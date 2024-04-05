@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Data\MMS\ddr\next deliveries trial layout\en.STM32MP1_SeriesDDRmemory_routing_guidelines_examples\STM32MP15XXAC\STM32MP15XXAC_1DDR3L\CAD_Project\STM32MP15XXAC_1DDR3Lx16_A01.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=stm32mp15xxac_1ddr3lx16a-plated.txt|DrillLayers=gtl,g1,g2,gbl
+LayersSetName=Top_Signal1_Blind_Vias|DrillFile=|DrillLayers=gtl,g1
