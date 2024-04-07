@@ -1,0 +1,5 @@
+1. I've checked the pinconfiguration between STM32MP151AAC3 and THGBMDG5D1LBAIL. It's OK according to the data sheet. 2024-04-06
+2. Polygon pour is now working. 2024-04-07
+3. I've checked the pinconfiguration between STM32MP151AAC3 and NT5CC256M16ER-EK. It's OK according to the data sheet. 2024-04-07
+4. I've checked the pinconfiguration between STM32MP151AAC3 and STPMU1APQR. It's OK according to the data sheet. 2024-04-07
+4. Verified that the DNU (Do not use) pins for STM32MP157 is for DSI-camera, but for STM32MP151, they should be left unconnected
