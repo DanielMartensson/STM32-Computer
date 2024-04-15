@@ -3,3 +3,9 @@
 3. I've checked the pinconfiguration between STM32MP151AAC3 and NT5CC256M16ER-EK. It's OK according to the data sheet. 2024-04-07
 4. I've checked the pinconfiguration between STM32MP151AAC3 and STPMU1APQR. It's OK according to the data sheet. 2024-04-07
 4. Verified that the DNU (Do not use) pins for STM32MP157 is for DSI-camera, but for STM32MP151, they should be left unconnected
+5. The Realtek RTL8211F-CG is placed and all the compontes are placed. 2024-04-08
+5. ETH_TX tracks done - same length +- 0.2mm. 2024-04-09
+6. ETH_MDIO and ETH_MDC have the same length +-0.1. 2024-04-09
+7. ETH_RX tracks done - same legnth +- 0.1mm. 2024-04-10
+8. Ethernet done. 2024-04-10
+9. Drag the schematic for USB. 2024-04-14
