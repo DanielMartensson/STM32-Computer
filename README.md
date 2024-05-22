@@ -17,6 +17,7 @@ This project is a STM32 computer were Linux can be deployed onto.
 * 3 x Mounting pads of M2.5
 * 1 x 4/8 Gb DDRL3 RAM memory
 * Debug: JTAG
+* Power supply: 5V DC jack
 
 # Pictures
 
