@@ -20,4 +20,18 @@ This project is a STM32 computer were Linux can be deployed onto.
 
 # Pictures
 
+![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic3.png?raw=true)
+
+![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic4.png?raw=true)
+
+![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic7.png?raw=true)
+
+![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic1.png?raw=true)
+
+![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic2.png?raw=true)
+
+![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic5.png?raw=true)
+
+![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic6.png?raw=true)
+
 
