@@ -9,3 +9,4 @@
 7. ETH_RX tracks done - same legnth +- 0.1mm. 2024-04-10
 8. Ethernet done. 2024-04-10
 9. Drag the schematic for USB. 2024-04-14
+10. Fixing the power and Overlay for USB. 2024-04-20
