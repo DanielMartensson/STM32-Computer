@@ -1,6 +1,18 @@
 # STM32 Computer
 
 This project is a STM32 computer were Linux can be deployed onto.
+The circuit board is made in Altium CircuitMaker. 
+
+# URL to the board
+
+https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Computer
+
+# Status
+
+* 2024-03-29: Initializing the project
+* 2024-04-20: Done with the coarse routing for the components
+* 2024-05-26: Done with the fine impedance matched routing
+* 2024-06-06: In production for JLCPCB - 24 dollar for 5 pcs
 
 # Features
 
