@@ -31,6 +31,21 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 * Debug: JTAG
 * Power supply: 5V DC jack
 
+# Notes
+
+To produce this board, the manufacture need to have these minimum capabilities:
+
+* 0.1 mm minimum electrical clearance between traces pads and vias
+* 0.09 mm minimum electrical clearance between BGA pads and traces
+* Capability to cut the edge of the BGA pads if the minimum electrical clearance between BGA pads and traces are above 0.09 mm
+* 0.09 mm minimum width of traces
+* Via-in-pad according to IPC 4761 Type VII (Epoxy filled and clapped)
+* Via hole size of 0.3 mm and via diameter of 0.4 mm
+* Impedance control: JLC04161H-1080
+
+I have been using JLCPCB as the manufacturer for this.
+
+
 # Pictures
 
 ![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic3.png?raw=true)
