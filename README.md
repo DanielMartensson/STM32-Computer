@@ -13,6 +13,9 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 * 2024-04-20: Done with the coarse routing for the components
 * 2024-05-26: Done with the fine impedance matched routing
 * 2024-06-06: In production at JLCPCB - 42 dollar for 5 pcs
+* 2024-06-18: Received the package
+* 2024-07-07: Received the components
+* 2024-07-18: Done with soldering
 
 # Features
 
