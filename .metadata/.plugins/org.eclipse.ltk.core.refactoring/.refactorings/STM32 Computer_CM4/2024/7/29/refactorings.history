@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;manifest.prop&apos; to &apos;STM32 Computer_CM4&apos;" description="Move &apos;manifest.prop&apos; to &apos;STM32 Computer_CM4&apos;" destination="/STM32 Computer_CM4" element1="/STM32 Computer_CA7/manifest.prop" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1721411002303" updateReferences="true"/>
+</session>

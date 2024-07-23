@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;manifest.prop&apos; to &apos;DeviceTree&apos;" description="Move &apos;manifest.prop&apos; to &apos;DeviceTree&apos;" destination="DeviceTree" element1="/STM32 Computer_CM4/manifest.prop" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1721411010760" updateReferences="true"/>
+</session>

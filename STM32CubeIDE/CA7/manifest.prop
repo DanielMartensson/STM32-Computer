@@ -1,5 +1,0 @@
-MANIFEST_VERSION = openstlinux-6.1-yocto-mickledore-mp1-v23.06.21
-KERNEL_DT = ./DeviceTree/STM32 Computer/kernel
-OPTEE_DT = ./DeviceTree/STM32 Computer/optee-os
-UBOOT_DT = ./DeviceTree/STM32 Computer/u-boot
-TFA_DT = ./DeviceTree/STM32 Computer/tf-a
