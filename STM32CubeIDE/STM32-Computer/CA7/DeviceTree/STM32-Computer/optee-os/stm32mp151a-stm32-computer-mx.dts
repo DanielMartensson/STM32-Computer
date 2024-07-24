@@ -22,7 +22,7 @@
 
 / {
 	model = "STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mp1-v23.06.21";
-	compatible = "st,stm32mp151a-stm32 computer-mx", "st,stm32mp151";
+	compatible = "st,stm32mp151a-stm32-computer-mx", "st,stm32mp151";
 
 	memory@c0000000 {
 		device_type = "memory";

@@ -1,6 +1,6 @@
 #MicroXplorer Configuration settings - do not modify
 BootLoader.IPs=DDR\:I,RCC,TAMP,I2C4,SDMMC2,UART4,USB_OTG_HS
-BootROM.IPs=RCC\:I,TAMP\:I,USB_OTG_HS,SDMMC2
+BootROM.IPs=RCC\:I,TAMP\:I,USB_OTG_HS,SDMMC2,UART4
 CAD.formats=
 CAD.pinconfig=
 CAD.provider=
@@ -659,8 +659,8 @@ ProjectManager.MainLocation=Core/Src
 ProjectManager.NoMain=false
 ProjectManager.PreviousToolchain=STM32CubeIDE
 ProjectManager.ProjectBuild=false
-ProjectManager.ProjectFileName=STM32 Computer.ioc
-ProjectManager.ProjectName=STM32 Computer
+ProjectManager.ProjectFileName=STM32-Computer.ioc
+ProjectManager.ProjectName=STM32-Computer
 ProjectManager.ProjectStructure=
 ProjectManager.RegisterCallBack=
 ProjectManager.StackSize=0x400
