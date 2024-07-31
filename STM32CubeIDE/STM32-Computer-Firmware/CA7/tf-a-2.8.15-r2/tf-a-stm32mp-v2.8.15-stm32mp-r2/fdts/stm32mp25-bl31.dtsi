@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: (GPL-2.0-or-later OR BSD-3-Clause)
+/*
+ * Copyright (C) STMicroelectronics 2023 - All Rights Reserved
+ */
+
+/omit-if-no-ref/ &i2c7_pins_a;
+/omit-if-no-ref/ &ospi_port1_clk_pins_a;
+/omit-if-no-ref/ &ospi_port1_cs0_pins_a;
+/omit-if-no-ref/ &ospi_port1_io03_pins_a;
+/omit-if-no-ref/ &sdmmc1_b4_pins_a;
+/omit-if-no-ref/ &sdmmc2_b4_pins_a;
+/omit-if-no-ref/ &sdmmc2_d47_pins_a;
+/omit-if-no-ref/ &usart2_pins_a;
+
+/ {
+	soc@0 {
+		/delete-node/ ommanager@40500000;
+		/delete-node/ memory-controller@48200000;
+		rifsc@42080000 {
+			/delete-node/ mmc@48220000;
+			/delete-node/ mmc@48230000;
+		};
+	};
+};

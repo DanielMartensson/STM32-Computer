@@ -9,8 +9,8 @@
  */
 
 /dts-v1/;
-#include <dt-bindings/pinctrl/stm32-pinfunc.h>
 
+#include <dt-bindings/pinctrl/stm32-pinfunc.h>
 #include "stm32mp151.dtsi"
 #include "stm32mp15xa.dtsi"
 #include "stm32mp15xxac-pinctrl.dtsi"
@@ -20,7 +20,7 @@
 /* USER CODE END includes */
 
 / {
-	model = "STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mp1-v23.06.21";
+	model = "STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26";
 	compatible = "st,stm32mp151a-stm32-computer-mx", "st,stm32mp151";
 
 	memory@c0000000 {
@@ -128,8 +128,8 @@
 
 	i2c1_pins_mx: i2c1_mx-0 {
 		pins {
-			pinmux = <STM32_PINMUX('F', 14, AF5)>, /* I2C1_SCL */
-					 <STM32_PINMUX('F', 15, AF5)>; /* I2C1_SDA */
+			pinmux = <STM32_PINMUX('D', 12, AF5)>, /* I2C1_SCL */
+					 <STM32_PINMUX('D', 13, AF5)>; /* I2C1_SDA */
 			bias-disable;
 			drive-open-drain;
 			slew-rate = <0>;
@@ -138,15 +138,15 @@
 
 	i2c1_sleep_pins_mx: i2c1_sleep_mx-0 {
 		pins {
-			pinmux = <STM32_PINMUX('F', 14, ANALOG)>, /* I2C1_SCL */
-					 <STM32_PINMUX('F', 15, ANALOG)>; /* I2C1_SDA */
+			pinmux = <STM32_PINMUX('D', 12, ANALOG)>, /* I2C1_SCL */
+					 <STM32_PINMUX('D', 13, ANALOG)>; /* I2C1_SDA */
 		};
 	};
 
 	i2c4_pins_mx: i2c4_mx-0 {
 		pins {
-			pinmux = <STM32_PINMUX('D', 12, AF4)>, /* I2C4_SCL */
-					 <STM32_PINMUX('D', 13, AF4)>; /* I2C4_SDA */
+			pinmux = <STM32_PINMUX('F', 14, AF4)>, /* I2C4_SCL */
+					 <STM32_PINMUX('F', 15, AF4)>; /* I2C4_SDA */
 			bias-disable;
 			drive-open-drain;
 			slew-rate = <0>;
@@ -155,8 +155,8 @@
 
 	i2c4_sleep_pins_mx: i2c4_sleep_mx-0 {
 		pins {
-			pinmux = <STM32_PINMUX('D', 12, ANALOG)>, /* I2C4_SCL */
-					 <STM32_PINMUX('D', 13, ANALOG)>; /* I2C4_SDA */
+			pinmux = <STM32_PINMUX('F', 14, ANALOG)>, /* I2C4_SCL */
+					 <STM32_PINMUX('F', 15, ANALOG)>; /* I2C4_SDA */
 		};
 	};
 

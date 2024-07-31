@@ -1,0 +1,185 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/hwmon/st,stm32-tamp.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STMicroelectronics STM32 Tamper
+
+maintainers:
+  - Nicolas Toromanoff <nicolas.toromanoff@st.com>
+
+properties:
+  compatible:
+    enum:
+      - st,stm32-tamp
+      - st,stm32mp13-tamp
+      - st,stm32mp25-tamp
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    maxItems: 1
+
+  interrupts:
+    maxItems: 1
+
+  st,tamp-passive-precharge:
+    description: 0 is no precharge, so the pull-up is disabled for all external passive tamper.
+       1, 2, 3, 4, 8 define the number of cycle the STM32 precharge the pin before
+       checking the value (low/high) for all external tamper.
+    $ref: /schemas/types.yaml#/definitions/uint32
+    enum: [0, 1, 2, 4, 8]
+
+  st,tamp-passive-nb-sample:
+    description: The number of sample to read in a row to raise a passive tamper.
+    $ref: /schemas/types.yaml#/definitions/uint32
+    enum: [0, 2, 4, 8]
+
+  st,tamp-passive-sample-clk-div:
+    description: Clock divider to define frequency to read a sample for a passive tamper.
+    $ref: /schemas/types.yaml#/definitions/uint32
+
+  st,tamp-active-filter:
+    description: Set the active tamper filtering. 0 when active tamper filtering is disabled.
+      1 when active tamper filtering is enabled. A tamper event is detected when 2 comparison
+      mismatches occur out of 4 consecutive samples.
+    $ref: /schemas/types.yaml#/definitions/uint32
+    enum: [0, 1]
+
+  st,tamp-active-clk-div:
+    description: clock divider to define the frequency of read/write cycle for all active tampers.
+    $ref: /schemas/types.yaml#/definitions/uint32
+
+  st,trig-on:
+    description: Defines the active level to activate this passive tamper
+      (not used if pintctrl-0 as 2 entries).
+      It also depends on st,tamp-passive-precharge value. When st,tamp-passive-precharge=0
+      this passive tamper activate at edge. When st,tamp-passive-precharge != 0, with st,trig-on
+      defined, this passive tamper will activate if st,tamp-passive-nb-sample in a row are high.
+      If not defined the passive tamper event is raised if st,tamp-passive-nb-sample in a row
+      are low.
+    type: boolean
+
+  st,backup-zones:
+    description: Defines the topology of the backup registers zones. The number of zones and their
+                 access restrictions varies from one platform to another.
+                 For STM32MP1x platforms, it corresponds to
+                 <zone1 zone1 zone3>
+                 For STM32MP2x platforms, it corresponds to
+                 <zone1-rif1 zone1-rif2 zone2-rif1 zone2-rif2 zone3-rif1 zone3-rif0 zone3-rif2>;
+    minItems: 1
+    maxItems: 7
+
+  st,protreg:
+    minItems: 1
+    maxItems: 3
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      Describes the firewall hardware configuration to apply for a given
+      resource.
+
+      RIFPROT(tamp_res_id, sem_list, lock, sec, priv, scid, sem_en, cfen)
+
+      When a field isn't effective, it should be filled with RIF_UNUSED.
+
+        "tamp_res_id" The tamp resource number.
+
+        "sem_list" This peripheral does not support semaphores.
+                   This field must be set to RIF_UNUSED.
+
+        "lock" This peripheral does not support configuration locking.
+               This field must be set to RIF_UNUSED.
+
+        "sec" Configures secure-only access to the resource.
+          RIF_SEC, only secure access is granted to the resource
+          RIF_NSEC, secure/non-secure access is granted to the
+                    resource
+
+        "priv" Configures the privilege level needed to access this
+               resource.
+          RIF_PRIV, only privileged access is granted to the resource
+          RIF_NPRIV, privileged/Unprivileged access is granted to the
+                     resource
+
+        "scid" Configures the static CID that is allowed to access the
+               resource. Note that the static CID configuration is
+               ineffective if the semaphore mode is enabled. Mandates CID
+               filtering enabled to be effective.
+          RIF_CID1 allows CID 1 to access the resource
+          RIF_CID2 allows CID 2 to access the resource ...
+
+        "sem_en" This peripheral does not support semaphores.
+                 This field must be set to RIF_UNUSED.
+
+        "cfen" Enable/disable the CID filtering for this resource.
+          RIF_CFEN, enables the CID filtering
+          RIF_CFDIS, disables the CID filtering
+
+  st,tamp-internal-tampers:
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      List of the internal tamper detection cells to be enabled and whether they
+      should be enabled in potential or confirmed mode. Each entry is composed
+      of 2 arguments. The first one is the ID of the tamper to activate. The
+      second one is the mode.
+
+  st,tamp-mode:
+    description:
+      Only for external tampers.
+      Either TAMPER_CONFIRMED_MODE or TAMPER_POTENTIAL_MODE to configure the
+      external tamper either in confirmed or potential mode.
+
+  st,tamp-id:
+    $ref: "/schemas/types.yaml#/definitions/uint32"
+    description: ID of a tamper event
+    minimum: 0
+    maximum: 32
+
+  st,tamp-mask-pot-reset:
+    type: boolean
+    description:
+      Mask the reset control line of some resources when a potential tamper
+      occurs. Please refer to the SoC reference manual to see what resource
+      it concerns.
+
+patternProperties:
+  "^tamp-passive@[0-9]+$":
+    description: Describes the passive tamper with its allocated pinctrl.
+    type: object
+
+  "^tamp-active@[0-9]+$":
+    type: object
+    description: Describes the active tamper with its allocated pinctrl.
+
+required:
+  - compatible
+  - reg
+  - clocks
+
+allOf:
+  - if:
+      not:
+        properties:
+          compatible:
+            contains:
+              const: st,stm32mp25-tamp
+
+    then:
+      properties:
+        st,protreg: false
+
+additionalProperties: false
+
+examples:
+  - |
+    #include <dt-bindings/clock/stm32mp1-clks.h>
+    #include <dt-bindings/reset/stm32mp1-resets.h>
+    tamp: tamp@5c00a000 {
+            compatible = "st,stm32mp13-tamp";
+            reg = <0x5c00a000 0x400>;
+            interrupts = <GIC_SPI 128 IRQ_TYPE_LEVEL_HIGH>;
+            clocks = <&rcc RTCAPB>;
+    };
+...

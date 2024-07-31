@@ -1,0 +1,88 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/soc/stm32/st,stm32mp1-tzc.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STM32MP1 TrustZone address space bindings
+
+description: |
+  The STM32MP1 TZC is an ARM TZC400 based DDR access controller. It uses filters
+  to control read/write access to the DDR.
+  TZC node specifies a list of phandles to specific reserved memory regions.
+  It uses the defined bindings in rmem.yaml and adding a specific property
+  for the access right management.
+
+maintainers:
+  - Lionel Debieve <lionel.debieve@foss.st.com>
+
+properties:
+  compatible:
+    const: st,stm32mp1-tzc
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    minItems: 1
+    maxItems: 2
+
+  interrupts:
+    maxItems: 1
+
+  memory-region:
+    description: |
+      Phandle to a node describing memory area to be configured by the TZC.
+      The reserved region must describe a st,protreg property that will contain the specific
+      access management for a region.
+      - The "st,protreg" property defines the memory access type with a secure access and non
+        secure access field. Secure access initial u32 uses:
+          TZC_REGION_S_NONE: No secure access available
+          TZC_REGION_S_RD: Secure access Read only
+          TZC_REGION_S_WR: Secure access Write only
+          TZC_REGION_S_RDWR: Secure access Read/Write
+        The non secure access uses a u32 refering to the Non secure master. The list of the NSAID
+        are described in the dt-bindings/soc/stm32mp13-tzc400.h for STM32MP13 and in
+        dt-bindings/soc/stm32mp15-tzc400.h for STM32MP15. The TZC400 macro can be used to
+        create the u32. Ex:
+         (TZC_REGION_ACCESS_RD(1) | TZC_REGION_ACCESS_WD(2) | TZC_REGION_ACCESS_RDWR(3))
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+
+required:
+  - compatible
+  - reg
+  - clocks
+  - interrupts
+
+additionalProperties: false
+
+examples:
+  - |
+    #include <dt-bindings/interrupt-controller/arm-gic.h>
+    #include <dt-bindings/soc/stm32mp-tzc400-macro.h>
+    #include <dt-bindings/clock/stm32mp1-clks.h>
+    #include <dt-bindings/reset/stm32mp1-resets.h>
+    #include <dt-bindings/soc/stm32mp13-tzc400.h>
+
+    reserved-memory {
+      #address-cells = <1>;
+      #size-cells = <1>;
+      ranges;
+
+      optee_framebuffer: optee-framebuffer@dd000000 {
+                /* Secure framebuffer memory */
+                reg = <0xdd000000 0x1000000>;
+                /* Secure read/write access with no non secure access */
+                st,protreg = <TZC_REGION_S_RDWR 0>;
+              };
+    };
+
+    tzc@5c006000 {
+      compatible = "st,stm32mp1-tzc";
+      reg = <0x5c006000 0x1000>;
+      interrupts = <GIC_SPI 4 IRQ_TYPE_LEVEL_HIGH>;
+      clocks = <&rcc TZC>;
+      memory-region = <&optee_framebuffer>;
+    };
+
+...

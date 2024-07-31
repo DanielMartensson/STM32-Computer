@@ -1,0 +1,37 @@
+{
+    "copyright": "Copyright (c) 2022, STMicroelectronics - All Rights Reserved",
+    "license": "SPDX-License-Identifier: BSD-3-Clause",
+
+    "metadata": {
+        "version": 0,
+        "active_index": 0,
+        "previous_active_index": 1,
+        "img_entry": {
+            "img_0": {
+                "location": "device0",
+                "img_bank_info": {
+                    "img_0_bank_0": {
+                        "accepted": true
+                    },
+                    "img_0_bank_1": {
+                        "accepted": false
+                    }
+                }
+            }
+        }
+    },
+    "uuids": {
+        "locations": {
+            "device0": "00000000-0000-0000-0000-000000000000"
+        },
+        "entries": {
+            "img_0_bank_0": "4fd84c93-54ef-463f-a7ef-ae25ff887087",
+            "img_0_bank_1": "09c54952-d5bf-45af-acee-335303766fb3",
+            "img_0":        "19d5df83-11b0-457b-be2c-7559c13142a5"
+        }
+    },
+    "configs": {
+        "nb_fw_img": 1,
+        "nb_fw_banks": 2
+    }
+}

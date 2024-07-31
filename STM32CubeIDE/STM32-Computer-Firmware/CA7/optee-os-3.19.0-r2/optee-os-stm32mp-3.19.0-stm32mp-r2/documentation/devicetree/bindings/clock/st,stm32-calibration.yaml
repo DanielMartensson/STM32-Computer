@@ -1,0 +1,61 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/clock/st,stm32-calibration.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STMicroelectronics STM32 clock calibration bindings
+
+maintainers:
+  - Gatien Chevallier <gatien.chevallier@st.com>
+
+description: |
+  STMicroelectronics's STM32 MPUs embed a clock calibration system for HSI
+  and CSI clocks. The calibration relies on a counter. It is a digital
+  calibration circuit with 0.95 ppm resolution, used to compensate quartz
+  crystal inaccuracy.
+
+properties:
+  compatible:
+    const: "st,osc-calibration"
+
+patternProperties:
+  "^[a-z]{3}-calibration":
+    type: object
+    properties:
+      compatible:
+        enum:
+          - "st,csi-cal"
+          - "st,hsi-cal"
+      counter:
+        description: counter used to calibrate
+          Refer to counter.yaml for more details.
+        maxItems: 1
+
+    required:
+      - compatible
+      - counter
+
+required:
+  - compatible
+
+additionalProperties: false
+
+examples:
+- |
+    osc_calibration: osc-calibration {
+      compatible = "st,osc-calibration";
+
+      csi_calibration: csi-calibration {
+        compatible = "st,csi-cal";
+        counter = <&timers15 0 8>;
+        status = "disabled";
+      };
+
+      hsi_calibration: hsi-calibration {
+        compatible = "st,hsi-cal";
+        counter = <&timers15 0 7>;
+        status = "disabled";
+      };
+    };
+...

@@ -1,0 +1,1 @@
+cmd_drivers/tee/built-in.o :=  rm -f drivers/tee/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/tee/built-in.o drivers/tee/tee-uclass.o drivers/tee/optee/built-in.o drivers/tee/broadcom/built-in.o

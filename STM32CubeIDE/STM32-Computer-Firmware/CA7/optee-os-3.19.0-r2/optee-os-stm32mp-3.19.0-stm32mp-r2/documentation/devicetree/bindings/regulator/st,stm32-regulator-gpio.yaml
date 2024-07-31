@@ -1,0 +1,76 @@
+# SPDX-License-Identifier: GPL-2.0
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/regulator/gpio-regulator.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STM32 GPIO controlled regulators
+
+maintainers:
+  - Pascal Paillet <p.paillet@foss.st.com>
+
+description:
+  Any property defined as part of the core regulator binding, defined in
+  regulator.yaml, can also be used.
+
+allOf:
+  - $ref: "regulator.yaml#"
+
+properties:
+  compatible:
+    const: st,stm32-regulator-gpio
+
+  regulator-name: true
+
+  st,enable_pin_index:
+    description: GPIO used to control enable/disable of the regulator.
+      The GPIO is referred as index number in the pinctrl table.
+    maxItems: 1
+
+  enable-active-high:
+    description: Polarity of "enable-gpio" GPIO is active HIGH. Default is
+      active LOW.
+    type: boolean
+
+  st,voltage_pin_index:
+    description: GPIO used to change the output voltage of the regulator.
+      The GPIO is referred as index number in the pinctrl table.
+    maxItems: 1
+
+  states:
+    description: Selection of available voltages in ascending order
+      provided by this regulator and matching GPIO configurations to
+      achieve them.
+    $ref: /schemas/types.yaml#/definitions/uint32-matrix
+    maxItems: 2
+    items:
+      items:
+        - description: Voltage in microvolts
+        - description: GPIO state value
+
+required:
+  - compatible
+  - regulator-name
+
+unevaluatedProperties: false
+
+examples:
+  - |
+    gpio-regulator {
+      compatible = "st,stm32-regulator-gpio";
+      regulator-name = "vddcpu";
+
+      regulator-min-microvolt = <1200000>;
+      regulator-max-microvolt = <1350000>;
+
+      pinctrl-names = "default";
+      pinctrl-0 = <&vddcpu_pins_a>;
+
+      st,enable_pin_index = <1>;
+      enable-active-high;
+
+      st,voltage_pin_index = <0>;
+      states = <1200000 0x1>,
+        <1350000 0x0>;
+    };
+...

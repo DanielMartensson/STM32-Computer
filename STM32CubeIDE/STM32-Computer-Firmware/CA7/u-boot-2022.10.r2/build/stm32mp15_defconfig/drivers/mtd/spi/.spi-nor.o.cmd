@@ -1,0 +1,1 @@
+cmd_drivers/mtd/spi/spi-nor.o := rm -f drivers/mtd/spi/spi-nor.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/mtd/spi/spi-nor.o drivers/mtd/spi/sf_probe.o drivers/mtd/spi/spi-nor-ids.o drivers/mtd/spi/spi-nor-core.o

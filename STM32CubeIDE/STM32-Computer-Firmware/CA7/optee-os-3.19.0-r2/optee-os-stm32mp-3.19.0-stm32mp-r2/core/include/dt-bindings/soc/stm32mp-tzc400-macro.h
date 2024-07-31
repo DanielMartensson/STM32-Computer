@@ -1,0 +1,29 @@
+/* SPDX-License-Identifier: GPL-2.0+ OR BSD-3-Clause */
+/*
+ * Copyright (C) 2020-2021, STMicroelectronics - All Rights Reserved
+ */
+
+#ifndef _DT_BINDINGS_STM32MP_TZC400_MACRO_H
+#define _DT_BINDINGS_STM32MP_TZC400_MACRO_H
+
+#define	TZC_REGION_S_NONE	0
+#define	TZC_REGION_S_RD		1
+#define	TZC_REGION_S_WR		2
+#define	TZC_REGION_S_RDWR	3
+
+#define REGION_ID_ACCESS_NSAID_WR_EN_SHIFT	16
+#define REGION_ID_ACCESS_NSAID_RD_EN_SHIFT	0
+#define REGION_ID_ACCESS_NSAID_ID_MASK		0xf
+
+#define TZC_REGION_ACCESS_RD(id)					\
+		((1 << ((id) & REGION_ID_ACCESS_NSAID_ID_MASK)) <<	\
+		 REGION_ID_ACCESS_NSAID_RD_EN_SHIFT)
+
+#define TZC_REGION_ACCESS_WR(id)					\
+		((1 << ((id) & REGION_ID_ACCESS_NSAID_ID_MASK)) <<	\
+		 REGION_ID_ACCESS_NSAID_WR_EN_SHIFT)
+
+#define TZC_REGION_ACCESS_RDWR(id)					\
+		(TZC_REGION_ACCESS_RD(id) | TZC_REGION_ACCESS_WR(id))
+
+#endif /* _DT_BINDINGS_STM32MP_TZC400_MACRO_H */

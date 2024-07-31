@@ -1,0 +1,177 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/soc/stm32/st,stm32-rifsc.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STM32 Resource isolation framework security controller
+
+maintainers:
+  - Gatien Chevallier <gatien.chevallier@foss.st.com>
+
+description: |
+  Resource isolation framework (RIF) is a comprehensive set of hardware blocks
+  designed to enforce and manage isolation of STM32 hardware resources like
+  memory and peripherals.
+
+  The RIFSC (RIF security controller) is composed of three sets of registers,
+  each managing a specific set of hardware resources:
+    • RISC registers associated with RISUP logic (resource isolation device unit
+      for peripherals), assign all non-RIF aware peripherals to zero, one or
+      any security domains (secure, privilege, compartment).
+    • RIMC registers: associated with RIMU logic (resource isolation master
+      unit), assign all non RIF-aware bus master to one security domain by
+      setting secure, privileged and compartment information on the system bus.
+      Alternatively, the RISUP logic controlling the device port access to a
+      peripheral can assign target bus attributes to this peripheral master port
+      (supported attribute: CID).
+    • RISC registers associated with RISAL logic (resource isolation device unit
+      for address space - Lite version), assign address space subregions to one
+      security domains (secure, privilege, compartment).
+properties:
+  compatible:
+    const: st,stm32mp25-rifsc
+
+  reg:
+    maxItems: 1
+
+  "#address-cells":
+    const: 1
+
+  "#size-cells":
+    const: 1
+
+  st,protreg:
+    minItems: 1
+    maxItems: 192
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      Describes the firewall hardware configuration to apply for a given
+      peripheral and its associated RCC resources if relevant. See the reference
+      manual of the SoC to see whether the reset/clock of the peripheral have a
+      specific RIF configuration entry in the RCC or they inherit from the RIFSC
+      configuration. In this paragraph, peripheral = the peripheral + its
+      associated resources.
+
+      RIFPROT(rifid, sem_list, lock, sec, priv, scid, sem_en, cfen)
+
+      When a field isn't effective, it should be filled with RIF_UNUSED.
+
+        "rifid" The firewall ID of the peripheral to configure.
+
+        "sem_list" Contains the CID grantlist that can access the peripheral
+                   (multiple choice allowed) when the peripheral is configured
+                   in semaphore mode. Mandates CID filtering and semaphore
+                   enabled to be effective.
+          RIF_CID1_BF | RIF_CID4_BF, allows both CID (Compartment ID) 1/4 to
+                                     access the peripheral according to the RIF
+                                     semaphore rules
+
+        "lock" Specifies whether the RIF configuration is locked until
+               next platform reset for this peripheral.
+          RIF_UNLOCK, the RIF configuration will not be locked for this
+                      peripheral
+          RIF_LOCK, the RIF configuration will be locked and will not be
+                    editable until next platform reset for this peripheral
+
+        "sec" Configures secure-only access to the peripheral.
+          RIF_SEC, only secure access is granted to the peripheral
+          RIF_NSEC, secure/non-secure access is granted to the peripheral
+
+        "priv" Configures the privilege level needed to access this peripheral.
+          RIF_PRIV, only privileged access is granted to the peripheral
+          RIF_NPRIV, privileged/Unprivileged access is granted to the peripheral
+
+        "scid" Configures the static CID that is allowed to access the
+               peripheral. Note that the static CID configuration is ineffective
+               if the semaphore mode is enabled. Mandates CID filtering enabled
+               to be effective.
+          RIF_CID1 allows CID 1 to access the peripheral
+          RIF_CID2 allows CID 2 to access the peripheral ...
+
+        "sem_en" Enable/disable the semaphore mode for this peripheral. It
+                 Mandates CID filtering enabled to be effective.
+          RIF_SEM_EN, semaphore mode enabled
+          RIF_SEM_DIS, semaphore mode disabled
+
+        "cfen" Enable/disable the CID filtering for this peripheral.
+          RIF_CFEN, enables the CID filtering
+          RIF_CFDIS, disables the CID filtering
+
+  st,rimu:
+    minItems: 1
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      Describes the firewall hardware configuration to apply for a given
+      master port of a peripheral. Either inherited from the associated
+      RISUP or custom. This configuration will represent the master's attributes
+      on the interconnect.
+
+      RIMUPROT(rimu_id, scid, sec, priv, cidsel)
+
+      When a field isn't effective, it should be filled with RIF_UNUSED.
+
+      “rimu_id” ID of the master port
+
+      “scid” CID of the master on the interconnect. Effective only if “cidsel” =
+             RIF_CIDSEL_M. When “cidsel” = RIF_CIDSEL_P, "scid" should be set to
+             RIF_UNUSED.
+
+      "sec" Configures the secure level of the bus master on the interconnect.
+        RIF_SEC, master is configured as secure on the interconnect
+        RIF_NSEC, master is configured as non-secure on the interconnect
+
+      "priv" Configures the privilege level of the bus master on the
+             interconnect.
+        RIF_PRIV, master is configured as privileged on the interconnect
+        RIF_NPRIV, master is configured as non-privileged on the interconnect
+
+      “cidesel” Filled to indicate if the master CID is inherited from the
+                associated RISUP (inheritance) or not.
+        RIF_CIDSEL_P, master CID is inherited from the associated RISUP.
+        RIF_CIDSEL_M, master CID is defined in the “scid” field
+
+  st,glocked:
+    $ref: /schemas/types.yaml#/definitions/uint32
+    description:
+      Global lock to lock the whole RIFSC configuration. Can be set to one or
+      all of the values below.
+        RIFSC_RISUP_GLOCK, all RIFSC_RISC_x registers are locked until next
+                           reset
+        RIFSC_RIMU_GLOCK, all RIFSC_RIMC_x registers are locked until next reset
+
+required:
+  - compatible
+  - reg
+  - "#address-cells"
+  - "#size-cells"
+  - st,protreg
+
+additionalProperties: False
+
+examples:
+  - |
+        rifsc: rifsc@42080000 {
+            compatible = "st,stm32mp25-rifsc";
+            reg = <0x42080000 0x1000>;
+            #address-cells = <1>;
+            #size-cells = <1>;
+            st,glocked = <RIFSC_RIMU_GLOCK>;
+            st,protreg = <
+                    RIFPROT(STM32MP25_RIFSC_TIM1_ID, RIF_UNUSED, RIF_UNLOCK, RIF_NSEC, RIF_PRIV,
+                            RIF_CID1, RIF_SEM_DIS, RIF_CFEN)
+                    RIFPROT(STM32MP25_RIFSC_TIM2_ID, RIF_UNUSED, RIF_UNLOCK, RIF_NSEC, RIF_NPRIV,
+                            RIF_CID2, RIF_SEM_DIS, RIF_CFEN)
+                    RIFPROT(STM32MP25_RIFSC_TIM3_ID, RIF_UNUSED, RIF_UNLOCK, RIF_NSEC, RIF_PRIV,
+                            RIF_CID1, RIF_SEM_DIS, RIF_CFEN)
+                    RIFPROT(STM32MP25_RIFSC_TIM4_ID, RIF_UNUSED, RIF_UNLOCK, RIF_NSEC, RIF_PRIV,
+                            RIF_CID1, RIF_SEM_DIS, RIF_CFEN)
+                    RIFPROT(STM32MP25_RIFSC_TIM5_ID, RIF_UNUSED, RIF_UNLOCK, RIF_NSEC, RIF_PRIV,
+                            RIF_CID1, RIF_SEM_DIS, RIF_CFEN)
+            >;
+            st,rimu = <
+              RIMUPROT(RIMU_ID(0), RIF_CID1, RIF_NSEC, RIF_NPRIV, RIF_CIDSEL_M)
+              RIMUPROT(RIMU_ID(1), RIF_CID2, RIF_SEC, RIF_PRIV, RIF_CIDSEL_M)
+              RIMUPROT(RIMU_ID(2), RIF_UNUSED, RIF_NSEC, RIF_NPRIV, RIF_CIDSEL_P)
+            >;
+        };

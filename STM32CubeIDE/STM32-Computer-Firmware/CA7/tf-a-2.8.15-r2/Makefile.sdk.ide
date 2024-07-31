@@ -1,0 +1,4 @@
+DEPLOYDIR ?= $(FIP_DEPLOYDIR_ROOT)/arm-trusted-firmware
+
+include ../Makefile.sdk
+
