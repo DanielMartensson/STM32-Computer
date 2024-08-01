@@ -41,10 +41,10 @@ Linker script and memory map
  *fill*         0x2ffc3000    0x1f000 
                 0x2ffe2000                        __DTB_IMAGE_START__ = .
  *(.dtb_image*)
- .dtb_image     0x2ffe2000     0x324e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o
-                0x2ffe524e                        __DTB_IMAGE_END__ = .
+ .dtb_image     0x2ffe2000     0x3267 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o
+                0x2ffe5267                        __DTB_IMAGE_END__ = .
                 0x00026b00                        . = 0x26b00
- *fill*         0x2ffe524e     0x3db2 
+ *fill*         0x2ffe5267     0x3d99 
                 0x2ffe9000                        __BL2_IMAGE_START__ = .
  *(.bl2_image*)
  .bl2_image     0x2ffe9000    0x115c2 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o

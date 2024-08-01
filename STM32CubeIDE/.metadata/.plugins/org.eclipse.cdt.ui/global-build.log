@@ -1,4 +1,4 @@
-15:57:55 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
+19:09:06 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
 make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=optee-emmc stm32 metadata 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts
@@ -27,7 +27,7 @@ Image Type   : ST Microelectronics STM32 V1.0
 Image Size   : 229570 bytes
 Image Load   : 0x2ffc2500
 Entry Point  : 0x2ffe9000
-Checksum     : 0x0073bb52
+Checksum     : 0x0073bc3c
 Option     : 0x00000001
 Version	     : 0x00000000
 
