@@ -1,0 +1,10 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:296:12:stm32_pinctrl_probe	8	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:277:12:stm32_pinctrl_get_access	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:498:12:stm32_pinctrl_bind	40	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:451:12:stm32_pinctrl_config	408	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:551:12:stm32_pinctrl_set_state	0	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:101:12:stm32_populate_gpio_dev_list.isra	48	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:134:12:stm32_pinctrl_get_pins_count	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:162:24:stm32_pinctrl_get_gpio_dev	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:193:20:stm32_pinctrl_get_pin_name	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/pinctrl/pinctrl_stm32.c:215:12:stm32_pinctrl_get_pin_muxing	64	static

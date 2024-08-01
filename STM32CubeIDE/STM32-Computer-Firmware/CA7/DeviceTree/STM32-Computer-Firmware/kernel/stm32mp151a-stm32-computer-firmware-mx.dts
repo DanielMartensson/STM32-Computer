@@ -17,6 +17,7 @@
 #include "stm32mp15-m4-srm.dtsi"
 
 /* USER CODE BEGIN includes */
+#include "stm32mp15-scmi.dtsi"
 /* USER CODE END includes */
 
 / {

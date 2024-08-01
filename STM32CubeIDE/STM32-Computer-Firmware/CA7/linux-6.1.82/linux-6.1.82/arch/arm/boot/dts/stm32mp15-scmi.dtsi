@@ -30,8 +30,10 @@
 	};
 };
 
+/*
 /delete-node/ &clk_hse;
 /delete-node/ &clk_hsi;
 /delete-node/ &clk_lse;
 /delete-node/ &clk_lsi;
 /delete-node/ &clk_csi;
+*/

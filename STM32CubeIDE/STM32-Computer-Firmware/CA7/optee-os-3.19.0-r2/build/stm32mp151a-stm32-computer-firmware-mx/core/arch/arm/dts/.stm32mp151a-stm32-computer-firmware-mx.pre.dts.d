@@ -2,6 +2,7 @@
  core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts \
  core/include/dt-bindings/pinctrl/stm32-pinfunc.h \
  core/include/dt-bindings/clock/stm32mp1-clksrc.h \
+ core/include/dt-bindings/soc/stm32mp15-etzpc.h \
  core/arch/arm/dts/stm32mp151.dtsi \
  core/include/dt-bindings/interrupt-controller/arm-gic.h \
  core/include/dt-bindings/interrupt-controller/irq.h \

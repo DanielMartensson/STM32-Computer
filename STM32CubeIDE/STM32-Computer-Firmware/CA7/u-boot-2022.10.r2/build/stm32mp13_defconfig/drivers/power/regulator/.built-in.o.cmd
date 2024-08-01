@@ -1,0 +1,1 @@
+cmd_drivers/power/regulator/built-in.o :=  rm -f drivers/power/regulator/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/power/regulator/built-in.o drivers/power/regulator/regulator-uclass.o drivers/power/regulator/regulator_common.o drivers/power/regulator/fixed.o drivers/power/regulator/gpio-regulator.o drivers/power/regulator/scmi_regulator.o

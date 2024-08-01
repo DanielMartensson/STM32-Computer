@@ -1,0 +1,1 @@
+cmd_drivers/ram/stm32mp1/built-in.o :=  rm -f drivers/ram/stm32mp1/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/ram/stm32mp1/built-in.o drivers/ram/stm32mp1/stm32mp1_ram.o drivers/ram/stm32mp1/stm32mp1_ddr.o

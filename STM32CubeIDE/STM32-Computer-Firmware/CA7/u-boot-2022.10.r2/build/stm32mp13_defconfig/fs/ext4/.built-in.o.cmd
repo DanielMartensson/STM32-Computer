@@ -1,0 +1,1 @@
+cmd_fs/ext4/built-in.o :=  rm -f fs/ext4/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT fs/ext4/built-in.o fs/ext4/ext4fs.o fs/ext4/ext4_common.o fs/ext4/dev.o fs/ext4/ext4_write.o fs/ext4/ext4_journal.o

@@ -1,0 +1,1 @@
+cmd_lib/fwu_updates/built-in.o :=  rm -f lib/fwu_updates/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT lib/fwu_updates/built-in.o lib/fwu_updates/fwu.o lib/fwu_updates/fwu_gpt.o lib/fwu_updates/fwu_v2.o

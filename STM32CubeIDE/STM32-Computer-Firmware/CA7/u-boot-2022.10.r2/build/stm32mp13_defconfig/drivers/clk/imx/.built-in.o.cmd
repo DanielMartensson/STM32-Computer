@@ -1,0 +1,1 @@
+cmd_drivers/clk/imx/built-in.o :=  rm -f drivers/clk/imx/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/clk/imx/built-in.o drivers/clk/imx/clk-gate2.o drivers/clk/imx/clk-pllv3.o drivers/clk/imx/clk-pfd.o
