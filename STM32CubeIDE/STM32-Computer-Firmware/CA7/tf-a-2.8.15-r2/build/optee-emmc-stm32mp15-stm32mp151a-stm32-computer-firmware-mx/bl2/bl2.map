@@ -2881,490 +2881,490 @@ ro              0x2ffe9000    0x11000
  .rodata.dividers_mp15
                 0x2fff686e       0x96 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.version_string
-                0x2fff6904       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/build_message.o
+                0x2fff6904       0x34 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/build_message.o
                 0x2fff6904                version_string
  .rodata.build_message
-                0x2fff6936       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/build_message.o
-                0x2fff6936                build_message
+                0x2fff6938       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/build_message.o
+                0x2fff6938                build_message
  .rodata.bl2_load_images.str1.1
-                0x2fff6954      0x11a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_image_load_v2.o
+                0x2fff6956      0x11a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_image_load_v2.o
  .rodata.bl2_main.str1.1
-                0x2fff6a6e       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_main.o
+                0x2fff6a70       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_main.o
  .rodata.flush_bl_params_desc_args.str1.1
-                0x2fff6a8c       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/desc_image_load.o
+                0x2fff6a8e       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/desc_image_load.o
  .rodata.CSWTCH.28
-                0x2fff6aa5        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/desc_image_load.o
+                0x2fff6aa7        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/desc_image_load.o
  .rodata.fdt_read_uint32_array.str1.1
-                0x2fff6aa8       0x31 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
+                0x2fff6aaa       0x31 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
  .rodata.fdtw_read_bytes.str1.1
-                0x2fff6ad9       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
+                0x2fff6adb       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
  .rodata.fdtw_read_string.str1.1
-                0x2fff6afc       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
+                0x2fff6afe       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
  .rodata.fdt_get_stdout_node_offset.str1.1
-                0x2fff6b2e       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
+                0x2fff6b30       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fdt_wrappers.o
  .rodata.fwu_metadata_load.str1.1
-                0x2fff6b51      0x261 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fwu.o
+                0x2fff6b53      0x261 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fwu.o
  .rodata.fwu_get_active_bank_state.str1.1
-                0x2fff6db2       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fwu.o
+                0x2fff6db4       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fwu.o
  .rodata.fwu_init.str1.1
-                0x2fff6dc4       0x60 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fwu.o
+                0x2fff6dc6       0x60 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fwu.o
  .rodata.block_seek.str1.1
-                0x2fff6e24       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_block.o
+                0x2fff6e26       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_block.o
  .rodata.fip_dev_init.str1.1
-                0x2fff6e3a       0x97 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
+                0x2fff6e3c       0x97 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
  .rodata.fip_file_read.str1.1
-                0x2fff6ed1       0x58 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
+                0x2fff6ed3       0x58 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
  .rodata.fip_file_open.str1.1
-                0x2fff6f29       0x97 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
+                0x2fff6f2b       0x97 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
  .rodata.uuid_null.0
-                0x2fff6fc0       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
+                0x2fff6fc2       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_fip.o
  .rodata.free_entity.isra.0.str1.1
-                0x2fff6fd0       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_storage.o
+                0x2fff6fd2       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/io_storage.o
  .rodata.mmc_device_state.str1.1
-                0x2fff6fe8       0x20 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
+                0x2fff6fea       0x20 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
  .rodata.mmc_read_blocks.str1.1
-                0x2fff7008       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
+                0x2fff700a       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
  .rodata.mmc_init.str1.1
-                0x2fff701a       0x95 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
+                0x2fff701c       0x95 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
  .rodata.sd_tran_speed_base
-                0x2fff70af       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
+                0x2fff70b1       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
  .rodata.tran_speed_base
-                0x2fff70bf       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
+                0x2fff70c1       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/mmc.o
  .rodata.parse_gpt_entry.str1.1
-                0x2fff70cf       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/gpt.o
+                0x2fff70d1       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/gpt.o
  .rodata.load_partition_table.str1.1
-                0x2fff70e7       0x8e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/partition.o
+                0x2fff70e9       0x8e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/partition.o
                                  0xe3 (size before relaxing)
  .rodata.stm32mp1_ddr_init.str1.1
-                0x2fff7175       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr.o
+                0x2fff7177       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr.o
  .rodata.str1.1
-                0x2fff718e        0x7 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr.o
+                0x2fff7190        0x7 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr.o
                                  0x17 (size before relaxing)
  .rodata.stm32mp1_ddr_setup.str1.1
-                0x2fff7195      0x10f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
+                0x2fff7197      0x10f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
  .rodata.stm32mp1_ddr_clk_enable.str1.1
-                0x2fff72a4       0x2f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
+                0x2fff72a6       0x2f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
  .rodata.__func__.0
-                0x2fff72d3       0x13 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
+                0x2fff72d5       0x13 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
  .rodata.str1.1
-                0x2fff72e6       0x49 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
+                0x2fff72e8       0x49 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ram.o
  .rodata.stm32mp_ddr_dt_get_info.str1.1
-                0x2fff732f       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ram.o
+                0x2fff7331       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ram.o
  .rodata.stm32mp_ddr_dt_get_param.str1.1
-                0x2fff7352       0x1f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ram.o
+                0x2fff7354       0x1f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ram.o
  .rodata.__func__.0
-                0x2fff7371       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ram.o
+                0x2fff7373       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ram.o
  .rodata.stm32_sdmmc2_send_cmd.str1.1
-                0x2fff738a       0xda /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
+                0x2fff738c       0xda /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
  .rodata.stm32_sdmmc2_read.str1.1
-                0x2fff7464       0x59 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
+                0x2fff7466       0x59 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
  .rodata.stm32_sdmmc2_prepare.str1.1
-                0x2fff74bd        0xf /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
+                0x2fff74bf        0xf /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
  .rodata.stm32_sdmmc2_mmc_init.str1.1
-                0x2fff74cc       0x5f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
+                0x2fff74ce       0x5f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
  .rodata.__func__.0
-                0x2fff752b       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
+                0x2fff752d       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
  .rodata.__func__.1
-                0x2fff7545       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
+                0x2fff7547       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
  .rodata.__func__.2
-                0x2fff7557       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
+                0x2fff7559       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_sdmmc2.o
  .rodata.fconf_load_config.str1.1
-                0x2fff756d       0x52 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf.o
+                0x2fff756f       0x52 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf.o
  .rodata.fconf_populate.str1.1
-                0x2fff75bf       0xa0 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf.o
+                0x2fff75c1       0xa0 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf.o
  .rodata.set_config_info.str1.1
-                0x2fff765f       0x3e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
+                0x2fff7661       0x3e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
  .rodata.fconf_populate_dtb_registry.str1.1
-                0x2fff769d       0xba /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
+                0x2fff769f       0xba /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
                                  0xca (size before relaxing)
  .rodata.dyn_cfg_dtb_info_getter.str1.1
-                0x2fff7757       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
+                0x2fff7759       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
  .rodata.str1.1
-                0x2fff7775       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
+                0x2fff7777       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
  .rodata.parse_optee_image.str1.1
-                0x2fff7787       0x4d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/optee_utils.o
+                0x2fff7789       0x4d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/optee_utils.o
  .rodata.parse_optee_header.str1.1
-                0x2fff77d4      0x125 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/optee_utils.o
+                0x2fff77d6      0x125 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/optee_utils.o
  .rodata.stm32mp_io_setup.str1.1
-                0x2fff78f9      0x133 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
+                0x2fff78fb      0x133 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
  .rodata.bl2_plat_handle_pre_image_load.str1.1
-                0x2fff7a2c       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
+                0x2fff7a2e       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
  .rodata.plat_fwu_get_boot_idx.str1.1
-                0x2fff7a3c       0x56 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
+                0x2fff7a3e       0x56 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
  .rodata.plat_fwu_set_images_source.str1.1
-                0x2fff7a92       0x6c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
+                0x2fff7a94       0x6c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
  .rodata.plat_fwu_set_metadata_image_source.str1.1
-                0x2fff7afe       0x3a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
+                0x2fff7b00       0x3a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_io_storage.o
  .rodata.fconf_populate_stm32mp_io_policies.str1.1
-                0x2fff7b38       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_io.o
+                0x2fff7b3a       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_io.o
                                  0x99 (size before relaxing)
  .rodata.str1.1
-                0x2fff7b6a       0x63 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_io.o
+                0x2fff7b6c       0x63 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_io.o
                                  0x6f (size before relaxing)
  .rodata.bl2_platform_setup.str1.1
-                0x2fff7bcd       0x35 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
+                0x2fff7bcf       0x35 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
  .rodata.bl2_el3_plat_arch_setup.str1.1
-                0x2fff7c02      0x3bc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
+                0x2fff7c04      0x3bc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
                                 0x3c5 (size before relaxing)
  .rodata.bl2_plat_handle_post_image_load.str1.1
-                0x2fff7fbe       0x1c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
+                0x2fff7fc0       0x1c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
                                  0x26 (size before relaxing)
  .rodata.debug_msg
-                0x2fff7fda      0x1d5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
+                0x2fff7fdc      0x1d5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_plat_setup.o
  .rodata.stm32mp_board_ddr_power_init.str1.1
-                0x2fff81af       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/plat_ddr.o
+                0x2fff81b1       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/plat_ddr.o
  .rodata.stm32_pwr_down_wfi_load.str1.1
-                0x2fff81c9       0x3a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_critic_power.o
+                0x2fff81cb       0x3a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_critic_power.o
  .rodata.fconf_populate_stm32mp1_firewall.str1.1
-                0x2fff8203       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
+                0x2fff8205       0x1e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
                                  0x68 (size before relaxing)
  .rodata.stm32mp1_security_setup.str1.1
-                0x2fff8221       0x2b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
+                0x2fff8223       0x2b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
  .rodata.str1.1
-                0x2fff824c       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
+                0x2fff824e       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
                                  0x1c (size before relaxing)
  .rodata.load_auth_image.str1.1
-                0x2fff825e       0xd8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl_common.o
+                0x2fff8260       0xd8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl_common.o
                                 0x12d (size before relaxing)
  .rodata.print_entry_point_info.str1.1
-                0x2fff8336       0x2c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl_common.o
+                0x2fff8338       0x2c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl_common.o
  .rodata.tf_log.str1.1
-                0x2fff8362       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tf_log.o
+                0x2fff8364       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tf_log.o
  .rodata.console_unregister.str1.1
-                0x2fff8372       0x20 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/multi_console.o
+                0x2fff8374       0x20 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/multi_console.o
  .rodata.str1.1
-                0x2fff8392       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/plat_log_common.o
+                0x2fff8394       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/plat_log_common.o
  .rodata.read_uuid.str1.1
-                0x2fff83c4       0x30 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/uuid.o
+                0x2fff83c6       0x30 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/uuid.o
  .rodata.stm32_get_bootinfo_cell.isra.0.str1.1
-                0x2fff83f4       0x14 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff83f6       0x14 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_get_otp_index.str1.1
-                0x2fff8408       0x20 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff840a       0x20 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_get_otp_value_from_idx.str1.1
-                0x2fff8428       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff842a       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_get_otp_value.str1.1
-                0x2fff8442       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff8444       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_display_board_info.str1.1
-                0x2fff8458       0x25 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff845a       0x25 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_get_magic_number_cell.str1.1
-                0x2fff847d        0xd /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff847f        0xd /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_get_core1_branch_address_cell.str1.1
-                0x2fff848a       0x15 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff848c       0x15 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_get_fwu_info_cell.str1.1
-                0x2fff849f        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff84a1        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.stm32_get_boot_mode_cell.str1.1
-                0x2fff84a8        0xa /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
+                0x2fff84aa        0xa /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_common.o
  .rodata.xlat_arch_regime_get_xn_desc.str1.1
-                0x2fff84b2       0x2e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_arch.o
+                0x2fff84b4       0x2e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_arch.o
  .rodata.mmap_add_alloc_va.str1.1
-                0x2fff84e0       0x29 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_context.o
+                0x2fff84e2       0x29 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_context.o
  .rodata.xlat_table_get_index.str1.1
-                0x2fff8509       0x26 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_core.o
+                0x2fff850b       0x26 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_core.o
  .rodata.mmap_add_region_ctx.str1.1
-                0x2fff852f       0x2b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_core.o
+                0x2fff8531       0x2b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_core.o
  .rodata.init_xlat_tables_ctx.str1.1
-                0x2fff855a       0x4f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_core.o
+                0x2fff855c       0x4f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/xlat_tables_core.o
  .rodata.clk_enable.str1.1
-                0x2fff85a9       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/clk.o
+                0x2fff85ab       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/clk.o
  .rodata.udelay.str1.1
-                0x2fff85bb       0x22 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/delay_timer.o
+                0x2fff85bd       0x22 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/delay_timer.o
  .rodata.generic_delay_timer_init.str1.1
-                0x2fff85dd       0x2a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/generic_delay_timer.o
+                0x2fff85df       0x2a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/generic_delay_timer.o
  .rodata.fdt_osc_read_freq.str1.1
-                0x2fff8607       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_clkfunc.o
+                0x2fff8609       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_clkfunc.o
  .rodata.fdt_get_clock_id.str1.1
-                0x2fff861f       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_clkfunc.o
+                0x2fff8621       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_clkfunc.o
                                   0x7 (size before relaxing)
  .rodata.stm32mp_ddr_set_reg.str1.1
-                0x2fff861f       0x1b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ddr.o
+                0x2fff8621       0x1b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_ddr.o
  .rodata.set_gpio.constprop.0.str1.1
-                0x2fff863a       0x1d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_gpio.o
+                0x2fff863c       0x1d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_gpio.o
  .rodata.dt_set_pinctrl_config.str1.1
-                0x2fff8657       0x8c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_gpio.o
+                0x2fff8659       0x8c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_gpio.o
                                  0x90 (size before relaxing)
  .rodata.nvmem_driver_register.str1.1
-                0x2fff86e3       0x4a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
+                0x2fff86e5       0x4a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
  .rodata.nvmem_get_cell_by_index.str1.1
-                0x2fff872d       0x3b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
+                0x2fff872f       0x3b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
                                  0x3f (size before relaxing)
  .rodata.nvmem_get_cell_by_name.str1.1
-                0x2fff8768       0x11 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
+                0x2fff876a       0x11 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
  .rodata.__func__.0
-                0x2fff8779       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
+                0x2fff877b       0x12 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/nvmem.o
  .rodata.stm32_tamp_nvram_write_bkp.str1.1
-                0x2fff878b       0x27 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
+                0x2fff878d       0x27 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
  .rodata.stm32_tamp_nvram_read_cell.str1.1
-                0x2fff87b2       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
+                0x2fff87b4       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
  .rodata.stm32_tamp_nvram_update_rights.str1.1
-                0x2fff87cb       0x86 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
+                0x2fff87cd       0x86 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
  .rodata.stm32_tamp_nvram_init.str1.1
-                0x2fff8851       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
+                0x2fff8853       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_tamp_nvram_core.o
                                  0x1c (size before relaxing)
  .rodata.regulator_get_by_name.str1.1
-                0x2fff8869       0x39 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff886b       0x39 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.regulator_get_by_supply_name.str1.1
-                0x2fff88a2       0x25 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff88a4       0x25 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.regulator_get_voltage.str1.1
-                0x2fff88c7       0x26 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff88c9       0x26 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.regulator_set_voltage.str1.1
-                0x2fff88ed       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff88ef       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.regulator_list_voltages.str1.1
-                0x2fff8910       0x98 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff8912       0x98 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.regulator_set_flag.str1.1
-                0x2fff89a8       0x3d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff89aa       0x3d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.regulator_register.str1.1
-                0x2fff89e5      0x101 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff89e7      0x101 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.__func__.0
-                0x2fff8ae6       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff8ae8       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.__func__.1
-                0x2fff8aff       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
+                0x2fff8b01       0x16 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_core.o
  .rodata.fixed_regulator_register.str1.1
-                0x2fff8b15       0x55 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_fixed.o
+                0x2fff8b17       0x55 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_fixed.o
                                  0x58 (size before relaxing)
  .rodata.__func__.0
-                0x2fff8b6a       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_fixed.o
+                0x2fff8b6c       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/regulator_fixed.o
  .rodata.fdt_get_status.str1.1
-                0x2fff8b83       0x13 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
+                0x2fff8b85       0x13 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
                                  0x1a (size before relaxing)
  .rodata.dt_fill_device_info.str1.1
-                0x2fff8b96       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
+                0x2fff8b98       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
                                  0x2e (size before relaxing)
  .rodata.dt_get_ddr_size.str1.1
-                0x2fff8bb9       0x2d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
+                0x2fff8bbb       0x2d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
                                  0x3d (size before relaxing)
  .rodata.dt_get_vdd_regulator.str1.1
-                0x2fff8be6       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
+                0x2fff8be8       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
  .rodata.dt_get_board_model.str1.1
-                0x2fff8bfe        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
+                0x2fff8c00        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
  .rodata.dt_find_otp_name.str1.1
-                0x2fff8c06       0x76 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
+                0x2fff8c08       0x76 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
  .rodata.__func__.0
-                0x2fff8c7c       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
+                0x2fff8c7e       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_dt.o
  .rodata.fconf_populate_stm32mp_fuse_provisioning.str1.1
-                0x2fff8c8c       0x7f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_fuse.o
+                0x2fff8c8e       0x7f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_fuse.o
                                  0x8b (size before relaxing)
  .rodata.str1.1
-                0x2fff8d0b        0xd /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_fuse.o
+                0x2fff8d0d        0xd /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_fuse.o
                                  0x13 (size before relaxing)
  .rodata.stm32_get_gpio_bank_base.str1.1
-                0x2fff8d18       0x24 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8d1a       0x24 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.stm32mp_get_chip_version.str1.1
-                0x2fff8d3c       0x29 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8d3e       0x29 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.stm32mp_get_chip_dev_id.str1.1
-                0x2fff8d65       0x26 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8d67       0x26 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.get_part_number.str1.1
-                0x2fff8d8b       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8d8d       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.stm32mp_get_soc_name.str1.1
-                0x2fff8d9b       0x60 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8d9d       0x60 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
                                  0x65 (size before relaxing)
  .rodata.stm32mp_print_cpuinfo.str1.1
-                0x2fff8dfb        0xa /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8dfd        0xa /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.stm32mp_print_boardinfo.str1.1
-                0x2fff8e05        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8e07        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.stm32mp_check_closed_device.str1.1
-                0x2fff8e0e        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8e10        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.stm32_iwdg_get_otp_config.str1.1
-                0x2fff8e17        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8e19        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
  .rodata.str1.1
-                0x2fff8e1f       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
+                0x2fff8e21       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_private.o
                                  0x12 (size before relaxing)
  .rodata.tzc400_set_action.str1.1
-                0x2fff8e2f       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tzc400.o
+                0x2fff8e31       0x19 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tzc400.o
  .rodata.tzc400_init.str1.1
-                0x2fff8e48       0x24 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tzc400.o
+                0x2fff8e4a       0x24 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tzc400.o
  .rodata.tzc400_enable_filters.str1.1
-                0x2fff8e6c       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tzc400.o
+                0x2fff8e6e       0x32 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/tzc400.o
  .rodata.is_otp_invalid_mode.str1.1
-                0x2fff8e9e       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
+                0x2fff8ea0       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
  .rodata.otp_bank_offset.str1.1
-                0x2fff8eb8       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
+                0x2fff8eba       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
  .rodata.bsec_write_otp.str1.1
-                0x2fff8ed0       0x2a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
+                0x2fff8ed2       0x2a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
  .rodata.bsec_program_otp.str1.1
-                0x2fff8efa       0xa8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
+                0x2fff8efc       0xa8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
  .rodata.bsec_shadow_read_otp.str1.1
-                0x2fff8fa2       0x60 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
+                0x2fff8fa4       0x60 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bsec2.o
  .rodata.ddr_set_sr_mode.str1.1
-                0x2fff9002       0x1c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr_helpers.o
+                0x2fff9004       0x1c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr_helpers.o
  .rodata.CSWTCH.37
-                0x2fff901e        0xa /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr_helpers.o
+                0x2fff9020        0xa /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_ddr_helpers.o
  .rodata.stm32_i2c_get_setup_from_fdt.str1.1
-                0x2fff9028       0x4d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_i2c.o
+                0x2fff902a       0x4d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_i2c.o
                                  0x5d (size before relaxing)
  .rodata.stm32_i2c_init.str1.1
-                0x2fff9075      0x146 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_i2c.o
+                0x2fff9077      0x146 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_i2c.o
  .rodata.stm32_iwdg_init.str1.1
-                0x2fff91bb       0x36 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_iwdg.o
+                0x2fff91bd       0x36 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_iwdg.o
  .rodata.dt_get_pmic_node.str1.1
-                0x2fff91f1        0xb /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
+                0x2fff91f3        0xb /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
  .rodata.initialize_pmic_i2c.str1.1
-                0x2fff91fc       0x55 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
+                0x2fff91fe       0x55 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
                                  0x59 (size before relaxing)
  .rodata.initialize_pmic.str1.1
-                0x2fff9251       0x50 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
+                0x2fff9253       0x50 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
                                  0x6e (size before relaxing)
  .rodata.print_pmic_info_and_debug.str1.1
-                0x2fff92a1       0x31 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
+                0x2fff92a3       0x31 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
  .rodata.__func__.0
-                0x2fff92d2        0xe /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
+                0x2fff92d4        0xe /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
  .rodata.str1.1
-                0x2fff92e0       0x3b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
+                0x2fff92e2       0x3b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_pmic.o
                                  0x55 (size before relaxing)
  .rodata.stpmic1_regulator_levels_mv.str1.1
-                0x2fff931b        0x5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
+                0x2fff931d        0x5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
  .rodata.stpmic1_regulator_voltage_get.str1.1
-                0x2fff931b        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
+                0x2fff931d        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
                                   0xe (size before relaxing)
  .rodata.stpmic1_active_discharge_mode_set.str1.1
-                0x2fff9324       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
+                0x2fff9326       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
  .rodata.str1.1
-                0x2fff9324       0x3b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
+                0x2fff9326       0x3b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stpmic1.o
  .rodata.stm32_pm_get_optee_ep.str1.1
-                0x2fff9324       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_context.o
+                0x2fff9326       0x18 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_context.o
  .rodata.stm32mp1_dbgmcu_init.str1.1
-                0x2fff933c       0x36 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_dbgmcu.o
+                0x2fff933e       0x36 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_dbgmcu.o
  .rodata.stm32mp1_dbgmcu_get_chip_version.str1.1
-                0x2fff9372       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_dbgmcu.o
+                0x2fff9374       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_dbgmcu.o
  .rodata.stm32mp_syscfg_init.str1.1
-                0x2fff9395       0x8f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_syscfg.o
+                0x2fff9397       0x8f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_syscfg.o
                                  0x97 (size before relaxing)
  .rodata.stm32mp_syscfg_enable_io_compensation_finish.str1.1
-                0x2fff9424       0x21 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_syscfg.o
+                0x2fff9426       0x21 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_syscfg.o
  .rodata.stm32mp1_clk_get_gated_id.str1.1
-                0x2fff9445       0x1b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9447       0x1b /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp_clk_disable.str1.1
-                0x2fff9460       0x3d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9462       0x3d /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp_clk_enable.str1.1
-                0x2fff949d       0x44 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff949f       0x44 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp1_osc_wait.isra.0.str1.1
-                0x2fff94e1       0x2c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff94e3       0x2c /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp1_clk_init.str1.1
-                0x2fff950d       0x45 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff950f       0x45 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp1_clk_probe.str1.1
-                0x2fff9552       0x5e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9554       0x5e /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
                                  0x62 (size before relaxing)
  .rodata.__func__.0
-                0x2fff95b0       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95b2       0x1a /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp1_axi_div
-                0x2fff95ca        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95cc        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp1_mpu_apbx_div
-                0x2fff95d2        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95d4        0x8 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp1_mcu_div
-                0x2fff95da       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95dc       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.pllncfgr2
-                0x2fff95ea        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95ec        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stm32mp1_pll
-                0x2fff95ed        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95ef        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.rtc_parents
-                0x2fff95f1        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95f3        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.per_parents
-                0x2fff95f5        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95f7        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.mpu_parents
-                0x2fff95f8        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95fa        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.usbo_parents
-                0x2fff95fc        0x2 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff95fe        0x2 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.usbphy_parents
-                0x2fff95fe        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9600        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.mcuss_parents
-                0x2fff9601        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9603        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.axiss_parents
-                0x2fff9605        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9607        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.fmc_parents
-                0x2fff9608        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff960a        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.qspi_parents
-                0x2fff960c        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff960e        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.sdmmc3_parents
-                0x2fff9610        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9612        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.sdmmc12_parents
-                0x2fff9614        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9616        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.uart234578_parents
-                0x2fff9618        0x5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff961a        0x5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.uart6_parents
-                0x2fff961d        0x5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff961f        0x5 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.rng1_parents
-                0x2fff9622        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9624        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.usart1_parents
-                0x2fff9626        0x6 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9628        0x6 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.spi6_parents
-                0x2fff962c        0x6 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff962e        0x6 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.i2c46_parents
-                0x2fff9632        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9634        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.stgen_parents
-                0x2fff9636        0x2 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9638        0x2 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.i2c35_parents
-                0x2fff9638        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff963a        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.i2c12_parents
-                0x2fff963c        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff963e        0x4 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.parent_id_clock_id
-                0x2fff9640       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9642       0x23 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.str1.1
-                0x2fff9663       0x31 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
+                0x2fff9665       0x31 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_clk.o
  .rodata.str1.1
-                0x2fff9694       0x29 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_el3_entrypoint.o
+                0x2fff9696       0x29 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_el3_entrypoint.o
  .rodata.str1.1
-                0x2fff96bd       0x1f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/cpu_helpers.o
+                0x2fff96bf       0x1f /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/cpu_helpers.o
  .rodata.assert_str
-                0x2fff96dc       0x15 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/debug.o
+                0x2fff96de       0x15 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/debug.o
  .rodata.panic_str
-                0x2fff96f1       0x14 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/debug.o
+                0x2fff96f3       0x14 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/debug.o
  .rodata.str1.1
-                0x2fff9705       0x28 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/enable_mmu.o
+                0x2fff9707       0x28 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/enable_mmu.o
  .rodata.str1.1
-                0x2fff972d       0x28 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_console.o
+                0x2fff972f       0x28 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32_console.o
  .rodata.errata_entries
-                0x2fff9755        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/cortex_a7.o
+                0x2fff9757        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/cortex_a7.o
  .rodata.rev_err_str
-                0x2fff9755       0x92 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_helper.o
+                0x2fff9757       0x92 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_helper.o
  .rodata.fdt_address_cells.str1.1
-                0x2fff97e7        0xf /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_addresses.o)
+                0x2fff97e9        0xf /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_addresses.o)
  .rodata.fdt_get_phandle.str1.1
-                0x2fff97f6        0xe /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_ro.o)
+                0x2fff97f8        0xe /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_ro.o)
                                  0x16 (size before relaxing)
  .rodata.fdt_get_alias_namelen.str1.1
-                0x2fff9804        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_ro.o)
+                0x2fff9806        0x9 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_ro.o)
  .rodata.fdt_node_check_compatible.str1.1
-                0x2fff980d        0xb /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_ro.o)
+                0x2fff980f        0xb /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a(fdt_ro.o)
  .rodata.__assert.str1.1
-                0x2fff9818        0xf /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libc.a(assert.o)
+                0x2fff981a        0xf /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libc.a(assert.o)
  .rodata.vprintf.str1.1
-                0x2fff9827       0x15 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libc.a(printf.o)
+                0x2fff9829       0x15 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libc.a(printf.o)
  .rodata.vsnprintf.str1.1
-                0x2fff983c        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libc.a(snprintf.o)
-                0x2fff9840                        . = ALIGN (0x4)
-                0x2fff983c                        __RT_SVC_DESCS_START__ = .
+                0x2fff983e        0x3 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libc.a(snprintf.o)
+                0x2fff9844                        . = ALIGN (0x4)
+ *fill*         0x2fff983e        0x2 
+                0x2fff9840                        __RT_SVC_DESCS_START__ = .
  *(rt_svc_descs)
-                0x2fff983c                        __RT_SVC_DESCS_END__ = .
+                0x2fff9840                        __RT_SVC_DESCS_END__ = .
                 0x2fff9840                        . = ALIGN (0x4)
-                0x2fff983c                        __FCONF_POPULATOR_START__ = .
+                0x2fff9840                        __FCONF_POPULATOR_START__ = .
  *(.fconf_populator)
  .fconf_populator
-                0x2fff983c        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
+                0x2fff9840        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/fconf_dyn_cfg_getter.o
  .fconf_populator
-                0x2fff9848        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_io.o
+                0x2fff984c        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_io.o
  .fconf_populator
-                0x2fff9854        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
+                0x2fff9858        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp1_fconf_firewall.o
  .fconf_populator
-                0x2fff9860        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_fuse.o
-                0x2fff986c                        __FCONF_POPULATOR_END__ = .
-                0x2fff986c                        . = ALIGN (0x4)
-                0x2fff986c                        __PMF_SVC_DESCS_START__ = .
+                0x2fff9864        0xc /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/stm32mp_fconf_fuse.o
+                0x2fff9870                        __FCONF_POPULATOR_END__ = .
+                0x2fff9870                        . = ALIGN (0x4)
+                0x2fff9870                        __PMF_SVC_DESCS_START__ = .
  *(pmf_svc_descs)
-                0x2fff986c                        __PMF_SVC_DESCS_END__ = .
-                0x2fff986c                        . = ALIGN (0x4)
-                0x2fff986c                        __PARSER_LIB_DESCS_START__ = .
+                0x2fff9870                        __PMF_SVC_DESCS_END__ = .
+                0x2fff9870                        . = ALIGN (0x4)
+                0x2fff9870                        __PARSER_LIB_DESCS_START__ = .
  *(.img_parser_lib_descs)
-                0x2fff986c                        __PARSER_LIB_DESCS_END__ = .
-                0x2fff986c                        . = ALIGN (0x4)
-                0x2fff986c                        __CPU_OPS_START__ = .
+                0x2fff9870                        __PARSER_LIB_DESCS_END__ = .
+                0x2fff9870                        . = ALIGN (0x4)
+                0x2fff9870                        __CPU_OPS_START__ = .
  *(cpu_ops)
- cpu_ops        0x2fff986c       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/cortex_a7.o
-                0x2fff987c                        __CPU_OPS_END__ = .
-                0x2fff987c                        . = ALIGN (0x4)
-                0x2fff987c                        __GOT_START__ = .
+ cpu_ops        0x2fff9870       0x10 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/cortex_a7.o
+                0x2fff9880                        __CPU_OPS_END__ = .
+                0x2fff9880                        . = ALIGN (0x4)
+                0x2fff9880                        __GOT_START__ = .
  *(.got)
-                0x2fff987c                        __GOT_END__ = .
+                0x2fff9880                        __GOT_END__ = .
  *(.vectors)
- *fill*         0x2fff987c        0x4 
  .vectors       0x2fff9880       0x20 /home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-emmc-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2_el3_exceptions.o
                 0x2fff9880                bl2_vector_table
  .vectors.__stub

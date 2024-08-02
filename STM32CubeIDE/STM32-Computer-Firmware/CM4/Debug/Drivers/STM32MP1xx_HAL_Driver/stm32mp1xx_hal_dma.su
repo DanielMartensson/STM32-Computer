@@ -1,0 +1,17 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:174:19:HAL_DMA_Init	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:368:19:HAL_DMA_DeInit	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:487:19:HAL_DMA_Start	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:543:19:HAL_DMA_Start_IT	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:626:19:HAL_DMA_Abort	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:712:19:HAL_DMA_Abort_IT	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:748:19:HAL_DMA_PollForTransfer	48	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:916:6:HAL_DMA_IRQHandler	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1150:19:HAL_DMA_RegisterCallback	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1217:19:HAL_DMA_UnRegisterCallback	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1308:22:HAL_DMA_GetState	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1319:10:HAL_DMA_GetError	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1345:13:DMA_SetConfig	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1393:17:DMA_CalcBaseAndBitshift	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1421:26:DMA_CheckFifoParam	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1515:13:DMA_CalcDMAMUXChannelBaseAndMask	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_dma.c:1540:13:DMA_CalcDMAMUXRequestGenBaseAndMask	24	static

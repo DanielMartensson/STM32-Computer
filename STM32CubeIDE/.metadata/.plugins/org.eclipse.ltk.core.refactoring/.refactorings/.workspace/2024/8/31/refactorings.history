@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;STM32-Computer-Firmware_CA7/FIP_artifacts/arm-trusted-firmware/tf-a-stm32mp151a-stm32-computer-firmware-mx-optee-sdcard.stm32&apos;" deleteContents="false" description="Delete resource &apos;STM32-Computer-Firmware_CA7/FIP_artifacts/arm-trusted-firmware/tf-a-stm32mp151a-stm32-computer-firmware-mx-optee-sdcard.stm32&apos;" element1="/STM32-Computer-Firmware_CA7/FIP_artifacts/arm-trusted-firmware/tf-a-stm32mp151a-stm32-computer-firmware-mx-optee-sdcard.stm32" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1722594715904"/>
+</session>

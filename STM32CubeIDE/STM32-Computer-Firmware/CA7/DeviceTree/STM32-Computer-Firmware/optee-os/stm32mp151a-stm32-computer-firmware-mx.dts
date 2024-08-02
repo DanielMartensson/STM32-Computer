@@ -172,7 +172,7 @@
 		CLK_CKPER_DISABLED
 		CLK_ETH_PLL4P
 		CLK_SDMMC12_HCLK6
-		CLK_STGEN_HSI
+		CLK_STGEN_HSE
 		CLK_SPI2S23_PLL4P
 		CLK_I2C46_PCLK5
 		CLK_USBO_USBPHY
@@ -200,9 +200,9 @@
 		DIV(DIV_MCO2, 0)
 	>;
 	st,pll_vco {
-		pll2_vco_800Mhz: pll2-vco-800Mhz {
-			src = < CLK_PLL12_HSI >;
-			divmn = < 3 24 >;
+		pll2_vco_816Mhz: pll2-vco-816Mhz {
+			src = < CLK_PLL12_HSE >;
+			divmn = < 1 33 >;
 		};
 		pll3_vco_600Mhz: pll3-vco-600Mhz {
 			src = < CLK_PLL3_HSE >;
@@ -223,7 +223,7 @@
 		st,pll = < &pll2_cfg1 >;
 
 		pll2_cfg1: pll2_cfg1 {
-			st,pll_vco = < &pll2_vco_800Mhz >;
+			st,pll_vco = < &pll2_vco_816Mhz >;
 			st,pll_div_pqr = < 1 1 0 >;
 		};
 		/* USER CODE BEGIN pll2 */

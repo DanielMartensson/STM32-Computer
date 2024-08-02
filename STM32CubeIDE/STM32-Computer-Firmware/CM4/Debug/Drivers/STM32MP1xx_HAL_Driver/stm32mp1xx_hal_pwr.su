@@ -1,0 +1,17 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:99:6:HAL_PWR_EnableBkUpAccess	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:112:6:HAL_PWR_DisableBkUpAccess	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:260:6:HAL_PWR_ConfigPVD	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:295:6:HAL_PWR_EnablePVD	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:305:6:HAL_PWR_DisablePVD	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:336:6:HAL_PWR_EnableWakeUpPin	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:398:6:HAL_PWR_DisableWakeUpPin	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:422:6:HAL_PWR_EnableWakeUpPinIT	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:466:6:HAL_PWR_DisableWakeUpPinIT	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:517:6:HAL_PWR_EnterSLEEPMode	16	static,ignoring_inline_asm
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:573:6:HAL_PWR_EnterSTOPMode	16	static,ignoring_inline_asm
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:665:6:HAL_PWR_EnterSTANDBYMode	4	static,ignoring_inline_asm
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:719:6:HAL_PWR_EnableSleepOnExit	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:734:6:HAL_PWR_DisableSleepOnExit	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:748:6:HAL_PWR_EnableSEVOnPend	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:762:6:HAL_PWR_DisableSEVOnPend	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_pwr.c:774:13:HAL_PWR_PVDCallback	4	static

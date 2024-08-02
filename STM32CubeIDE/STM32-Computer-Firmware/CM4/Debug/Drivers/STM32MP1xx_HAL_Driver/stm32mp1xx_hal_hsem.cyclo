@@ -1,0 +1,11 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:151:20:HAL_HSEM_Take	2
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:188:19:HAL_HSEM_FastTake	2
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:217:10:HAL_HSEM_IsSemTaken	2
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:229:7:HAL_HSEM_Release	1
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:246:6:HAL_HSEM_ReleaseAll	1
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:278:7:HAL_HSEM_SetClearKey	1
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:290:10:HAL_HSEM_GetClearKey	1
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:317:6:HAL_HSEM_ActivateNotification	1
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:341:6:HAL_HSEM_DeactivateNotification	1
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:364:6:HAL_HSEM_IRQHandler	1
+/home/lubuntu/Dokument/GitHub/STM32-Computer/STM32CubeIDE/STM32-Computer-Firmware/Drivers/STM32MP1xx_HAL_Driver/Src/stm32mp1xx_hal_hsem.c:410:13:HAL_HSEM_FreeCallback	1
