@@ -1,0 +1,4 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/crypto/mscode_parser.c:26:5:mscode_parse	4	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/crypto/mscode_parser.c:42:5:mscode_note_content_type	88	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/crypto/mscode_parser.c:74:5:mscode_note_digest_algo	88	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/crypto/mscode_parser.c:122:5:mscode_note_digest	16	static

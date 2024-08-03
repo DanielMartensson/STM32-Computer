@@ -1,0 +1,12 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:220:21:efi_set_secure_state	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:188:1:efi_get_variable_runtime	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:203:1:efi_get_next_variable_name_runtime	0	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:59:21:efi_get_variable	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:93:21:efi_set_variable	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:124:21:efi_get_next_variable_name	16	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:156:21:efi_query_variable_info	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:315:14:efi_init_secure_state	32	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:372:6:efi_secure_boot_enabled	0	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:377:24:efi_auth_var_get_type	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:388:19:efi_auth_var_get_guid	24	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/lib/efi_loader/efi_var_common.c:406:7:efi_get_var	32	static

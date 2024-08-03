@@ -1,0 +1,3 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/video/backlight_gpio.c:18:12:gpio_backlight_enable	8	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/video/backlight_gpio.c:45:12:gpio_backlight_probe	8	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/video/backlight_gpio.c:27:12:gpio_backlight_of_to_plat	24	static

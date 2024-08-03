@@ -1,0 +1,3 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/board/st/common/stm32mp_dfu_virt.c:62:5:dfu_read_medium_virt	40	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/board/st/common/stm32mp_dfu_virt.c:80:5:dfu_write_medium_virt	0	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/board/st/common/stm32mp_dfu_virt.c:90:5:dfu_get_medium_size_virt	0	static

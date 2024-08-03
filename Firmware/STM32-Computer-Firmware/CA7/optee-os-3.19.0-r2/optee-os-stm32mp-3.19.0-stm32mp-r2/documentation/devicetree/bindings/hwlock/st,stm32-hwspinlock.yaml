@@ -1,0 +1,108 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/hwlock/st,stm32-hwspinlock.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STMicroelectronics STM32 Hardware Spinlock bindings
+
+maintainers:
+  - Fabien Dessenne <fabien.dessenne@foss.st.com>
+
+properties:
+  "#hwlock-cells":
+    const: 2
+
+  compatible:
+    enum:
+      - st,stm32-hwspinlock
+      - st,stm32mp25-hsem
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    maxItems: 1
+
+  clock-names:
+    items:
+      - const: hsem
+
+  st,protreg:
+    minItems: 1
+    maxItems: 16
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      Describes the firewall hardware configuration to apply for a given
+      resource.
+
+      RIFPROT(hsem_res_id, sem_list, lock, sec, priv, scid, sem_en, cfen)
+
+      When a field isn't effective, it should be filled with RIF_UNUSED.
+
+        "hsem_res_id" The HSEM resource number.
+
+        "sem_list" This peripheral does not support semaphores.
+                   This field must be set to RIF_UNUSED.
+
+        "lock" This peripheral does not support configuration locking.
+               This field must be set to RIF_UNUSED.
+
+        "sec" Configures secure-only access to the resource.
+          RIF_SEC, only secure access is granted to the resource
+          RIF_NSEC, secure/non-secure access is granted to the
+                    resource
+
+        "priv" Configures the privilege level needed to access this
+               resource.
+          RIF_PRIV, only privileged access is granted to the resource
+          RIF_NPRIV, privileged/Unprivileged access is granted to the
+                     resource
+
+        "scid" Configures the static CID that is allowed to access the
+               resource. Note that the static CID configuration is
+               ineffective if the semaphore mode is enabled. Mandates CID
+               filtering enabled to be effective.
+          RIF_CID1 allows CID 1 to access the resource
+          RIF_CID2 allows CID 2 to access the resource ...
+
+        "sem_en" This peripheral does not support semaphores.
+                 This field must be set to RIF_UNUSED.
+
+        "cfen" Enable/disable the CID filtering for this resource.
+          RIF_CFEN, enables the CID filtering
+          RIF_CFDIS, disables the CID filtering
+
+allOf:
+  - if:
+      not:
+        properties:
+          compatible:
+            contains:
+              const: st,stm32mp25-hsem
+
+    then:
+      properties:
+        st,protreg: false
+
+required:
+  - "#hwlock-cells"
+  - compatible
+  - reg
+  - clocks
+  - clock-names
+
+additionalProperties: false
+
+examples:
+  - |
+    #include <dt-bindings/clock/stm32mp1-clks.h>
+    hwspinlock@4c000000 {
+        compatible = "st,stm32-hwspinlock";
+        #hwlock-cells = <2>;
+        reg = <0x4c000000 0x400>;
+        clocks = <&rcc HSEM>;
+        clock-names = "hsem";
+    };
+
+...

@@ -1,0 +1,85 @@
+cmd_scripts/basic/fixdep := cc -Wp,-MD,scripts/basic/.fixdep.d -Iscripts/basic -Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu11   -o scripts/basic/fixdep /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/scripts/basic/fixdep.c   
+
+source_scripts/basic/fixdep := /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/scripts/basic/fixdep.c
+
+deps_scripts/basic/fixdep := \
+    $(wildcard include/config/his/driver.h) \
+    $(wildcard include/config/my/option.h) \
+    $(wildcard include/config/foo.h) \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/stdc-predef.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/sys/types.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/features.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/features-time64.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/wordsize.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/timesize.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/sys/cdefs.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/long-double.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/gnu/stubs.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/gnu/stubs-64.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/typesizes.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/time64.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/clock_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/clockid_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/time_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/timer_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/gcc/x86_64-ostl_sdk-linux/12.3.0/include/stddef.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/stdint-intn.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/endian.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/endian.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/endianness.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/byteswap.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/uintn-identity.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/sys/select.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/select.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/sigset_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/__sigset_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/struct_timeval.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/struct_timespec.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/pthreadtypes.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/thread-shared-types.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/pthreadtypes-arch.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/atomic_wide_counter.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/struct_mutex.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/struct_rwlock.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/sys/stat.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/stat.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/struct_stat.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/unistd.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/posix_opt.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/environments.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/confname.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/getopt_posix.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/getopt_core.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/unistd_ext.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/fcntl.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/fcntl.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/fcntl-linux.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/string.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/libc-header-start.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/locale_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/__locale_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/strings.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/gcc/x86_64-ostl_sdk-linux/12.3.0/include/stdarg.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/stdlib.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/waitflags.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/waitstatus.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/floatn.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/floatn-common.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/alloca.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/stdlib-bsearch.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/stdlib-float.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/stdio.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/__fpos_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/__mbstate_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/__fpos64_t.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/__FILE.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/FILE.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/types/struct_FILE.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/stdio_lim.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/bits/stdio.h \
+  /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/include/ctype.h \
+
+scripts/basic/fixdep: $(deps_scripts/basic/fixdep)
+
+$(deps_scripts/basic/fixdep):

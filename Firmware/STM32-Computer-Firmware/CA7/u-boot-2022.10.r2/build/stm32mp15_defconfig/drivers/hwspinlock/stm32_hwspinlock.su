@@ -1,0 +1,3 @@
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/hwspinlock/stm32_hwspinlock.c:46:12:stm32mp1_unlock	8	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/hwspinlock/stm32_hwspinlock.c:24:12:stm32mp1_lock	8	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/hwspinlock/stm32_hwspinlock.c:58:12:stm32mp1_hwspinlock_probe	48	static

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.270382017">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.270382017" moduleId="org.eclipse.cdt.core.settings" name="Default">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.st.stm32cube.ide.mcu.build.STMGCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="STM32-Computer-Firmware_CA7_u-boot-2022.10.r2" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" errorParsers="com.st.stm32cube.ide.mcu.build.STMGCCErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.270382017" name="Default" parent="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug">
+					<folderInfo id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.270382017." name="/" resourcePath="">
+						<toolChain id="com.st.stm32cube.ide.mpu.gnu.managedbuild.toolchain.exe.debug.216403785" name="OpenSTLinux SDK" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.toolchain.exe.debug">
+							<option id="com.st.stm32cube.ide.mpu.option.sdkversion.1515179944" superClass="com.st.stm32cube.ide.mpu.option.sdkversion" value="openstlinux-6.1-yocto-mickledore-mpu-v24.06.26" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.targetplatform.707935703" isAbstract="false" osList="all" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.targetplatform"/>
+							<builder arguments="-f ../Makefile.sdk.ide" buildPath="${workspace_loc:/STM32-Computer-Firmware_CA7_u-boot-2022.10.r2}/u-boot-stm32mp-v2022.10-stm32mp-r2" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.builder.1751925122" managedBuildOn="false" name="Gnu Make Builder.Debug" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.builder"/>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.1360338361" name="MPU GCC Assembler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler">
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel.1533481563" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel.value.g3" valueType="enumerated"/>
+								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.input.1254007266" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.input"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.1520144415" name="MPU GCC Compiler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler">
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel.698826554" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel.value.g3" valueType="enumerated"/>
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level.848693996" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level.value.og" valueType="enumerated"/>
+								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.2126827910" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.92976221" name="MPU G++ Compiler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler">
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.83757379" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.value.g3" valueType="enumerated"/>
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level.943402493" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level.value.og" valueType="enumerated"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.459405518" name="MPU GCC Linker" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker">
+								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.input.1869551548" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.linker.391548925" name="MPU G++ Linker" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.linker"/>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.archiver.441000182" name="MPU GCC Archiver" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="STM32-Computer-Firmware_CA7_u-boot-2022.10.r2.com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe.466215706" name="Executable" projectType="com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.270382017;com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.270382017.;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.1520144415;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.2126827910">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="all" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
+				<buildTarget>all</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="fip" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
+				<buildTarget>fip</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="clean" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
+				<buildTarget>clean</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="help" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
+				<buildTarget>help</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="all  (stm32mp151a-stm32-computer-firmware-mx) - mp15" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
+				<buildTarget>DEVICETREE=stm32mp151a-stm32-computer-firmware-mx  FIP_CONFIG="optee-sdcard" UBOOT_CONFIG=default UBOOT_DEFCONFIG=stm32mp15_defconfig UBOOT_BINARY=u-boot.dtb  all</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="all  (stm32mp151a-stm32-computer-firmware-mx) - mp13" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
+				<buildTarget>DEVICETREE=stm32mp151a-stm32-computer-firmware-mx    FIP_CONFIG="optee-sdcard" UBOOT_CONFIG=trusted UBOOT_DEFCONFIG=stm32mp13_defconfig UBOOT_BINARY=u-boot.dtb  all</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7"/>
+			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7_u-boot-2022.10.r2"/>
+		</configuration>
+	</storageModule>
+</cproject>

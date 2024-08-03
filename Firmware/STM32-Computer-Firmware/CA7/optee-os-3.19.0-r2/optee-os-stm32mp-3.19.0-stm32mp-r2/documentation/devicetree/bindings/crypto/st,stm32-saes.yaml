@@ -1,0 +1,46 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/crypto/st,stm32-saes.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STMicroelectronics STM32 Secure AES bindings
+
+maintainers:
+  - Nicolas Toromanoff <nicolas.toromanoff@foss.st.com>
+
+properties:
+  compatible:
+    enum:
+      - st,stm32mp13-saes
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    maxItems: 1
+
+  interrupts:
+    maxItems: 1
+
+  resets:
+    maxItems: 1
+
+required:
+  - compatible
+  - reg
+  - clocks
+
+additionalProperties: false
+
+examples:
+  - |
+    #include <dt-bindings/clock/stm32mp1-clks.h>
+    #include <dt-bindings/reset/stm32mp1-resets.h>
+    saes: saes@54005000 {
+            compatible = "st,stm32mp13-saes";
+            reg = <0x54005000 0x400>;
+            clocks = <&rcc SAES_K>;
+            resets = <&rcc SAES_R>;
+    };
+...

@@ -1,0 +1,503 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/clock/st,stm32mp1-rcc.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Reset Clock Controller Binding
+
+maintainers:
+  - Gabriel Fernandez <gabriel.fernandez@foss.st.com>
+
+description: |
+  The RCC IP is both a reset and a clock controller.
+  RCC makes also power management (resume/supend and wakeup interrupt).
+  Please also refer to reset.txt for common reset controller binding usage.
+
+  This binding uses common clock bindings
+  Documentation/devicetree/bindings/clock/clock-bindings.txt
+
+  Specifying clocks
+  =================
+
+  All available clocks are defined as preprocessor macros in
+  dt-bindings/clock/stm32mp*-clks.h header and can be used in device
+  tree sources.
+
+  Specifying softreset control of devices
+  =======================================
+
+  Device nodes should specify the reset channel required in their "resets"
+  property, containing a phandle to the reset device node and an index specifying
+  which channel to use.
+  The index is the bit number within the RCC registers bank, starting from RCC
+  base address.
+  It is calculated as: index = register_offset / 4 * 32 + bit_offset.
+  Where bit_offset is the bit offset within the register.
+
+  For example on STM32MP1, for LTDC reset:
+     ltdc = APB4_RSTSETR_offset / 4 * 32 + LTDC_bit_offset
+          = 0x180 / 4 * 32 + 0 = 3072
+
+  The list of valid indices for STM32MP1 is available in:
+  include/dt-bindings/reset-controller/stm32mp1-resets.h
+  include/dt-bindings/reset-controller/stm32mp13-resets.h
+
+  This file implements defines like:
+  #define LTDC_R	3072
+
+properties:
+  compatible:
+    items:
+      - enum:
+          - st,stm32mp1-rcc-secure
+          - st,stm32mp1-rcc
+          - st,stm32mp13-rcc
+      - const: syscon
+
+  "#address-cells":
+    const: 1
+
+  "#size-cells":
+    const: 0
+
+  "#clock-cells":
+    const: 1
+
+  "#reset-cells":
+    const: 1
+
+  reg:
+    maxItems: 1
+
+  interrupts:
+    description: contains the general interrupt line (from CSTOP).
+    maxItems: 1
+
+  st,clkdiv:
+    description: |
+      - The property is a list of dividers defined by macros DIV(DIV_<DIV-CLOCK>, value).
+      - There are 12 dividers values expected:
+        MPU AXI MLAHB APB1 APB2 APB3 APB4 APB5 APB6 RTC MCO1 MCO2
+      - Each divider value uses the DIV coding defined in RCC associated register
+        RCC_xxxDIVR. In most cases, it is:
+          0x0: not divided
+          0x1: division by 2
+          0x2: division by 4
+          0x3: division by 8
+          ...
+      - For RTC, MCO1, MCO2 and DIV_MPU the coding is different so refer to the
+        ref man.
+      - Property can be used to configure the clock main dividers value:
+          st,clkdiv = <
+            DIV(DIV_MPU, 1)
+            DIV(DIV_AXI, 0)
+            DIV(DIV_MLAHB, 0)
+            DIV(DIV_APB1, 1)
+            DIV(DIV_APB2, 1)
+            DIV(DIV_APB3, 1)
+            DIV(DIV_APB4, 1)
+            DIV(DIV_APB5, 2)
+            DIV(DIV_APB6, 1)
+            DIV(DIV_RTC, 23)
+            DIV(DIV_MCO1, 0)
+            DIV(DIV_MCO2, 0)
+          >;
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+
+  st,clksrc:
+    description: |
+        - used to configure the peripherals kernel clock selection.
+        The property is a list of peripheral kernel clock source identifiers defined
+        by macros CLK_<KERNEL-CLOCK>_<PARENT-CLOCK>.
+        - st,clksrc may not list all the kernel clocks and has no ordering requirements.
+        - Property can be used to configure the clock distribution tree:
+            st,clksrc = <
+                    CLK_MPU_PLL1P
+                    CLK_AXI_PLL2P
+                    CLK_MLAHBS_PLL3
+                    CLK_RTC_LSE
+                    CLK_MCO1_DISABLED
+                    CLK_MCO2_DISABLED
+                    CLK_ETH1_PLL4P
+                    CLK_ETH2_PLL4P
+                    CLK_SDMMC1_PLL4P
+                    CLK_SDMMC2_PLL4P
+                    CLK_STGEN_HSE
+                    CLK_USBPHY_HSE
+                    CLK_I2C4_HSI
+            >;
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+
+  st,rcc:
+    type: object
+
+    properties:
+      compatible:
+        const: st,rcc
+
+      clocks:
+        description: >
+          List of phandles for clocks activated by RCC himself.
+          This properties allows to set always on clocks for clocks, used by
+          RCC subsystem or required by the board.
+        minItems: 1
+
+      pinctrl-0:
+        description: >
+          Describes the default pin control associated to the RCC subsystem.
+          Contains the pinmux and the bias config.
+          This properties can be used, for example, to configure an MCO clock
+          output through an output pin.
+        minItems: 1
+
+       additionalProperties: false
+
+patternProperties:
+  '^st,pll@[0-9]*$':
+    description:
+      Each PLL children node for PLL1 to PLL4 (see ref manual for details)
+      are listed with associated reg 0 to 3.
+      PLL2, PLL3 or PLL4 are off when their associated nodes are absent or
+      deactivated.
+    type: object
+    properties:
+      compatible:
+        const: st,stm32mp1-pll
+      reg:
+        description: index of the pll instance.
+        minItems: 1
+      st,pll:
+        description: |
+          Phandle of the default pll configuration.
+          A pll could have several configuration (5 max) and should be described in a subnode
+          just below.
+        $ref: "/schemas/types.yaml#/definitions/phandle-array"
+    patternProperties:
+      '^pll[0-9]_cfg[0-9]*$':
+        type: object
+        properties:
+          st,pll_vco:
+            description:
+              Phandle of pll vco configuration.
+              See description of 'st,pll_vco' node.
+            $ref: "/schemas/types.yaml#/definitions/phandle-array"
+            minItems: 1
+
+          st,pll_div_pqr:
+            $ref: "/schemas/types.yaml#/definitions/uint32-array"
+            description: |
+              The parameters for PLL configuration in the following order:
+              <DIVP DIVQ DIVR> Output.
+              DIVx values are defined as in RCC spec:
+                0x0: bypass (division by 1)
+                0x1: division by 2
+                0x2: division by 3
+                0x3: division by 4
+                ...
+        required:
+          - st,pll_vco
+        additionalProperties: false
+    required:
+      - compatible
+    additionalProperties: false
+
+  '^st,pll_vco':
+    description: |
+      This node will contain all vco configuration of all PLLs in subnodes.
+      We will found theses parameters in each subnodes nammed as following,
+    type: object
+    patternProperties:
+      '^pll[0-9]-vco-':
+        type: object
+        properties:
+          src:
+            description:
+              Clock source configuration values are defined by macros CLK_<NAME>_<SOURCE>.
+            minItems: 1
+          divmn:
+            description:
+              The parameters for PLL divider (DIVM) and multiplication factor (DIVN)
+              configuration.
+            minItems: 1
+          frac:
+            description:
+              Fractional part of the multiplication factor
+              (optional, PLL is in integer mode when absent).
+            minItems: 1
+          csg:
+            description: |
+              Clock Spreading Generator (optional) with parameters in the
+              following order: MOD_PER INC_STEP SSCG_MODE.
+              MOD_PER: Modulation Period Adjustment
+              INC_STEP: Modulation Depth Adjustment
+              SSCG_MODE: Spread spectrum clock generator mode
+              - SSCG_MODE_CENTER_SPREAD = 0
+              - SSCG_MODE_DOWN_SPREAD = 1
+            minItems: 1
+        additionalProperties: false
+    additionalProperties: false
+
+if:
+  compatible:
+    items:
+      - enum:
+        st,stm32mp13-rcc
+then:
+  '^st,clk_opp':
+    description: |
+      This node will contain all operating point configurations. The OPP
+      configuration will be applied at the run-time and will override the clock tree
+      configuration.
+      Each node will contain a list of operating point configurations (cfg_1, cfg_2...)
+    type: object
+    patternProperties:
+      '^st,ck_[a-z]*$':
+        type: object
+        description: |
+          three kind of operating points: st,ck_mpu, st,ck_axi, st,ck_mlahbs.
+        patternProperties:
+          'cfg_[0-9]*$':
+            type: object
+            description: list of operating point configuration.
+            properties:
+              hz:
+                description: Operating point frequency in hertz
+                minItems: 1
+              st,clksrc:
+                description: The clock source (same syntax of 'st,clksrc' property below)
+                $ref: "/schemas/types.yaml#/definitions/uint32-array"
+                minItems: 1
+              st,clkdiv:
+                description: The clock source (same syntax of 'st,clkdiv' property below)
+                $ref: "/schemas/types.yaml#/definitions/uint32-array"
+                minItems: 1
+              st,pll:
+                description: Phandle of the pll configuration (See description of 'pllx_cfgx' node)
+                $ref: "/schemas/types.yaml#/definitions/phandle-array"
+                minItems: 1
+            required:
+              - hz
+              - st,clksrc
+            additionalProperties: false
+    additionalProperties: false
+
+required:
+  - "#address-cells"
+  - "#size-cells"
+  - "#clock-cells"
+  - "#reset-cells"
+  - compatible
+  - reg
+  - st,clkdiv
+  - st,clksrc
+  - interrupts
+
+additionalProperties: false
+
+examples:
+  - |
+    //SOC level
+    rcc@50000000 {
+            compatible = "st,stm32mp13-rcc", "syscon";
+            reg = <0x50000000 0x1000>;
+            #address-cells = <1>;
+            #size-cells = <0>;
+            #clock-cells = <1>;
+            #reset-cells = <1>;
+            interrupts = <GIC_SPI 5 IRQ_TYPE_LEVEL_HIGH>;
+            secure-interrupts = <GIC_SPI 122 IRQ_TYPE_LEVEL_HIGH>;
+            secure-interrupt-names = "wakeup";
+    };
+
+    //board level
+    &rcc {
+            st,clksrc = <
+                    CLK_MPU_PLL1P
+                    CLK_AXI_PLL2P
+                    CLK_MLAHBS_PLL3
+                    CLK_RTC_LSE
+                    CLK_MCO1_DISABLED
+                    CLK_MCO2_DISABLED
+                    CLK_CKPER_HSE
+                    CLK_ETH1_PLL4P
+                    CLK_ETH2_PLL4P
+                    CLK_SDMMC1_PLL4P
+                    CLK_SDMMC2_PLL4P
+                    CLK_STGEN_HSE
+                    CLK_USBPHY_HSE
+                    CLK_I2C4_HSI
+                    CLK_USBO_USBPHY
+                    CLK_ADC2_CKPER
+                    CLK_I2C12_HSI
+                    CLK_UART2_HSI
+                    CLK_UART4_HSI
+                    CLK_SAES_AXI
+                    CLK_DCMIPP_PLL2Q
+                    CLK_LPTIM3_PCLK3
+            >;
+
+            st,clkdiv = <
+                    DIV(DIV_MPU, 1)
+                    DIV(DIV_AXI, 0)
+                    DIV(DIV_MLAHB, 0)
+                    DIV(DIV_APB1, 1)
+                    DIV(DIV_APB2, 1)
+                    DIV(DIV_APB3, 1)
+                    DIV(DIV_APB4, 1)
+                    DIV(DIV_APB5, 2)
+                    DIV(DIV_APB6, 1)
+                    DIV(DIV_RTC, 0)
+                    DIV(DIV_MCO1, 0)
+                    DIV(DIV_MCO2, 0)
+            >;
+
+            st,pll_vco {
+                    pll1_vco_1800Mhz: pll1-vco-1800mhz {
+                            src = < CLK_PLL12_HSE >;
+                            divmn = < 1 74 >;
+                    };
+
+                    pll1_vco_1300Mhz: pll1-vco-1300Mhz {
+                            src = < CLK_PLL12_HSE >;
+                            divmn = < 2 80 >;
+                            frac = < 0x800 >;
+                    };
+
+                    pll2_vco_1066Mhz: pll2-vco-1066Mhz {
+                            src = < CLK_PLL12_HSE >;
+                            divmn = < 2 65 >;
+                            frac = < 0x1400 >;
+                    };
+
+                    pll3_vco_417_8Mhz: pll3-vco-417_8Mhz {
+                             src = < CLK_PLL3_HSE >;
+                             divmn = < 1 33 >;
+                             frac = < 0x1a04 >;
+                    };
+
+                     pll4_vco_600Mhz: pll4-vco-600Mhz {
+                             src = < CLK_PLL4_HSE >;
+                             divmn = < 1 49 >;
+                    };
+            };
+
+            pll1:st,pll@0 {
+                    compatible = "st,stm32mp1-pll";
+                    reg = <0>;
+                    st,pll = < &pll1_cfg1 >;
+
+                    pll1_cfg1: pll1_cfg1 {
+                            st,pll_vco = < &pll1_vco_1300Mhz >;
+                            st,pll_div_pqr = < 0 1 1 >;
+                    };
+
+                    pll1_cfg2: pll1_cfg2 {
+                            st,pll_vco = < &pll1_vco_1800Mhz >;
+                            st,pll_div_pqr = < 0 1 1 >;
+                     };
+            };
+
+            pll2:st,pll@1 {
+                    compatible = "st,stm32mp1-pll";
+                    reg = <1>;
+                    st,pll = < &pll2_cfg1 >;
+
+                  pll2_cfg1: pll2_cfg1 {
+                            st,pll_vco = < &pll2_vco_1066Mhz >;
+                            st,pll_div_pqr = < 1 0 1 >;
+                  };
+            };
+
+            pll3:st,pll@2 {
+                    compatible = "st,stm32mp1-pll";
+                    reg = <2>;
+                    st,pll = < &pll3_cfg1 >;
+
+                  pll3_cfg1: pll3_cfg1 {
+                            st,pll_vco = < &pll3_vco_417_8Mhz >;
+                            st,pll_div_pqr = < 1 16 1 >;
+                  };
+            };
+
+            pll4:st,pll@3 {
+                    compatible = "st,stm32mp1-pll";
+                    reg = <3>;
+                    st,pll = < &pll4_cfg1 >;
+
+                    pll4_cfg1: pll4_cfg1 {
+                            st,pll_vco = < &pll4_vco_600Mhz >;
+                            st,pll_div_pqr = < 11 59 5 >;
+                    };
+            };
+
+            st,clk_opp {
+                    st,ck_mpu {
+                            cfg_1 {
+                                    hz = < 900000000 >;
+                                    st,clksrc = < CLK_MPU_PLL1P >;
+                                    st,pll = < &pll1_cfg1 >;
+                            };
+
+                            cfg_2 {
+                                     hz = < 650000000 >;
+                                     st,clksrc = < CLK_MPU_PLL1P >;
+                                     st,pll = < &pll1_cfg2 >;
+                            };
+
+                            cfg_3 {
+                                    hz = < 450000000 >;
+                                    st,clksrc = < CLK_MPU_PLL1P_DIV >;
+                                    st,clkdiv = < DIV(DIV_MPU, 1) >;
+                                    st,pll = < &pll1_cfg1 >;
+                            };
+
+                            cfg_4 {
+                                    hz = <64000000>;
+                                    st,clksrc = < CLK_MPU_HSI >;
+                            };
+
+                            cfg_5 {
+                                    hz = <24000000>;
+                                    st,clksrc = < CLK_MPU_HSE >;
+                            };
+                    };
+
+                    st,ck_axi {
+                            cfg_1 {
+                                    hz = <266500000>;
+                                    st,clksrc  = < CLK_AXI_PLL2P >;
+                                    st,clkdiv = < DIV(DIV_AXI, 0) >;
+                                    st,pll = < &pll2_cfg1 >;
+                             };
+
+                             cfg_2 {
+                                     hz = <64000000>;
+                                    st,clksrc  = < CLK_AXI_HSI>;
+                                     st,clkdiv = < DIV(DIV_AXI, 0) >;
+                             };
+                    };
+
+                    st,ck_mlahbs {
+                            cfg_1 {
+                                    hz = <208877930>;
+                                    st,clksrc  = < CLK_MLAHBS_PLL3 >;
+                                    st,clkdiv = < DIV(DIV_MLAHB, 0) >;
+                                    st,pll = < &pll3_cfg1 >;
+                            };
+
+                            cfg_2 {
+                                    hz = <12000000>;
+                                    st,clksrc  = < CLK_MLAHBS_HSE>;
+                                    st,clkdiv = < DIV(DIV_MLAHB, 1) >;
+                            };
+                    };
+            };
+
+            st,rcc {
+                compatible = "st,rcc";
+                pinctrl-0 = <&rcc_mco_pins_a>;
+                clocks = <&rcc CK_MCO1>;
+            };
+    };
+...

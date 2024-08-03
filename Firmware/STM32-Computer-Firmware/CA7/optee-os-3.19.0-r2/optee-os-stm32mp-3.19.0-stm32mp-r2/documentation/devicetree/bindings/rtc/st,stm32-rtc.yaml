@@ -1,0 +1,237 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/rtc/st,stm32-rtc.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STMicroelectronics STM32 Real Time Clock Bindings
+
+maintainers:
+  - Gabriel Fernandez <gabriel.fernandez@st.com>
+
+properties:
+  compatible:
+    enum:
+      - st,stm32-rtc
+      - st,stm32h7-rtc
+      - st,stm32mp1-rtc
+      - st,stm32mp13-rtc
+      - st,stm32mp25-rtc
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    minItems: 1
+    maxItems: 2
+
+  clock-names:
+    items:
+      - const: pclk
+      - const: rtc_ck
+
+  interrupts:
+    maxItems: 1
+
+  st,syscfg:
+    $ref: "/schemas/types.yaml#/definitions/phandle-array"
+    items:
+      minItems: 3
+      maxItems: 3
+    description: |
+      Phandle/offset/mask triplet. The phandle to pwrcfg used to
+      access control register at offset, and change the dbp (Disable Backup
+      Protection) bit represented by the mask, mandatory to disable/enable backup
+      domain (RTC registers) write protection.
+
+  assigned-clocks:
+    description: |
+      override default rtc_ck parent clock reference to the rtc_ck clock entry
+    maxItems: 1
+
+  assigned-clock-parents:
+    description: |
+      override default rtc_ck parent clock phandle of the new parent clock of rtc_ck
+    maxItems: 1
+
+  st,lsco:
+    $ref: "/schemas/types.yaml#/definitions/uint32"
+    description: |
+      To select and enable RTC Low Speed Clock Output.
+      Refer to <include/dt-bindings/rtc/rtc-stm32.h> for the supported values.
+      Pinctrl state named "default" may be defined to reserve pin for RTC output.
+
+  st,alarm:
+    $ref: "/schemas/types.yaml#/definitions/uint32"
+    description: |
+      To select and enable RTC Alarm A output.
+      Refer to <include/dt-bindings/rtc/rtc-stm32.h> for the supported values.
+      Pinctrl state named "default" may be defined to reserve pin for RTC output.
+
+  st,protreg:
+    minItems: 1
+    maxItems: 6
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      Describes the firewall hardware configuration to apply for a given
+      resource.
+
+      RIFPROT(rtc_res_id, sem_list, lock, sec, priv, scid, sem_en, cfen)
+
+      When a field isn't effective, it should be filled with RIF_UNUSED.
+
+        "rtc_res_id" The RTC resource number.
+
+        "sem_list" This peripheral does not support semaphores.
+                   This field must be set to RIF_UNUSED.
+
+        "lock" This peripheral does not support configuration locking.
+               This field must be set to RIF_UNUSED.
+
+        "sec" Configures secure-only access to the resource.
+          RIF_SEC, only secure access is granted to the resource
+          RIF_NSEC, secure/non-secure access is granted to the
+                    resource
+
+        "priv" Configures the privilege level needed to access this
+               resource.
+          RIF_PRIV, only privileged access is granted to the resource
+          RIF_NPRIV, privileged/Unprivileged access is granted to the
+                     resource
+
+        "scid" Configures the static CID that is allowed to access the
+               resource. Note that the static CID configuration is
+               ineffective if the semaphore mode is enabled. Mandates CID
+               filtering enabled to be effective.
+          RIF_CID1 allows CID 1 to access the resource
+          RIF_CID2 allows CID 2 to access the resource ...
+
+        "sem_en" This peripheral does not support semaphores.
+                 This field must be set to RIF_UNUSED.
+
+        "cfen" Enable/disable the CID filtering for this resource.
+          RIF_CFEN, enables the CID filtering
+          RIF_CFDIS, disables the CID filtering
+
+allOf:
+  - if:
+      not:
+        properties:
+          compatible:
+            contains:
+              const: st,stm32-rtc
+
+    then:
+      properties:
+        clocks:
+          minItems: 1
+          maxItems: 1
+
+        st,lsco:
+          maxItems: 0
+
+        st,alarm:
+          maxItems: 0
+
+        clock-names: false
+
+      required:
+        - st,syscfg
+
+  - if:
+      properties:
+        compatible:
+          contains:
+            const: st,stm32mp25-rtc
+
+    then:
+      properties:
+        st,protreg: false
+
+  - if:
+      properties:
+        compatible:
+          contains:
+            const: st,stm32h7-rtc
+
+    then:
+      properties:
+        clocks:
+          minItems: 2
+          maxItems: 2
+
+        st,lsco:
+          maxItems: 0
+
+        st,alarm:
+          maxItems: 0
+
+      required:
+        - clock-names
+        - st,syscfg
+
+  - if:
+      properties:
+        compatible:
+          contains:
+            enum:
+              - st,stm32mp1-rtc
+              - st,stm32mp13-rtc
+
+    then:
+      properties:
+        clocks:
+          minItems: 2
+          maxItems: 2
+
+        assigned-clocks: false
+        assigned-clock-parents: false
+
+        st,lsco:
+          maxItems: 1
+
+        st,alarm:
+          maxItems: 1
+
+      required:
+        - clock-names
+
+required:
+  - compatible
+  - reg
+  - clocks
+  - interrupts
+
+additionalProperties: false
+
+examples:
+  - |
+    #include <dt-bindings/mfd/stm32f4-rcc.h>
+    #include <dt-bindings/clock/stm32fx-clock.h>
+    rtc@40002800 {
+      compatible = "st,stm32-rtc";
+      reg = <0x40002800 0x400>;
+      clocks = <&rcc 1 CLK_RTC>;
+      assigned-clocks = <&rcc 1 CLK_RTC>;
+      assigned-clock-parents = <&rcc 1 CLK_LSE>;
+      interrupt-parent = <&exti>;
+      interrupts = <17 1>;
+      st,syscfg = <&pwrcfg 0x00 0x100>;
+    };
+
+    #include <dt-bindings/interrupt-controller/arm-gic.h>
+    #include <dt-bindings/clock/stm32mp1-clks.h>
+    #include <dt-bindings/rtc/rtc-stm32.h>
+    rtc@5c004000 {
+      compatible = "st,stm32mp1-rtc";
+      reg = <0x5c004000 0x400>;
+      clocks = <&rcc RTCAPB>, <&rcc RTC>;
+      clock-names = "pclk", "rtc_ck";
+      interrupts = <GIC_SPI 3 IRQ_TYPE_LEVEL_HIGH>;
+      st,alarm = <RTC_OUT1>;
+      st,lsco = <RTC_OUT2_RMP>;
+      pinctrl-0 = <&rtc_out1_pins_a &rtc_out2_rmp_pins_a>;
+      pinctrl-names = "default";
+    };
+
+...

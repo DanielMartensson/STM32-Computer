@@ -1,0 +1,1 @@
+cmd_drivers/hwspinlock/built-in.o :=  rm -f drivers/hwspinlock/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/hwspinlock/built-in.o drivers/hwspinlock/hwspinlock-uclass.o drivers/hwspinlock/stm32_hwspinlock.o

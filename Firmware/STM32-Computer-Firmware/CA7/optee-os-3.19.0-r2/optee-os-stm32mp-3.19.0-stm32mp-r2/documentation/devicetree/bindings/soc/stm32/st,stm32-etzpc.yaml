@@ -1,0 +1,76 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/soc/stm32/st,stm32-etzpc.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STM32 Extended TrustZone protection controller bindings
+
+maintainers:
+  - Lionel Debieve <lionel.debieve@foss.st.com>
+
+properties:
+  compatible:
+    const: "st,stm32-etzpc"
+
+  "#address-cells":
+    const: 1
+
+  "#size-cells":
+    const: 1
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    maxItems: 1
+
+  st,decprot:
+    description: |
+      - Define a list of peripherals with the associated configuration.
+        It is defined by macros DECPROT(STM32MP1_ETZPC_XXX_ID, DECPROT_XX, DECPROT_LOCK)
+        as defined by header file dt-bindings/soc/stm32mp13-etzpc.h.
+      - A peripheral ID is required as in dt-bindings/soc/stm32mp13-etzpc.h for STM32MP13 and
+        dt-bindings/soc/stm32mp15-etzpc.h for STM32MP15
+      - Peripheral access which can be defined using following description
+          DECPROT_S_RW: Secure Read/Write
+          DECPROT_NS_R_S_W: Non-secure Read / Secure write
+          DECPROT_MCU_ISOLATION: CoProcessor isolated
+          DECPROT_NS_RW: Non-secure Read/Write
+      - description: Configuration lock state (DECPROT_UNLOCK / DECPROT_LOCK)
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+
+required:
+  - compatible
+  - "#address-cells"
+  - "#size-cells"
+  - reg
+  - clocks
+
+additionalProperties: false
+
+examples:
+  - |
+    #include <dt-bindings/clock/stm32mp13-clks.h>
+    #include <dt-bindings/reset/stm32mp13-resets.h>
+    #include <dt-bindings/soc/stm32mp13-etzpc.h>
+    etzpc: etzpc@5c007000 {
+      compatible = "st,stm32-etzpc";
+      reg = <0x5C007000 0x400>;
+      clocks = <&rcc TZPC>;
+      #address-cells = <1>;
+      #size-cells = <1>;
+      st,decprot = <
+                DECPROT(STM32MP1_ETZPC_ADC1_ID, DECPROT_NS_RW, DECPROT_UNLOCK)
+                DECPROT(STM32MP1_ETZPC_ADC2_ID, DECPROT_NS_RW, DECPROT_LOCK)
+                DECPROT(STM32MP1_ETZPC_BKPSRAM_ID, DECPROT_S_RW, DECPROT_UNLOCK)
+                DECPROT(STM32MP1_ETZPC_CRYP_ID, DECPROT_NS_RW, DECPROT_UNLOCK)
+                DECPROT(STM32MP1_ETZPC_DCMIPP_ID, DECPROT_NS_RW, DECPROT_UNLOCK)
+                DECPROT(STM32MP1_ETZPC_DDRCTRLPHY_ID, DECPROT_NS_R_S_W, DECPROT_UNLOCK)
+                DECPROT(STM32MP1_ETZPC_ETH1_ID, DECPROT_NS_RW, DECPROT_UNLOCK)
+                DECPROT(STM32MP1_ETZPC_ETH2_ID, DECPROT_NS_RW, DECPROT_UNLOCK)
+                DECPROT(STM32MP1_ETZPC_FMC_ID, DECPROT_NS_RW, DECPROT_UNLOCK)
+      >:
+    };
+
+...

@@ -1,0 +1,1 @@
+cmd_drivers/usb/typec/ucsi/built-in.o :=  rm -f drivers/usb/typec/ucsi/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/usb/typec/ucsi/built-in.o drivers/usb/typec/ucsi/ucsi-uclass.o drivers/usb/typec/ucsi/ucsi-stm32g0.o

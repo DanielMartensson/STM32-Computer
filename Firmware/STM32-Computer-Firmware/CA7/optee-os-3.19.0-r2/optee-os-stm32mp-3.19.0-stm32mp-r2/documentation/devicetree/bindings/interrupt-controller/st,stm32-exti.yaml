@@ -1,0 +1,215 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/interrupt-controller/st,stm32-exti.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STM32 External Interrupt Controller Device Tree Bindings
+
+maintainers:
+  - Alexandre Torgue <alexandre.torgue@st.com>
+  - Ludovic Barre <ludovic.barre@st.com>
+
+properties:
+  compatible:
+    oneOf:
+      - items:
+          - enum:
+              - st,stm32-exti
+              - st,stm32h7-exti
+      - items:
+          - enum:
+              - st,stm32mp1-exti
+              - st,stm32mp13-exti
+          - const: syscon
+
+  "#interrupt-cells":
+    const: 2
+
+  reg:
+    maxItems: 1
+
+  interrupt-controller: true
+
+  hwlocks:
+    maxItems: 1
+    description:
+      Reference to a phandle of a hardware spinlock provider node.
+
+  interrupts:
+    minItems: 1
+    maxItems: 96
+    description:
+      Interrupts references to primary interrupt controller
+
+  wakeup-parent: true
+
+  st,protreg:
+    minItems: 1
+    maxItems: 96
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      Describes the firewall hardware configuration to apply for a given
+      interrupt. Applicable for platforms implementing the RIF.
+
+      RIFPROT(exti_res_id, sem_list, lock, sec, priv, scid, sem_en, cfen)
+
+      When a field isn't effective, it should be filled with RIF_UNUSED.
+
+        "exti_res_id" The EXTI resource ID. Use (RIF_EXTI1_RESOURCE (x) with
+                      x the EXTI id (same than exit line number). Note that
+                      this macro is for EXTI instance 1. Use
+                      RIF_EXTI2_RESOURCE (x) for EXTI instance 2.
+
+        "sem_list" This peripheral does not support semaphores.
+                    This field must be set to RIF_UNUSED.
+
+        "lock" This peripheral does not support individual interrupt
+                RIF configuration locking. Global lock can be set through the
+                "st,glocked"property
+                This field must be set to RIF_UNUSED.
+
+        "sec" Configures secure-only access to the interrupt.
+          RIF_SEC, only secure access is granted to the interrupt
+          RIF_NSEC, secure/non-secure access is granted to the interrupt
+
+        "priv" Configures the privilege level needed to access this
+                interrupt.
+          RIF_PRIV, only privileged access is granted to the interrupt
+          RIF_NPRIV, privileged/Unprivileged access is granted to the
+                      interrupt
+
+        "scid" Configures the static CID that is allowed to access the
+                interrupt. Note that the static CID configuration is
+                ineffective if the semaphore mode is enabled. Mandates CID
+                filtering enabled to be effective.
+          RIF_CID1 allows CID 1 to access the interrupt
+          RIF_CID2 allows CID 2 to access the interrupt ...
+
+        "sem_en" This peripheral does not support semaphores.
+                  This field must be set to RIF_UNUSED.
+
+        "cfen" Enable/disable the CID filtering for this interrupt.
+          RIF_CFEN, enables the CID filtering
+          RIF_CFDIS, disables the CID filtering
+
+  st,proccid:
+    minItems: 1
+    maxItems: 3
+    $ref: "/schemas/types.yaml#/definitions/uint32-array"
+    description:
+      Applicable for platforms implementing the RIF. Used to affect the CID
+      number to a particular CPU in EXTI. On STM32MP2x platforms CPU1 = A35,
+      CPU2 = M33 and CPU3 = M0+. As EXTI does not know which is the CID for
+      each CPU, is must be set.
+      For EXTI 1, <1 RIF_CID1>, <2 RIF_CID2>;
+      For EXTI 2, <1 RIF_CID1>, <2 RIF_CID2>, <3 RIF_CID3>;
+
+  st,glocked:
+    type: boolean
+    description:
+      Applicable for platforms implementing the RIF. Used to globally lock
+      the EXTI RIF configuration. When set, Security, privilege, and CID
+      configurations are locked and can't be modified until next reset.
+
+patternProperties:
+  '^exti-interrupt-map$':
+    type: object
+    properties:
+      interrupt-map: true
+      interrupt-map-mask: true
+      "#interrupt-cells":
+        const: 2
+      "#address-cells":
+        const: 0
+
+    required:
+      - interrupt-map
+      - "#interrupt-cells"
+      - "#address-cells"
+
+required:
+  - "#interrupt-cells"
+  - compatible
+  - reg
+  - interrupt-controller
+
+allOf:
+  - $ref: /schemas/interrupt-controller.yaml#
+  - if:
+      properties:
+        compatible:
+          contains:
+            enum:
+              - st,stm32-exti
+    then:
+      properties:
+        interrupts:
+          minItems: 1
+          maxItems: 32
+      required:
+        - interrupts
+  - if:
+      properties:
+        compatible:
+          contains:
+            enum:
+              - st,stm32h7-exti
+    then:
+      properties:
+        interrupts:
+          minItems: 1
+          maxItems: 96
+      required:
+        - interrupts
+  - if:
+      not:
+        properties:
+          compatible:
+            contains:
+              const: st,stm32mp13-exti
+
+    then:
+      properties:
+        st,protreg: false
+
+additionalProperties: false
+
+examples:
+  - |
+    //Example 1
+    exti1: interrupt-controller@5000d000 {
+        compatible = "st,stm32mp1-exti", "syscon";
+        interrupt-controller;
+        #interrupt-cells = <2>;
+        reg = <0x5000d000 0x400>;
+    };
+
+    //Example 2
+    exti2: interrupt-controller@5000d000 {
+        compatible = "st,stm32mp1-exti", "syscon";
+        interrupt-controller;
+        #interrupt-cells = <2>;
+        reg = <0x5000d000 0x400>;
+        wakeup-parent = <&pwr_irq>;
+        exti-interrupt-map {
+            #address-cells = <0>;
+            #interrupt-cells = <2>;
+            interrupt-map-mask = <0xffffffff 0>;
+            interrupt-map =
+                <0 0 &intc GIC_SPI 6 IRQ_TYPE_LEVEL_HIGH>,
+                <3 0 &intc GIC_SPI 9 IRQ_TYPE_LEVEL_HIGH>,
+                <55 0 &pwr_irq 0 IRQ_TYPE_EDGE_FALLING 0>;
+        };
+    };
+
+    //Example 3
+    exti3: interrupt-controller@40013c00 {
+        compatible = "st,stm32-exti";
+        interrupt-controller;
+        #interrupt-cells = <2>;
+        reg = <0x40013C00 0x400>;
+        interrupts = <1>, <2>, <3>, <6>, <7>, <8>, <9>, <10>, <23>, <40>, <41>, <42>, <62>, <76>;
+    };
+
+...

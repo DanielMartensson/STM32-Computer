@@ -1,0 +1,1 @@
+cmd_drivers/watchdog/built-in.o :=  rm -f drivers/watchdog/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/watchdog/built-in.o drivers/watchdog/wdt-uclass.o drivers/watchdog/arm_smc_wdt.o drivers/watchdog/stm32mp_wdt.o

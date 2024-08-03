@@ -1,0 +1,1 @@
+cmd_drivers/usb/typec/built-in.o :=  rm -f drivers/usb/typec/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/usb/typec/built-in.o drivers/usb/typec/typec-uclass.o drivers/usb/typec/typec-stusb160x.o

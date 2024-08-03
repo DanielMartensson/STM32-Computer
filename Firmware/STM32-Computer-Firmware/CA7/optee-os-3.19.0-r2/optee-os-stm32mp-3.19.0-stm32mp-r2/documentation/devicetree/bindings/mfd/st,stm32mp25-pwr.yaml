@@ -1,0 +1,90 @@
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/mfd/st,stm32mp25-pwr.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: STM32MP25 PWR
+
+description: STMicroelectronics STM32MP25 PWR peripheral
+  This hardware block provides some power supplies
+  configuration and wake-up pin interrupts.
+
+maintainers:
+  - Pascal Paillet <p.paillet@st.com>
+
+properties:
+  compatible:
+    const: st,stm32mp25-pwr
+
+  reg:
+    maxItems: 1
+
+  interrupts:
+    description: contains the PWR Wake-up pin interrupt line.
+    maxItems: 1
+
+  wakeup-parent: true
+
+patternProperties:
+  "^(vdd33ucpd|vdda18adc|vddgpu|vddio|vddio1|vddio2|vddio3|vddio4)$":
+    type: object
+
+    $ref: "regulator.yaml#"
+
+    properties:
+      compatible:
+        const: st,stm32mp25-pwr-regu
+
+      vdd-supply:
+        description: Input supply phandle(s) for vdd and vddio input
+
+    patternProperties:
+      ".*-supply$":
+        description: Input supply phandle(s) for this node
+
+required:
+  - compatible
+  - reg
+
+additionalProperties: false
+
+examples:
+  - |
+    pwr: pwr@44210000 {
+      compatible = "st,stm32mp25-pwr";
+      reg = <0x44210000 0x400>;
+      wakeup-parent = <&exti1>;
+      interrupts = <GIC_SPI 226 IRQ_TYPE_LEVEL_HIGH>;
+
+      vdd33ucpd: vdd33ucpd {
+        compatible = "st,stm32mp25-pwr-regu";
+        regulator-name = "vdd33ucpd";
+        vdd33ucpd-supply = <&vdd3v3_usb>;
+      };
+
+      vdda18adc: vdda18adc {
+        compatible = "st,stm32mp25-pwr-regu";
+        regulator-name = "vdda18adc";
+        vdda18adc-supply = <&v1v8>;
+      };
+
+      vddgpu: vddgpu {
+        compatible = "st,stm32mp25-pwr-regu";
+        regulator-name = "vddgpu";
+        vddgpu-supply = <&vddgpu_pmic>;
+      };
+
+      vddio1: vddio1 {
+        compatible = "st,stm32mp25-pwr-regu";
+        regulator-name = "vddio1";
+        vddio1-supply = <&vddio_sdcard>;
+      };
+
+      vddio: vddio {
+        compatible = "st,stm32mp25-pwr-regu";
+        regulator-name = "vddio";
+        vdd-supply = <&vdd>;
+      };
+    };
+...
