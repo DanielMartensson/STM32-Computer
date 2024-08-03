@@ -1,1 +1,0 @@
-cmd_drivers/crypto/rsa_mod_exp/built-in.o :=  rm -f drivers/crypto/rsa_mod_exp/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/crypto/rsa_mod_exp/built-in.o drivers/crypto/rsa_mod_exp/mod_exp_uclass.o drivers/crypto/rsa_mod_exp/mod_exp_sw.o

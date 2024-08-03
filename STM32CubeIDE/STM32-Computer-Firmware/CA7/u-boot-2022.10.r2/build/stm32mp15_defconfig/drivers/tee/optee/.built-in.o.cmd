@@ -1,1 +1,0 @@
-cmd_drivers/tee/optee/built-in.o :=  rm -f drivers/tee/optee/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/tee/optee/built-in.o drivers/tee/optee/core.o drivers/tee/optee/supplicant.o drivers/tee/optee/i2c.o

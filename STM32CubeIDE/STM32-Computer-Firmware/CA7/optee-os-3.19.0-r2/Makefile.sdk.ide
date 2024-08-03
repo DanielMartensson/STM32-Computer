@@ -1,4 +1,0 @@
-DEPLOYDIR ?= $(FIP_DEPLOYDIR_ROOT)/optee
-
-include ../Makefile.sdk
-

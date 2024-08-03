@@ -1,1 +1,0 @@
-cmd_drivers/mmc/built-in.o :=  rm -f drivers/mmc/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/mmc/built-in.o drivers/mmc/mmc.o drivers/mmc/mmc-uclass.o drivers/mmc/mmc_bootdev.o drivers/mmc/mmc_write.o drivers/mmc/mmc_boot.o drivers/mmc/stm32_sdmmc2.o

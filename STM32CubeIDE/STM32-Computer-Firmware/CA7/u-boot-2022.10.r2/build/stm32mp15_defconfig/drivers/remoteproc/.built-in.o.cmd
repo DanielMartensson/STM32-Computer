@@ -1,1 +1,0 @@
-cmd_drivers/remoteproc/built-in.o :=  rm -f drivers/remoteproc/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/remoteproc/built-in.o drivers/remoteproc/rproc-uclass.o drivers/remoteproc/rproc-elf-loader.o drivers/remoteproc/rproc-optee.o drivers/remoteproc/stm32_copro.o

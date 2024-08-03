@@ -1,1 +1,0 @@
-global-incdirs-y += .

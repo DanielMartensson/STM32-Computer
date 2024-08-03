@@ -1,4 +1,0 @@
-DEPLOYDIR ?= $(FIP_DEPLOYDIR_ROOT)/u-boot
-
-include ../Makefile.sdk
-

@@ -1,1 +1,0 @@
-cmd_board/st/common/built-in.o :=  rm -f board/st/common/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT board/st/common/built-in.o board/st/common/cmd_stboard.o board/st/common/stpmic1.o board/st/common/stm32mp_dfu.o board/st/common/stm32mp_dfu_virt.o

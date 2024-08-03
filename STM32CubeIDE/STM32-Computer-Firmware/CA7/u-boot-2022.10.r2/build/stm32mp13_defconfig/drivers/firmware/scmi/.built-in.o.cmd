@@ -1,1 +1,0 @@
-cmd_drivers/firmware/scmi/built-in.o :=  rm -f drivers/firmware/scmi/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/firmware/scmi/built-in.o drivers/firmware/scmi/scmi_agent-uclass.o drivers/firmware/scmi/smt.o drivers/firmware/scmi/smccc_agent.o drivers/firmware/scmi/optee_agent.o

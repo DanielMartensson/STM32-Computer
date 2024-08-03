@@ -1,0 +1,45 @@
+03:38:47 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
+make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=optee-sdcard stm32 metadata 
+Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
+FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts
++ case "$command" in
++ exec make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=optee-sdcard stm32 metadata
+make[1]: Nothing to be done for 'all'.
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+  CPP     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
+  DTC     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+  AS      stm32mp1.S
+  LDS     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o
+
+Built /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin successfully
+
+
+Generate /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.stm32
+Image Type   : ST Microelectronics STM32 V1.0
+Image Size   : 229570 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2ffe9000
+Checksum     : 0x0073dd5f
+Option     : 0x00000001
+Version	     : 0x00000000
+
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+rm /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.elf /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+mkfwumdata -g -i 1 -b 2 -v 2 8a7a84a0-8387-40f6-ab41-a8b9a5a60d23,19d5df83-11b0-457b-be2c-7559c13142a5,4fd84c93-54ef-463f-a7ef-ae25ff887087,09c54952-d5bf-45af-acee-335303766fb3 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware/metadata.bin

@@ -1,1 +1,0 @@
-cmd_lib/crypto/built-in.o :=  rm -f lib/crypto/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT lib/crypto/built-in.o lib/crypto/asymmetric_keys.o lib/crypto/public_key.o lib/crypto/rsa_public_key.o lib/crypto/x509_key_parser.o lib/crypto/pkcs7_message.o lib/crypto/pkcs7_verify.o lib/crypto/mscode.o

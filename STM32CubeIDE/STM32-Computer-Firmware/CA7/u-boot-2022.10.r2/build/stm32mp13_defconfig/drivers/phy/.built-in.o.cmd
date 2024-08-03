@@ -1,1 +1,0 @@
-cmd_drivers/phy/built-in.o :=  rm -f drivers/phy/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT drivers/phy/built-in.o drivers/phy/allwinner/built-in.o drivers/phy/marvell/built-in.o drivers/phy/rockchip/built-in.o drivers/phy/socionext/built-in.o drivers/phy/phy-uclass.o drivers/phy/phy-stm32-usbphyc.o drivers/phy/cadence/built-in.o drivers/phy/ti/built-in.o

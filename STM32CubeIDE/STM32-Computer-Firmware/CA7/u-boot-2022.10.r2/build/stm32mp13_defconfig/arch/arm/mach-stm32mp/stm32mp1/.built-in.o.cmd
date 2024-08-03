@@ -1,1 +1,0 @@
-cmd_arch/arm/mach-stm32mp/stm32mp1/built-in.o :=  rm -f arch/arm/mach-stm32mp/stm32mp1/built-in.o; arm-ostl-linux-gnueabi-ar cDPrsT arch/arm/mach-stm32mp/stm32mp1/built-in.o arch/arm/mach-stm32mp/stm32mp1/cpu.o arch/arm/mach-stm32mp/stm32mp1/stm32mp13x.o arch/arm/mach-stm32mp/stm32mp1/fdt.o

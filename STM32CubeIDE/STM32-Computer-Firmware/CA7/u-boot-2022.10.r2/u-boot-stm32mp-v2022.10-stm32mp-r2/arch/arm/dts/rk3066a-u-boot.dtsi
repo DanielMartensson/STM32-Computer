@@ -1,4 +1,0 @@
-// SPDX-License-Identifier: GPL-2.0+
-
-#include "rockchip-u-boot.dtsi"
-#include "rk3xxx-u-boot.dtsi"

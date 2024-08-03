@@ -1,1 +1,0 @@
-cmd_lib/crypto/x509_key_parser.o := rm -f lib/crypto/x509_key_parser.o; arm-ostl-linux-gnueabi-ar cDPrsT lib/crypto/x509_key_parser.o lib/crypto/x509.asn1.o lib/crypto/x509_akid.asn1.o lib/crypto/x509_cert_parser.o lib/crypto/x509_public_key.o
