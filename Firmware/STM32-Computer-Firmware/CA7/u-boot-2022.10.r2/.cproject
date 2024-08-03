@@ -58,6 +58,13 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7"/>
+			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7_u-boot-2022.10.r2"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="all" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
@@ -95,7 +102,7 @@
 			<target name="all  (stm32mp151a-stm32-computer-firmware-mx) - mp15" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
-				<buildTarget>DEVICETREE=stm32mp151a-stm32-computer-firmware-mx  FIP_CONFIG="optee-sdcard" UBOOT_CONFIG=default UBOOT_DEFCONFIG=stm32mp15_defconfig UBOOT_BINARY=u-boot.dtb  all</buildTarget>
+				<buildTarget>DEVICETREE=stm32mp151a-stm32-computer-firmware-mx  FIP_CONFIG="optee-emmc" UBOOT_CONFIG=default UBOOT_DEFCONFIG=stm32mp15_defconfig UBOOT_BINARY=u-boot.dtb  all</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
@@ -109,12 +116,5 @@
 				<runAllBuilders>true</runAllBuilders>
 			</target>
 		</buildTargets>
-	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope" versionNumber="2">
-		<configuration configurationName="Default">
-			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7"/>
-			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7_u-boot-2022.10.r2"/>
-		</configuration>
 	</storageModule>
 </cproject>

@@ -58,6 +58,13 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Default">
+			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2"/>
+			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="all" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
@@ -100,10 +107,10 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
-			<target name="stm32 metadata  (stm32mp151a-stm32-computer-firmware-mx)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="emmc stm32 metadata  (stm32mp151a-stm32-computer-firmware-mx)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
-				<buildTarget>TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG="optee-sdcard" stm32 metadata</buildTarget>
+				<buildTarget>TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG="optee-emmc" stm32 metadata</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
@@ -116,13 +123,14 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
+			<target name="usb stm32 metadata  (stm32mp151a-stm32-computer-firmware-mx)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
+				<buildTarget>TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG="usb" stm32 metadata</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
 		</buildTargets>
-	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope" versionNumber="2">
-		<configuration configurationName="Default">
-			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2"/>
-			<resource resourceType="PROJECT" workspacePath="/STM32-Computer-Firmware_CA7"/>
-		</configuration>
 	</storageModule>
 </cproject>

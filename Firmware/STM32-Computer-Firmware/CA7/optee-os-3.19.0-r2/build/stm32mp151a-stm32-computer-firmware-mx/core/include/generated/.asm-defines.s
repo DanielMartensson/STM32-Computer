@@ -2379,7 +2379,7 @@ __defines:
 	.uleb128 0
 	.4byte	.LASF464
 	.byte	0
-	.section	.debug_macro,"G",%progbits,wm4.conf.h.2.f98fb311926e303effc290644aac2bad,comdat
+	.section	.debug_macro,"G",%progbits,wm4.conf.h.2.fece317f20b0fc2f6009b19fb3eaf594,comdat
 .Ldebug_macro3:
 	.2byte	0x5
 	.byte	0
@@ -8184,6 +8184,8 @@ __defines:
 	.ascii	"TA_FLAG_DEVICE_ENUM (1 << 9)\000"
 .LASF1153:
 	.ascii	"TEE_PANIC_ID_TEE_GETPROPERTYNAME 0x0000020A\000"
+.LASF1090:
+	.ascii	"TEE_ATTR_RSA_PUBLIC_EXPONENT 0xD0000230\000"
 .LASF1774:
 	.ascii	"TTBR_ASID_MASK U(0xff)\000"
 .LASF237:
@@ -8631,8 +8633,8 @@ __defines:
 	.ascii	"CNTKCTL_PL0VCTEN BIT(1)\000"
 .LASF1174:
 	.ascii	"TEE_PANIC_ID_TEE_GETOBJECTINFO 0x00000703\000"
-.LASF70:
-	.ascii	"__UINTPTR_TYPE__ unsigned int\000"
+.LASF910:
+	.ascii	"TEE_ERROR_BUSY 0xFFFF000D\000"
 .LASF1241:
 	.ascii	"TEE_PANIC_ID_TEE_BIGINTCONVERTFROMS32 0x00001702\000"
 .LASF679:
@@ -8642,8 +8644,8 @@ __defines:
 	.ascii	"__LDBL_MAX__ 1.7976931348623157e+308L\000"
 .LASF540:
 	.ascii	"CFG_PM_ARM32 1\000"
-.LASF910:
-	.ascii	"TEE_ERROR_BUSY 0xFFFF000D\000"
+.LASF427:
+	.ascii	"__ARM_FP16_ARGS\000"
 .LASF200:
 	.ascii	"__FLT32_MIN_EXP__ (-125)\000"
 .LASF1120:
@@ -8893,8 +8895,8 @@ __defines:
 	.ascii	"IFT)\000"
 .LASF169:
 	.ascii	"__DBL_MAX_EXP__ 1024\000"
-.LASF1090:
-	.ascii	"TEE_ATTR_RSA_PUBLIC_EXPONENT 0xD0000230\000"
+.LASF1136:
+	.ascii	"TEE_ECC_CURVE_NIST_P521 0x00000005\000"
 .LASF1922:
 	.ascii	"TEE_U64_TO_LITTLE_ENDIAN(x) ((uint64_t)(x))\000"
 .LASF314:
@@ -9119,8 +9121,8 @@ __defines:
 	.ascii	"CFG_STM32_EARLY_CONSOLE_UART 4\000"
 .LASF594:
 	.ascii	"CFG_STM32_TIM 1\000"
-.LASF503:
-	.ascii	"CFG_DRAM_SIZE 0x40000000\000"
+.LASF1601:
+	.ascii	"CORTEX_A9_PART_NUM U(0xC09)\000"
 .LASF1036:
 	.ascii	"TEE_ALG_HMAC_SHA256 0x30000004\000"
 .LASF1127:
@@ -9745,11 +9747,8 @@ __defines:
 	.ascii	"TEE_MAIN_ALGO_DES 0x11\000"
 .LASF1283:
 	.ascii	"__GNUC_VA_LIST \000"
-.LASF1516:
-	.ascii	"container_of(ptr,type,member) (__extension__({ cons"
-	.ascii	"t typeof(((type *)0)->member) *__ptr = (ptr); (type"
-	.ascii	" *)((unsigned long)(__ptr) - offsetof(type, member)"
-	.ascii	"); }))\000"
+.LASF70:
+	.ascii	"__UINTPTR_TYPE__ unsigned int\000"
 .LASF626:
 	.ascii	"CFG_WITH_LPAE 1\000"
 .LASF958:
@@ -9768,6 +9767,8 @@ __defines:
 	.ascii	"SCTLR_AFE BIT32(29)\000"
 .LASF1973:
 	.ascii	"APB3_BASE 0x50020000\000"
+.LASF620:
+	.ascii	"CFG_TZDRAM_START 0xde000000\000"
 .LASF1997:
 	.ascii	"ETZPC_BASE 0x5c007000\000"
 .LASF398:
@@ -9976,8 +9977,6 @@ __defines:
 	.ascii	"__INT_MAX__ 0x7fffffff\000"
 .LASF1007:
 	.ascii	"TEE_ALG_RSASSA_PKCS1_PSS_MGF1_SHA384 0x70515930\000"
-.LASF620:
-	.ascii	"CFG_TZDRAM_START 0xfe000000\000"
 .LASF156:
 	.ascii	"__FLT_MAX__ 3.4028234663852886e+38F\000"
 .LASF53:
@@ -10236,6 +10235,8 @@ __defines:
 	.ascii	"__MALLOC_H \000"
 .LASF307:
 	.ascii	"__LACCUM_IBIT__ 32\000"
+.LASF2007:
+	.ascii	"GPIOH_BASE 0x50009000\000"
 .LASF222:
 	.ascii	"__FLT64_NORM_MAX__ 1.7976931348623157e+308F64\000"
 .LASF1904:
@@ -10359,8 +10360,6 @@ __defines:
 	.ascii	"__DBL_MAX__ ((double)1.7976931348623157e+308L)\000"
 .LASF995:
 	.ascii	"TEE_ALG_SM4_CBC_NOPAD 0x10000114\000"
-.LASF427:
-	.ascii	"__ARM_FP16_ARGS\000"
 .LASF1132:
 	.ascii	"TEE_ECC_CURVE_NIST_P192 0x00000001\000"
 .LASF1454:
@@ -11313,8 +11312,6 @@ __defines:
 	.ascii	"CORE_MMU_USER_PARAM_SHIFT SMALL_PAGE_SHIFT\000"
 .LASF1042:
 	.ascii	"TEE_ALG_ECDSA_P256 0x70003041\000"
-.LASF1601:
-	.ascii	"CORTEX_A9_PART_NUM U(0xC09)\000"
 .LASF350:
 	.ascii	"__DA_FBIT__ 31\000"
 .LASF207:
@@ -11929,8 +11926,11 @@ __defines:
 .LASF1242:
 	.ascii	"TEE_PANIC_ID_TEE_BIGINTCONVERTTOOCTETSTRING 0x00001"
 	.ascii	"703\000"
-.LASF2007:
-	.ascii	"GPIOH_BASE 0x50009000\000"
+.LASF1516:
+	.ascii	"container_of(ptr,type,member) (__extension__({ cons"
+	.ascii	"t typeof(((type *)0)->member) *__ptr = (ptr); (type"
+	.ascii	" *)((unsigned long)(__ptr) - offsetof(type, member)"
+	.ascii	"); }))\000"
 .LASF1017:
 	.ascii	"TEE_ALG_DSA_SHA224 0x70003131\000"
 .LASF913:
@@ -12206,8 +12206,6 @@ __defines:
 	.ascii	"TEE_PANIC_ID_TEE_OPENPERSISTENTOBJECT 0x00000903\000"
 .LASF1855:
 	.ascii	"TEE_STORAGE_PRIVATE_REE 0x80000000\000"
-.LASF1136:
-	.ascii	"TEE_ECC_CURVE_NIST_P521 0x00000005\000"
 .LASF249:
 	.ascii	"__SFRACT_MAX__ 0X7FP-7HR\000"
 .LASF1231:
@@ -12339,6 +12337,8 @@ __defines:
 	.ascii	"__ULLFRACT_MIN__ 0.0ULLR\000"
 .LASF800:
 	.ascii	"PRIdPTR __PRIPTR_PREFIX \"d\"\000"
+.LASF503:
+	.ascii	"CFG_DRAM_SIZE 0x20000000\000"
 .LASF1808:
 	.ascii	"__KERNEL_THREAD_PRIVATE_ARCH_H \000"
 .LASF42:

@@ -1810,7 +1810,7 @@ __defines:
 	.uleb128 0
 	.4byte	.LASF464
 	.byte	0
-	.section	.debug_macro,"G",%progbits,wm4.conf.h.2.f98fb311926e303effc290644aac2bad,comdat
+	.section	.debug_macro,"G",%progbits,wm4.conf.h.2.fece317f20b0fc2f6009b19fb3eaf594,comdat
 .Ldebug_macro3:
 	.2byte	0x5
 	.byte	0
@@ -4867,6 +4867,8 @@ __defines:
 	.ascii	"TEE_ALG_ECDSA_P192 0x70001041\000"
 .LASF1101:
 	.ascii	"TEE_ATTR_ECC_EPHEMERAL_PUBLIC_VALUE_Y 0xD0000A46\000"
+.LASF620:
+	.ascii	"CFG_TZDRAM_START 0xde000000\000"
 .LASF942:
 	.ascii	"TEE_USAGE_VERIFY 0x00000020\000"
 .LASF1145:
@@ -4883,6 +4885,9 @@ __defines:
 	.ascii	"PRIi32 \"i\"\000"
 .LASF943:
 	.ascii	"TEE_USAGE_DERIVE 0x00000040\000"
+.LASF923:
+	.ascii	"TEE_PROPSET_CURRENT_TA (TEE_PropSetHandle)0xFFFFFFF"
+	.ascii	"F\000"
 .LASF125:
 	.ascii	"__UINT32_C(c) c ## U\000"
 .LASF340:
@@ -4922,8 +4927,8 @@ __defines:
 	.ascii	"TEE_MEMREF_0_USED 0x00000001\000"
 .LASF855:
 	.ascii	"PRIu32 \"u\"\000"
-.LASF171:
-	.ascii	"__DBL_DECIMAL_DIG__ 17\000"
+.LASF655:
+	.ascii	"__attr_const __attribute__((__const__))\000"
 .LASF24:
 	.ascii	"__SIZEOF_LONG_DOUBLE__ 8\000"
 .LASF475:
@@ -5012,8 +5017,6 @@ __defines:
 	.ascii	"GEN_ASM_DEFINES_H \000"
 .LASF350:
 	.ascii	"__DA_FBIT__ 31\000"
-.LASF503:
-	.ascii	"CFG_DRAM_SIZE 0x40000000\000"
 .LASF988:
 	.ascii	"TEE_ALG_RSASSA_PKCS1_PSS_MGF1_SHA384 0x70515930\000"
 .LASF71:
@@ -5503,8 +5506,6 @@ __defines:
 	.ascii	"TEE_ATTR_DH_BASE 0xD0001232\000"
 .LASF301:
 	.ascii	"__UACCUM_FBIT__ 16\000"
-.LASF620:
-	.ascii	"CFG_TZDRAM_START 0xfe000000\000"
 .LASF265:
 	.ascii	"__UFRACT_EPSILON__ 0x1P-16UR\000"
 .LASF78:
@@ -5722,8 +5723,9 @@ __defines:
 	.ascii	"TEE_TYPE_DES 0xA0000011\000"
 .LASF145:
 	.ascii	"__FLT_EVAL_METHOD__ 0\000"
-.LASF1268:
-	.ascii	"short int\000"
+.LASF1169:
+	.ascii	"TEE_PANIC_ID_TEE_CLOSEANDDELETEPERSISTENTOBJECT 0x0"
+	.ascii	"0000901\000"
 .LASF667:
 	.ascii	"__rodata_dummy __section(\".rodata.dummy\" __SECTIO"
 	.ascii	"N_FLAGS_RODATA)\000"
@@ -6008,6 +6010,8 @@ __defines:
 	.ascii	"TEE_DATA_FLAG_ACCESS_WRITE 0x00000002\000"
 .LASF126:
 	.ascii	"__UINT_LEAST64_MAX__ 0xffffffffffffffffULL\000"
+.LASF171:
+	.ascii	"__DBL_DECIMAL_DIG__ 17\000"
 .LASF257:
 	.ascii	"__FRACT_IBIT__ 0\000"
 .LASF1028:
@@ -6101,8 +6105,8 @@ __defines:
 	.ascii	"__CHAR16_TYPE__ short unsigned int\000"
 .LASF1219:
 	.ascii	"TEE_PANIC_ID_TEE_BIGINTINITFMM 0x00001602\000"
-.LASF553:
-	.ascii	"CFG_SCMI_MSG_SHM_MSG 1\000"
+.LASF503:
+	.ascii	"CFG_DRAM_SIZE 0x20000000\000"
 .LASF231:
 	.ascii	"__FLT32X_DIG__ 15\000"
 .LASF685:
@@ -6381,8 +6385,8 @@ __defines:
 	.ascii	"TEE_PANIC_ID_TEE_GETPROPERTYASU32 0x00000208\000"
 .LASF1123:
 	.ascii	"TEE_PANIC_ID_TA_INVOKECOMMANDENTRYPOINT 0x00000104\000"
-.LASF655:
-	.ascii	"__attr_const __attribute__((__const__))\000"
+.LASF1268:
+	.ascii	"short int\000"
 .LASF775:
 	.ascii	"_STDDEF_H \000"
 .LASF586:
@@ -6465,9 +6469,8 @@ __defines:
 	.ascii	"TEE_ERROR_ACCESS_CONFLICT 0xFFFF0003\000"
 .LASF101:
 	.ascii	"__INT16_MAX__ 0x7fff\000"
-.LASF923:
-	.ascii	"TEE_PROPSET_CURRENT_TA (TEE_PropSetHandle)0xFFFFFFF"
-	.ascii	"F\000"
+.LASF421:
+	.ascii	"__ARMEL__ 1\000"
 .LASF610:
 	.ascii	"CFG_TEE_CORE_LOG_LEVEL 2\000"
 .LASF1002:
@@ -6699,8 +6702,8 @@ __defines:
 	.ascii	"CFG_STM32_LOWPOWER_SIP 1\000"
 .LASF872:
 	.ascii	"TEE_SUCCESS 0x00000000\000"
-.LASF421:
-	.ascii	"__ARMEL__ 1\000"
+.LASF553:
+	.ascii	"CFG_SCMI_MSG_SHM_MSG 1\000"
 .LASF840:
 	.ascii	"PRId32 \"d\"\000"
 .LASF492:
@@ -6816,9 +6819,6 @@ __defines:
 	.ascii	"__linux 1\000"
 .LASF168:
 	.ascii	"__DBL_MIN_10_EXP__ (-307)\000"
-.LASF1169:
-	.ascii	"TEE_PANIC_ID_TEE_CLOSEANDDELETEPERSISTENTOBJECT 0x0"
-	.ascii	"0000901\000"
 .LASF1073:
 	.ascii	"TEE_ATTR_RSA_PRIME1 0xC0000430\000"
 .LASF559:

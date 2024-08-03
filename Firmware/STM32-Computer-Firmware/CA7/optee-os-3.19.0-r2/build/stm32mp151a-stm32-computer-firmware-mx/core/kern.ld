@@ -3,8 +3,8 @@ OUTPUT_ARCH(arm)
 ENTRY(_start)
 SECTIONS
 {
- . = (0xfe000000 + (0xfe000000 - 0xfe000000));
- ASSERT(!((0xfe000000 + (0xfe000000 - 0xfe000000)) & 31), "text start should align to 32bytes")
+ . = (0xde000000 + (0xde000000 - 0xde000000));
+ ASSERT(!((0xde000000 + (0xde000000 - 0xde000000)) & 31), "text start should align to 32bytes")
  __text_start = .;
  __flatmap_unpg_rx_start = ((__text_start) - ((__text_start) % ((1 << (12)))));
  .text : {
@@ -91,10 +91,10 @@ SECTIONS
   __nozi_stack_end = .;
  }
  __end = .;
- __init_size = __data_end - (0xfe000000 + (0xfe000000 - 0xfe000000));
- ASSERT(. <= (0xfe000000 + (1 << (21))),
+ __init_size = __data_end - (0xde000000 + (0xde000000 - 0xde000000));
+ ASSERT(. <= (0xde000000 + (1 << (21))),
   "TEE_RAM_VA_SIZE is too small")
- . = 0xfe000000 + (1 << (21));
+ . = 0xde000000 + (1 << (21));
  _end_of_ram = .;
  __flatmap_unpg_rw_size = _end_of_ram - __flatmap_unpg_rw_start;
  __get_tee_init_end = .;
