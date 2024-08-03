@@ -10,15 +10,15 @@
  * DDR type: DDR3 / DDR3L
  * DDR width: 16bits
  * DDR density: 4Gb
- * System frequency: 528000kHz
+ * System frequency: 533000kHz
  * Relaxed Timing Mode: false
  * Address mapping type: RBC
  *
- * Save Date: 2024.08.03, save Time: 16:36:18
+ * Save Date: 2024.08.04, save Time: 01:22:28
  */
 
-#define DDR_MEM_NAME "DDR3-DDR3L 16bits 528000kHz"
-#define DDR_MEM_SPEED 528000
+#define DDR_MEM_NAME "DDR3-DDR3L 16bits 533000kHz"
+#define DDR_MEM_SPEED 533000
 #define DDR_MEM_SIZE 0x20000000
 
 #define DDR_MSTR 0x00041401
@@ -31,7 +31,7 @@
 #define DDR_HWLPCTL 0x00000000
 #define DDR_RFSHCTL0 0x00210000
 #define DDR_RFSHCTL3 0x00000000
-#define DDR_RFSHTMG 0x0080008A
+#define DDR_RFSHTMG 0x0081008B
 #define DDR_CRCPARCTL0 0x00000000
 #define DDR_DRAMTMG0 0x121B2414
 #define DDR_DRAMTMG1 0x000A041C
@@ -85,15 +85,15 @@
 #define DDR_ADDRMAP10 0x00000000
 #define DDR_ADDRMAP11 0x00000000
 #define DDR_PGCR 0x01442E02
-#define DDR_PTR0 0x0022A41B
-#define DDR_PTR1 0x047C0740
-#define DDR_PTR2 0x042D9C80
+#define DDR_PTR0 0x0022AA5B
+#define DDR_PTR1 0x04841104
+#define DDR_PTR2 0x042DA068
 #define DDR_ACIOCR 0x10400812
 #define DDR_DXCCR 0x00000C40
 #define DDR_DSGCR 0xF200011F
 #define DDR_DCR 0x0000000B
 #define DDR_DTPR0 0x38D488D0
-#define DDR_DTPR1 0x098A00D8
+#define DDR_DTPR1 0x098B00D8
 #define DDR_DTPR2 0x10023600
 #define DDR_MR0 0x00000840
 #define DDR_MR1 0x00000000

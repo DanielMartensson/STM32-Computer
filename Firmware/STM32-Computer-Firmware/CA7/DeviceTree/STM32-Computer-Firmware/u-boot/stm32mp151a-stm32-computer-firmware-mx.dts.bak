@@ -17,6 +17,8 @@
 #include "stm32mp15-m4-srm.dtsi"
 
 /* USER CODE BEGIN includes */
+#include "stm32mp15-scmi.dtsi"
+#include "stm32mp15-scmi-u-boot.dtsi"
 /* USER CODE END includes */
 
 / {
@@ -47,34 +49,34 @@
 
 		/* USER CODE BEGIN clocks */
 		clk_csi: clk-csi {
-					#clock-cells = <0>;
-					compatible = "fixed-clock";
-					clock-frequency = <4000000>;
-				};
+			#clock-cells = <0>;
+			compatible = "fixed-clock";
+			clock-frequency = <4000000>;
+		};
 
-				clk_hse: clk-hse {
-					#clock-cells = <0>;
-					compatible = "fixed-clock";
-					clock-frequency = <24000000>;
-				};
+		clk_hse: clk-hse {
+			#clock-cells = <0>;
+			compatible = "fixed-clock";
+			clock-frequency = <24000000>;
+		};
 
-				clk_hsi: clk-hsi {
-					#clock-cells = <0>;
-					compatible = "fixed-clock";
-					clock-frequency = <64000000>;
-				};
+		clk_hsi: clk-hsi {
+			#clock-cells = <0>;
+			compatible = "fixed-clock";
+			clock-frequency = <64000000>;
+		};
 
-				clk_lse: clk-lse {
-					#clock-cells = <0>;
-					compatible = "fixed-clock";
-					clock-frequency = <32768>;
-				};
+		clk_lse: clk-lse {
+			#clock-cells = <0>;
+			compatible = "fixed-clock";
+			clock-frequency = <32768>;
+		};
 
-				clk_lsi: clk-lsi {
-					#clock-cells = <0>;
-					compatible = "fixed-clock";
-					clock-frequency = <32000>;
-				};
+		clk_lsi: clk-lsi {
+			#clock-cells = <0>;
+			compatible = "fixed-clock";
+			clock-frequency = <32000>;
+		};
 		/* USER CODE END clocks */
 	};
 

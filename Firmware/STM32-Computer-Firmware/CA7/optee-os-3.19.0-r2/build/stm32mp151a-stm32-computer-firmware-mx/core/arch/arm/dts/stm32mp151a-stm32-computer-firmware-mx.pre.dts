@@ -2288,7 +2288,7 @@
  st,clkdiv = <
   ((0 << 26) | ((10) << 8) | (1))
   ((0 << 26) | ((11) << 8) | (0))
-  ((0 << 26) | ((12) << 8) | (1))
+  ((0 << 26) | ((12) << 8) | (0))
   ((0 << 26) | ((13) << 8) | (1))
   ((0 << 26) | ((14) << 8) | (1))
   ((0 << 26) | ((15) << 8) | (1))
@@ -2299,13 +2299,15 @@
   ((0 << 26) | ((21) << 8) | (0))
  >;
  st,pll_vco {
-  pll2_vco_1056Mhz: pll2-vco-1056Mhz {
+  pll2_vco_1066Mhz: pll2-vco-1066Mhz {
    src = < ((1 << 26) | ((3) << 4) | (1)) >;
    divmn = < 2 65 >;
+   frac = < 0x1400 >;
   };
-  pll3_vco_416Mhz: pll3-vco-416Mhz {
+  pll3_vco_417Mhz: pll3-vco-417Mhz {
    src = < ((1 << 26) | ((4) << 4) | (1)) >;
-   divmn = < 5 103 >;
+   divmn = < 1 33 >;
+   frac = < 0x1a04 >;
   };
   pll4_vco_594Mhz: pll4-vco-594Mhz {
    src = < ((1 << 26) | ((5) << 4) | (1)) >;
@@ -2322,7 +2324,7 @@
   st,pll = < &pll2_cfg1 >;
 
   pll2_cfg1: pll2_cfg1 {
-   st,pll_vco = < &pll2_vco_1056Mhz >;
+   st,pll_vco = < &pll2_vco_1066Mhz >;
    st,pll_div_pqr = < 1 1 0 >;
   };
 
@@ -2336,7 +2338,7 @@
   st,pll = < &pll3_cfg1 >;
 
   pll3_cfg1: pll3_cfg1 {
-   st,pll_vco = < &pll3_vco_416Mhz >;
+   st,pll_vco = < &pll3_vco_417Mhz >;
    st,pll_div_pqr = < 1 16 36 >;
   };
 

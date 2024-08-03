@@ -687,8 +687,8 @@
  };
 };
 &ddr {
- st,mem-name = "DDR3-DDR3L 16bits 528000kHz";
- st,mem-speed = <528000>;
+ st,mem-name = "DDR3-DDR3L 16bits 533000kHz";
+ st,mem-speed = <533000>;
  st,mem-size = <0x20000000>;
  st,ctl-reg = <
   0x00041401
@@ -718,7 +718,7 @@
   0x00000010
  >;
  st,ctl-timing = <
-  0x0080008A
+  0x0081008B
   0x121B2414
   0x000A041C
   0x0608090F
@@ -775,11 +775,11 @@
   0x0000CE80
  >;
  st,phy-timing = <
-  0x0022A41B
-  0x047C0740
-  0x042D9C80
+  0x0022AA5B
+  0x04841104
+  0x042DA068
   0x38D488D0
-  0x098A00D8
+  0x098B00D8
   0x10023600
   0x00000840
   0x00000000
@@ -1259,7 +1259,7 @@
  st,clkdiv = <
   ((0 << 26) | ((10) << 8) | (1))
   ((0 << 26) | ((11) << 8) | (0))
-  ((0 << 26) | ((12) << 8) | (1))
+  ((0 << 26) | ((12) << 8) | (0))
   ((0 << 26) | ((13) << 8) | (1))
   ((0 << 26) | ((14) << 8) | (1))
   ((0 << 26) | ((15) << 8) | (1))
@@ -1270,13 +1270,15 @@
   ((0 << 26) | ((21) << 8) | (0))
  >;
  st,pll_vco {
-  pll2_vco_1056Mhz: pll2-vco-1056Mhz {
+  pll2_vco_1066Mhz: pll2-vco-1066Mhz {
    src = < ((1 << 26) | ((3) << 4) | (1)) >;
    divmn = < 2 65 >;
+   frac = < 0x1400 >;
   };
-  pll3_vco_416Mhz: pll3-vco-416Mhz {
+  pll3_vco_417Mhz: pll3-vco-417Mhz {
    src = < ((1 << 26) | ((4) << 4) | (1)) >;
-   divmn = < 5 103 >;
+   divmn = < 1 33 >;
+   frac = < 0x1a04 >;
   };
   pll4_vco_594Mhz: pll4-vco-594Mhz {
    src = < ((1 << 26) | ((5) << 4) | (1)) >;
@@ -1288,7 +1290,7 @@
   reg = <1>;
   st,pll = < &pll2_cfg1 >;
   pll2_cfg1: pll2_cfg1 {
-   st,pll_vco = < &pll2_vco_1056Mhz >;
+   st,pll_vco = < &pll2_vco_1066Mhz >;
    st,pll_div_pqr = < 1 1 0 >;
   };
  };
@@ -1297,7 +1299,7 @@
   reg = <2>;
   st,pll = < &pll3_cfg1 >;
   pll3_cfg1: pll3_cfg1 {
-   st,pll_vco = < &pll3_vco_416Mhz >;
+   st,pll_vco = < &pll3_vco_417Mhz >;
    st,pll_div_pqr = < 1 16 36 >;
   };
  };
