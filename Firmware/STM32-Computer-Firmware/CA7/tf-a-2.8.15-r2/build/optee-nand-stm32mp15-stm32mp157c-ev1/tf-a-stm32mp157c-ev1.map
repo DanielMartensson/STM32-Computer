@@ -1,0 +1,64 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+HEADER           0x00000000         0x00003000         rw
+RAM              0x2ffc2500         0x0003cb00         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.glue_7         0x00000000        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00000000        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00000000        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00000000        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.text           0x00000000        0x0
+ .text          0x00000000        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/stm32mp1-stm32mp157c-ev1.o
+
+.header         0x00000000        0x0
+                0x00000000                        __HEADER_START__ = .
+ *(.header)
+                0x00000000                        . = ALIGN (0x4)
+                0x00000000                        __HEADER_END__ = .
+                0x2ffc2500                        . = 0x2ffc2500
+
+.data           0x2ffc2500    0x380ce
+                0x2ffc3000                        . = ALIGN (0x1000)
+ *fill*         0x2ffc2500      0xb00 
+                0x2ffc3000                        __DATA_START__ = .
+ *(.data*)
+ .data          0x2ffc3000        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/stm32mp1-stm32mp157c-ev1.o
+                0x0001fb00                        . = 0x1fb00
+ *fill*         0x2ffc3000    0x1f000 
+                0x2ffe2000                        __DTB_IMAGE_START__ = .
+ *(.dtb_image*)
+ .dtb_image     0x2ffe2000     0x49af /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/stm32mp1-stm32mp157c-ev1.o
+                0x2ffe69af                        __DTB_IMAGE_END__ = .
+                0x00026b00                        . = 0x26b00
+ *fill*         0x2ffe69af     0x2651 
+                0x2ffe9000                        __BL2_IMAGE_START__ = .
+ *(.bl2_image*)
+ .bl2_image     0x2ffe9000    0x115ce /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/stm32mp1-stm32mp157c-ev1.o
+                0x2fffa5ce                        __BL2_IMAGE_END__ = .
+                0x2fffa5ce                        __DATA_END__ = .
+                0x2fffa5ce                        __TF_END__ = .
+LOAD /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/stm32mp1-stm32mp157c-ev1.o
+OUTPUT(/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/tf-a-stm32mp157c-ev1.elf elf32-littlearm)
+LOAD linker stubs
+
+.bss            0x2fffa5ce        0x0
+ .bss           0x2fffa5ce        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/stm32mp1-stm32mp157c-ev1.o
+
+.ARM.attributes
+                0x00000000       0x27
+ .ARM.attributes
+                0x00000000       0x27 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-nand-stm32mp15-stm32mp157c-ev1/stm32mp1-stm32mp157c-ev1.o

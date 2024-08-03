@@ -1,0 +1,62 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+HEADER           0x00000000         0x00000200         rw
+RAM              0x2ffe0000         0x0001f000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.glue_7         0x00000000        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x00000000        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x00000000        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00000000        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.text           0x00000000        0x0
+ .text          0x00000000        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/stm32mp1-stm32mp135f-dk.o
+
+.header         0x00000000        0x0
+                0x00000000                        __HEADER_START__ = .
+ *(.header)
+                0x00000000                        . = ALIGN (0x4)
+                0x00000000                        __HEADER_END__ = .
+                0x2ffe0000                        . = 0x2ffe0000
+
+.data           0x2ffe0000    0x167f8
+                0x2ffe0000                        . = ALIGN (0x1000)
+                0x2ffe0000                        __DATA_START__ = .
+ *(.data*)
+ .data          0x2ffe0000        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/stm32mp1-stm32mp135f-dk.o
+                0x00000000                        . = 0x0
+                0x2ffe0000                        __DTB_IMAGE_START__ = .
+ *(.dtb_image*)
+ .dtb_image     0x2ffe0000     0x38f0 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/stm32mp1-stm32mp135f-dk.o
+                0x2ffe38f0                        __DTB_IMAGE_END__ = .
+                0x00004000                        . = 0x4000
+ *fill*         0x2ffe38f0      0x710 
+                0x2ffe4000                        __BL2_IMAGE_START__ = .
+ *(.bl2_image*)
+ .bl2_image     0x2ffe4000    0x127f8 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/stm32mp1-stm32mp135f-dk.o
+                0x2fff67f8                        __BL2_IMAGE_END__ = .
+                0x2fff67f8                        __DATA_END__ = .
+                0x2fff67f8                        __TF_END__ = .
+LOAD /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/stm32mp1-stm32mp135f-dk.o
+OUTPUT(/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/tf-a-stm32mp135f-dk.elf elf32-littlearm)
+LOAD linker stubs
+
+.bss            0x2fff67f8        0x0
+ .bss           0x2fff67f8        0x0 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/stm32mp1-stm32mp135f-dk.o
+
+.ARM.attributes
+                0x00000000       0x27
+ .ARM.attributes
+                0x00000000       0x27 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp13-stm32mp135f-dk/stm32mp1-stm32mp135f-dk.o

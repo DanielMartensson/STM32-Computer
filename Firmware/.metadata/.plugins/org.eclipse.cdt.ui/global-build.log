@@ -1,45 +1,74 @@
-03:38:47 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
-make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=optee-sdcard stm32 metadata 
+12:56:25 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
+make -f ../Makefile.sdk.ide help 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts
 + case "$command" in
-+ exec make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=optee-sdcard stm32 metadata
-make[1]: Nothing to be done for 'all'.
-make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
-Including bl32/optee/optee.mk
-Trusted Firmware-A built for OP-TEE payload support
-PSA_FWU_SUPPORT is an experimental feature
-  CPP     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
-  DTC     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
-make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
-make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
-Including bl32/optee/optee.mk
-Trusted Firmware-A built for OP-TEE payload support
-PSA_FWU_SUPPORT is an experimental feature
-  AS      stm32mp1.S
-  LDS     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o
++ exec make -f ../Makefile.sdk.ide help
 
-Built /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin successfully
+TF-A configuration:
+  TF_A_CONFIG = optee-emmc optee-nand optee-nor optee-sdcard   uart usb 
+Config details:
+  optee-emmc
+    with device tree : stm32mp157c-ed1 stm32mp157f-ed1 stm32mp157a-ev1 stm32mp157c-ev1 stm32mp157d-ev1 stm32mp157f-ev1 
+    extra optionflags: AARCH32_SP=optee PSA_FWU_SUPPORT=1 STM32MP_EMMC=1
+    binary basename  : tf-a (TF_A_BINARY_optee-emmc)
+    tf-a build target: all dtbs
+  optee-nand
+    with device tree : stm32mp157a-ev1 stm32mp157c-ev1 stm32mp157d-ev1 stm32mp157f-ev1 
+    extra optionflags: AARCH32_SP=optee PSA_FWU_SUPPORT=1 STM32MP_RAW_NAND=1 STM32MP_FORCE_MTD_START_OFFSET=0x00200000
+    binary basename  : tf-a (TF_A_BINARY_optee-nand)
+    tf-a build target: all dtbs
+  optee-nor
+    with device tree : stm32mp157a-ev1 stm32mp157c-ev1 stm32mp157d-ev1 stm32mp157f-ev1 
+    extra optionflags: AARCH32_SP=optee PSA_FWU_SUPPORT=1 STM32MP_SPI_NOR=1 STM32MP_FORCE_MTD_START_OFFSET=0x00100000
+    binary basename  : tf-a (TF_A_BINARY_optee-nor)
+    tf-a build target: all dtbs
+  optee-sdcard
+    with device tree : stm32mp135f-dk stm32mp157a-dk1 stm32mp157d-dk1 stm32mp157c-dk2 stm32mp157f-dk2 stm32mp157c-ed1 stm32mp157f-ed1 stm32mp157a-ev1 stm32mp157c-ev1 stm32mp157d-ev1 stm32mp157f-ev1 
+    extra optionflags: AARCH32_SP=optee PSA_FWU_SUPPORT=1 STM32MP_SDMMC=1
+    binary basename  : tf-a (TF_A_BINARY_optee-sdcard)
+    tf-a build target: all dtbs
+  uart
+    with device tree : stm32mp157c-ed1 stm32mp157f-ed1 stm32mp157a-ev1 stm32mp157c-ev1 stm32mp157d-ev1 stm32mp157f-ev1 stm32mp135f-dk stm32mp157a-dk1 stm32mp157d-dk1 stm32mp157c-dk2 stm32mp157f-dk2 
+    extra optionflags: STM32MP_UART_PROGRAMMER=1
+    binary basename  : tf-a (TF_A_BINARY_uart)
+    tf-a build target: all
+  usb
+    with device tree : stm32mp157c-ed1 stm32mp157f-ed1 stm32mp157a-ev1 stm32mp157c-ev1 stm32mp157d-ev1 stm32mp157f-ev1 stm32mp135f-dk stm32mp157a-dk1 stm32mp157d-dk1 stm32mp157c-dk2 stm32mp157f-dk2 
+    extra optionflags: STM32MP_USB_PROGRAMMER=1
+    binary basename  : tf-a (TF_A_BINARY_usb)
+    tf-a build target: all
 
+Note that each TF-A configuration settings can be updated through overall or specific config var:
+  TF_A_DEVICETREE
+  TF_A_EXTRA_OPTFLAGS
+  TF_A_BINARY
+  TF_A_MAKE_TARGET
 
-Generate /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.stm32
-Image Type   : ST Microelectronics STM32 V1.0
-Image Size   : 229570 bytes
-Image Load   : 0x2ffc2500
-Entry Point  : 0x2ffe9000
-Checksum     : 0x0073dd5f
-Option     : 0x00000001
-Version	     : 0x00000000
+TF-A features configuration:
+  TF_A_ENABLE_BL31 = 0 ('1' to generate bl31 binary)
+  TF_A_ENABLE_DEBUG_WRAPPER = 1 ('1' to generate tf-a for debugging)
+  TF_A_ENABLE_FWDDR = 0 ('1' to generate tf-a ddr firmware for fip ddr)
 
-Building stm32mp1
-make[1]: Nothing to be done for 'dtbs'.
-rm /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.elf /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin
-make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
-Image Type   : STMicroelectronics STM32 V1.0
-Image Target : STM32MP15x Cortex-A7
-Image Size   : 229700 bytes
-Image Load   : 0x2ffc2500
-Entry Point  : 0x2fffa601
-Version      : 0x00000000
-Halt Address : 0x2ffe9000
-mkfwumdata -g -i 1 -b 2 -v 2 8a7a84a0-8387-40f6-ab41-a8b9a5a60d23,19d5df83-11b0-457b-be2c-7559c13142a5,4fd84c93-54ef-463f-a7ef-ae25ff887087,09c54952-d5bf-45af-acee-335303766fb3 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware/metadata.bin
+TF-A folder configuration:
+  SRC_PATH  = /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2
+  BLD_PATH  = /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build
+  DEPLOYDIR = /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware
+  BL31_DEPLOYDIR     = /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware/bl31
+  BL32_DEPLOYDIR     = /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware/bl32
+  FWCONFIG_DEPLOYDIR = /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware/fwconfig
+  FWDDR_DEPLOYDIR    = /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware/ddr
+
+FIP configuration:
+  Do not forget to set FIP deploydir folders (such as FIP_DEPLOYDIR_ROOT) to provide path to needed binaries
+
+METADATA configuration:
+  TF_A_METADATA_TOOL_ARGS = 
+
+Available targets:
+  all      : build TF-A binaries for defined config(s)
+  fip      : build FIP binaries
+  metadata : build the TF-A metadata binary
+  stm32    : build TF-A stm32 binaries
+  clean    : clean build directories from generated files
+
