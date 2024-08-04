@@ -2673,3 +2673,4 @@ GenProcess for OUTPUT : processName=optee-dtsBind - Output=optee-os
 2024-08-04 01:23:34,499 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 58246mS.
 2024-08-04 01:23:34,500 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 1mS.
 2024-08-04 01:23:34,501 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-08-04 11:56:48,613 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
