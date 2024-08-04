@@ -107,10 +107,10 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
-			<target name="emmc stm32 metadata  (stm32mp151a-stm32-computer-firmware-mx)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="sdcard stm32 metadata  (stm32mp151a-stm32-computer-firmware-mx)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
-				<buildTarget>TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG="optee-emmc" stm32 metadata</buildTarget>
+				<buildTarget>TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG="optee-sdcard" stm32 metadata</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>

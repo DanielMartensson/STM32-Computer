@@ -12,6 +12,8 @@
    nvmem-cells = <&part_number_otp>;
    nvmem-cell-names = "part_number";
   };
+  cpu1: cpu@1 {
+  };
  };
  psci {
   compatible = "arm,psci-1.0";
@@ -787,6 +789,407 @@
   0x00000000
  >;
 };
+&ddr {
+ st,mem-name = "DDR3-DDR3L 16bits 533000kHz";
+ st,mem-speed = <533000>;
+ st,mem-size = <0x20000000>;
+ st,ctl-reg = <
+  0x00041401
+  0x00000010
+  0x00000000
+  0x00000000
+  0x00800000
+  0x00000000
+  0x00400010
+  0x00000000
+  0x00210000
+  0x00000000
+  0x00000000
+  0xC2000040
+  0x02060105
+  0x00000202
+  0x07000000
+  0xC0400003
+  0x00000000
+  0x00000000
+  0x00000000
+  0x00000001
+  0x00000000
+  0x00000000
+  0x00000000
+  0x00000000
+  0x00000010
+ >;
+ st,ctl-timing = <
+  0x0081008B
+  0x121B2414
+  0x000A041C
+  0x0608090F
+  0x0050400C
+  0x08040608
+  0x06060403
+  0x02020002
+  0x00000202
+  0x00001005
+  0x000000A0
+  0x06000600
+ >;
+ st,ctl-map = <
+  0x00070707
+  0x00000000
+  0x1F000000
+  0x00001F1F
+  0x06060606
+  0x0F060606
+  0x00000000
+  0x00000000
+  0x00000000
+ >;
+ st,ctl-perf = <
+  0x00000C01
+  0x00000000
+  0x01000001
+  0x08000200
+  0x08000400
+  0x00010000
+  0x00000000
+  0x02100C03
+  0x00800100
+  0x01100C03
+  0x01000200
+  0x00010000
+  0x00000000
+  0x02100C03
+  0x00800040
+  0x01100C03
+  0x01000200
+ >;
+ st,phy-reg = <
+  0x01442E02
+  0x10400812
+  0x00000C40
+  0xF200011F
+  0x0000000B
+  0x00010000
+  0x00000038
+  0x0000CE81
+  0x0000CE81
+  0x0000CE80
+  0x0000CE80
+ >;
+ st,phy-timing = <
+  0x0022AA5B
+  0x04841104
+  0x042DA068
+  0x38D488D0
+  0x098B00D8
+  0x10023600
+  0x00000840
+  0x00000000
+  0x00000208
+  0x00000000
+ >;
+};
+/ {
+ memory@c0000000 {
+  device_type = "memory";
+  reg = <0xc0000000 0x20000000>;
+ };
+ vin: vin {
+  compatible = "regulator-fixed";
+  regulator-name = "vin";
+  regulator-min-microvolt = <5000000>;
+  regulator-max-microvolt = <5000000>;
+  regulator-always-on;
+ };
+};
+&bsec {
+ board_id: board_id@ec {
+  reg = <0xec 0x4>;
+  st,non-secure-otp;
+ };
+};
+&clk_hse {
+ st,digbypass;
+};
+&cpu0 {
+ cpu-supply = <&vddcore>;
+};
+&cpu1 {
+ cpu-supply = <&vddcore>;
+};
+&hash1 {
+ status = "okay";
+};
+&i2c4 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&i2c4_pins_a>;
+ i2c-scl-rising-time-ns = <185>;
+ i2c-scl-falling-time-ns = <20>;
+ clock-frequency = <400000>;
+ status = "okay";
+ pmic: stpmic@33 {
+  compatible = "st,stpmic1";
+  reg = <0x33>;
+  interrupts-extended = <&exti_pwr 55 2>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  status = "okay";
+  regulators {
+   compatible = "st,stpmic1-regulators";
+   buck1-supply = <&vin>;
+   buck2-supply = <&vin>;
+   buck3-supply = <&vin>;
+   buck4-supply = <&vin>;
+   ldo1-supply = <&v3v3>;
+   ldo2-supply = <&vin>;
+   ldo3-supply = <&vdd_ddr>;
+   ldo4-supply = <&vin>;
+   ldo5-supply = <&vin>;
+   ldo6-supply = <&v3v3>;
+   vref_ddr-supply = <&vin>;
+   boost-supply = <&vin>;
+   pwr_sw1-supply = <&bst_out>;
+   pwr_sw2-supply = <&bst_out>;
+   vddcore: buck1 {
+    regulator-name = "vddcore";
+    regulator-min-microvolt = <1200000>;
+    regulator-max-microvolt = <1350000>;
+    regulator-always-on;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+   vdd_ddr: buck2 {
+    regulator-name = "vdd_ddr";
+    regulator-min-microvolt = <1350000>;
+    regulator-max-microvolt = <1350000>;
+    regulator-always-on;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+   vdd: buck3 {
+    regulator-name = "vdd";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    st,mask-reset;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+   v3v3: buck4 {
+    regulator-name = "v3v3";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    regulator-over-current-protection;
+    regulator-initial-mode = <0>;
+   };
+   v1v8_audio: ldo1 {
+    regulator-name = "v1v8_audio";
+    regulator-min-microvolt = <1800000>;
+    regulator-max-microvolt = <1800000>;
+    regulator-always-on;
+   };
+   v3v3_hdmi: ldo2 {
+    regulator-name = "v3v3_hdmi";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+   };
+   vtt_ddr: ldo3 {
+    regulator-name = "vtt_ddr";
+    regulator-always-on;
+    regulator-over-current-protection;
+    st,regulator-sink-source;
+   };
+   vdd_usb: ldo4 {
+    regulator-name = "vdd_usb";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+   };
+   vdda: ldo5 {
+    regulator-name = "vdda";
+    regulator-min-microvolt = <2900000>;
+    regulator-max-microvolt = <2900000>;
+    regulator-boot-on;
+   };
+   v1v2_hdmi: ldo6 {
+    regulator-name = "v1v2_hdmi";
+    regulator-min-microvolt = <1200000>;
+    regulator-max-microvolt = <1200000>;
+    regulator-always-on;
+   };
+   vref_ddr: vref_ddr {
+    regulator-name = "vref_ddr";
+    regulator-always-on;
+   };
+   bst_out: boost {
+    regulator-name = "bst_out";
+   };
+   vbus_otg: pwr_sw1 {
+    regulator-name = "vbus_otg";
+   };
+   vbus_sw: pwr_sw2 {
+    regulator-name = "vbus_sw";
+    regulator-active-discharge = <1>;
+   };
+  };
+ };
+};
+&iwdg1 {
+ timeout-sec = <32>;
+ status = "okay";
+};
+&pwr_regulators {
+ vdd-supply = <&vdd>;
+ vdd_3v3_usbfs-supply = <&vdd_usb>;
+};
+&rcc {
+ compatible = "st,stm32mp1-rcc-secure", "st,stm32mp1-rcc", "syscon";
+ st,clksrc = <
+  ((1 << 26) | ((0) << 4) | (2))
+  ((1 << 26) | ((1) << 4) | (2))
+  ((1 << 26) | ((2) << 4) | (3))
+  (((1) << (31)) | ((0x800) << 16) | (0 << 12))
+  (((1) << (31)) | ((0x804) << 16) | (0 << 12))
+  ((1 << 26) | ((6) << 4) | (2))
+  ((1 << 26) | ((10) << 4) | (0))
+  ((1 << 26) | ((11) << 4) | (0))
+  ((1 << 26) | ((41) << 4) | (0))
+  ((1 << 26) | ((8) << 4) | (2))
+  ((1 << 26) | ((38) << 4) | (0))
+  ((1 << 26) | ((16) << 4) | (1))
+  ((1 << 26) | ((14) << 4) | (0))
+  ((1 << 26) | ((18) << 4) | (1))
+  ((1 << 26) | ((19) << 4) | (1))
+  ((1 << 26) | ((20) << 4) | (2))
+  ((1 << 26) | ((21) << 4) | (2))
+  ((1 << 26) | ((25) << 4) | (2))
+  ((1 << 26) | ((9) << 4) | (2))
+  ((1 << 26) | ((15) << 4) | (1))
+  ((1 << 26) | ((40) << 4) | (1))
+  ((1 << 26) | ((22) << 4) | (0))
+  ((1 << 26) | ((23) << 4) | (2))
+  ((1 << 26) | ((24) << 4) | (2))
+  ((1 << 26) | ((29) << 4) | (2))
+  ((1 << 26) | ((30) << 4) | (2))
+  ((1 << 26) | ((31) << 4) | (2))
+  ((1 << 26) | ((32) << 4) | (2))
+  ((1 << 26) | ((33) << 4) | (2))
+  ((1 << 26) | ((17) << 4) | (0))
+  ((1 << 26) | ((39) << 4) | (3))
+  ((1 << 26) | ((34) << 4) | (1))
+  ((1 << 26) | ((35) << 4) | (1))
+  ((1 << 26) | ((36) << 4) | (1))
+  ((1 << 26) | ((37) << 4) | (1))
+  ((1 << 26) | ((12) << 4) | (0))
+  ((1 << 26) | ((13) << 4) | (3))
+  ((1 << 26) | ((26) << 4) | (0))
+  ((1 << 26) | ((27) << 4) | (0))
+  ((1 << 26) | ((28) << 4) | (3))
+ >;
+ st,clkdiv = <
+  ((0 << 26) | ((10) << 8) | (1))
+  ((0 << 26) | ((11) << 8) | (0))
+  ((0 << 26) | ((12) << 8) | (0))
+  ((0 << 26) | ((13) << 8) | (1))
+  ((0 << 26) | ((14) << 8) | (1))
+  ((0 << 26) | ((15) << 8) | (1))
+  ((0 << 26) | ((16) << 8) | (1))
+  ((0 << 26) | ((17) << 8) | (2))
+  ((0 << 26) | ((20) << 8) | (0))
+  ((0 << 26) | ((21) << 8) | (0))
+ >;
+ st,pll_vco {
+  pll2_vco_1066Mhz: pll2-vco-1066Mhz {
+   src = <((1 << 26) | ((3) << 4) | (1))>;
+   divmn = <2 65>;
+   frac = <0x1400>;
+  };
+  pll3_vco_417Mhz: pll3-vco-417Mhz {
+   src = <((1 << 26) | ((4) << 4) | (1))>;
+   divmn = <1 33>;
+   frac = <0x1a04>;
+  };
+  pll4_vco_594Mhz: pll4-vco-594Mhz {
+   src = <((1 << 26) | ((5) << 4) | (1))>;
+   divmn = <3 98>;
+  };
+ };
+ pll2: st,pll@1 {
+  compatible = "st,stm32mp1-pll";
+  reg = <1>;
+  st,pll = <&pll2_cfg1>;
+  pll2_cfg1: pll2_cfg1 {
+   st,pll_vco = <&pll2_vco_1066Mhz>;
+   st,pll_div_pqr = <1 0 0>;
+  };
+ };
+ pll3: st,pll@2 {
+  compatible = "st,stm32mp1-pll";
+  reg = <2>;
+  st,pll = <&pll3_cfg1>;
+  pll3_cfg1: pll3_cfg1 {
+   st,pll_vco = <&pll3_vco_417Mhz>;
+   st,pll_div_pqr = <1 16 36>;
+  };
+ };
+ pll4: st,pll@3 {
+  compatible = "st,stm32mp1-pll";
+  reg = <3>;
+  st,pll = <&pll4_cfg1>;
+  pll4_cfg1: pll4_cfg1 {
+   st,pll_vco = <&pll4_vco_594Mhz>;
+   st,pll_div_pqr = <5 7 7>;
+  };
+ };
+};
+&rng1 {
+ status = "okay";
+};
+&rtc {
+ status = "okay";
+};
+&sdmmc1 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&sdmmc1_b4_pins_a>;
+ disable-wp;
+ st,neg-edge;
+ bus-width = <4>;
+ vmmc-supply = <&v3v3>;
+ status = "okay";
+};
+&uart4 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&uart4_pins_a>;
+ status = "okay";
+};
+&uart7 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&uart7_pins_c>;
+ status = "disabled";
+};
+&usart3 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&usart3_pins_c>;
+ uart-has-rtscts;
+ status = "disabled";
+};
+&usbotg_hs {
+ phys = <&usbphyc_port1 0>;
+ phy-names = "usb2-phy";
+ usb-role-switch;
+ status = "okay";
+};
+&usbphyc {
+ status = "okay";
+};
+&usbphyc_port0 {
+ phy-supply = <&vdd_usb>;
+};
+&usbphyc_port1 {
+ phy-supply = <&vdd_usb>;
+};
 &pinctrl {
  fmc_pins_a: fmc-0 {
   pins1 {
@@ -1171,6 +1574,12 @@
  memory@c0000000 {
   device_type = "memory";
   reg = <0xc0000000 0x20000000>;
+ };
+ aliases {
+  serial0 = &uart4;
+ };
+ chosen {
+  stdout-path = "serial0:115200n8";
  };
  clocks {
   clk_hsi: clk-hsi {

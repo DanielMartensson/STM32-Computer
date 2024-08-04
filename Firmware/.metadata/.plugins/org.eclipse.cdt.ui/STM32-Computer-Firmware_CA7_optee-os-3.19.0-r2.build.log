@@ -1,4 +1,4 @@
-01:25:18 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_optee-os-3.19.0-r2 ****
+21:36:49 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_optee-os-3.19.0-r2 ****
 make -f ../Makefile.sdk.ide CFG_DRAM_SIZE=0x20000000 CFG_TZDRAM_START=0xde000000 CFG_EMBED_DTB_SOURCE_FILE=stm32mp151a-stm32-computer-firmware-mx optee 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../../FIP_artifacts
@@ -6,43 +6,12 @@ FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-
 + exec make -f ../Makefile.sdk.ide CFG_DRAM_SIZE=0x20000000 CFG_TZDRAM_START=0xde000000 CFG_EMBED_DTB_SOURCE_FILE=stm32mp151a-stm32-computer-firmware-mx optee
 make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2'
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/conf.mk
-  UPD     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/conf.mk
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/include/generated/conf.h
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/include/generated/asm-defines.h
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/include/generated/context_asm_defines.h
-  CC      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/arch/arm/tee/entry_fast.o
-  CPP     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.pre.dts
-  DTC     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dtb
-core/arch/arm/dts/stm32mp151.dtsi:437.22-449.5: Warning (unique_unit_address): /soc/spi@4000b000: duplicate unit-address (also used in node /soc/audio-controller@4000b000)
-core/arch/arm/dts/stm32mp151.dtsi:462.22-474.5: Warning (unique_unit_address): /soc/spi@4000c000: duplicate unit-address (also used in node /soc/audio-controller@4000c000)
-core/arch/arm/dts/stm32mp151.dtsi:760.22-772.5: Warning (unique_unit_address): /soc/spi@44004000: duplicate unit-address (also used in node /soc/audio-controller@44004000)
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.c
-  CC      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.o
-  LD      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/all_objs.o
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/unpaged_entries.txt
-  LD      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/unpaged.o
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/text_unpaged.ld.S
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/rodata_unpaged.ld.S
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/init_entries.txt
-  UPD     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/.buildcount
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/version.o
-  LD      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/init.o
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/text_init.ld.S
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/rodata_init.ld.S
-  CPP     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/kern.ld
-  LD      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/tee.elf
-  OBJDUMP /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/tee.dmp
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/tee.bin
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/tee-header_v2.bin
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/tee-pager_v2.bin
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/tee-pageable_v2.bin
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/tee.symb_sizes
-  INSTALL /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/export-ta_arm32/host_include/conf.mk
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/conf.cmake
-  UPD     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/conf.cmake
-  INSTALL /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/export-ta_arm32/host_include/conf.cmake
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/export-ta_arm32/mk/conf.mk
 make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2'
 
-01:25:49 Build Finished. 0 errors, 0 warnings. (took 31s.49ms)
+21:36:56 Build Finished. 0 errors, 0 warnings. (took 6s.462ms)
 

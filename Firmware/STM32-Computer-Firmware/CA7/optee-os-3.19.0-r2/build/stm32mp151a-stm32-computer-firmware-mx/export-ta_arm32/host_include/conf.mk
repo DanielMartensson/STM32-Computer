@@ -1,5 +1,5 @@
 # auto-generated TEE configuration file
-# TEE version f8cb4e8d8-dev
+# TEE version 19970000f-dev
 ARCH=arm
 PLATFORM=stm32mp1
 PLATFORM_FLAVOR=

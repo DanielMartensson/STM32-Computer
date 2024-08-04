@@ -20,6 +20,7 @@
 #include "stm32mp15-ddr.dtsi"
 
 /* USER CODE BEGIN includes */
+#include "stm32mp15xx-dkx.dtsi"
 #include "stm32mp15-pinctrl.dtsi"
 /* USER CODE END includes */
 
@@ -36,12 +37,18 @@
 	};
 
 	/* USER CODE BEGIN root */
+	
+	aliases {
+		serial0 = &uart4;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
 	/* USER CODE END root */
 
 	clocks {
 		/* USER CODE BEGIN clocks */
-		/* USER CODE END clocks */
-
 		clk_hsi: clk-hsi {
 			clock-frequency = <64000000>;
 
@@ -62,6 +69,7 @@
 			/* USER CODE BEGIN clk_hse */
 			/* USER CODE END clk_hse */
 		};
+		/* USER CODE END clocks */
 	};
 
 }; /*root*/
