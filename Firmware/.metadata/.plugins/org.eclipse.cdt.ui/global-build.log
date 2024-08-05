@@ -1,38 +1,194 @@
-21:39:46 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
-make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=usb stm32 metadata 
+01:02:12 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
+make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=optee-sdcard stm32 metadata 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts
 + case "$command" in
-+ exec make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=usb stm32 metadata
++ exec make -f ../Makefile.sdk.ide TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG=optee-sdcard stm32 metadata
 make[1]: Nothing to be done for 'all'.
 make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
-  CPP     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
-  DTC     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+  CPP     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
+  DTC     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/fdts/stm32mp151a-stm32-computer-firmware-mx-bl2.dts
+  CPP     fdts/stm32mp151a-stm32-computer-firmware-mx-fw-config.dts
+  DTC     fdts/stm32mp151a-stm32-computer-firmware-mx-fw-config.dts
 make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
 make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+  CC      lib/libfdt/fdt.c
+  CC      lib/libfdt/fdt_addresses.c
+  CC      lib/libfdt/fdt_empty_tree.c
+  CC      lib/libfdt/fdt_ro.c
+  CC      lib/libfdt/fdt_rw.c
+  CC      lib/libfdt/fdt_strerror.c
+  CC      lib/libfdt/fdt_sw.c
+  CC      lib/libfdt/fdt_wip.c
+  AR      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libfdt.a
+  CC      bl2/aarch32/bl2_arch_setup.c
+  CC      bl2/bl2_image_load_v2.c
+  CC      bl2/bl2_main.c
+  CC      common/desc_image_load.c
+  CC      common/fdt_wrappers.c
+  CC      drivers/fwu/fwu.c
+  CC      drivers/io/io_block.c
+  CC      drivers/io/io_fip.c
+  CC      drivers/io/io_mtd.c
+  CC      drivers/io/io_storage.c
+  CC      drivers/mmc/mmc.c
+  CC      drivers/partition/gpt.c
+  CC      drivers/partition/partition.c
+  CC      drivers/st/crypto/stm32_hash.c
+  CC      drivers/st/ddr/stm32mp1_ddr.c
+  CC      drivers/st/ddr/stm32mp1_ram.c
+  CC      drivers/st/ddr/stm32mp_ddr_test.c
+  CC      drivers/st/ddr/stm32mp_ram.c
+  CC      drivers/st/io/io_mmc.c
+  CC      drivers/st/mmc/stm32_sdmmc2.c
+  CC      lib/fconf/fconf.c
+  CC      lib/fconf/fconf_dyn_cfg_getter.c
+  CC      lib/optee/optee_utils.c
+  CC      lib/zlib/adler32.c
+  CC      lib/zlib/crc32.c
+  CC      lib/zlib/inffast.c
+  CC      lib/zlib/inflate.c
+  CC      lib/zlib/inftrees.c
+  CC      lib/zlib/tf_gunzip.c
+  CC      lib/zlib/zutil.c
+  CC      plat/st/common/bl2_io_storage.c
+  CC      plat/st/common/stm32mp_fconf_io.c
+  CC      plat/st/stm32mp1/bl2_plat_setup.c
+  CC      plat/st/stm32mp1/plat_bl2_mem_params_desc.c
+  CC      plat/st/stm32mp1/plat_ddr.c
+  CC      plat/st/stm32mp1/plat_image_load.c
+  CC      plat/st/stm32mp1/stm32mp1_critic_power.c
+  CC      plat/st/stm32mp1/stm32mp1_fconf_firewall.c
+  CC      common/bl_common.c
+  CC      common/tf_log.c
+  CC      drivers/console/multi_console.c
+  CC      plat/common/plat_bl_common.c
+  CC      plat/common/plat_log_common.c
+  CC      plat/common/aarch32/plat_common.c
+  CC      lib/compiler-rt/builtins/popcountdi2.c
+  CC      lib/compiler-rt/builtins/popcountsi2.c
+  CC      lib/compiler-rt/builtins/ctzdi2.c
+  CC      lib/compiler-rt/builtins/divdi3.c
+  CC      lib/compiler-rt/builtins/divmoddi4.c
+  CC      lib/compiler-rt/builtins/lshrdi3.c
+  CC      lib/compiler-rt/builtins/udivmoddi4.c
+  CC      common/uuid.c
+  CC      plat/st/common/stm32mp_common.c
+  CC      lib/xlat_tables_v2/aarch32/xlat_tables_arch.c
+  CC      lib/xlat_tables_v2/xlat_tables_context.c
+  CC      lib/xlat_tables_v2/xlat_tables_core.c
+  CC      lib/xlat_tables_v2/xlat_tables_utils.c
+  CC      drivers/clk/clk.c
+  CC      drivers/delay_timer/delay_timer.c
+  CC      drivers/delay_timer/generic_delay_timer.c
+  CC      drivers/st/clk/stm32mp_clkfunc.c
+  CC      drivers/st/ddr/stm32mp_ddr.c
+  CC      drivers/st/gpio/stm32_gpio.c
+  CC      drivers/st/nvmem/nvmem.c
+  CC      drivers/st/nvmem/stm32mp_tamp_nvram_core.c
+  CC      drivers/st/regulator/regulator_core.c
+  CC      drivers/st/regulator/regulator_fixed.c
+  CC      drivers/st/regulator/regulator_gpio.c
+  CC      plat/st/common/stm32mp_dt.c
+  CC      plat/st/common/stm32mp_fconf_fuse.c
+  CC      plat/st/stm32mp1/stm32mp1_private.c
+  CC      drivers/arm/tzc/tzc400.c
+  CC      drivers/st/bsec/bsec2.c
+  CC      drivers/st/ddr/stm32mp1_ddr_helpers.c
+  CC      drivers/st/i2c/stm32_i2c.c
+  CC      drivers/st/iwdg/stm32_iwdg.c
+  CC      drivers/st/pmic/stm32mp_pmic.c
+  CC      drivers/st/pmic/stpmic1.c
+  CC      drivers/st/reset/stm32mp1_reset.c
+  CC      plat/st/stm32mp1/stm32mp1_context.c
+  CC      plat/st/stm32mp1/stm32mp1_dbgmcu.c
+  CC      plat/st/stm32mp1/stm32mp1_syscfg.c
+  CC      drivers/st/nvmem/stm32mp_tamp_nvram_mp1.c
+  CC      drivers/st/clk/stm32mp1_clk.c
+  AS      bl2/aarch32/bl2_el3_entrypoint.S
+  AS      bl2/aarch32/bl2_el3_exceptions.S
+  AS      bl2/aarch32/bl2_run_next_image.S
+  AS      lib/cpus/aarch32/cpu_helpers.S
+  AS      lib/locks/exclusive/aarch32/spinlock.S
+  AS      plat/common/aarch32/platform_up_stack.S
+  AS      plat/st/stm32mp1/stm32mp1_critic_power_wrapper.S
+  AS      common/aarch32/debug.S
+  AS      lib/aarch32/cache_helpers.S
+  AS      lib/aarch32/misc_helpers.S
+  AS      plat/common/aarch32/platform_helpers.S
+  AS      lib/compiler-rt/builtins/arm/aeabi_ldivmod.S
+  AS      lib/compiler-rt/builtins/arm/aeabi_uldivmod.S
+  AS      lib/compiler-rt/builtins/arm/aeabi_memcpy.S
+  AS      lib/compiler-rt/builtins/arm/aeabi_memset.S
+  AS      lib/xlat_tables_v2/aarch32/enable_mmu.S
+  AS      drivers/st/uart/aarch32/stm32_console.S
+  AS      lib/cpus/aarch32/cortex_a7.S
+  AS      plat/st/stm32mp1/stm32mp1_helper.S
+  PP      bl2/bl2_el3.ld.S
+  CC      lib/libc/abort.c
+  CC      lib/libc/assert.c
+  CC      lib/libc/exit.c
+  CC      lib/libc/memchr.c
+  CC      lib/libc/memcmp.c
+  CC      lib/libc/memcpy.c
+  CC      lib/libc/memmove.c
+  CC      lib/libc/memrchr.c
+  CC      lib/libc/memset.c
+  CC      lib/libc/printf.c
+  CC      lib/libc/putchar.c
+  CC      lib/libc/puts.c
+  CC      lib/libc/snprintf.c
+  CC      lib/libc/strchr.c
+  CC      lib/libc/strcmp.c
+  CC      lib/libc/strlcat.c
+  CC      lib/libc/strlcpy.c
+  CC      lib/libc/strlen.c
+  CC      lib/libc/strncmp.c
+  CC      lib/libc/strnlen.c
+  CC      lib/libc/strrchr.c
+  CC      lib/libc/strtok.c
+  CC      lib/libc/strtoul.c
+  CC      lib/libc/strtoll.c
+  CC      lib/libc/strtoull.c
+  CC      lib/libc/strtol.c
+  AR      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/lib/libc.a
+  LD      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2.elf
+  BIN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2.bin
+
+Built /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2.bin successfully
+
+  PP      plat/st/stm32mp1/stm32mp1.ld.S
   AS      stm32mp1.S
-  LDS     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o
+  LDS     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o
 
-Built /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin successfully
+Built /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin successfully
 
 
-Generate /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.stm32
+Generate /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.stm32
 Image Type   : ST Microelectronics STM32 V1.0
-Image Size   : 225446 bytes
+Image Size   : 229570 bytes
 Image Load   : 0x2ffc2500
 Entry Point  : 0x2ffe9000
-Checksum     : 0x006ef04e
+Checksum     : 0x00755e23
 Option     : 0x00000001
 Version	     : 0x00000000
 
 Building stm32mp1
-rm /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.elf /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/usb-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o
+  OD      /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/bl2/bl2.dump
+make[1]: Nothing to be done for 'dtbs'.
+rm /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/stm32mp1-stm32mp151a-stm32-computer-firmware-mx.o /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.elf /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../build/optee-sdcard-stm32mp15-stm32mp151a-stm32-computer-firmware-mx/tf-a-stm32mp151a-stm32-computer-firmware-mx.bin
 make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
 Image Type   : STMicroelectronics STM32 V1.0
 Image Target : STM32MP15x Cortex-A7
-Image Size   : 225540 bytes
+Image Size   : 229700 bytes
 Image Load   : 0x2ffc2500
-Entry Point  : 0x2fff95c1
+Entry Point  : 0x2fffa601
 Version      : 0x00000000
 Halt Address : 0x2ffe9000
 mkfwumdata -g -i 1 -b 2 -v 2 8a7a84a0-8387-40f6-ab41-a8b9a5a60d23,19d5df83-11b0-457b-be2c-7559c13142a5,4fd84c93-54ef-463f-a7ef-ae25ff887087,09c54952-d5bf-45af-acee-335303766fb3 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts/arm-trusted-firmware/metadata.bin
