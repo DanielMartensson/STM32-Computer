@@ -94,7 +94,7 @@
 			<target name="optee  (stm32mp151a-stm32-computer-firmware-mx) - DK  Board" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
-				<buildTarget>CFG_DRAM_SIZE=0x20000000 CFG_TZDRAM_START=0xde000000 CFG_TEE_CORE_LOG_LEVEL=3 CFG_TEE_CORE_DEBUG=y DEBUG=1 CFG_EMBED_DTB_SOURCE_FILE=stm32mp151a-stm32-computer-firmware-mx optee</buildTarget>
+				<buildTarget>CFG_DRAM_SIZE=0x20000000 CFG_TZDRAM_START=0xde000000 CFG_EMBED_DTB_SOURCE_FILE=stm32mp151a-stm32-computer-firmware-mx optee</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
