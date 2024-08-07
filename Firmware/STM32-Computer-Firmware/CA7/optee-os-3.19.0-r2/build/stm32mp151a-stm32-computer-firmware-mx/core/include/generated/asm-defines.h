@@ -17,7 +17,7 @@
 #define THREAD_CTX_REGS_CPSR	76	/* offsetof(struct thread_ctx_regs, cpsr)"	*/
 #define THREAD_CORE_LOCAL_R0	0	/* offsetof(struct thread_core_local, r[0])"	*/
 #define THREAD_CORE_LOCAL_SM_PM_CTX_PHYS	8	/* offsetof(struct thread_core_local, sm_pm_ctx_phys)"	*/
-#define THREAD_CORE_LOCAL_SIZE	40	/* sizeof(struct thread_core_local)"	*/
+#define THREAD_CORE_LOCAL_SIZE	32	/* sizeof(struct thread_core_local)"	*/
 #define SM_PM_CTX_SIZE	80	/* sizeof(struct sm_pm_ctx)"	*/
 #define THREAD_CTX_SIZE	784	/* sizeof(struct thread_ctx)"	*/
 #define THREAD_CORE_LOCAL_TMP_STACK_VA_END	12	/* offsetof(struct thread_core_local, tmp_stack_va_end)"	*/

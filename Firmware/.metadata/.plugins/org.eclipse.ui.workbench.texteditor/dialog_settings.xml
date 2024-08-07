@@ -1,25 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="DEBUG"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="cpu"/>
-			<item value="pins_mx"/>
+			<item value="debug"/>
+			<item value="con_usbotg_hs_ep"/>
+			<item value="&amp;usbh_ohci"/>
+			<item value="&amp;usbh_ehci"/>
+			<item value="&amp;uart4"/>
+			<item value="&amp;tamp"/>
+			<item value="rcc"/>
+			<item value="vdd"/>
+			<item value="&amp;pwr_regulators"/>
+			<item value="&amp;mdma1"/>
+			<item value="&amp;m4_dma2"/>
+			<item value="ltdc_ep0_out"/>
+			<item value="v1v2_hdmi"/>
+			<item value="v3v3_hdmi"/>
+			<item value="i2s2"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="670"/>
-		<item key="DIALOG_Y_ORIGIN" value="208"/>
-		<item key="DIALOG_WIDTH" value="363"/>
-		<item key="DIALOG_HEIGHT" value="437"/>
+		<item key="DIALOG_X_ORIGIN" value="89"/>
+		<item key="DIALOG_Y_ORIGIN" value="317"/>
+		<item key="DIALOG_WIDTH" value="342"/>
+		<item key="DIALOG_HEIGHT" value="285"/>
 		<item key="DIALOG_FONT_NAME" value="1|Sans|10.0|0|GTK|1|"/>
 	</section>
 </section>

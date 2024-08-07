@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
-		<cconfiguration id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.1251947795">
-			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.1251947795" moduleId="org.eclipse.cdt.core.settings" name="Default">
+		<cconfiguration id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.939492893">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.939492893" moduleId="org.eclipse.cdt.core.settings" name="Default">
 				<externalSettings/>
 				<extensions>
 					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
@@ -15,33 +15,33 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" errorParsers="com.st.stm32cube.ide.mcu.build.STMGCCErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.1251947795" name="Default" parent="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug">
-					<folderInfo id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.1251947795." name="/" resourcePath="">
-						<toolChain id="com.st.stm32cube.ide.mpu.gnu.managedbuild.toolchain.exe.debug.186442592" name="OpenSTLinux SDK" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.toolchain.exe.debug">
-							<option id="com.st.stm32cube.ide.mpu.option.sdkversion.2146399460" superClass="com.st.stm32cube.ide.mpu.option.sdkversion" value="openstlinux-6.1-yocto-mickledore-mpu-v24.06.26" valueType="string"/>
-							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.targetplatform.518562061" isAbstract="false" osList="all" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.targetplatform"/>
-							<builder arguments="-f ../Makefile.sdk.ide" buildPath="${workspace_loc:/STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2}/tf-a-stm32mp-v2.8.15-stm32mp-r2" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.builder.304313650" managedBuildOn="false" name="Gnu Make Builder.Debug" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.builder"/>
-							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.339634974" name="MPU GCC Assembler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler">
-								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel.544548891" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel.value.g3" valueType="enumerated"/>
-								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.input.1048198547" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.input"/>
+				<configuration artifactName="STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" errorParsers="com.st.stm32cube.ide.mcu.build.STMGCCErrorParser;org.eclipse.cdt.core.CWDLocator;org.eclipse.cdt.core.GmakeErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.939492893" name="Default" parent="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug">
+					<folderInfo id="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.939492893." name="/" resourcePath="">
+						<toolChain id="com.st.stm32cube.ide.mpu.gnu.managedbuild.toolchain.exe.debug.990414384" name="OpenSTLinux SDK" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.toolchain.exe.debug">
+							<option id="com.st.stm32cube.ide.mpu.option.sdkversion.672140699" superClass="com.st.stm32cube.ide.mpu.option.sdkversion" value="openstlinux-6.1-yocto-mickledore-mpu-v24.06.26" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.targetplatform.756861029" isAbstract="false" osList="all" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.targetplatform"/>
+							<builder arguments="-f ../Makefile.sdk.ide" buildPath="${workspace_loc:/STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2}/tf-a-stm32mp-v2.8.15-stm32mp-r2" id="com.st.stm32cube.ide.mpu.gnu.managedbuild.builder.654438358" managedBuildOn="false" name="Gnu Make Builder.Debug" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.builder"/>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.425880417" name="MPU GCC Assembler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler">
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel.1311765986" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.option.debuglevel.value.g3" valueType="enumerated"/>
+								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.input.439011334" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
-							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.1557539965" name="MPU GCC Compiler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler">
-								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel.117995488" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel.value.g3" valueType="enumerated"/>
-								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level.760734695" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level.value.og" valueType="enumerated"/>
-								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.1792322368" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c"/>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.1332454496" name="MPU GCC Compiler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler">
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel.1643445113" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.debuglevel.value.g3" valueType="enumerated"/>
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level.1111716966" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.option.optimization.level.value.og" valueType="enumerated"/>
+								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.1916490666" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
-							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.797567947" name="MPU G++ Compiler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler">
-								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.402212124" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.value.g3" valueType="enumerated"/>
-								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level.1534936728" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level.value.og" valueType="enumerated"/>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.660412057" name="MPU G++ Compiler" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler">
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.1395788299" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.debuglevel.value.g3" valueType="enumerated"/>
+								<option id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level.1426972030" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.compiler.option.optimization.level.value.og" valueType="enumerated"/>
 							</tool>
-							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.276198420" name="MPU GCC Linker" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker">
-								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.input.665954445" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.input">
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.2101127872" name="MPU GCC Linker" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker">
+								<inputType id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.input.40070013" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
 								</inputType>
 							</tool>
-							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.linker.1737903175" name="MPU G++ Linker" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.linker"/>
-							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.archiver.1136062404" name="MPU GCC Archiver" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.archiver"/>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.linker.906040505" name="MPU G++ Linker" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.cpp.linker"/>
+							<tool id="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.archiver.1072823363" name="MPU GCC Archiver" superClass="com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.archiver"/>
 						</toolChain>
 					</folderInfo>
 				</configuration>
@@ -50,11 +50,11 @@
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2.com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe.2007644188" name="Executable" projectType="com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe"/>
+		<project id="STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2.com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe.32609414" name="Executable" projectType="com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe"/>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.1251947795;com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.1251947795.;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.1557539965;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.1792322368">
+		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.939492893;com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.939492893.;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.1332454496;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.1916490666">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
@@ -107,10 +107,10 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
-			<target name="sdcard stm32 metadata  (stm32mp151a-stm32-computer-firmware-mx)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="optee-emmc stm32 metadata  (stm32mp151a-stm32-computer-firmware-mx)" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
-				<buildTarget>TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG="optee-sdcard" stm32 metadata</buildTarget>
+				<buildTarget>TF_A_DEVICETREE=stm32mp151a-stm32-computer-firmware-mx TF_A_CONFIG="optee-emmc" stm32 metadata</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>

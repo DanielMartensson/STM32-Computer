@@ -12,5 +12,4 @@
  include/dt-bindings/reset/stm32mp1-resets.h \
  include/dt-bindings/reset/stm32mp15-resets.h fdts/stm32mp15xa.dtsi \
  fdts/stm32mp15xxac-pinctrl.dtsi fdts/stm32mp15-ddr.dtsi \
- fdts/stm32mp15xx-dkx.dtsi fdts/stm32mp15-ddr3-1x4Gb-1066-binG.dtsi \
  fdts/stm32mp15-pinctrl.dtsi fdts/stm32mp15-bl2.dtsi

@@ -22,10 +22,6 @@
 			nvmem-cells = <&part_number_otp>;
 			nvmem-cell-names = "part_number";
 		};
-		
-		cpu1: cpu@1 {
-			/* EMPTY */
-		};
 	};
 
 	psci {

@@ -16,7 +16,7 @@ LDFLAGS =
 CFLAGS =
 CPPFLAGS =
 # Define default make options
-EXTRA_OEMAKE = PLATFORM=stm32mp1 CROSS_COMPILE_core=arm-ostl-linux-gnueabi- CROSS_COMPILE_ta_arm64=arm-ostl-linux-gnueabi- ARCH=arm CFG_ARM32_core=y CROSS_COMPILE_ta_arm32=arm-ostl-linux-gnueabi- NOWERROR=1 LDFLAGS=  CFG_TEE_CORE_LOG_LEVEL=3 CFG_TEE_CORE_DEBUG=y  CFG_SCMI_SCPFW=n
+EXTRA_OEMAKE = PLATFORM=stm32mp1 CROSS_COMPILE_core=arm-ostl-linux-gnueabi- CROSS_COMPILE_ta_arm64=arm-ostl-linux-gnueabi- ARCH=arm CFG_ARM32_core=y CROSS_COMPILE_ta_arm32=arm-ostl-linux-gnueabi- NOWERROR=1 LDFLAGS=  CFG_TEE_CORE_LOG_LEVEL=2 CFG_TEE_CORE_DEBUG=n  CFG_SCMI_SCPFW=n
 
 # Set dependencies list for building all
 DEPS = optee
