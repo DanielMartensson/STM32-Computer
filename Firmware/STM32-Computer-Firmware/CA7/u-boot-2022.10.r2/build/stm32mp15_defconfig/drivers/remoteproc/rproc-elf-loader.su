@@ -6,4 +6,4 @@
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/remoteproc/rproc-elf-loader.c:290:7:rproc_elf_get_boot_addr	0	static
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/remoteproc/rproc-elf-loader.c:374:5:rproc_elf32_load_rsc_table	40	static
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/remoteproc/rproc-elf-loader.c:483:5:rproc_elf64_load_rsc_table	48	static
-/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/remoteproc/rproc-elf-loader.c:519:5:rproc_elf_load_rsc_table	0	static
+/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/drivers/remoteproc/rproc-elf-loader.c:519:5:rproc_elf_load_rsc_table	4	static

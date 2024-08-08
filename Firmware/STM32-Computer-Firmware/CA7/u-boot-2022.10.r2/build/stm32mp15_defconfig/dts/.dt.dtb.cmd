@@ -1,1 +1,1 @@
-cmd_dts/dt.dtb := cat arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dtb > dts/dt.dtb
+cmd_dts/dt.dtb := cat arch/arm/dts/stm32mp157f-dk2.dtb > dts/dt.dtb

@@ -2125,6 +2125,10 @@
 # 19 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts" 2
 
 
+# 1 "core/include/dt-bindings/mfd/st,stpmic1.h" 1
+# 22 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts" 2
+# 1 "core/include/dt-bindings/power/stm32mp1-power.h" 1
+# 23 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts" 2
 
 
 / {
@@ -2149,6 +2153,20 @@
  };
 
 
+ aliases {
+ };
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+
+ vin: vin {
+  compatible = "regulator-fixed";
+  regulator-name = "vin";
+  regulator-min-microvolt = <5000000>;
+  regulator-max-microvolt = <5000000>;
+  regulator-always-on;
+ };
 
 
  clocks {
@@ -2213,6 +2231,9 @@
  status = "okay";
 
 
+ huk_otp: huk-otp@f0 {
+  reg = <0xf0 0x10>;
+ };
 
 };
 
@@ -2236,7 +2257,7 @@
  (((0) << 16) | ((0x0) << 8) | (0x0))
 
  (((89) << 16) | ((0x2) << 8) | (0x0))
-# 141 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+# 160 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
  >;
 
 
@@ -2249,6 +2270,84 @@
  status = "okay";
 
 
+ compatible = "st,stm32mp15-i2c-non-secure";
+ i2c-scl-rising-time-ns = <185>;
+ i2c-scl-falling-time-ns = <20>;
+ clock-frequency = <400000>;
+ /delete-property/dmas;
+ /delete-property/dma-names;
+ pmic: stpmic@33 {
+  compatible = "st,stpmic1";
+  reg = <0x33>;
+  interrupts-extended = <&gpioa 0 2>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  status = "okay";
+
+  regulators {
+   compatible = "st,stpmic1-regulators";
+   buck1-supply = <&vin>;
+   buck2-supply = <&vin>;
+   buck3-supply = <&vin>;
+   buck4-supply = <&vin>;
+   ldo1-supply = <&v3v3>;
+   ldo2-supply = <&vin>;
+   ldo3-supply = <&vdd_ddr>;
+   ldo4-supply = <&vin>;
+   ldo5-supply = <&vin>;
+   ldo6-supply = <&v3v3>;
+   vref_ddr-supply = <&vin>;
+   boost-supply = <&vin>;
+   pwr_sw1-supply = <&bst_out>;
+   pwr_sw2-supply = <&bst_out>;
+  };
+
+  v3v3: buck4 {
+   regulator-name = "v3v3";
+   regulator-min-microvolt = <3300000>;
+   regulator-max-microvolt = <3300000>;
+   regulator-always-on;
+   regulator-over-current-protection;
+   regulator-initial-mode = <0>;
+  };
+
+  vdd: buck3 {
+   regulator-name = "vdd";
+   regulator-min-microvolt = <3300000>;
+   regulator-max-microvolt = <3300000>;
+   regulator-always-on;
+   st,mask-reset;
+   regulator-initial-mode = <0>;
+   regulator-over-current-protection;
+  };
+
+  vdd_ddr: buck2 {
+   regulator-name = "vdd_ddr";
+   regulator-min-microvolt = <1350000>;
+   regulator-max-microvolt = <1350000>;
+   regulator-always-on;
+   regulator-initial-mode = <0>;
+   regulator-over-current-protection;
+  };
+
+  vdd_usb: ldo4 {
+   regulator-name = "vdd_usb";
+   interrupts = <19 0>;
+  };
+
+  v1v2_hdmi: ldo6 {
+   regulator-name = "v1v2_hdmi";
+   regulator-min-microvolt = <1200000>;
+   regulator-max-microvolt = <1200000>;
+   regulator-always-on;
+   interrupts = <21 0>;
+  };
+
+  bst_out: boost {
+   regulator-name = "bst_out";
+   interrupts = <14 0>;
+  };
+ };
 
 };
 
@@ -2256,6 +2355,14 @@
  status = "okay";
 
 
+ system_suspend_supported_soc_modes = <
+  0
+  2
+  5
+ >;
+ system_off_soc_mode = <6>;
+ vdd-supply = <&vdd>;
+ vdd_3v3_usbfs-supply = <&vdd_usb>;
 
 };
 
@@ -2374,5 +2481,7 @@
  status = "okay";
 
 
+ st,tamp-passive-nb-sample = <4>;
+ st,tamp-passive-sample-clk-div = <16384>;
 
 };

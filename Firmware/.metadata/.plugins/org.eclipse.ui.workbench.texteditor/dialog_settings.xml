@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="DEBUG"/>
+		<item key="selection" value="vdd_usb"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="debug"/>
-			<item value="con_usbotg_hs_ep"/>
-			<item value="&amp;usbh_ohci"/>
-			<item value="&amp;usbh_ehci"/>
-			<item value="&amp;uart4"/>
-			<item value="&amp;tamp"/>
-			<item value="rcc"/>
-			<item value="vdd"/>
+			<item value="vdd_usb"/>
+			<item value="STM32_PM_CSTOP_ALLOW_STANDBY_DDR_OFF"/>
 			<item value="&amp;pwr_regulators"/>
-			<item value="&amp;mdma1"/>
-			<item value="&amp;m4_dma2"/>
-			<item value="ltdc_ep0_out"/>
-			<item value="v1v2_hdmi"/>
-			<item value="v3v3_hdmi"/>
-			<item value="i2s2"/>
+			<item value="&amp;osc_calibration "/>
+			<item value="&amp;osc_calibration"/>
+			<item value="&amp;m4_rproc"/>
+			<item value="&amp;ltdc"/>
+			<item value="&amp;iwdg1"/>
+			<item value="&amp;ipcc"/>
+			<item value="&amp;i2s"/>
+			<item value="&amp;i2s2"/>
+			<item value="vdd_ddr"/>
+			<item value="v3v3"/>
+			<item value="bst_out"/>
+			<item value="&amp;i2c4"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>
