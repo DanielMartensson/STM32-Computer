@@ -146,13 +146,16 @@ struct stm32_uart_pdata *stm32_uart_init_from_dt_node(void *fdt, int node)
 	TEE_Result res = TEE_ERROR_GENERIC;
 	struct stm32_uart_pdata *pd = NULL;
 	struct dt_node_info info = { };
-	uint32_t cfg8 = 0;
+	uint32_t reg_var, cfg8 = 0;
 
 	_fdt_fill_device_info(fdt, &info, node);
 
 	if (info.status == DT_STATUS_DISABLED)
 		return NULL;
 
+	reg_var = info.reg;
+	DMSG("info.reg = 0x%X", reg_var);
+	DMSG("info.reg_size = 0x%X", info.reg_size);
 	assert(info.reg != DT_INFO_INVALID_REG &&
 	       info.reg_size != DT_INFO_INVALID_REG_SIZE);
 

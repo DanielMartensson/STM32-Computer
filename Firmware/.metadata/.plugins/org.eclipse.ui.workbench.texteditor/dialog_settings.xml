@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="uart"/>
+		<item key="selection" value="DMSG"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="DMSG"/>
 			<item value="uart"/>
 			<item value="vdd_usb"/>
 			<item value="STM32_PM_CSTOP_ALLOW_STANDBY_DDR_OFF"/>
@@ -22,7 +23,6 @@
 			<item value="&amp;i2s2"/>
 			<item value="vdd_ddr"/>
 			<item value="v3v3"/>
-			<item value="bst_out"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>
