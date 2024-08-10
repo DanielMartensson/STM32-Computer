@@ -9260,3 +9260,602 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-08-10 20:35:11.930
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-08-10 21:43:50.939 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=sv_SE
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-08-10 21:46:15.185
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-08-10 21:46:15.204
+!MESSAGE Log4j2 initialized with config file /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-08-10 21:47:20.518
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.ui 4 0 2024-08-10 21:51:21.670
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:565)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:480)
+	at org.eclipse.swt.widgets.Control.getShell(Control.java:3350)
+	at org.eclipse.swt.awt.SWT_AWT.lambda$5(SWT_AWT.java:224)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5854)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1555)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1534)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1337)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4803)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1560)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1344)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4803)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1560)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1344)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4803)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:543)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:183)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:286)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:938)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:861)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:845)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:208)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:206)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:314)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1410)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1340)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1337)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1197)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1969)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:337)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5854)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5064)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4516)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+
+!ENTRY org.eclipse.ui 4 0 2024-08-10 21:51:21.678
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:565)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:480)
+	at org.eclipse.swt.widgets.Control.removeControlListener(Control.java:2238)
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.SwtFocusHandler$2.widgetDisposed(SwtFocusHandler.java:67)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5854)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1555)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1534)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1337)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4803)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1560)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1344)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4803)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:1560)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1344)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4803)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:543)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:183)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:286)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:938)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:861)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:845)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:208)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:206)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:314)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1410)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1340)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1337)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1197)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1969)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:337)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5854)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5064)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4516)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2024-08-10 21:51:21.679
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:565)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:480)
+	at org.eclipse.swt.widgets.Control.setRedraw(Control.java:5971)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:288)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:938)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:861)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:845)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:208)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:206)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:314)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1410)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1340)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1337)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1197)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1969)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:337)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5854)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5064)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4516)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-08-10 21:51:21.690
+!MESSAGE Exception occurred while unrendering: org.eclipse.e4.ui.compatibility.editor=org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl@61df07d0 (tags: [Editor, removeOnHide, com.st.stm32cube.common.mx.startCubeMx], contributorURI: null) (widget: null, renderer: null, toBeRendered: false, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (contributionURI: bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor, object: CompatibilityPart [partId=org.eclipse.e4.ui.compatibility.editor, properties=[], tags=[Editor, removeOnHide, com.st.stm32cube.common.mx.startCubeMx], beingDisposed=true, alreadyDisposed=true], context: Anonymous Context, variables: [], label: STM32-Computer-Firmware.ioc, iconURI: platform:/plugin/com.st.stm32cube.common.mx/icons/MicroXplorer.png, tooltip: null, dirty: false, closeable: true, description: null)
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:565)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:480)
+	at org.eclipse.swt.widgets.Control.setRedraw(Control.java:5971)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:288)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:938)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:861)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:845)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:185)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:92)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:208)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:206)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:314)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1410)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1340)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1337)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1197)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1969)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:337)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5854)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5064)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4516)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2024-08-10 21:51:22.629
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.XZedRepository
+!STACK 0
+java.lang.NullPointerException: Cannot enter synchronized block because "this.browseFileTransferProtocolMap" is null
+	at org.eclipse.ecf.internal.provider.filetransfer.Activator.getBrowseFileTransfer(Activator.java:633)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:81)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:184)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:109)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:275)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCacheFromFile(CacheManager.java:109)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.getLocalFile(XZedSimpleMetadataRepositoryFactory.java:60)
+	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2024-08-10 21:51:22.640
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.simpleRepository
+!STACK 0
+java.lang.NullPointerException: Cannot enter synchronized block because "this.browseFileTransferProtocolMap" is null
+	at org.eclipse.ecf.internal.provider.filetransfer.Activator.getBrowseFileTransfer(Activator.java:633)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:81)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:184)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:109)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:275)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:278)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:232)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2024-08-10 21:51:22.653
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.compositeRepository
+!STACK 0
+java.lang.IllegalStateException: bundle org.eclipse.equinox.p2.repository is not started
+	at org.eclipse.equinox.internal.p2.repository.Activator.getContext(Activator.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getPreferences(AbstractRepositoryManager.java:510)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.saveToPreferences(AbstractRepositoryManager.java:1055)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.removeRepository(AbstractRepositoryManager.java:964)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.removeRepository(AbstractRepositoryManager.java:942)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:708)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2024-08-10 21:51:22.654
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.compositeRepository
+!STACK 0
+java.lang.IllegalStateException: bundle org.eclipse.equinox.p2.repository is not started
+	at org.eclipse.equinox.internal.p2.repository.Activator.getContext(Activator.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreFromSystemProperty(AbstractRepositoryManager.java:1017)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1037)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getRepositoryProperty(AbstractRepositoryManager.java:575)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:707)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2024-08-10 21:51:22.656
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://sw-center.st.com/stm32cubeide/toolchains.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:409)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:713)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2024-08-10 21:51:22.656
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/toolchains.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2024-08-10 21:51:22.664
+!MESSAGE Unable to read repository at https://sw-center.st.com/stm32cubeide/updatesite1.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://sw-center.st.com/stm32cubeide/toolchains.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:409)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:713)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:161)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:93)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:791)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:689)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2024-08-10 21:51:22.664
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/toolchains.
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2024-08-10 21:51:22.664
+!MESSAGE Exception in update check thread
+!STACK 0
+java.lang.IllegalStateException: bundle org.eclipse.equinox.p2.repository is not started
+	at org.eclipse.equinox.internal.p2.repository.Activator.getContext(Activator.java:65)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getPreferences(AbstractRepositoryManager.java:510)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.remember(AbstractRepositoryManager.java:900)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.addRepository(AbstractRepositoryManager.java:171)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:676)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2024-08-10 21:51:50.484 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=sv_SE
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-08-10 21:52:53.736
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-08-10 21:52:53.738
+!MESSAGE Log4j2 initialized with config file /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-08-10 21:53:35.726
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-08-10 21:58:54.170 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=sv_SE
+Command-line arguments:  -data file:/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/ -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-08-10 21:59:11.238
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-08-10 21:59:11.242
+!MESSAGE Log4j2 initialized with config file /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-08-10 21:59:53.364
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-08-10 23:58:34.580 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=sv_SE
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-08-10 23:59:01.672
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-08-10 23:59:01.690
+!MESSAGE Log4j2 initialized with config file /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/.metadata/.log4j2.xml
+!SESSION 2024-08-11 00:06:48.591 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=sv_SE
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-08-11 00:07:17.321
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-08-11 00:07:17.333
+!MESSAGE Log4j2 initialized with config file /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/.metadata/.log4j2.xml
