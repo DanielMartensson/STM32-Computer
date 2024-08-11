@@ -2154,6 +2154,7 @@
 
 
  aliases {
+  serial0 = &uart4;
  };
 
  chosen {
@@ -2269,7 +2270,7 @@
  (((0) << 16) | ((0x0) << 8) | (0x0))
 
  (((89) << 16) | ((0x2) << 8) | (0x0))
-# 172 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+# 173 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
  >;
 
 

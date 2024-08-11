@@ -45,6 +45,7 @@
 
 	/* USER CODE BEGIN root */
 	aliases {
+		serial0 = &uart4;
 	};
 
 	chosen {

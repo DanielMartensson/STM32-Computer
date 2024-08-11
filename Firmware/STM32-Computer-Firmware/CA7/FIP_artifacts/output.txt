@@ -754,3 +754,381 @@ M/TC:   und_spsr : 0x24820503
 M/TC:     und_sp : 0x501c5c54
 M/TC:     und_lr : 0x0d890700
 M/TC:       pmcr : 0x48008004
+NOTICE:  CPU: STM32MP151AAC Rev.Z
+NOTICE:  Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
+INFO:    PMIC version = 0x21
+WARNING: VDD unknown
+INFO:    Reset reason (0x15):
+INFO:      Power-on Reset (rst_por)
+INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_io
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_fuse
+INFO:    Using USB
+INFO:      Instance 2
+INFO:    Boot used partition fsbl1
+NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):fc5a7b038-dirty(fc5a7b03)
+NOTICE:  BL2: Built : 23:46:56, Aug  6 2024
+INFO:    BL2: Doing platform setup
+INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
+INFO:    Memory size = 0x20000000 (512 MB)
+INFO:    DFU USB START...
+INFO:    phase ID :3, Manifestation 3 at c7161442
+INFO:    Send detach request
+INFO:    Receive DFU Detach
+INFO:    DFU USB STOP...
+INFO:    BL2: Loading image id 1
+INFO:    Loading image id=1 at address 0x2ffff000
+INFO:    Image id=1 loaded: 0x2ffff000 - 0x2ffff1ea
+INFO:    FCONF: Reading FW_CONFIG firmware configuration file from: 0x2ffff000
+INFO:    FCONF: Reading firmware configuration information for: dyn_cfg
+INFO:    FCONF: Reading firmware configuration information for: stm32mp1_firewall
+INFO:    BL2: Loading image id 4
+INFO:    Loading image id=4 at address 0xde000000
+INFO:    Image id=4 loaded: 0xde000000 - 0xde00001c
+INFO:    OPTEE ep=0xde000000
+INFO:    OPTEE header info:
+INFO:          magic=0x4554504f
+INFO:          version=0x2
+INFO:          arch=0x0
+INFO:          flags=0x0
+INFO:          nb_images=0x1
+INFO:    BL2: Loading image id 8
+INFO:    Loading image id=8 at address 0xde000000
+INFO:    Image id=8 loaded: 0xde000000 - 0xde038e08
+INFO:    BL2: Skip loading image id 9
+INFO:    BL2: Loading image id 2
+INFO:    Loading image id=2 at address 0xc0500000
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513678
+INFO:    BL2: Skip loading image id 16
+INFO:    BL2: Loading image id 5
+INFO:    Loading image id=5 at address 0xc0100000
+INFO:    Image id=5 loaded: 0xc0100000 - 0xc0214c94
+NOTICE:  BL2: Booting BL32
+INFO:    Entry point address = 0xde000000
+INFO:    SPSR = 0x1d3
+I/TC: Early console on UART#4
+D/TC:0   add_phys_mem:670 MCUSRAM_BASE type IO_SEC 0x30000000 size 0x00060000
+D/TC:0   add_phys_mem:670 RETRAM_BASE type IO_SEC 0x38000000 size 0x00010000
+D/TC:0   add_phys_mem:670 TEE_RAM_START type ROM_SEC 0xde000000 size 0x00200000
+D/TC:0   add_phys_mem:670 DDR_BASE type RAM_NSEC 0xc0000000 size 0x00001000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0xa0021000ul, CORE_MMU_PGDIR_SIZE) type IO_SEC 0xa0000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x54000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x54000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x48000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x48000000 size 0x01200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5c000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x5c000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5a000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x5a000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50020000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:684 Physical mem map overlaps 0x50000000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x54000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x54000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5c000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x5c000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5a000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x5a000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50020000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:684 Physical mem map overlaps 0x50000000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x44000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x44000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x40000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x40000000 size 0x00200000
+D/TC:0   add_phys_mem:670 TA_RAM_START type TA_RAM 0xde200000 size 0x01e00000
+D/TC:0   add_phys_mem:670 VCORE_UNPG_RW_PA type TEE_RAM_RW 0xde038000 size 0x001c8000
+D/TC:0   add_phys_mem:670 VCORE_UNPG_RX_PA type TEE_RAM_RX 0xde000000 size 0x00038000
+D/TC:0   add_va_space:710 type RES_VASPACE size 0x00a00000
+D/TC:0   add_va_space:710 type SHM_VASPACE size 0x02000000
+D/TC:0   dump_mmap_table:837 type TA_RAM       va 0xd6400000..0xd81fffff pa 0xde200000..0xdfffffff size 0x01e00000 (pgdir)
+D/TC:0   dump_mmap_table:837 type ROM_SEC      va 0xd8400000..0xd85fffff pa 0xde000000..0xde1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd8600000..0xd87fffff pa 0xa0000000..0xa01fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd8800000..0xd89fffff pa 0x5c000000..0x5c1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd8a00000..0xd8bfffff pa 0x5c000000..0x5c1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd8c00000..0xd8dfffff pa 0x5a000000..0x5a1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd8e00000..0xd8ffffff pa 0x5a000000..0x5a1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd9000000..0xd91fffff pa 0x54000000..0x541fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd9200000..0xd93fffff pa 0x54000000..0x541fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd9400000..0xd95fffff pa 0x50000000..0x501fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd9600000..0xd97fffff pa 0x50000000..0x501fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd9800000..0xda9fffff pa 0x48000000..0x491fffff size 0x01200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xdac00000..0xdadfffff pa 0x44000000..0x441fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xdae00000..0xdaffffff pa 0x40000000..0x401fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type RES_VASPACE  va 0xdb000000..0xdb9fffff pa 0x00000000..0x009fffff size 0x00a00000 (pgdir)
+D/TC:0   dump_mmap_table:837 type SHM_VASPACE  va 0xdbc00000..0xddbfffff pa 0x00000000..0x01ffffff size 0x02000000 (pgdir)
+D/TC:0   dump_mmap_table:837 type RAM_NSEC     va 0xddf8f000..0xddf8ffff pa 0xc0000000..0xc0000fff size 0x00001000 (smallpg)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xddf90000..0xddf9ffff pa 0x38000000..0x3800ffff size 0x00010000 (smallpg)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xddfa0000..0xddffffff pa 0x30000000..0x3005ffff size 0x00060000 (smallpg)
+D/TC:0   dump_mmap_table:837 type TEE_RAM_RX   va 0xde000000..0xde037fff pa 0xde000000..0xde037fff size 0x00038000 (smallpg)
+D/TC:0   dump_mmap_table:837 type TEE_RAM_RW   va 0xde038000..0xde1fffff pa 0xde038000..0xde1fffff size 0x001c8000 (smallpg)
+D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 1 / 10
+D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 2 / 10
+D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
+I/TC: 
+I/TC: Embedded DTB found
+D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
+I/TC: OP-TEE version: 29d5ad287-dev (gcc version 12.3.0 (GCC)) #23 Sun Aug 11 01:14:57 UTC 2024 arm
+I/TC: WARNING: This OP-TEE configuration might be insecure!
+I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
+I/TC: Primary CPU initializing
+D/TC:0 0 call_preinitcalls:21 level 2 mobj_mapped_shm_init()
+D/TC:0 0 mobj_mapped_shm_init:463 Shared memory address range: dbc00000, ddc00000
+D/TC:0 0 call_initcalls:40 level 1 register_time_source()
+D/TC:0 0 call_initcalls:40 level 1 initialize_bsec()
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[1] = cfg0_otp 0bit offset: 0, length: 8
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[2] = part_number_otp 1bit offset: 0, length: 8
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[3] = monotonic_otp 4bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[4] = nand_otp 9bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[5] = uid_otp 13bit offset: 0, length: 96
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[6] = package_otp 16bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[7] = hw2_otp 18bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[8] = calib 23bit offset: 0, length: 16
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[9] = calib 23bit offset: 16, length: 16
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[10] = pkh_otp 24bit offset: 0, length: 256
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[11] = mac 57bit offset: 0, length: 64
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[12] = huk-otp 60bit offset: 0, length: 128
+D/TC:0 0 call_initcalls:40 level 1 clk_dt_probe()
+D/TC:0 0 clk_dt_probe:202 Probing clocks from devicetree
+D/TC:0 0 clk_register:126 Registered clock clk-hse, freq 24000000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-hse initialized
+D/TC:0 0 clk_register:126 Registered clock clk-hsi, freq 64000000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-hsi initialized
+D/TC:0 0 clk_register:126 Registered clock clk-lse, freq 32768
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-lse initialized
+D/TC:0 0 clk_register:126 Registered clock clk-lsi, freq 32000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-lsi initialized
+D/TC:0 0 clk_register:126 Registered clock clk-csi, freq 4000000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-csi initialized
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 533000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 533000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock spi6, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock i2c4, freq 64000000
+D/TC:0 0 clk_register:126 Registered clock i2c6, freq 64000000
+D/TC:0 0 clk_register:126 Registered clock usart1, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock rtcapb, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock iwdg, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 24000000
+D/TC:0 0 clk_register:126 Registered clock gpioz, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock crpy1, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock hash1, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock rng1, freq 4000000
+D/TC:0 0 clk_register:126 Registered clock bkpsram, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock rtc, freq 32768
+D/TC:0 0 clk_register:126 Registered clock gpioa, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiob, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioc, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiod, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioe, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiof, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiog, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioh, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioi, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioj, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiok, freq 0
+D/TC:0 0 clk_register:126 Registered clock (null), freq 208877928
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 208877928
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock syscfg, freq 0
+D/TC:0 0 clk_register:126 Registered clock (null), freq 0
+D/TC:0 0 clk_register:126 Registered clock (null), freq 0
+D/TC:0 0 clk_register:126 Registered clock dbg, freq 0
+D/TC:0 0 clk_register:126 Registered clock hse, freq 24000000
+D/TC:0 0 clk_register:126 Registered clock csi, freq 4000000
+D/TC:0 0 clk_register:126 Registered clock lsi, freq 32000
+D/TC:0 0 clk_register:126 Registered clock lse, freq 32768
+D/TC:0 0 clk_register:126 Registered clock hsi, freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 12000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock pll2q, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock pll2r, freq 533000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 208877929
+D/TC:0 0 clk_register:126 Registered clock pll3q, freq 24573874
+D/TC:0 0 clk_register:126 Registered clock pll3r, freq 11290698
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock mcu, freq 208877929
+D/TC:0 0 probe_driver_node:443 element: stm32mp1_clock on node rcc@50000000 initialized
+D/TC:0 0 call_initcalls:40 level 2 init_debug()
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem cfg0_otp = 0: 0 bit offset: 0, length: 8
+I/TC: WARNING: All debug access are allowed
+D/TC:0 0 call_initcalls:40 level 2 provisioning_probe()
+D/TC:0 0 call_initcalls:40 level 2 probe_dt_drivers_early()
+D/TC:0 0 add_node_to_probe:641 element: stm32-cpu-opp on node cpu0-opp-table
+D/TC:0 0 add_node_to_probe:641 element: simple-bus on node soc
+D/TC:0 0 add_node_to_probe:641 element: simple-bus on node ahb
+D/TC:0 0 add_node_to_probe:641 element: fixed-regulator on node vin
+D/TC:0 0 probe_driver_node:443 element: fixed-regulator on node vin initialized
+D/TC:0 0 probe_driver_node:443 element: simple-bus on node ahb initialized
+D/TC:0 0 add_node_to_probe:641 element: stm32mp15_rstctrl on node rcc@50000000
+D/TC:0 0 add_node_to_probe:641 element: stm32mp1-pwr-regu on node pwr@50001000
+D/TC:0 0 add_node_to_probe:641 element: stm32-rtc on node rtc@5c004000
+D/TC:0 0 add_node_to_probe:641 element: stm32mp1-tzc400 on node tzc@5c006000
+D/TC:0 0 add_node_to_probe:641 element: stm32-tamp on node tamp@5c00a000
+D/TC:0 0 add_node_to_probe:641 element: stm32_gpio on node pin-controller@50002000
+D/TC:0 0 add_node_to_probe:641 element: stm32_gpio on node pin-controller-z@54004000
+D/TC:0 0 add_node_to_probe:641 element: stm32-etzpc on node etzpc@5c007000
+D/TC:0 0 probe_driver_node:443 element: simple-bus on node soc initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 1 time(s)
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 2 time(s)
+D/TC:0 0 stm32_etzpc_set_driverdata:517 ETZPC revision 0x32, per_sec 96, ahb_sec 0, tzma 2
+D/TC:0 0 add_node_to_probe:641 element: stm32_i2c on node i2c@5c002000
+D/TC:0 0 probe_driver_node:443 element: stm32-etzpc on node etzpc@5c007000 initialized
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@54004000
+D/TC:0 0 _fdt_stm32_gpio_controller:982 GPIO bank Z assigned to non-secure
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank Z (8 pins) @d9004000
+D/TC:0 0 probe_driver_node:443 element: stm32_gpio on node pin-controller-z@54004000 initialized
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50002000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank A (16 pins) @d9402000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50003000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank B (16 pins) @d9403000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50004000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank C (16 pins) @d9404000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50005000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank D (16 pins) @d9405000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50006000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank E (16 pins) @d9406000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50007000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank F (16 pins) @d9407000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50008000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank G (16 pins) @d9408000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50009000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank H (16 pins) @d9409000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@5000a000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank I (12 pins) @d940a000
+D/TC:0 0 probe_driver_node:443 element: stm32_gpio on node pin-controller@50002000 initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 1 time(s)
+D/TC:0 0 tzc_set_driverdata:124 TZC400 Filters 2 Regions 8
+D/TC:0 0 add_carved_out_nsec:382 0xc0000000 - 0xddffffff : Sec access 0 NS access 0x87fb87fb
+D/TC:0 0 tzc_dump_state:473 region 0
+D/TC:0 0 tzc_dump_state:476 region_base: 0x0000000000000000
+D/TC:0 0 tzc_dump_state:479 region_top: 0x00000000ffffffff
+D/TC:0 0 tzc_dump_state:481 secure rw: TZC_REGION_S_NONE
+D/TC:0 0 tzc_dump_state:486 filter 0 enable
+D/TC:0 0 tzc_dump_state:486 filter 1 enable
+D/TC:0 0 tzc_dump_state:473 region 1
+D/TC:0 0 tzc_dump_state:476 region_base: 0x00000000de000000
+D/TC:0 0 tzc_dump_state:479 region_top: 0x00000000dfffffff
+D/TC:0 0 tzc_dump_state:481 secure rw: TZC_REGION_S_RDWR
+D/TC:0 0 tzc_dump_state:486 filter 0 enable
+D/TC:0 0 tzc_dump_state:486 filter 1 enable
+D/TC:0 0 tzc_dump_state:473 region 2
+D/TC:0 0 tzc_dump_state:476 region_base: 0x00000000c0000000
+D/TC:0 0 tzc_dump_state:479 region_top: 0x00000000ddffffff
+D/TC:0 0 tzc_dump_state:481 secure rw: TZC_REGION_S_NONE
+D/TC:0 0 tzc_dump_state:486 filter 0 enable
+D/TC:0 0 tzc_dump_state:486 filter 1 enable
+D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0xff to 0xd8621824
+D/TC:0 0 gic_it_set_cpu_mask:352 cpu_mask: 0x3
+D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd8621424
+D/TC:0 0 probe_driver_node:443 element: stm32mp1-tzc400 on node tzc@5c006000 initialized
+D/TC:0 0 probe_driver_node:443 element: stm32-rtc on node rtc@5c004000 initialized
+D/TC:0 0 probe_driver_node:443 element: stm32mp1-pwr-regu on node pwr@50001000 initialized
+D/TC:0 0 probe_driver_node:443 element: stm32mp15_rstctrl on node rcc@50000000 initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 2 time(s)
+D/TC:0 0 i2c_compute_timing:455 I2C SDADEL(min/max): 18/519, SCLDEL(Min): 285
+D/TC:0 0 i2c_compute_timing:553 I2C TIMINGR (PRESC/SCLDEL/SDADEL): 1/8/1
+D/TC:0 0 i2c_compute_timing:555 I2C TIMINGR (SCLH/SCLL): 27/38
+D/TC:0 0 i2c_compute_timing:557 I2C TIMINGR: 0x10811b26
+D/TC:0 0 i2c_setup_timing:644 I2C Freq(400000Hz), Clk Source(64000000)
+D/TC:0 0 i2c_setup_timing:646 I2C Rise(185) and Fall(20) Time
+D/TC:0 0 i2c_setup_timing:648 I2C Analog Filter(On), DNF(0)
+D/TC:0 0 add_node_to_probe:641 element: stm32_pmic on node stpmic@33
+D/TC:0 0 probe_driver_node:443 element: stm32_i2c on node i2c@5c002000 initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 3 time(s)
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 4 time(s)
+D/TC:0 0 register_periph:104 Register I2C4 as non-secure
+D/TC:0 0 initialize_pmic:724 PMIC version = 0x21
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck1: enable, 1200mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck2: enable, 1350mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck3: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck4: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo1: disable, 1800mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo2: disable, 1800mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo3: enable, 1700mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo4: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo5: enable, 2900mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo6: disable, 1000mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul vref_ddr: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul boost: disable, 5000mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul pwr_sw1: disable, 5000mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul pwr_sw2: disable, 5000mV
+D/TC:0 0 parse_regulator_fdt_nodes:185 No CPU supply provided
+D/TC:0 0 probe_driver_node:443 element: stm32_pmic on node stpmic@33 initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 3 time(s)
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 4 time(s)
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 5 time(s)
+D/TC:0 0 process_probe_list:590 Unresolved dependencies after 5 rounds, 5 deferred
+D/TC:0 0 probe_dt_drivers_early:774 Deferred drivers probing
+D/TC:0 0 print_probe_list:397 Probe list: 2 elements
+D/TC:0 0 print_probe_list:399 |- Driver stm32-tamp probes on node tamp@5c00a000
+D/TC:0 0 print_probe_list:399 |- Driver stm32-cpu-opp probes on node cpu0-opp-table
+D/TC:0 0 print_probe_list:403 `- Probe list end
+D/TC:0 0 print_probe_list:409 Failed list: 0 elements
+D/TC:0 0 print_probe_list:414 `- Failed list end
+D/TC:0 0 call_initcalls:40 level 3 platform_banner()
+I/TC: Platform stm32mp1: flavor PLATFORM_FLAVOR - DT stm32mp151a-stm32-computer-firmware-mx.dts
+I/TC: OP-TEE ST profile: system_services
+D/TC:0 0 call_initcalls:40 level 3 init_stm32mp1_calib()
+D/TC:0 0 stm32mp_start_clock_calib:406 HSI clock calibration not supported
+D/TC:0 0 stm32mp_start_clock_calib:408 CSI clock calibration not supported
+D/TC:0 0 call_initcalls:40 level 3 verify_pseudo_tas_conformance()
+D/TC:0 0 call_initcalls:40 level 3 mobj_init()
+D/TC:0 0 call_initcalls:40 level 3 default_mobj_init()
+D/TC:0 0 call_initcalls:40 level 3 tee_cryp_init()
+D/TC:0 0 call_initcalls:40 level 4 init_console_from_dt()
+D/TC:0 0 stm32_uart_init_from_dt_node:157 info.status = 3
+D/TC:0 0 stm32_uart_init_from_dt_node:158 info.reg = 0xFFFFFFFF
+D/TC:0 0 stm32_uart_init_from_dt_node:159 info.reg_size = 0xFFFFFFFF
+D/TC:0 0 stm32_uart_init_from_dt_node:160 info.clock = -1
+D/TC:0 0 stm32_uart_init_from_dt_node:161 info.reset = -1
+D/TC:0 0 stm32_uart_init_from_dt_node:162 info.interrupt = -1
+D/TC:0 0 stm32_uart_init_from_dt_node:163 info.type = 0
+D/TC:0 0 stm32_uart_init_from_dt_node:164 info.prio = 0
+D/TC:0 0 stm32_uart_init_from_dt_node:165 Node = 0
+E/TC:0 0 assertion 'info.reg != DT_INFO_INVALID_REG && info.reg_size != DT_INFO_INVALID_REG_SIZE' failed at core/drivers/stm32_uart.c:167 <stm32_uart_init_from_dt_node>
+E/TC:0 0 Panic at core/kernel/assert.c:28 <_assert_break>
+E/TC:0 0 TEE load address @ 0xde000000
+E/TC:0 0 Call stack:
+E/TC:0 0  0xde002679
+E/TC:0 0  0xde0155e3
+E/TC:0 0  0xde01421b
+E/TC:0 0  0xde00d597
+E/TC:0 0  0xde00355d
+E/TC:0 0  0xde0160f9
+E/TC:0 0  0xde00243d
+E/TC:0 0  0xde00019c
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem part_number_otp = 1: 1 bit offset: 0, length: 8
+M/TC: CPU : 0
+M/TC:     usr_sp : 0x00000000
+M/TC:     usr_lr : 0x00000000
+M/TC:   irq_spsr : 0x00000000
+M/TC:     irq_sp : 0x00000000
+M/TC:     irq_lr : 0x00000000
+M/TC:   fiq_spsr : 0x00000000
+M/TC:     fiq_sp : 0x00000000
+M/TC:     fiq_lr : 0x00000000
+M/TC:   svc_spsr : 0x00000000
+M/TC:     svc_sp : 0x00000000
+M/TC:     svc_lr : 0x00000000
+M/TC:   abt_spsr : 0x00000000
+M/TC:     abt_sp : 0x00000000
+M/TC:     abt_lr : 0x00000000
+M/TC:   und_spsr : 0x00000000
+M/TC:     und_sp : 0x00000000
+M/TC:     und_lr : 0x00000000
+M/TC:       pmcr : 0x00000000
