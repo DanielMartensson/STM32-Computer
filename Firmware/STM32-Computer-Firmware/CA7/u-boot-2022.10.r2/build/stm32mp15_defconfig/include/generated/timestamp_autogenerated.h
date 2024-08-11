@@ -1,4 +1,4 @@
-#define U_BOOT_DATE "Aug 10 2024"
-#define U_BOOT_TIME "20:45:52"
+#define U_BOOT_DATE "Aug 11 2024"
+#define U_BOOT_TIME "03:26:25"
 #define U_BOOT_TZ "+0200"
-#define U_BOOT_EPOCH 1723315552
+#define U_BOOT_EPOCH 1723339585

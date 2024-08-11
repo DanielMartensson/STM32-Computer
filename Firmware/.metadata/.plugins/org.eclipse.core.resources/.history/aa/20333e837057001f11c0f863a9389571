@@ -1,0 +1,86 @@
+# Set default path
+SRC_PATH ?= $(PWD)
+BLD_PATH ?= $(SRC_PATH)/../build
+DEPLOYDIR ?= $(SRC_PATH)/../deploy
+FIPTOOLDIR ?= $(SRC_PATH)/..
+
+# Set default FIP config
+FIP_CONFIG ?= optee-emmc optee-nand optee-nor optee-sdcard
+
+# Set default optee-os config
+DEVICETREE ?=
+CFG_EMBED_DTB_SOURCE_FILE ?=  stm32mp157c-ed1 stm32mp157f-ed1 stm32mp157a-ev1 stm32mp157c-ev1 stm32mp157d-ev1 stm32mp157f-ev1 stm32mp135f-dk stm32mp157a-dk1 stm32mp157d-dk1 stm32mp157c-dk2 stm32mp157f-dk2  
+
+# Remove default variables
+LDFLAGS =
+CFLAGS =
+CPPFLAGS =
+# Define default make options
+EXTRA_OEMAKE = PLATFORM=stm32mp1 CROSS_COMPILE_core=arm-ostl-linux-gnueabi- CROSS_COMPILE_ta_arm64=arm-ostl-linux-gnueabi- ARCH=arm CFG_ARM32_core=y CROSS_COMPILE_ta_arm32=arm-ostl-linux-gnueabi- NOWERROR=1 LDFLAGS=  CFG_TEE_CORE_LOG_LEVEL=3 CFG_TEE_CORE_DEBUG=y  CFG_SCMI_SCPFW=n
+
+# Set dependencies list for building all
+DEPS = optee
+DEPS += fip
+
+help:
+	@echo
+	@echo "OPTEE-OS configuration:"
+	@echo "  CFG_EMBED_DTB_SOURCE_FILE = $(CFG_EMBED_DTB_SOURCE_FILE)"
+	@echo
+	@echo "OPTEE-OS folder configuration:"
+	@echo "  SRC_PATH  = $(SRC_PATH)"
+	@echo "  BLD_PATH  = $(BLD_PATH)"
+	@echo "  DEPLOYDIR = $(DEPLOYDIR)"
+	@echo "  EXTDT_DIR = $(EXTDT_DIR)"
+	@echo
+	@echo "FIP configuration:"
+	@echo "  Do not forget to set FIP deploydir folders (such as FIP_DEPLOYDIR_ROOT) to provide path to needed binaries"
+	@echo
+	@echo "Available targets:"
+	@echo "  all   : default target to build all binaries for defined config(s)"
+	@echo "  fip   : build FIP binaries for defined config(s)"
+	@echo "  optee : build OPTEE-OS binaries for defined config(s)"
+	@echo "  clean : clean build directories from generated files"
+	@echo
+
+all: $(DEPS)
+
+optee:
+	@mkdir -p $(DEPLOYDIR)
+	@mkdir -p $(DEPLOYDIR)/debug
+	@if [ -n "$(CFG_EMBED_DTB_SOURCE_FILE)" ]; then \
+		for dt in $(CFG_EMBED_DTB_SOURCE_FILE); do \
+			# Configure SOC switch \
+			soc_extra="" ; \
+			for soc in  stm32mp15  stm32mp13  ; do \
+				if [ "$$(echo $$dt | grep -c $$soc)" -eq 1 ]; then \
+					soc_extra="$$(echo CFG_$$soc | tr a-z A-Z)=y" ; \
+					break ; \
+				fi ; \
+			done ; \
+			$(MAKE) $(EXTRA_OEMAKE) -C $(SRC_PATH) PREFIX=$(SDKTARGETSYSROOT) O=$(BLD_PATH)/$$dt CFG_EMBED_DTB_SOURCE_FILE=$$dt.dts $$soc_extra ; \
+			# Copy binary files with explicit name \
+			cp $(BLD_PATH)/$$dt/core/tee-header_v2.bin $(DEPLOYDIR)/tee-header_v2-$$dt.bin ; \
+			cp $(BLD_PATH)/$$dt/core/tee-pager_v2.bin $(DEPLOYDIR)/tee-pager_v2-$$dt.bin ; \
+			cp $(BLD_PATH)/$$dt/core/tee-pageable_v2.bin $(DEPLOYDIR)/tee-pageable_v2-$$dt.bin ; \
+			cp $(BLD_PATH)/$$dt/core/tee.elf $(DEPLOYDIR)/debug/tee-$$dt.elf ; \
+		done ; \
+	else \
+		$(MAKE) $(EXTRA_OEMAKE) -C $(SRC_PATH) PREFIX=$(SDKTARGETSYSROOT) O=$(BLD_PATH)/ ; \
+		# Copy binary files with explicit name \
+		cp $(BLD_PATH)/core/tee-header_v2.bin $(DEPLOYDIR)/ ; \
+		cp $(BLD_PATH)/core/tee-pager_v2.bin $(DEPLOYDIR)/ ; \
+		cp $(BLD_PATH)/core/tee-pageable_v2.bin $(DEPLOYDIR)/ ; \
+		cp $(BLD_PATH)/core/tee.elf $(DEPLOYDIR)/debug/ ; \
+	fi
+
+fip: optee
+	for fipconfig in $(FIP_CONFIG) ; do \
+		FIP_DEPLOYDIR_OPTEE=$(DEPLOYDIR) FIP_CONFIG="$$fipconfig" $(if $(DEVICETREE),FIP_DEVICETREE="$(DEVICETREE)") $(FIPTOOLDIR)/fiptool-stm32mp || exit 1;\
+	done
+clean:
+	@echo "Removing $(BLD_PATH) ..."
+	@rm -rf $(BLD_PATH)
+	@echo "Removing $(DEPLOYDIR) ..."
+	@rm -rf $(DEPLOYDIR)
+	@echo

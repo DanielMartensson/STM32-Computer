@@ -1,4 +1,4 @@
-20:54:06 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
+03:33:22 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_tf-a-2.8.15-r2 ****
 make -f ../Makefile.sdk.ide fip 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2/../../FIP_artifacts
