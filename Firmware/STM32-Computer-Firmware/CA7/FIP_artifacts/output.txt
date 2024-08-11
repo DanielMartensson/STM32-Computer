@@ -1,4 +1,42 @@
-INFO:    phase ID :3, Manifestation 3 at c7161442
+NOTICE:  CPU: STM32MP151AAC Rev.Z
+NOTICE:  Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
+INFO:    PMIC version = 0x21
+WARNING: VDD unknown
+INFO:    Reset reason (0x15):
+INFO:      Power-on Reset (rst_por)
+INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_io
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_fuse
+INFO:    Using USB
+INFO:      Instance 2
+INFO:    Boot used partition fsbl1
+NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):fc5a7b038-dirty(fc5a7b03)
+NOTICE:  BL2: Built : 23:46:56, Aug  6 2024
+INFO:    BL2: Doing platform setup
+INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
+WARNING: regulator_get_by_name: vref_ddr not found
+PANIC at PC : 0x2ffea81f
+
+Exception mode=0x00000016 at: 0x2ffea81f
+NOTICE:  CPU: STM32MP151AAC Rev.Z
+NOTICE:  Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
+INFO:    PMIC version = 0x21
+WARNING: VDD unknown
+INFO:    Reset reason (0x15):
+INFO:      Power-on Reset (rst_por)
+INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_io
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_fuse
+INFO:    Using USB
+INFO:      Instance 2
+INFO:    Boot used partition fsbl1
+NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):fc5a7b038-dirty(fc5a7b03)
+NOTICE:  BL2: Built : 23:46:56, Aug  6 2024
+INFO:    BL2: Doing platform setup
+INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
+INFO:    Memory size = 0x20000000 (512 MB)
+INFO:    DFU USB START...
+INFO:    phase ID :3, Manifestation 3 at c716159a
 INFO:    Send detach request
 INFO:    Receive DFU Detach
 INFO:    DFU USB STOP...
@@ -24,7 +62,7 @@ INFO:    Image id=8 loaded: 0xde000000 - 0xde038e08
 INFO:    BL2: Skip loading image id 9
 INFO:    BL2: Loading image id 2
 INFO:    Loading image id=2 at address 0xc0500000
-INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513678
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc05137d0
 INFO:    BL2: Skip loading image id 16
 INFO:    BL2: Loading image id 5
 INFO:    Loading image id=5 at address 0xc0100000
@@ -85,7 +123,7 @@ D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: a5a318ab4-dev (gcc version 12.3.0 (GCC)) #27 Sun Aug 11 12:01:47 UTC 2024 arm
+I/TC: OP-TEE version: b0d38bcbc-dev (gcc version 12.3.0 (GCC)) #31 Sun Aug 11 13:42:25 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -300,15 +338,23 @@ D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul pwr_sw2: disable, 5000mV
 D/TC:0 0 probe_driver_node:443 element: stm32_pmic on node stpmic@33 initialized
 D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 3 time(s)
 D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 4 time(s)
-D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
-D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 5 time(s)
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem part_number_otp = 1: 1 bit offset: 0, length: 8
+D/TC:0 0 get_opp_freqvolt_from_dt_subnode:1426 Invalid opp-supported-hw 0x2
+D/TC:0 0 get_opp_freqvolt_from_dt_subnode:1426 Invalid opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_get_dt_subnode:622 Found OPP 0 (650000kHz/1200mV) from DT
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+E/TC:0 0 set_voltage_then_clock:164 Failed to set clock
+E/TC:0 0 probe_driver_node:458 Failed to probe stm32-cpu-opp on node cpu0-opp-table: 0xffff0000
 D/TC:0 0 process_probe_list:590 Unresolved dependencies after 5 rounds, 5 deferred
 D/TC:0 0 probe_dt_drivers_early:774 Deferred drivers probing
-D/TC:0 0 print_probe_list:397 Probe list: 2 elements
+D/TC:0 0 print_probe_list:397 Probe list: 1 elements
 D/TC:0 0 print_probe_list:399 |- Driver stm32-tamp probes on node tamp@5c00a000
-D/TC:0 0 print_probe_list:399 |- Driver stm32-cpu-opp probes on node cpu0-opp-table
 D/TC:0 0 print_probe_list:403 `- Probe list end
-D/TC:0 0 print_probe_list:409 Failed list: 0 elements
+D/TC:0 0 print_probe_list:409 Failed list: 1 elements
+E/TC:0 0 print_probe_list:411 |- Driver stm32-cpu-opp on node cpu0-opp-table failed
 D/TC:0 0 print_probe_list:414 `- Failed list end
 D/TC:0 0 call_initcalls:40 level 3 platform_banner()
 I/TC: Platform stm32mp1: flavor PLATFORM_FLAVOR - DT stm32mp151a-stm32-computer-firmware-mx.dts
@@ -336,8 +382,6 @@ I/TC: DTB enables console (non-secure)
 D/TC:0 0 call_initcalls:40 level 5 stm32mp_syscfg_enable_io_compensation()
 D/TC:0 0 call_initcalls:40 level 5 init_pm_support()
 D/TC:0 0 call_initcalls:40 level 5 probe_dt_drivers()
-D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
-D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 6 time(s)
 D/TC:0 0 stm32_tamp_parse_passive_conf:1608 Passive conf from dt: precharge=0, nb_sample=4, clk_div=16384
 D/TC:0 0 stm32_tamp_parse_active_conf:1823 Active conf from dt: no filter clk_div=1
 D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0xff00 to 0xd86218e4
@@ -346,16 +390,11 @@ D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd86214e5
 D/TC:0 0 add_node_to_probe:641 element: stm32_tamp_nvram on node nvram@5c00a100
 D/TC:0 0 probe_driver_node:443 element: stm32-tamp on node tamp@5c00a000 initialized
 D/TC:0 0 probe_driver_node:443 element: stm32_tamp_nvram on node nvram@5c00a100 initialized
-D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
-D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 7 time(s)
-D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
-D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 8 time(s)
-D/TC:0 0 process_probe_list:590 Unresolved dependencies after 8 rounds, 8 deferred
-E/TC:0 0 probe_dt_drivers:795 Probe sequence result: 0x80000000
-D/TC:0 0 print_probe_list:397 Probe list: 1 elements
-D/TC:0 0 print_probe_list:399 |- Driver stm32-cpu-opp probes on node cpu0-opp-table
+E/TC:0 0 probe_dt_drivers:795 Probe sequence result: 0
+D/TC:0 0 print_probe_list:397 Probe list: 0 elements
 D/TC:0 0 print_probe_list:403 `- Probe list end
-D/TC:0 0 print_probe_list:409 Failed list: 0 elements
+D/TC:0 0 print_probe_list:409 Failed list: 1 elements
+E/TC:0 0 print_probe_list:411 |- Driver stm32-cpu-opp on node cpu0-opp-table failed
 D/TC:0 0 print_probe_list:414 `- Failed list end
 E/TC:0 0 Panic at core/kernel/dt_driver.c:797 <probe_dt_drivers>
 E/TC:0 0 TEE load address @ 0xde000000
@@ -366,23 +405,22 @@ E/TC:0 0  0xde01499b
 E/TC:0 0  0xde01610d
 E/TC:0 0  0xde00243d
 E/TC:0 0  0xde00019c
-D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem part_number_otp = 1: 1 bit offset: 0, length: 8
 M/TC: CPU : 0
 M/TC:     usr_sp : 0x00000000
 M/TC:     usr_lr : 0x00000000
-M/TC:   irq_spsr : 0x00000000
+M/TC:   irq_spsr : 0x00020000
 M/TC:     irq_sp : 0x00000000
 M/TC:     irq_lr : 0x00000000
 M/TC:   fiq_spsr : 0x00000000
 M/TC:     fiq_sp : 0x00000000
-M/TC:     fiq_lr : 0x00000000
-M/TC:   svc_spsr : 0x00000000
+M/TC:     fiq_lr : 0x40000000
+M/TC:   svc_spsr : 0x00000081
 M/TC:     svc_sp : 0x00000000
 M/TC:     svc_lr : 0x00000000
 M/TC:   abt_spsr : 0x00000000
-M/TC:     abt_sp : 0x00000000
+M/TC:     abt_sp : 0x00080002
 M/TC:     abt_lr : 0x00000000
 M/TC:   und_spsr : 0x00000000
-M/TC:     und_sp : 0x00000000
-M/TC:     und_lr : 0x00000000
+M/TC:     und_sp : 0x00040000
+M/TC:     und_lr : 0x00000400
 M/TC:       pmcr : 0x00000000

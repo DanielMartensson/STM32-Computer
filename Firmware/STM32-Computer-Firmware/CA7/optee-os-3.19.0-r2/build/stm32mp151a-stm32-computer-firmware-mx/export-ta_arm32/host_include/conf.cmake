@@ -1,5 +1,5 @@
 # auto-generated TEE configuration file
-# TEE version a5a318ab4-dev
+# TEE version b0d38bcbc-dev
 set(CFG_AES_GCM_TABLE_BASED y)
 # CFG_APDU_PTA is not set 
 set(CFG_ARM32_core y)

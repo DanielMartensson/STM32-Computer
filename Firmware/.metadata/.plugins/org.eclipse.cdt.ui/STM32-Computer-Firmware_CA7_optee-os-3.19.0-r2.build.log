@@ -1,4 +1,4 @@
-14:01:38 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_optee-os-3.19.0-r2 ****
+15:42:14 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_optee-os-3.19.0-r2 ****
 make -f ../Makefile.sdk.ide CFG_DRAM_SIZE=0x20000000 CFG_TZDRAM_START=0xde000000 CFG_EMBED_DTB_SOURCE_FILE=stm32mp151a-stm32-computer-firmware-mx optee 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../../FIP_artifacts
@@ -38,5 +38,5 @@ core/arch/arm/dts/stm32mp151.dtsi:760.22-772.5: Warning (unique_unit_address): /
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/export-ta_arm32/mk/conf.mk
 make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2'
 
-14:02:01 Build Finished. 0 errors, 0 warnings. (took 23s.214ms)
+15:42:38 Build Finished. 0 errors, 0 warnings. (took 24s.49ms)
 

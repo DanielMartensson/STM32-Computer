@@ -176,8 +176,9 @@
 			ldo6-supply = <&v3v3>;
 			vref_ddr-supply = <&vin>;
 			boost-supply = <&vin>;
+			/*
 			pwr_sw1-supply = <&bst_out>;
-			pwr_sw2-supply = <&bst_out>;
+			pwr_sw2-supply = <&bst_out>;*/
 
 			vddcore: buck1 {
 				regulator-name = "vddcore";
@@ -216,12 +217,13 @@
 				regulator-initial-mode = <0>;
 			};
 
+			/*
 			v1v8_audio: ldo1 {
 				regulator-name = "v1v8_audio";
 				regulator-min-microvolt = <1800000>;
 				regulator-max-microvolt = <1800000>;
 				regulator-always-on;
-			};
+			};*/
 
 			v3v3_hdmi: ldo2 {
 				regulator-name = "v3v3_hdmi";
@@ -262,6 +264,7 @@
 				regulator-always-on;
 			};
 
+			/*
 			bst_out: boost {
 				regulator-name = "bst_out";
 			};
@@ -273,7 +276,7 @@
 			vbus_sw: pwr_sw2 {
 				regulator-name = "vbus_sw";
 				regulator-active-discharge = <1>;
-			};
+			};*/
 		};
 	};
 	/* USER CODE END i2c4 */

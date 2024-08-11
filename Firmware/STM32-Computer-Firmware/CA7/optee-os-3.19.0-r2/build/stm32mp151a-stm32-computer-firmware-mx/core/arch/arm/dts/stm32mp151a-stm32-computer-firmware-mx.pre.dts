@@ -2169,6 +2169,16 @@
   regulator-always-on;
  };
 
+ led {
+  compatible = "gpio-leds";
+  led-blue {
+   label = "heartbeat";
+   gpios = <&gpioa 14 0>;
+   1,default-trigger = "heartbeat";
+   default-state = "off";
+  };
+ };
+
 
  clocks {
 
@@ -2270,7 +2280,7 @@
  (((0) << 16) | ((0x0) << 8) | (0x0))
 
  (((89) << 16) | ((0x2) << 8) | (0x0))
-# 173 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+# 183 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
  >;
 
 
@@ -2289,6 +2299,7 @@
  clock-frequency = <400000>;
  /delete-property/dmas;
  /delete-property/dma-names;
+
  pmic: stpmic@33 {
   compatible = "st,stpmic1";
   reg = <0x33>;
@@ -2311,65 +2322,104 @@
    ldo6-supply = <&v3v3>;
    vref_ddr-supply = <&vin>;
    boost-supply = <&vin>;
-   pwr_sw1-supply = <&bst_out>;
-   pwr_sw2-supply = <&bst_out>;
+
+
+
+
+   vddcore: buck1 {
+    regulator-name = "vddcore";
+    regulator-min-microvolt = <1200000>;
+    regulator-max-microvolt = <1350000>;
+    regulator-always-on;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+
+   vdd_ddr: buck2 {
+    regulator-name = "vdd_ddr";
+    regulator-min-microvolt = <1350000>;
+    regulator-max-microvolt = <1350000>;
+    regulator-always-on;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+
+   vdd: buck3 {
+    regulator-name = "vdd";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    st,mask-reset;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+
+   v3v3: buck4 {
+    regulator-name = "v3v3";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    regulator-over-current-protection;
+    regulator-initial-mode = <0>;
+   };
+# 274 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+   v3v3_hdmi: ldo2 {
+    regulator-name = "v3v3_hdmi";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    interrupts = <17 0>;
+   };
+
+   vtt_ddr: ldo3 {
+    regulator-name = "vtt_ddr";
+    regulator-always-on;
+    regulator-over-current-protection;
+    st,regulator-sink-source;
+   };
+
+   vdd_usb: ldo4 {
+    regulator-name = "vdd_usb";
+    interrupts = <19 0>;
+   };
+
+   vdda: ldo5 {
+    regulator-name = "vdda";
+    regulator-min-microvolt = <2900000>;
+    regulator-max-microvolt = <2900000>;
+    interrupts = <20 0>;
+    regulator-boot-on;
+   };
+
+   v1v2_hdmi: ldo6 {
+    regulator-name = "v1v2_hdmi";
+    regulator-min-microvolt = <1200000>;
+    regulator-max-microvolt = <1200000>;
+    regulator-always-on;
+    interrupts = <21 0>;
+   };
+
+   vref_ddr: vref_ddr {
+    regulator-name = "vref_ddr";
+    regulator-always-on;
+   };
+# 333 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
   };
 
-  vddcore: buck1 {
-   regulator-name = "vddcore";
-   regulator-min-microvolt = <1200000>;
-   regulator-max-microvolt = <1350000>;
-   regulator-always-on;
-   regulator-initial-mode = <0>;
-   regulator-over-current-protection;
+  onkey {
+   compatible = "st,stpmic1-onkey";
+   interrupts = <0 0>, <1 0>;
+   interrupt-names = "onkey-falling", "onkey-rising";
+   power-off-time-sec = <10>;
+   status = "okey";
   };
 
-  v3v3: buck4 {
-   regulator-name = "v3v3";
-   regulator-min-microvolt = <3300000>;
-   regulator-max-microvolt = <3300000>;
-   regulator-always-on;
-   regulator-over-current-protection;
-   regulator-initial-mode = <0>;
-  };
-
-  vdd: buck3 {
-   regulator-name = "vdd";
-   regulator-min-microvolt = <3300000>;
-   regulator-max-microvolt = <3300000>;
-   regulator-always-on;
-   st,mask-reset;
-   regulator-initial-mode = <0>;
-   regulator-over-current-protection;
-  };
-
-  vdd_ddr: buck2 {
-   regulator-name = "vdd_ddr";
-   regulator-min-microvolt = <1350000>;
-   regulator-max-microvolt = <1350000>;
-   regulator-always-on;
-   regulator-initial-mode = <0>;
-   regulator-over-current-protection;
-  };
-
-  vdd_usb: ldo4 {
-   regulator-name = "vdd_usb";
-   interrupts = <19 0>;
-  };
-
-  v1v2_hdmi: ldo6 {
-   regulator-name = "v1v2_hdmi";
-   regulator-min-microvolt = <1200000>;
-   regulator-max-microvolt = <1200000>;
-   regulator-always-on;
-   interrupts = <21 0>;
-  };
-
-  bst_out: boost {
-   regulator-name = "bst_out";
-   interrupts = <14 0>;
+  watchdog {
+   compatible = "st,stpmic1-wdt";
+   status = "disabled";
   };
  };
+
 
 };
 
@@ -2514,7 +2564,6 @@
 };
 
 &cpu0 {
- clock-frequency = <650000000>;
  cpu-supply = <&vddcore>;
 };
 
