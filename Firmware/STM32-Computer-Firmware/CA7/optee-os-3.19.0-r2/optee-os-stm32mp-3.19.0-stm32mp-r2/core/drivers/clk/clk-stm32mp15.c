@@ -3853,7 +3853,7 @@ static int pll1_config_from_opp_khz(uint32_t freq_khz)
 TEE_Result stm32mp1_set_opp_khz(uint32_t freq_khz)
 {
 	uint32_t mpu_src = 0;
-
+	DMSG("freq_khz = %i", freq_khz);
 	if (freq_khz == current_opp_khz)
 		return TEE_SUCCESS;
 
@@ -3863,15 +3863,19 @@ TEE_Result stm32mp1_set_opp_khz(uint32_t freq_khz)
 		 * settings computation, system can only work on current
 		 * operating point so return error.
 		 */
+		DMSG("PLL1 settings are valid! OK!");
 		return TEE_ERROR_NO_DATA;
 	}
 
 	/* Check that PLL1 is MPU clock source */
 	mpu_src = io_read32(stm32_rcc_base() + RCC_MPCKSELR) &
 		RCC_SELR_SRC_MASK;
+	DMSG("(mpu_src != RCC_MPCKSELR_PLL) && (mpu_src != RCC_MPCKSELR_PLL_MPUDIV) = %i ", (mpu_src != RCC_MPCKSELR_PLL) && (mpu_src != RCC_MPCKSELR_PLL_MPUDIV));
 	if ((mpu_src != RCC_MPCKSELR_PLL) &&
-	    (mpu_src != RCC_MPCKSELR_PLL_MPUDIV))
+	    (mpu_src != RCC_MPCKSELR_PLL_MPUDIV)){
+		DMSG("TEE ERROR BAD STATE");
 		return TEE_ERROR_BAD_STATE;
+	}
 
 	if (pll1_config_from_opp_khz(freq_khz)) {
 		/* Restore original value */
@@ -3879,11 +3883,12 @@ TEE_Result stm32mp1_set_opp_khz(uint32_t freq_khz)
 			EMSG("No CPU operating point can be set");
 			panic();
 		}
-
+		DMSG("pll1_config_from_opp_khz = TEE ERROR GENERIC");
 		return TEE_ERROR_GENERIC;
 	}
 
 	current_opp_khz = freq_khz;
+	DMSG("TEE_SUCCESS: current_opp_khz = %i", current_opp_khz);
 
 	return TEE_SUCCESS;
 }

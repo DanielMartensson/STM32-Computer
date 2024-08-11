@@ -89,6 +89,7 @@ unsigned int stm32_cpu_opp_level(size_t opp_index)
 static TEE_Result _set_opp_clk_rate(unsigned int opp)
 {
 #ifdef CFG_STM32MP15
+	DMSG("opp = %i, cpu_opp.dvfs[opp].freq_khz = %i", opp, cpu_opp.dvfs[opp].freq_khz);
 	return stm32mp1_set_opp_khz(cpu_opp.dvfs[opp].freq_khz);
 #else
 	return clk_set_rate(cpu_opp.clock, cpu_opp.dvfs[opp].freq_khz * 1000UL);
@@ -147,7 +148,7 @@ static TEE_Result set_clock_then_voltage(unsigned int opp)
 static TEE_Result set_voltage_then_clock(unsigned int opp)
 {
 	TEE_Result res = TEE_ERROR_GENERIC;
-
+	DMSG("opp = %i, cpu_opp.dvfs[opp].volt_mv = %i", opp, cpu_opp.dvfs[opp].volt_mv);
 	res = opp_set_voltage(cpu_opp.rdev, cpu_opp.dvfs[opp].volt_mv);
 	if (res)
 		return res;
@@ -160,7 +161,7 @@ static TEE_Result set_voltage_then_clock(unsigned int opp)
 	if (_set_opp_clk_rate(opp)) {
 		unsigned int current_opp = cpu_opp.current_opp;
 		unsigned int previous_volt = 0U;
-
+		DMSG("cpu_opp.current_opp = %i", current_opp);
 		EMSG("Failed to set clock");
 
 		if (current_opp == cpu_opp.opp_count)

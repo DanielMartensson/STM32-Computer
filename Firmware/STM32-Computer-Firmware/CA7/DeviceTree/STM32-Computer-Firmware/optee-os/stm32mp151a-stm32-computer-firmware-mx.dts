@@ -375,6 +375,7 @@
 	/* USER CODE END rcc */
 
 	st,clksrc = <
+		CLK_MPU_PLL1P /* <-- Manually added */
 		CLK_CKPER_DISABLED
 		CLK_ETH_PLL4P
 		CLK_SDMMC12_PLL4P

@@ -103,7 +103,7 @@ D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: a4aa857a1-dev (gcc version 12.3.0 (GCC)) #33 Sun Aug 11 14:59:47 UTC 2024 arm
+I/TC: OP-TEE version: 765cb9bc0-dev (gcc version 12.3.0 (GCC)) #36 Sun Aug 11 17:05:34 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -321,12 +321,18 @@ D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferre
 D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem part_number_otp = 1: 1 bit offset: 0, length: 8
 D/TC:0 0 get_opp_freqvolt_from_dt_subnode:1426 Invalid opp-supported-hw 0x2
 D/TC:0 0 get_opp_freqvolt_from_dt_subnode:1426 Invalid opp-supported-hw 0x2
-D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
-D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
-D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
-D/TC:0 0 stm32_cpu_opp_get_dt_subnode:622 Found OPP 0 (650000kHz/1200mV) from DT
-D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
-E/TC:0 0 set_voltage_then_clock:164 Failed to set clock
+D/TC:0 0 stm32_cpu_opp_is_supported:558 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:558 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:558 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_get_dt_subnode:623 Found OPP 0 (650000kHz/1200mV) from DT
+D/TC:0 0 stm32_cpu_opp_is_supported:558 Not supported opp-supported-hw 0x2
+D/TC:0 0 set_voltage_then_clock:151 opp = 0, cpu_opp.dvfs[opp].volt_mv = 1200
+D/TC:0 0 _set_opp_clk_rate:92 opp = 0, cpu_opp.dvfs[opp].freq_khz = 650000
+D/TC:0 0 stm32mp1_set_opp_khz:3856 freq_khz = 650000
+D/TC:0 0 stm32mp1_set_opp_khz:3873 (mpu_src != RCC_MPCKSELR_PLL) && (mpu_src != RCC_MPCKSELR_PLL_MPUDIV) = 1 
+D/TC:0 0 stm32mp1_set_opp_khz:3876 TEE ERROR BAD STATE
+D/TC:0 0 set_voltage_then_clock:164 cpu_opp.current_opp = 0
+E/TC:0 0 set_voltage_then_clock:165 Failed to set clock
 E/TC:0 0 probe_driver_node:458 Failed to probe stm32-cpu-opp on node cpu0-opp-table: 0xffff0000
 D/TC:0 0 process_probe_list:590 Unresolved dependencies after 5 rounds, 5 deferred
 D/TC:0 0 probe_dt_drivers_early:774 Deferred drivers probing
@@ -380,27 +386,27 @@ E/TC:0 0 Panic at core/kernel/dt_driver.c:797 <probe_dt_drivers>
 E/TC:0 0 TEE load address @ 0xde000000
 E/TC:0 0 Call stack:
 E/TC:0 0  0xde002679
-E/TC:0 0  0xde0155f7
-E/TC:0 0  0xde01499b
-E/TC:0 0  0xde01610d
+E/TC:0 0  0xde0156eb
+E/TC:0 0  0xde014a8f
+E/TC:0 0  0xde016201
 E/TC:0 0  0xde00243d
 E/TC:0 0  0xde00019c
 M/TC: CPU : 0
-M/TC:     usr_sp : 0x00000000
-M/TC:     usr_lr : 0x00000000
-M/TC:   irq_spsr : 0x00000000
+M/TC:     usr_sp : 0x00000080
+M/TC:     usr_lr : 0x00000004
+M/TC:   irq_spsr : 0x00020000
 M/TC:     irq_sp : 0x00000000
 M/TC:     irq_lr : 0x00000000
-M/TC:   fiq_spsr : 0x00000000
+M/TC:   fiq_spsr : 0x00000010
 M/TC:     fiq_sp : 0x00000000
-M/TC:     fiq_lr : 0x00000000
-M/TC:   svc_spsr : 0x00000000
+M/TC:     fiq_lr : 0x40000000
+M/TC:   svc_spsr : 0x00000081
 M/TC:     svc_sp : 0x00000000
-M/TC:     svc_lr : 0x00000000
+M/TC:     svc_lr : 0x00000001
 M/TC:   abt_spsr : 0x00000000
-M/TC:     abt_sp : 0x00000000
+M/TC:     abt_sp : 0x00080082
 M/TC:     abt_lr : 0x00000000
-M/TC:   und_spsr : 0x00000000
-M/TC:     und_sp : 0x00000000
-M/TC:     und_lr : 0x00000000
+M/TC:   und_spsr : 0x20000000
+M/TC:     und_sp : 0x00040000
+M/TC:     und_lr : 0x00000400
 M/TC:       pmcr : 0x00000000
