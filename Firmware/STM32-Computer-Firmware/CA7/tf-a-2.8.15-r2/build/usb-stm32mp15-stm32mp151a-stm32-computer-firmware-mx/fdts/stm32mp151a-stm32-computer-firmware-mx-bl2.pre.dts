@@ -1328,11 +1328,13 @@
     regulator-name = "vdd_usb";
     regulator-min-microvolt = <3300000>;
     regulator-max-microvolt = <3300000>;
+    regulator-always-on;
    };
    vdda: ldo5 {
     regulator-name = "vdda";
     regulator-min-microvolt = <2900000>;
     regulator-max-microvolt = <2900000>;
+    regulator-always-on;
     regulator-boot-on;
    };
    v1v2_hdmi: ldo6 {

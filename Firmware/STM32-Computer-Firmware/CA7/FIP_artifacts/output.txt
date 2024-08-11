@@ -14,29 +14,9 @@ NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):fc5a7b038-dirty(fc5a7b03)
 NOTICE:  BL2: Built : 23:46:56, Aug  6 2024
 INFO:    BL2: Doing platform setup
 INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
-WARNING: regulator_get_by_name: vref_ddr not found
-PANIC at PC : 0x2ffea81f
-
-Exception mode=0x00000016 at: 0x2ffea81f
-NOTICE:  CPU: STM32MP151AAC Rev.Z
-NOTICE:  Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
-INFO:    PMIC version = 0x21
-WARNING: VDD unknown
-INFO:    Reset reason (0x15):
-INFO:      Power-on Reset (rst_por)
-INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
-INFO:    FCONF: Reading firmware configuration information for: stm32mp_io
-INFO:    FCONF: Reading firmware configuration information for: stm32mp_fuse
-INFO:    Using USB
-INFO:      Instance 2
-INFO:    Boot used partition fsbl1
-NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):fc5a7b038-dirty(fc5a7b03)
-NOTICE:  BL2: Built : 23:46:56, Aug  6 2024
-INFO:    BL2: Doing platform setup
-INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
 INFO:    Memory size = 0x20000000 (512 MB)
 INFO:    DFU USB START...
-INFO:    phase ID :3, Manifestation 3 at c716159a
+INFO:    phase ID :3, Manifestation 3 at c71615b2
 INFO:    Send detach request
 INFO:    Receive DFU Detach
 INFO:    DFU USB STOP...
@@ -62,7 +42,7 @@ INFO:    Image id=8 loaded: 0xde000000 - 0xde038e08
 INFO:    BL2: Skip loading image id 9
 INFO:    BL2: Loading image id 2
 INFO:    Loading image id=2 at address 0xc0500000
-INFO:    Image id=2 loaded: 0xc0500000 - 0xc05137d0
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc05137e8
 INFO:    BL2: Skip loading image id 16
 INFO:    BL2: Loading image id 5
 INFO:    Loading image id=5 at address 0xc0100000
@@ -123,7 +103,7 @@ D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: b0d38bcbc-dev (gcc version 12.3.0 (GCC)) #31 Sun Aug 11 13:42:25 UTC 2024 arm
+I/TC: OP-TEE version: a4aa857a1-dev (gcc version 12.3.0 (GCC)) #33 Sun Aug 11 14:59:47 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -375,7 +355,7 @@ D/TC:0 0 stm32_uart_init_from_dt_node:161 info.reset = 19472
 D/TC:0 0 stm32_uart_init_from_dt_node:162 info.interrupt = -1
 D/TC:0 0 stm32_uart_init_from_dt_node:163 info.type = 0
 D/TC:0 0 stm32_uart_init_from_dt_node:164 info.prio = 0
-D/TC:0 0 stm32_uart_init_from_dt_node:165 Node = 8332
+D/TC:0 0 stm32_uart_init_from_dt_node:165 Node = 8348
 D/TC:0 0 stm32_uart_init_from_dt_node:166 OK
 D/TC:0 0 register_periph_iomem:203 IO for non-secure resource 0x40010000
 I/TC: DTB enables console (non-secure)
@@ -408,19 +388,19 @@ E/TC:0 0  0xde00019c
 M/TC: CPU : 0
 M/TC:     usr_sp : 0x00000000
 M/TC:     usr_lr : 0x00000000
-M/TC:   irq_spsr : 0x00020000
+M/TC:   irq_spsr : 0x00000000
 M/TC:     irq_sp : 0x00000000
 M/TC:     irq_lr : 0x00000000
 M/TC:   fiq_spsr : 0x00000000
 M/TC:     fiq_sp : 0x00000000
-M/TC:     fiq_lr : 0x40000000
-M/TC:   svc_spsr : 0x00000081
+M/TC:     fiq_lr : 0x00000000
+M/TC:   svc_spsr : 0x00000000
 M/TC:     svc_sp : 0x00000000
 M/TC:     svc_lr : 0x00000000
 M/TC:   abt_spsr : 0x00000000
-M/TC:     abt_sp : 0x00080002
+M/TC:     abt_sp : 0x00000000
 M/TC:     abt_lr : 0x00000000
 M/TC:   und_spsr : 0x00000000
-M/TC:     und_sp : 0x00040000
-M/TC:     und_lr : 0x00000400
+M/TC:     und_sp : 0x00000000
+M/TC:     und_lr : 0x00000000
 M/TC:       pmcr : 0x00000000

@@ -288,11 +288,13 @@
 
 			vdd_usb: ldo4 {
 				regulator-name = "vdd_usb";
+				regulator-always-on;
 				interrupts = <IT_CURLIM_LDO4 0>;
 			};
 
 			vdda: ldo5 {
 				regulator-name = "vdda";
+				regulator-always-on;
 				regulator-min-microvolt = <2900000>;
 				regulator-max-microvolt = <2900000>;
 				interrupts = <IT_CURLIM_LDO5 0>;
@@ -490,6 +492,7 @@
 };
 
 &cpu0 {
+	cpu-frequency = <650000000>;
 	cpu-supply = <&vddcore>;
 };
 

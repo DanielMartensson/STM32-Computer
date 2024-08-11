@@ -2380,11 +2380,13 @@
 
    vdd_usb: ldo4 {
     regulator-name = "vdd_usb";
+    regulator-always-on;
     interrupts = <19 0>;
    };
 
    vdda: ldo5 {
     regulator-name = "vdda";
+    regulator-always-on;
     regulator-min-microvolt = <2900000>;
     regulator-max-microvolt = <2900000>;
     interrupts = <20 0>;
@@ -2403,7 +2405,7 @@
     regulator-name = "vref_ddr";
     regulator-always-on;
    };
-# 333 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+# 335 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
   };
 
   onkey {
@@ -2564,6 +2566,7 @@
 };
 
 &cpu0 {
+ cpu-frequency = <650000000>;
  cpu-supply = <&vddcore>;
 };
 
