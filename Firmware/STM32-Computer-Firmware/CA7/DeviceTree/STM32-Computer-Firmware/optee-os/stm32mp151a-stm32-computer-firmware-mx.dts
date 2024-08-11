@@ -214,6 +214,15 @@
 			pwr_sw2-supply = <&bst_out>;
 		};
 		
+		vddcore: buck1 {
+			regulator-name = "vddcore";
+			regulator-min-microvolt = <1200000>;
+			regulator-max-microvolt = <1350000>;
+			regulator-always-on;
+			regulator-initial-mode = <0>;
+			regulator-over-current-protection;
+		};
+		
 		v3v3: buck4 {
 			regulator-name = "v3v3";
 			regulator-min-microvolt = <3300000>;
@@ -399,6 +408,15 @@
 };
 
 /* USER CODE BEGIN addons */
+&clk_hse {
+	st,digbypass;
+};
+
+&cpu0 {
+	clock-frequency = <650000000>;
+	cpu-supply = <&vddcore>;
+};
+
 &uart4 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart4_pins_mx>;

@@ -163,6 +163,7 @@ struct stm32_uart_pdata *stm32_uart_init_from_dt_node(void *fdt, int node)
 	DMSG("info.type = %i", info.type);
 	DMSG("info.prio = %i", info.prio);
 	DMSG("Node = %i", node);
+	DMSG("OK");
 
 	assert(info.reg != DT_INFO_INVALID_REG &&
 	       info.reg_size != DT_INFO_INVALID_REG_SIZE);
