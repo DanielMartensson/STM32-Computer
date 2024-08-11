@@ -40,6 +40,7 @@
 		ranges;
 
 		/* USER CODE BEGIN reserved-memory */
+
 		vdev0vring1: vdev0vring1@10041000 {
 			compatible = "shared-dma-pool";
 			reg = <0x10041000 0x1000>;
@@ -921,6 +922,15 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbphyc */
+	phy-supply = <&vdd_usb>;
+	st,tune-hs-dc-level = <2>;
+	st,enable-fs-rftime-tuning;
+	st,enable-hs-rftime-reduction;
+	st,trim-hs-current = <15>;
+	st,trim-hs-impedance = <1>;
+	st,tune-squelch-level = <3>;
+	st,tune-hs-rx-offset = <2>;
+	st,no-lsfs-sc;
 	/* USER CODE END usbphyc */
 };
 
@@ -944,15 +954,6 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbphyc_port1 */
-	phy-supply = <&vdd_usb>;
-	st,tune-hs-dc-level = <2>;
-	st,enable-fs-rftime-tuning;
-	st,enable-hs-rftime-reduction;
-	st,trim-hs-current = <15>;
-	st,trim-hs-impedance = <1>;
-	st,tune-squelch-level = <3>;
-	st,tune-hs-rx-offset = <2>;
-	st,no-lsfs-sc;
 	/* USER CODE END usbphyc_port1 */
 };
 

@@ -103,7 +103,7 @@ D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: 765cb9bc0-dev (gcc version 12.3.0 (GCC)) #36 Sun Aug 11 17:05:34 UTC 2024 arm
+I/TC: OP-TEE version: 173a5d0d7-dev (gcc version 12.3.0 (GCC)) #38 Sun Aug 11 18:53:04 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -195,8 +195,8 @@ D/TC:0 0 clk_register:126 Registered clock lse, freq 32768
 D/TC:0 0 clk_register:126 Registered clock hsi, freq 64000000
 D/TC:0 0 clk_register:126 Registered clock (null), freq 12000000
 D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
-D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
-D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 325000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 325000000
 D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
 D/TC:0 0 clk_register:126 Registered clock pll2q, freq 266500000
 D/TC:0 0 clk_register:126 Registered clock pll2r, freq 533000000
@@ -204,7 +204,7 @@ D/TC:0 0 clk_register:126 Registered clock (null), freq 208877929
 D/TC:0 0 clk_register:126 Registered clock pll3q, freq 24573874
 D/TC:0 0 clk_register:126 Registered clock pll3r, freq 11290698
 D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
-D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
 D/TC:0 0 clk_register:126 Registered clock mcu, freq 208877929
 D/TC:0 0 probe_driver_node:443 element: stm32mp1_clock on node rcc@50000000 initialized
 D/TC:0 0 call_initcalls:40 level 2 init_debug()
@@ -326,21 +326,16 @@ D/TC:0 0 stm32_cpu_opp_is_supported:558 Not supported opp-supported-hw 0x2
 D/TC:0 0 stm32_cpu_opp_is_supported:558 Not supported opp-supported-hw 0x2
 D/TC:0 0 stm32_cpu_opp_get_dt_subnode:623 Found OPP 0 (650000kHz/1200mV) from DT
 D/TC:0 0 stm32_cpu_opp_is_supported:558 Not supported opp-supported-hw 0x2
-D/TC:0 0 set_voltage_then_clock:151 opp = 0, cpu_opp.dvfs[opp].volt_mv = 1200
 D/TC:0 0 _set_opp_clk_rate:92 opp = 0, cpu_opp.dvfs[opp].freq_khz = 650000
 D/TC:0 0 stm32mp1_set_opp_khz:3856 freq_khz = 650000
-D/TC:0 0 stm32mp1_set_opp_khz:3873 (mpu_src != RCC_MPCKSELR_PLL) && (mpu_src != RCC_MPCKSELR_PLL_MPUDIV) = 1 
-D/TC:0 0 stm32mp1_set_opp_khz:3876 TEE ERROR BAD STATE
-D/TC:0 0 set_voltage_then_clock:164 cpu_opp.current_opp = 0
-E/TC:0 0 set_voltage_then_clock:165 Failed to set clock
-E/TC:0 0 probe_driver_node:458 Failed to probe stm32-cpu-opp on node cpu0-opp-table: 0xffff0000
-D/TC:0 0 process_probe_list:590 Unresolved dependencies after 5 rounds, 5 deferred
+D/TC:0 0 probe_driver_node:443 element: stm32-cpu-opp on node cpu0-opp-table initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 5 time(s)
+D/TC:0 0 process_probe_list:590 Unresolved dependencies after 6 rounds, 6 deferred
 D/TC:0 0 probe_dt_drivers_early:774 Deferred drivers probing
 D/TC:0 0 print_probe_list:397 Probe list: 1 elements
 D/TC:0 0 print_probe_list:399 |- Driver stm32-tamp probes on node tamp@5c00a000
 D/TC:0 0 print_probe_list:403 `- Probe list end
-D/TC:0 0 print_probe_list:409 Failed list: 1 elements
-E/TC:0 0 print_probe_list:411 |- Driver stm32-cpu-opp on node cpu0-opp-table failed
+D/TC:0 0 print_probe_list:409 Failed list: 0 elements
 D/TC:0 0 print_probe_list:414 `- Failed list end
 D/TC:0 0 call_initcalls:40 level 3 platform_banner()
 I/TC: Platform stm32mp1: flavor PLATFORM_FLAVOR - DT stm32mp151a-stm32-computer-firmware-mx.dts
@@ -376,37 +371,41 @@ D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd86214e5
 D/TC:0 0 add_node_to_probe:641 element: stm32_tamp_nvram on node nvram@5c00a100
 D/TC:0 0 probe_driver_node:443 element: stm32-tamp on node tamp@5c00a000 initialized
 D/TC:0 0 probe_driver_node:443 element: stm32_tamp_nvram on node nvram@5c00a100 initialized
-E/TC:0 0 probe_dt_drivers:795 Probe sequence result: 0
-D/TC:0 0 print_probe_list:397 Probe list: 0 elements
-D/TC:0 0 print_probe_list:403 `- Probe list end
-D/TC:0 0 print_probe_list:409 Failed list: 1 elements
-E/TC:0 0 print_probe_list:411 |- Driver stm32-cpu-opp on node cpu0-opp-table failed
-D/TC:0 0 print_probe_list:414 `- Failed list end
-E/TC:0 0 Panic at core/kernel/dt_driver.c:797 <probe_dt_drivers>
-E/TC:0 0 TEE load address @ 0xde000000
-E/TC:0 0 Call stack:
-E/TC:0 0  0xde002679
-E/TC:0 0  0xde0156eb
-E/TC:0 0  0xde014a8f
-E/TC:0 0  0xde016201
-E/TC:0 0  0xde00243d
-E/TC:0 0  0xde00019c
-M/TC: CPU : 0
-M/TC:     usr_sp : 0x00000080
-M/TC:     usr_lr : 0x00000004
-M/TC:   irq_spsr : 0x00020000
-M/TC:     irq_sp : 0x00000000
-M/TC:     irq_lr : 0x00000000
-M/TC:   fiq_spsr : 0x00000010
-M/TC:     fiq_sp : 0x00000000
-M/TC:     fiq_lr : 0x40000000
-M/TC:   svc_spsr : 0x00000081
-M/TC:     svc_sp : 0x00000000
-M/TC:     svc_lr : 0x00000001
-M/TC:   abt_spsr : 0x00000000
-M/TC:     abt_sp : 0x00080082
-M/TC:     abt_lr : 0x00000000
-M/TC:   und_spsr : 0x20000000
-M/TC:     und_sp : 0x00040000
-M/TC:     und_lr : 0x00000400
-M/TC:       pmcr : 0x00000000
+D/TC:0 0 call_initcalls:40 level 6 init_stm32mp1_drivers()
+D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0x101ff01 to 0xd8621808
+D/TC:0 0 gic_it_set_cpu_mask:352 cpu_mask: 0x1010101
+D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd8621409
+D/TC:0 0 call_initcalls:40 level 6 stm32mp1_init_scmi_server()
+D/TC:0 0 call_initcalls:40 level 6 stm32mp1_init_final_shres()
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp IWDG1    ( 0): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp USART1   ( 1): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp SPI6     ( 2): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp I2C4     ( 3): non-secure    
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp RNG1     ( 4): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp HASH1    ( 5): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp CRYP1    ( 6): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp I2C6     ( 7): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp RTC      ( 8): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp MCU      ( 9): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp PLL3     (10): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp MDMA     (11): unregistered  
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem cfg0_otp = 0: 0 bit offset: 0, length: 8
+D/TC:0 0 check_rcc_secure_configuration:347 RCC/PWR secure hardening: TZEN enable, MCKPROT enable
+D/TC:0 0 call_initcalls:40 level 6 stm32mp_syscfg_set_hslv()
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem hw2_otp = 6: 18 bit offset: 0, length: 32
+D/TC:0 0 call_initcalls:40 level 6 init_low_power()
+D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0xff00 to 0xd86218b0
+D/TC:0 0 gic_it_set_cpu_mask:352 cpu_mask: 0x300
+D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd86214b1
+D/TC:0 0 call_initcalls:40 level 6 stm32mp1_init_lp_states()
+D/TC:0 0 stm32mp1_init_lp_states:230 Power configuration: shutdown to 6, suspend to 2
+D/TC:0 0 call_initcalls:40 level 6 regulator_core_init()
+D/TC:0 0 call_initcalls:40 level 7 stm32_rng_release()
+D/TC:0 0 call_initcalls:40 level 7 regulator_core_cleanup()
+D/TC:0 0 regulator_core_cleanup:916 disable usb33
+D/TC:0 0 regulator_core_cleanup:916 disable reg18
+D/TC:0 0 regulator_core_cleanup:916 disable reg11
+D/TC:0 0 call_initcalls:40 level 7 release_probe_lists()
+D/TC:0 0 call_finalcalls:59 level 1 release_external_dt()
+I/TC: Primary CPU switching to normal world boot
+I/TC: Forced system reset PSCIÿ

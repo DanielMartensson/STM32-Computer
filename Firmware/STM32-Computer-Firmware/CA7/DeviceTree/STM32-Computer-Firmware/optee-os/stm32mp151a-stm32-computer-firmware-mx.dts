@@ -375,7 +375,6 @@
 	/* USER CODE END rcc */
 
 	st,clksrc = <
-		CLK_MPU_PLL1P /* <-- Manually added */
 		CLK_CKPER_DISABLED
 		CLK_ETH_PLL4P
 		CLK_SDMMC12_PLL4P
@@ -386,7 +385,7 @@
 		CLK_CEC_LSE
 		CLK_I2C12_HSI
 		CLK_UART24_HSI
-		CLK_MPU_HSI
+		CLK_MPU_PLL1P
 		CLK_AXI_PLL2P
 		CLK_MCU_PLL3P
 		CLK_RTC_LSE
@@ -407,6 +406,11 @@
 		DIV(DIV_MCO2, 0)
 	>;
 	st,pll_vco {
+		pll1_vco_1300Mhz: pll1-vco-1300Mhz {
+			src = < CLK_PLL12_HSE >;
+			divmn = < 2 80 >;
+			frac = < 0x800 >;
+		};
 		pll2_vco_1066Mhz: pll2-vco-1066Mhz {
 			src = < CLK_PLL12_HSE >;
 			divmn = < 2 65 >;
@@ -423,6 +427,20 @@
 		};
 		/* USER CODE BEGIN rcc_st-pll_vco */
 		/* USER CODE END rcc_st-pll_vco */
+	};
+
+	pll1:st,pll@0 {
+		compatible = "st,stm32mp1-pll";
+		reg = <0>;
+
+		st,pll = < &pll1_cfg1 >;
+
+		pll1_cfg1: pll1_cfg1 {
+			st,pll_vco = < &pll1_vco_1300Mhz >;
+			st,pll_div_pqr = < 0 1 1 >;
+		};
+		/* USER CODE BEGIN pll1 */
+		/* USER CODE END pll1 */
 	};
 
 	pll2:st,pll@1 {

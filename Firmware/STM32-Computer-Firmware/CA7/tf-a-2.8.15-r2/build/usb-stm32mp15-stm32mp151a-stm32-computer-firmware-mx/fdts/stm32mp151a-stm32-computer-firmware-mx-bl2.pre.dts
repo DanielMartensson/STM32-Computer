@@ -1377,6 +1377,11 @@
   ((0 << 26) | ((21) << 8) | (0))
  >;
  st,pll_vco {
+  pll1_vco_1300Mhz: pll1-vco-1300Mhz {
+   src = < ((1 << 26) | ((3) << 4) | (1)) >;
+   divmn = < 2 80 >;
+   frac = < 0x800 >;
+  };
   pll2_vco_1066Mhz: pll2-vco-1066Mhz {
    src = < ((1 << 26) | ((3) << 4) | (1)) >;
    divmn = < 2 65 >;
@@ -1390,6 +1395,15 @@
   pll4_vco_594Mhz: pll4-vco-594Mhz {
    src = < ((1 << 26) | ((5) << 4) | (1)) >;
    divmn = < 3 98 >;
+  };
+ };
+ pll1:st,pll@0 {
+  compatible = "st,stm32mp1-pll";
+  reg = <0>;
+  st,pll = < &pll1_cfg1 >;
+  pll1_cfg1: pll1_cfg1 {
+   st,pll_vco = < &pll1_vco_1300Mhz >;
+   st,pll_div_pqr = < 0 1 1 >;
   };
  };
  pll2:st,pll@1 {

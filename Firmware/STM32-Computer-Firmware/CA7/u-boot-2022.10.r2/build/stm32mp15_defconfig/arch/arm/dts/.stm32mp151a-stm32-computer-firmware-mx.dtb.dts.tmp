@@ -3090,6 +3090,7 @@
   ranges;
 
 
+
   vdev0vring1: vdev0vring1@10041000 {
    compatible = "shared-dma-pool";
    reg = <0x10041000 0x1000>;
@@ -3700,7 +3701,7 @@
      regulator-over-current-protection;
      regulator-initial-mode = <0>;
     };
-# 663 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 664 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
     v3v3_hdmi: ldo2 {
      regulator-name = "v3v3_hdmi";
      regulator-min-microvolt = <3300000>;
@@ -3744,7 +3745,7 @@
      regulator-name = "vref_ddr";
      regulator-always-on;
     };
-# 724 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 725 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
    };
 
    onkey {
@@ -3945,6 +3946,15 @@
  status = "okay";
 
 
+ phy-supply = <&vdd_usb>;
+ st,tune-hs-dc-level = <2>;
+ st,enable-fs-rftime-tuning;
+ st,enable-hs-rftime-reduction;
+ st,trim-hs-current = <15>;
+ st,trim-hs-impedance = <1>;
+ st,tune-squelch-level = <3>;
+ st,tune-hs-rx-offset = <2>;
+ st,no-lsfs-sc;
 
 };
 
@@ -3968,15 +3978,6 @@
  status = "okay";
 
 
- phy-supply = <&vdd_usb>;
- st,tune-hs-dc-level = <2>;
- st,enable-fs-rftime-tuning;
- st,enable-hs-rftime-reduction;
- st,trim-hs-current = <15>;
- st,trim-hs-impedance = <1>;
- st,tune-squelch-level = <3>;
- st,tune-hs-rx-offset = <2>;
- st,no-lsfs-sc;
 
 };
 
@@ -3994,4 +3995,4 @@
 
 
 };
-# 966 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 967 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
