@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="DMSG"/>
+		<item key="selection" value="vddcore"/>
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="false"/>
+		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="vddcore"/>
+			<item value="stm32mp1_set_opp_khz"/>
+			<item value="pll"/>
+			<item value="opp_khz"/>
+			<item value="clk_set_rate_no_lock"/>
+			<item value="clk_set_rate"/>
+			<item value="_set_opp_clk_rate"/>
 			<item value="DMSG"/>
-			<item value="uart"/>
-			<item value="vdd_usb"/>
-			<item value="STM32_PM_CSTOP_ALLOW_STANDBY_DDR_OFF"/>
-			<item value="&amp;pwr_regulators"/>
-			<item value="&amp;osc_calibration "/>
-			<item value="&amp;osc_calibration"/>
-			<item value="&amp;m4_rproc"/>
-			<item value="&amp;ltdc"/>
-			<item value="&amp;iwdg1"/>
-			<item value="&amp;ipcc"/>
-			<item value="&amp;i2s"/>
-			<item value="&amp;i2s2"/>
-			<item value="vdd_ddr"/>
-			<item value="v3v3"/>
+			<item value="opp_set_voltage"/>
+			<item value="set_opp_clk_rate"/>
+			<item value="CLK_SET_RATE"/>
+			<item value="set_clock"/>
+			<item value="set_voltage"/>
+			<item value="stm32_cpu_opp_get_dt"/>
+			<item value="stm32_cpu_get_dt"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>
@@ -30,9 +30,9 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="89"/>
-		<item key="DIALOG_Y_ORIGIN" value="317"/>
+		<item key="DIALOG_Y_ORIGIN" value="147"/>
 		<item key="DIALOG_WIDTH" value="342"/>
-		<item key="DIALOG_HEIGHT" value="285"/>
+		<item key="DIALOG_HEIGHT" value="455"/>
 		<item key="DIALOG_FONT_NAME" value="1|Sans|10.0|0|GTK|1|"/>
 	</section>
 </section>

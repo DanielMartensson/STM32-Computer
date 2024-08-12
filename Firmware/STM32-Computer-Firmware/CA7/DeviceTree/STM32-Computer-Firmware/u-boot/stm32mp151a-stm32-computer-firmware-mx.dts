@@ -87,6 +87,7 @@
 
 	/* USER CODE BEGIN root */
 	aliases {
+		serial0 = &uart4;
 		ethernet0 = &ethernet0;
 	};
 
@@ -914,7 +915,6 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbotg_hs */
-	/* This board does not have any USB-C connector */
 	/* USER CODE END usbotg_hs */
 };
 

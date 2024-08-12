@@ -3137,6 +3137,7 @@
 
 
  aliases {
+  serial0 = &uart4;
   ethernet0 = &ethernet0;
  };
 
@@ -3701,7 +3702,7 @@
      regulator-over-current-protection;
      regulator-initial-mode = <0>;
     };
-# 664 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 665 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
     v3v3_hdmi: ldo2 {
      regulator-name = "v3v3_hdmi";
      regulator-min-microvolt = <3300000>;
@@ -3745,7 +3746,7 @@
      regulator-name = "vref_ddr";
      regulator-always-on;
     };
-# 725 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 726 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
    };
 
    onkey {
@@ -3936,7 +3937,6 @@
  pinctrl-0 = <&usb_otg_hs_pins_mx>;
  pinctrl-1 = <&usb_otg_hs_sleep_pins_mx>;
  status = "okay";
-
 
 
 

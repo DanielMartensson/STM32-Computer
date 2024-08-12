@@ -1,4 +1,4 @@
-21:04:59 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_u-boot-2022.10.r2 ****
+12:43:24 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_u-boot-2022.10.r2 ****
 make -f ../Makefile.sdk.ide fip 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/../../FIP_artifacts
@@ -1285,5 +1285,5 @@ CMD> fiptool create   \
 	--hw-config /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/../../FIP_artifacts/u-boot/u-boot-stm32mp157f-ev1.dtb   \ 
 	/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/../../FIP_artifacts/fip/fip-stm32mp157f-ev1-optee-sdcard.bin
 
-21:08:28 Build Finished. 0 errors, 0 warnings. (took 3m:28s.595ms)
+12:47:28 Build Finished. 0 errors, 0 warnings. (took 4m:3s.660ms)
 
