@@ -3090,6 +3090,10 @@
   ranges;
 
 
+  optee@de000000 {
+   reg = <0xde000000 0x02000000>;
+   no-map;
+  };
 
  };
 
@@ -3653,7 +3657,7 @@
      regulator-over-current-protection;
      regulator-initial-mode = <0>;
     };
-# 616 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 620 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
     v3v3_hdmi: ldo2 {
      regulator-name = "v3v3_hdmi";
      regulator-min-microvolt = <3300000>;
@@ -3697,7 +3701,7 @@
      regulator-name = "vref_ddr";
      regulator-always-on;
     };
-# 677 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 681 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
    };
 
    onkey {
@@ -3950,4 +3954,4 @@
 
 
 };
-# 922 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 926 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2

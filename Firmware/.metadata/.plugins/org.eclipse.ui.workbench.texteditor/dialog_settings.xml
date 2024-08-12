@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="con_usbotg_hs_ep"/>
+		<item key="selection" value="vdev0buffer"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="vdev0buffer"/>
 			<item value="con_usbotg_hs_ep"/>
 			<item value="vddcore"/>
 			<item value="stm32mp1_set_opp_khz"/>
@@ -22,7 +23,6 @@
 			<item value="CLK_SET_RATE"/>
 			<item value="set_clock"/>
 			<item value="set_voltage"/>
-			<item value="stm32_cpu_opp_get_dt"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>

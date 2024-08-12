@@ -4227,3 +4227,6 @@ java.lang.NullPointerException: Cannot invoke "javax.swing.JTextField.getText()"
 2024-08-12 21:53:01,498 [INFO] IpDdr:68 - [DDR IP] PluginUI initialization
 2024-08-12 21:53:01,546 [WARN] IpParametersView:151 - Warning: This peripheral hasn't parameters
 2024-08-12 21:53:01,657 [WARN] IpParametersView:151 - Warning: This peripheral hasn't parameters
+2024-08-12 23:51:37,436 [INFO] WebApp:189 - Connection lost
+2024-08-12 23:51:53,687 [INFO] WebApp:186 - Connection restablished
+2024-08-12 23:55:24,119 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
