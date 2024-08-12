@@ -40,48 +40,6 @@
 		ranges;
 
 		/* USER CODE BEGIN reserved-memory */
-
-		vdev0vring1: vdev0vring1@10041000 {
-			compatible = "shared-dma-pool";
-			reg = <0x10041000 0x1000>;
-			no-map;
-		};
-
-		vdev0buffer: vdev0buffer@10042000 {
-			compatible = "shared-dma-pool";
-			reg = <0x10042000 0x4000>;
-			no-map;
-		};
-
-		mcu_rsc_table: mcu-rsc-table@10048000 {
-			compatible = "shared-dma-pool";
-			reg = <0x10048000 0x8000>;
-			no-map;
-		};
-		
-		mcuram: mcuram@30000000 {
-			compatible = "shared-dma-pool";
-			reg = <0x30000000 0x40000>;
-			no-map;
-		};
-		
-		mcuram2: mcuram2@10000000 {
-			compatible = "shared-dma-pool";
-			reg = <0x10000000 0x40000>;
-			no-map;
-		};
-
-		retram: retram@38000000 {
-			compatible = "shared-dma-pool";
-			reg = <0x38000000 0x10000>;
-			no-map;
-		};
-		
-		vdev0vring0: vdev0vring0@10040000 {
-			compatible = "shared-dma-pool";
-			reg = <0x10040000 0x1000>;
-			no-map;
-		};
 		/* USER CODE END reserved-memory */
 	};
 
@@ -478,13 +436,6 @@
 	status = "okay";
 
 	/* USER CODE BEGIN m4_rproc */
-	memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>,
-			<&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
-	mboxes = <&ipcc 0>, <&ipcc 1>, <&ipcc 2>, <&ipcc 3>;
-	mbox-names = "vq0", "vq1", "shutdown", "detach";
-	interrupt-parent = <&exti>;
-	interrupts = <68 1>;
-	wakeup-source;
 	/* USER CODE END m4_rproc */
 
 	m4_system_resources{
@@ -858,10 +809,14 @@
 	status = "okay";
 
 	/* USER CODE BEGIN sdmmc2 */
-	broken-cd;
+	non-removable;
+	no-sd;
+	no-sdio;
 	st,neg-edge;
-	bus-width = <4>;
+	bus-width = <8>;
 	vmmc-supply = <&v3v3>;
+	vqmmc-supply = <&vdd>;
+	mmc-ddr-3_3v;
 	/* USER CODE END sdmmc2 */
 };
 

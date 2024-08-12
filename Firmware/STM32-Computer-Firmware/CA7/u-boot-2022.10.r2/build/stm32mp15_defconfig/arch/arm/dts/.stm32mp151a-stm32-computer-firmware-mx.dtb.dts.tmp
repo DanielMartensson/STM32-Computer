@@ -3091,48 +3091,6 @@
 
 
 
-  vdev0vring1: vdev0vring1@10041000 {
-   compatible = "shared-dma-pool";
-   reg = <0x10041000 0x1000>;
-   no-map;
-  };
-
-  vdev0buffer: vdev0buffer@10042000 {
-   compatible = "shared-dma-pool";
-   reg = <0x10042000 0x4000>;
-   no-map;
-  };
-
-  mcu_rsc_table: mcu-rsc-table@10048000 {
-   compatible = "shared-dma-pool";
-   reg = <0x10048000 0x8000>;
-   no-map;
-  };
-
-  mcuram: mcuram@30000000 {
-   compatible = "shared-dma-pool";
-   reg = <0x30000000 0x40000>;
-   no-map;
-  };
-
-  mcuram2: mcuram2@10000000 {
-   compatible = "shared-dma-pool";
-   reg = <0x10000000 0x40000>;
-   no-map;
-  };
-
-  retram: retram@38000000 {
-   compatible = "shared-dma-pool";
-   reg = <0x38000000 0x10000>;
-   no-map;
-  };
-
-  vdev0vring0: vdev0vring0@10040000 {
-   compatible = "shared-dma-pool";
-   reg = <0x10040000 0x1000>;
-   no-map;
-  };
-
  };
 
 
@@ -3528,13 +3486,6 @@
  status = "okay";
 
 
- memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>,
-   <&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
- mboxes = <&ipcc 0>, <&ipcc 1>, <&ipcc 2>, <&ipcc 3>;
- mbox-names = "vq0", "vq1", "shutdown", "detach";
- interrupt-parent = <&exti>;
- interrupts = <68 1>;
- wakeup-source;
 
 
  m4_system_resources{
@@ -3702,7 +3653,7 @@
      regulator-over-current-protection;
      regulator-initial-mode = <0>;
     };
-# 665 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 616 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
     v3v3_hdmi: ldo2 {
      regulator-name = "v3v3_hdmi";
      regulator-min-microvolt = <3300000>;
@@ -3746,7 +3697,7 @@
      regulator-name = "vref_ddr";
      regulator-always-on;
     };
-# 726 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 677 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
    };
 
    onkey {
@@ -3882,10 +3833,14 @@
  status = "okay";
 
 
- broken-cd;
+ non-removable;
+ no-sd;
+ no-sdio;
  st,neg-edge;
- bus-width = <4>;
+ bus-width = <8>;
  vmmc-supply = <&v3v3>;
+ vqmmc-supply = <&vdd>;
+ mmc-ddr-3_3v;
 
 };
 
@@ -3995,4 +3950,4 @@
 
 
 };
-# 967 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 922 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
