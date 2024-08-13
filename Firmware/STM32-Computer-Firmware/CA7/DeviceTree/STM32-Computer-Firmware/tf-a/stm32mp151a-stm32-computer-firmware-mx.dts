@@ -168,7 +168,7 @@
 			buck2-supply = <&vin>;
 			buck3-supply = <&vin>;
 			buck4-supply = <&vin>;
-			ldo1-supply = <&v3v3>;
+			/*ldo1-supply = <&v3v3>;*/
 			ldo2-supply = <&vin>;
 			ldo3-supply = <&vdd_ddr>;
 			ldo4-supply = <&vin>;
@@ -288,10 +288,11 @@
 	status = "okay";
 
 	/* USER CODE BEGIN rcc */
+	/* CLK_CKPER_DISABLED -> CLK_CKPER_HSE */
 	/* USER CODE END rcc */
 
 	st,clksrc = <
-		CLK_CKPER_DISABLED
+		CLK_CKPER_HSE
 		CLK_SDMMC12_PLL4P
 		CLK_STGEN_HSE
 		CLK_I2C46_HSI
@@ -419,7 +420,6 @@
 	status = "okay";
 
 	/* USER CODE BEGIN uart4 */
-	
 	/* USER CODE END uart4 */
 };
 
@@ -472,6 +472,11 @@
 
 &cpu0 {
 	cpu-supply = <&vddcore>;
+};
+
+&pwr_regulators{
+	vdd-supply = <&vdd>;
+	vdd_3v3_usbfs-supply = <&vdd_usb>;
 };
 
 /* USER CODE END addons */

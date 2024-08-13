@@ -15,10 +15,12 @@ TF_A_ENABLE_DEBUG_WRAPPER ?= 1
 TF_A_ENABLE_FWDDR ?= 0
 
 # Set default TF-A config
-TF_A_CONFIG ?=  optee-emmc optee-nand optee-nor optee-sdcard   uart usb 
+#TF_A_CONFIG ?=  optee-emmc optee-nand optee-nor optee-sdcard   uart usb 
+TF_A_CONFIG ?=  optee-emmc uart usb 
+
 
 # Set default FIP config
-FIP_CONFIG ?= optee-emmc optee-nand optee-nor optee-sdcard
+FIP_CONFIG ?= optee-emmc #optee-nand optee-nor optee-sdcard
 
 # Default TF-A overall settings to null
 TF_A_BINARY ?=

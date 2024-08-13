@@ -1,7 +1,6 @@
 NOTICE:  CPU: STM32MP151AAC Rev.Z
 NOTICE:  Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
 INFO:    PMIC version = 0x21
-WARNING: VDD unknown
 INFO:    Reset reason (0x15):
 INFO:      Power-on Reset (rst_por)
 INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
@@ -16,7 +15,7 @@ INFO:    BL2: Doing platform setup
 INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
 INFO:    Memory size = 0x20000000 (512 MB)
 INFO:    DFU USB START...
-INFO:    phase ID :3, Manifestation 3 at c7161132
+INFO:    phase ID :3, Manifestation 3 at c716780a
 INFO:    Send detach request
 INFO:    Receive DFU Detach
 INFO:    DFU USB STOP...
@@ -38,11 +37,11 @@ INFO:          flags=0x0
 INFO:          nb_images=0x1
 INFO:    BL2: Loading image id 8
 INFO:    Loading image id=8 at address 0xde000000
-INFO:    Image id=8 loaded: 0xde000000 - 0xde038e08
+INFO:    Image id=8 loaded: 0xde000000 - 0xde03ee08
 INFO:    BL2: Skip loading image id 9
 INFO:    BL2: Loading image id 2
 INFO:    Loading image id=2 at address 0xc0500000
-INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513368
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513a40
 INFO:    BL2: Skip loading image id 16
 INFO:    BL2: Loading image id 5
 INFO:    Loading image id=5 at address 0xc0100000
@@ -72,8 +71,8 @@ D/TC:0   add_phys_mem:684 Physical mem map overlaps 0x50000000
 D/TC:0   add_phys_mem:670 ROUNDDOWN(0x44000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x44000000 size 0x00200000
 D/TC:0   add_phys_mem:670 ROUNDDOWN(0x40000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x40000000 size 0x00200000
 D/TC:0   add_phys_mem:670 TA_RAM_START type TA_RAM 0xde200000 size 0x01e00000
-D/TC:0   add_phys_mem:670 VCORE_UNPG_RW_PA type TEE_RAM_RW 0xde038000 size 0x001c8000
-D/TC:0   add_phys_mem:670 VCORE_UNPG_RX_PA type TEE_RAM_RX 0xde000000 size 0x00038000
+D/TC:0   add_phys_mem:670 VCORE_UNPG_RW_PA type TEE_RAM_RW 0xde03e000 size 0x001c2000
+D/TC:0   add_phys_mem:670 VCORE_UNPG_RX_PA type TEE_RAM_RX 0xde000000 size 0x0003e000
 D/TC:0   add_va_space:710 type RES_VASPACE size 0x00a00000
 D/TC:0   add_va_space:710 type SHM_VASPACE size 0x02000000
 D/TC:0   dump_mmap_table:837 type TA_RAM       va 0xd6400000..0xd81fffff pa 0xde200000..0xdfffffff size 0x01e00000 (pgdir)
@@ -95,15 +94,15 @@ D/TC:0   dump_mmap_table:837 type SHM_VASPACE  va 0xdbc00000..0xddbfffff pa 0x00
 D/TC:0   dump_mmap_table:837 type RAM_NSEC     va 0xddf8f000..0xddf8ffff pa 0xc0000000..0xc0000fff size 0x00001000 (smallpg)
 D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xddf90000..0xddf9ffff pa 0x38000000..0x3800ffff size 0x00010000 (smallpg)
 D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xddfa0000..0xddffffff pa 0x30000000..0x3005ffff size 0x00060000 (smallpg)
-D/TC:0   dump_mmap_table:837 type TEE_RAM_RX   va 0xde000000..0xde037fff pa 0xde000000..0xde037fff size 0x00038000 (smallpg)
-D/TC:0   dump_mmap_table:837 type TEE_RAM_RW   va 0xde038000..0xde1fffff pa 0xde038000..0xde1fffff size 0x001c8000 (smallpg)
+D/TC:0   dump_mmap_table:837 type TEE_RAM_RX   va 0xde000000..0xde03dfff pa 0xde000000..0xde03dfff size 0x0003e000 (smallpg)
+D/TC:0   dump_mmap_table:837 type TEE_RAM_RW   va 0xde03e000..0xde1fffff pa 0xde03e000..0xde1fffff size 0x001c2000 (smallpg)
 D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 1 / 10
 D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 2 / 10
 D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: e413e2ec3-dev (gcc version 12.3.0 (GCC)) #40 Mon Aug 12 21:21:05 UTC 2024 arm
+I/TC: OP-TEE version: c9e2d42b8-dev (gcc version 12.3.0 (GCC)) #44 Tue Aug 13 22:18:38 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -123,6 +122,7 @@ D/TC:0 0 save_dt_nvmem_layout:875 nvmem[9] = calib 23bit offset: 16, length: 16
 D/TC:0 0 save_dt_nvmem_layout:875 nvmem[10] = pkh_otp 24bit offset: 0, length: 256
 D/TC:0 0 save_dt_nvmem_layout:875 nvmem[11] = mac 57bit offset: 0, length: 64
 D/TC:0 0 save_dt_nvmem_layout:875 nvmem[12] = huk-otp 60bit offset: 0, length: 128
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[13] = board_id 59bit offset: 0, length: 32
 D/TC:0 0 call_initcalls:40 level 1 clk_dt_probe()
 D/TC:0 0 clk_dt_probe:202 Probing clocks from devicetree
 D/TC:0 0 clk_register:126 Registered clock clk-hse, freq 24000000
@@ -211,6 +211,12 @@ D/TC:0 0 call_initcalls:40 level 2 init_debug()
 D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem cfg0_otp = 0: 0 bit offset: 0, length: 8
 I/TC: WARNING: All debug access are allowed
 D/TC:0 0 call_initcalls:40 level 2 provisioning_probe()
+D/TC:0 0 stm32_bsec_find_otp_by_phandle:679 nvmem = 6: 18 bit offset: 0, length: 32
+D/TC:0 0 provision:62 OTP 18: provisioning value 0x1e0, lock 0x2 / shadow value 0x7ae00000, lock 0
+I/TC: Override the OTP 18: 0x7ae00000 to 0x7ae001e0
+D/TC:0 0 stm32_bsec_shadow_register:266 BSEC shadow warning: OTP locked
+D/TC:0 0 provision:100 Read SHADOW 0x7ae001e0
+I/TC: WARNING: Embeds insecure stm32mp_provisioning driver
 D/TC:0 0 call_initcalls:40 level 2 probe_dt_drivers_early()
 D/TC:0 0 add_node_to_probe:641 element: stm32-cpu-opp on node cpu0-opp-table
 D/TC:0 0 add_node_to_probe:641 element: simple-bus on node soc
@@ -408,47 +414,185 @@ D/TC:0 0 regulator_core_cleanup:916 disable reg11
 D/TC:0 0 call_initcalls:40 level 7 release_probe_lists()
 D/TC:0 0 call_finalcalls:59 level 1 release_external_dt()
 I/TC: Primary CPU switching to normal world boot
-serial_stm32 serial@40010000: pinctrl_select_state_full: uclass_get_device_by_phandle_id: err=-19
-
-
-U-Boot 2022.10-stm32mp-r2 (Aug 12 2024 - 23:20:26 +0200)
-
-optee optee: OP-TEE: revision 3.19 (e413e2ec)
 D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
 D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
 D/TC:0 0 core_mmu_xlat_table_alloc:526 xlat tables used 4 / 10
 D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
 D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open device.pta
 D/TC:? 0 tee_ta_init_pseudo_ta_session:326 device.pta : 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
-D/TC:? 0 tee_ta_close_session:451 csess 0xde04a750 id 1
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050588 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open PTA-SCMI
+D/TC:? 0 tee_ta_init_pseudo_ta_session:326 PTA-SCMI : a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050480 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050378 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050378 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050378 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+serial_stm32 serial@40010000: pinctrl_select_state_full: uclass_get_device_by_phandle_id: err=-19
+optee optee: OP-TEE: revision 3.19 (c9e2d42b)
+
+
+U-Boot 2022.10-stm32mp-r2 (Aug 14 2024 - 00:19:35 +0200)
+
 D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
 D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open bsec.pta
 D/TC:? 0 tee_ta_init_pseudo_ta_session:326 bsec.pta : 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde04a648 id 1
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050378 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde04a540 id 1
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde04a540 id 1
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 CPU: STM32MP151AAC Rev.Z
 Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
 Board: stm32mp1 in trusted mode (st,stm32mp151a-stm32-computer-firmware-mx)
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde04a540 id 1
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 DRAM:  512 MiB
-Clocks:
-- MPU : 650 MHz
-- MCU : 208.878 MHz
-- AXI : 266.500 MHz
-- PER : 0 MHz
-- DDR : 533 MHz
-optee optee: OP-TEE: revision 3.19 (e413e2ec)
+optee optee: OP-TEE: revision 3.19 (c9e2d42b)
 D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
 D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
-D/TC:? 0 tee_ta_close_session:451 csess 0xde04a540 id 1
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+Clocks:
+- MPU : 650 MHz
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+- MCU : 208.878 MHz
+- AXI : 266.500 MHz
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+- PER : 24 MHz
+- DDR : 533 MHz
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+Core:  104 devices, 38 uclasses, devicetree: board
+smcwd watchdog: Init failed
+NAND:  0 MiB
+MMC:   STM32 SD/MMC: 0
+Loading Environment from nowhere... OK
+In:    serial
+Out:   serial
+Err:   serial
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+invalid MAC address 0 in OTP 00:00:00:00:00:00
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+Net:   D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+
+Error: ethernet@5800a000 address not set.
+No ethernet found.
+
+7[r[999;999H[6n8D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+Card did not respond to voltage select! : -110
+No EFI system partition
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+
+Error: ethernet@5800a000 address not set.
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+
+Error: ethernet@5800a000 address not set.
+Hit any key to stop autoboot:  1  0 
+Boot over usb0!
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 stm32_bsec_shadow_register:266 BSEC shadow warning: OTP locked
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 1a8342cc-81a5-4512-99fe-9e2b3e37d626
+D/TC:? 0 tee_ta_open_session:677 init session failed 0xffff0008
+DFU alt info setting: done
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:0   pwr_scv_handler:56 PWR service: write 0x40000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: write 0xd0000000 at offset 0xc
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+crq->brequest:0x0

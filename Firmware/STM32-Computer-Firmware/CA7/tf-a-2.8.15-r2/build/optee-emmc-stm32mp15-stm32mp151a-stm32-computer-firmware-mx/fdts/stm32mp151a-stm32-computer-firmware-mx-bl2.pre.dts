@@ -1271,7 +1271,6 @@
    buck2-supply = <&vin>;
    buck3-supply = <&vin>;
    buck4-supply = <&vin>;
-   ldo1-supply = <&v3v3>;
    ldo2-supply = <&vin>;
    ldo3-supply = <&vdd_ddr>;
    ldo4-supply = <&vin>;
@@ -1353,7 +1352,7 @@
 &rcc{
  status = "okay";
  st,clksrc = <
-  ((1 << 26) | ((6) << 4) | (3))
+  ((1 << 26) | ((6) << 4) | (2))
   ((1 << 26) | ((8) << 4) | (2))
   ((1 << 26) | ((16) << 4) | (1))
   ((1 << 26) | ((25) << 4) | (2))
@@ -1482,6 +1481,10 @@
 };
 &cpu0 {
  cpu-supply = <&vddcore>;
+};
+&pwr_regulators{
+ vdd-supply = <&vdd>;
+ vdd_3v3_usbfs-supply = <&vdd_usb>;
 };
 /omit-if-no-ref/ &fmc_pins_a;
 /omit-if-no-ref/ &i2c2_pins_a;

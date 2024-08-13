@@ -2897,6 +2897,8 @@
 /delete-node/ &clk_lsi;
 /delete-node/ &clk_csi;
 # 21 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/include/dt-bindings/mfd/st,stpmic1.h" 1
+# 22 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
 # 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp15-scmi-u-boot.dtsi" 1
 
 
@@ -3067,8 +3069,6 @@
 &uart8{
  resets = <&rcc 19475>;
 };
-# 22 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
-# 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/include/dt-bindings/mfd/st,stpmic1.h" 1
 # 23 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
 
 
@@ -3091,23 +3091,98 @@
 
 
   optee@de000000 {
-   reg = <0xde000000 0x02000000>;
+   reg = <0xde000000 0x2000000>;
+   no-map;
+  };
+
+  mcuram2:mcuram2@10000000{
+   compatible = "shared-dma-pool";
+   reg = <0x10000000 0x40000>;
+   no-map;
+  };
+
+  vdev0vring0:vdev0vring0@10040000{
+   compatible = "shared-dma-pool";
+   reg = <0x10040000 0x1000>;
+   no-map;
+  };
+
+  vdev0vring1:vdev0vring1@10041000{
+   compatible = "shared-dma-pool";
+   reg = <0x10041000 0x1000>;
+   no-map;
+  };
+
+  vdev0buffer:vdev0buffer@10042000{
+   compatible = "shared-dma-pool";
+   reg = <0x10042000 0x4000>;
+   no-map;
+  };
+
+  mcu_rsc_table:mcu-rsc-table@10048000{
+   compatible = "shared-dma-pool";
+   reg = <0x10048000 0x8000>;
+   no-map;
+  };
+
+  mcuram:mcuram@30000000{
+   compatible = "shared-dma-pool";
+   reg = <0x30000000 0x40000>;
+   no-map;
+  };
+
+  retram:retram@38000000{
+   compatible = "shared-dma-pool";
+   reg = <0x38000000 0x10000>;
    no-map;
   };
 
  };
 
 
- aliases {
-  serial0 = &uart4;
+ aliases{
   ethernet0 = &ethernet0;
+  serial0 = &uart4;
  };
 
- chosen {
-  stdout-path = "serial0:115200n8";
+ hdmi:connector{
+  compatible = "hdmi-connector";
+  label = "hdmi";
+  type = "a";
+
+  port{
+
+   hdmi_connector_in:endpoint{
+    remote-endpoint = <&sii9022_out>;
+   };
+  };
  };
 
- vin: vin {
+ config {
+  u-boot,boot-led = "heartbeat";
+  u-boot,error-led = "error";
+  u-boot,mmc-env-partition = "u-boot-env";
+  st,fastboot-gpios = <&gpioa 13 (1 | 16)>;
+  st,stm32prog-gpios = <&gpioa 14 (1 | 16)>;
+ };
+
+ led{
+  compatible = "gpio-leds";
+
+  led-blue{
+   label = "heartbeat";
+   gpios = <&gpioa 14 0>;
+   linux,default-trigger = "heartbeat";
+   default-state = "off";
+  };
+
+  led-red {
+   label = "error";
+   gpios = <&gpioa 13 1>;
+  };
+ };
+
+ vin:vin{
   compatible = "regulator-fixed";
   regulator-name = "vin";
   regulator-min-microvolt = <5000000>;
@@ -3115,17 +3190,8 @@
   regulator-always-on;
  };
 
- hdmi: connector {
-  compatible = "hdmi-connector";
-  label = "hdmi";
-
-  type = "a";
-
-  port {
-   hdmi_connector_in: endpoint {
-    remote-endpoint = <&sii9022_out>;
-   };
-  };
+ chosen{
+  stdout-path = "serial0:115200n8";
  };
 
 
@@ -3490,6 +3556,16 @@
  status = "okay";
 
 
+ resets = <&scmi_reset 10>,
+   <&scmi_reset 11>;
+ reset-names = "mcu_rst", "hold_boot";
+ /delete-property/ st,syscfg-holdboot;
+
+ memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>,
+   <&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
+ interrupt-parent = <&exti>;
+ interrupts = <68 1>;
+ wakeup-source;
 
 
  m4_system_resources{
@@ -3521,6 +3597,7 @@
  status = "okay";
 
 
+ resets = <&scmi_reset 9>;
 
 };
 
@@ -3553,11 +3630,13 @@
  phy-handle = <&phy0>;
  nvmem-cells = <&ethernet_mac_address>;
  nvmem-cell-names = "mac-address";
- mdio {
+
+ mdio{
   #address-cells = <1>;
   #size-cells = <0>;
   compatible = "snps,dwmac-mdio";
-  phy0: ethernet-phy@0 {
+
+  phy0:ethernet-phy@0{
    reg = <0>;
   };
  };
@@ -3588,137 +3667,15 @@
  status = "okay";
 
 
+ clocks = <&scmi_clk 13>;
+ resets = <&scmi_reset 1>;
  i2c-scl-rising-time-ns = <185>;
  i2c-scl-falling-time-ns = <20>;
  clock-frequency = <400000>;
+ /delete-property/ dmas;
+ /delete-property/ dma-names;
 
- /delete-property/dmas;
- /delete-property/dma-names;
-
- pmic: stpmic@33 {
-   compatible = "st,stpmic1";
-   reg = <0x33>;
-   interrupts-extended = <&exti 55 2>;
-   interrupt-controller;
-   #interrupt-cells = <2>;
-   status = "okay";
-
-   regulators {
-    compatible = "st,stpmic1-regulators";
-    buck1-supply = <&vin>;
-    buck2-supply = <&vin>;
-    buck3-supply = <&vin>;
-    buck4-supply = <&vin>;
-    ldo1-supply = <&v3v3>;
-    ldo2-supply = <&vin>;
-    ldo3-supply = <&vdd_ddr>;
-    ldo4-supply = <&vin>;
-    ldo5-supply = <&vin>;
-    ldo6-supply = <&v3v3>;
-    vref_ddr-supply = <&vin>;
-    boost-supply = <&vin>;
-
-
-
-
-    vddcore: buck1 {
-     regulator-name = "vddcore";
-     regulator-min-microvolt = <1200000>;
-     regulator-max-microvolt = <1350000>;
-     regulator-always-on;
-     regulator-initial-mode = <0>;
-     regulator-over-current-protection;
-    };
-
-    vdd_ddr: buck2 {
-     regulator-name = "vdd_ddr";
-     regulator-min-microvolt = <1350000>;
-     regulator-max-microvolt = <1350000>;
-     regulator-always-on;
-     regulator-initial-mode = <0>;
-     regulator-over-current-protection;
-    };
-
-    vdd: buck3 {
-     regulator-name = "vdd";
-     regulator-min-microvolt = <3300000>;
-     regulator-max-microvolt = <3300000>;
-     regulator-always-on;
-     st,mask-reset;
-     regulator-initial-mode = <0>;
-     regulator-over-current-protection;
-    };
-
-    v3v3: buck4 {
-     regulator-name = "v3v3";
-     regulator-min-microvolt = <3300000>;
-     regulator-max-microvolt = <3300000>;
-     regulator-always-on;
-     regulator-over-current-protection;
-     regulator-initial-mode = <0>;
-    };
-# 620 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
-    v3v3_hdmi: ldo2 {
-     regulator-name = "v3v3_hdmi";
-     regulator-min-microvolt = <3300000>;
-     regulator-max-microvolt = <3300000>;
-     regulator-always-on;
-     interrupts = <17 0>;
-    };
-
-    vtt_ddr: ldo3 {
-     regulator-name = "vtt_ddr";
-     regulator-min-microvolt = <500000>;
-     regulator-max-microvolt = <750000>;
-     regulator-always-on;
-     regulator-over-current-protection;
-    };
-
-    vdd_usb: ldo4 {
-     regulator-name = "vdd_usb";
-     interrupts = <19 0>;
-     regulator-always-on;
-    };
-
-    vdda: ldo5 {
-     regulator-name = "vdda";
-     regulator-min-microvolt = <2900000>;
-     regulator-max-microvolt = <2900000>;
-     interrupts = <20 0>;
-     regulator-always-on;
-     regulator-boot-on;
-    };
-
-    v1v2_hdmi: ldo6 {
-     regulator-name = "v1v2_hdmi";
-     regulator-min-microvolt = <1200000>;
-     regulator-max-microvolt = <1200000>;
-     regulator-always-on;
-     interrupts = <21 0>;
-    };
-
-    vref_ddr: vref-ddr {
-     regulator-name = "vref_ddr";
-     regulator-always-on;
-    };
-# 681 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
-   };
-
-   onkey {
-    compatible = "st,stpmic1-onkey";
-    interrupts = <0 0>, <1 0>;
-    interrupt-names = "onkey-falling", "onkey-rising";
-    power-off-time-sec = <10>;
-    status = "okay";
-   };
-
-   watchdog {
-    compatible = "st,stpmic1-wdt";
-    status = "disabled";
-   };
- };
-
- hdmi-transmitter@39 {
+ hdmi-transmitter@39{
   compatible = "sil,sii9022";
   reg = <0x39>;
   iovcc-supply = <&v3v3_hdmi>;
@@ -3729,30 +3686,148 @@
   #sound-dai-cells = <0>;
   status = "okay";
 
-  ports {
+  ports{
    #address-cells = <1>;
    #size-cells = <0>;
 
-   port@0 {
+   port@0{
     reg = <0>;
-    sii9022_in: endpoint {
+
+    sii9022_in:endpoint{
      remote-endpoint = <&ltdc_ep0_out>;
     };
    };
 
-   port@1 {
+   port@1{
     reg = <1>;
-    sii9022_out: endpoint {
+
+    sii9022_out:endpoint{
      remote-endpoint = <&hdmi_connector_in>;
     };
    };
 
-   port@3 {
+   port@3{
     reg = <3>;
-    sii9022_tx_endpoint: endpoint {
+
+    sii9022_tx_endpoint:endpoint{
      remote-endpoint = <&i2s2_endpoint>;
     };
    };
+  };
+ };
+
+ pmic:stpmic@33{
+  compatible = "st,stpmic1";
+  reg = <0x33>;
+  interrupts-extended = <&exti 55 2>;
+  interrupt-controller;
+  #interrupt-cells = <2>;
+  status = "okay";
+
+  regulators{
+   compatible = "st,stpmic1-regulators";
+   buck1-supply = <&vin>;
+   buck2-supply = <&vin>;
+   buck3-supply = <&vin>;
+   buck4-supply = <&vin>;
+
+   ldo2-supply = <&vin>;
+   ldo3-supply = <&vdd_ddr>;
+   ldo4-supply = <&vin>;
+   ldo5-supply = <&vin>;
+   ldo6-supply = <&v3v3>;
+   vref_ddr-supply = <&vin>;
+
+
+
+
+   vddcore:buck1{
+    regulator-name = "vddcore";
+    regulator-min-microvolt = <1200000>;
+    regulator-max-microvolt = <1350000>;
+    regulator-always-on;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+
+   vdd_ddr:buck2{
+    regulator-name = "vdd_ddr";
+    regulator-min-microvolt = <1350000>;
+    regulator-max-microvolt = <1350000>;
+    regulator-always-on;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+
+   vdd:buck3{
+    regulator-name = "vdd";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    st,mask-reset;
+    regulator-initial-mode = <0>;
+    regulator-over-current-protection;
+   };
+
+   v3v3:buck4{
+    regulator-name = "v3v3";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    regulator-over-current-protection;
+    regulator-initial-mode = <0>;
+   };
+# 740 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+   v3v3_hdmi:ldo2{
+    regulator-name = "v3v3_hdmi";
+    regulator-min-microvolt = <3300000>;
+    regulator-max-microvolt = <3300000>;
+    regulator-always-on;
+    interrupts = <17 0>;
+   };
+
+   vtt_ddr:ldo3{
+    regulator-name = "vtt_ddr";
+    regulator-min-microvolt = <500000>;
+    regulator-max-microvolt = <750000>;
+    regulator-always-on;
+    regulator-over-current-protection;
+   };
+
+   vdd_usb:ldo4{
+    regulator-name = "vdd_usb";
+    interrupts = <19 0>;
+   };
+
+   vdda:ldo5{
+    regulator-name = "vdda";
+    regulator-min-microvolt = <2900000>;
+    regulator-max-microvolt = <2900000>;
+    interrupts = <20 0>;
+    regulator-boot-on;
+   };
+
+   v1v2_hdmi:ldo6{
+    regulator-name = "v1v2_hdmi";
+    regulator-min-microvolt = <1200000>;
+    regulator-max-microvolt = <1200000>;
+    regulator-always-on;
+    interrupts = <21 0>;
+   };
+
+   vref_ddr:vref-ddr{
+    regulator-name = "vref_ddr";
+    regulator-always-on;
+   };
+# 799 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+  };
+
+  onkey{
+   compatible = "st,stpmic1-onkey";
+   interrupts = <0 0>, <1 0>;
+   interrupt-names = "onkey-falling", "onkey-rising";
+   power-off-time-sec = <10>;
+   status = "okay";
   };
  };
 
@@ -3767,8 +3842,10 @@
 
  clocks = <&rcc 16>, <&rcc 131>, <&rcc 187>, <&rcc 188>;
  clock-names = "pclk", "i2sclk", "x8k", "x11k";
- i2s2_port: port {
-  i2s2_endpoint: endpoint {
+
+ i2s2_port:port{
+
+  i2s2_endpoint:endpoint{
    remote-endpoint = <&sii9022_tx_endpoint>;
    dai-format = "i2s";
    mclk-fs = <256>;
@@ -3784,9 +3861,10 @@
  status = "okay";
 
 
- port {
-  ltdc_ep0_out: endpoint {
-  remote-endpoint = <&sii9022_in>;
+ port{
+
+  ltdc_ep0_out:endpoint{
+   remote-endpoint = <&sii9022_in>;
   };
  };
 
@@ -3819,6 +3897,13 @@
  status = "okay";
 
 
+ compatible = "st,stm32mp1-rcc-secure", "syscon";
+ clock-names = "hse", "hsi", "csi", "lse", "lsi";
+ clocks = <&scmi_clk 0>,
+   <&scmi_clk 1>,
+   <&scmi_clk 2>,
+   <&scmi_clk 3>,
+   <&scmi_clk 4>;
 
 };
 
@@ -3826,6 +3911,16 @@
  status = "okay";
 
 
+ clocks = <&scmi_clk 18>, <&scmi_clk 17>;
+
+};
+
+&rng1{
+ status = "okay";
+
+
+ clocks = <&scmi_clk 16>;
+ resets = <&scmi_reset 8>;
 
 };
 
@@ -3863,8 +3958,8 @@
  status = "okay";
 
 
- /delete-property/dmas;
- /delete-property/dma-names;
+ /delete-property/ dmas;
+ /delete-property/ dma-names;
 
 };
 
@@ -3876,7 +3971,7 @@
  #address-cells = <1>;
  #size-cells = <0>;
 
- hub@1 {
+ hub@1{
   compatible = "usb424,2514";
   reg = <1>;
   vdd-supply = <&v3v3>;
@@ -3888,6 +3983,7 @@
  status = "okay";
 
 
+ phys = <&usbphyc_port0>;
 
 };
 
@@ -3898,6 +3994,10 @@
  status = "okay";
 
 
+ phys = <&usbphyc_port1 0>;
+ phy-names = "usb2-phy";
+ usb-role-switch;
+ u-boot,force-b-session-valid;
 
 };
 
@@ -3906,14 +4006,6 @@
 
 
  phy-supply = <&vdd_usb>;
- st,tune-hs-dc-level = <2>;
- st,enable-fs-rftime-tuning;
- st,enable-hs-rftime-reduction;
- st,trim-hs-current = <15>;
- st,trim-hs-impedance = <1>;
- st,tune-squelch-level = <3>;
- st,tune-hs-rx-offset = <2>;
- st,no-lsfs-sc;
 
 };
 
@@ -3937,12 +4029,27 @@
  status = "okay";
 
 
+ phy-supply = <&vdd_usb>;
+ st,tune-hs-dc-level = <2>;
+ st,enable-fs-rftime-tuning;
+ st,enable-hs-rftime-reduction;
+ st,trim-hs-current = <15>;
+ st,trim-hs-impedance = <1>;
+ st,tune-squelch-level = <3>;
+ st,tune-hs-rx-offset = <2>;
+ st,no-lsfs-sc;
 
 };
 
 
+&arm_wdt{
+ timeout-sec = <32>;
+ status = "okay";
+};
+
 &cpu0 {
  cpu-supply = <&vddcore>;
+ clocks = <&scmi_clk 7>;
 };
 
 
@@ -3954,4 +4061,4 @@
 
 
 };
-# 926 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 1033 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
