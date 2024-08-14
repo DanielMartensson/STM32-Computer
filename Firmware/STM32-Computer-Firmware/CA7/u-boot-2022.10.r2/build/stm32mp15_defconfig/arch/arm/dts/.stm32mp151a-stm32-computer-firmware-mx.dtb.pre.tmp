@@ -391,20 +391,20 @@
 					 <STM32_PINMUX('B', 3, AF9)>, /* SDMMC2_D2 */
 					 <STM32_PINMUX('B', 4, AF9)>, /* SDMMC2_D3 */
 					 <STM32_PINMUX('B', 9, AF10)>, /* SDMMC2_D5 */
-					 <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
 					 <STM32_PINMUX('B', 15, AF9)>, /* SDMMC2_D1 */
 					 <STM32_PINMUX('C', 7, AF10)>, /* SDMMC2_D7 */
-					 <STM32_PINMUX('E', 5, AF9)>, /* SDMMC2_D6 */
-					 <STM32_PINMUX('G', 6, AF10)>; /* SDMMC2_CMD */
+					 <STM32_PINMUX('E', 5, AF9)>; /* SDMMC2_D6 */
 			bias-disable;
 			drive-push-pull;
 			slew-rate = <1>;
 		};
 		pins2 {
-			pinmux = <STM32_PINMUX('E', 3, AF9)>; /* SDMMC2_CK */
-			bias-disable;
+			pinmux = <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
+					 <STM32_PINMUX('E', 3, AF9)>, /* SDMMC2_CK */
+					 <STM32_PINMUX('G', 6, AF10)>; /* SDMMC2_CMD */
+			bias-pull-up;
 			drive-push-pull;
-			slew-rate = <3>;
+			slew-rate = <1>;
 		};
 	};
 
@@ -414,7 +414,6 @@
 					 <STM32_PINMUX('B', 3, AF9)>, /* SDMMC2_D2 */
 					 <STM32_PINMUX('B', 4, AF9)>, /* SDMMC2_D3 */
 					 <STM32_PINMUX('B', 9, AF10)>, /* SDMMC2_D5 */
-					 <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
 					 <STM32_PINMUX('B', 15, AF9)>, /* SDMMC2_D1 */
 					 <STM32_PINMUX('C', 7, AF10)>, /* SDMMC2_D7 */
 					 <STM32_PINMUX('E', 5, AF9)>; /* SDMMC2_D6 */
@@ -423,14 +422,15 @@
 			slew-rate = <1>;
 		};
 		pins2 {
-			pinmux = <STM32_PINMUX('E', 3, AF9)>; /* SDMMC2_CK */
-			bias-disable;
+			pinmux = <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
+					 <STM32_PINMUX('E', 3, AF9)>; /* SDMMC2_CK */
+			bias-pull-up;
 			drive-push-pull;
-			slew-rate = <3>;
+			slew-rate = <1>;
 		};
 		pins3 {
 			pinmux = <STM32_PINMUX('G', 6, AF10)>; /* SDMMC2_CMD */
-			bias-disable;
+			bias-pull-up;
 			drive-open-drain;
 			slew-rate = <1>;
 		};
@@ -884,20 +884,20 @@
 	/* USER CODE END rcc */
 };
 
+&rng1{
+	status = "okay";
+
+	/* USER CODE BEGIN rng1 */
+	clocks = <&scmi_clk CK_SCMI_RNG1>;
+	resets = <&scmi_reset RST_SCMI_RNG1>;
+	/* USER CODE END rng1 */
+};
+
 &rtc{
 	status = "okay";
 
 	/* USER CODE BEGIN rtc */
 	clocks = <&scmi_clk CK_SCMI_RTCAPB>, <&scmi_clk CK_SCMI_RTC>;
-	/* USER CODE END rtc */
-};
-
-&rng1{
-	status = "okay";
-
-	/* USER CODE BEGIN rtc */
-	clocks = <&scmi_clk CK_SCMI_RNG1>;
-	resets = <&scmi_reset RST_SCMI_RNG1>;
 	/* USER CODE END rtc */
 };
 
@@ -1030,4 +1030,6 @@
 	cpu-supply = <&vddcore>;
 	clocks = <&scmi_clk CK_SCMI_MPU>;
 };
-/* USER CODE END addons */#include "stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi"
+/* USER CODE END addons */
+
+#include "stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi"

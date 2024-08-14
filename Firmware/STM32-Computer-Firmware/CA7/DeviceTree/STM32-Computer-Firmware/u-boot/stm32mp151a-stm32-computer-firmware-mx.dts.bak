@@ -121,7 +121,7 @@
 
 		led-blue{
 			label = "heartbeat";
-			gpios = <&gpioa 14 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpioa 14 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "heartbeat";
 			default-state = "off";
 		};
@@ -129,6 +129,7 @@
 		led-red {
 			label = "error";
 			gpios = <&gpioa 13 GPIO_ACTIVE_LOW>;
+			default-state = "off";
 		};
 	};
 	
@@ -1030,4 +1031,3 @@
 	clocks = <&scmi_clk CK_SCMI_MPU>;
 };
 /* USER CODE END addons */
-

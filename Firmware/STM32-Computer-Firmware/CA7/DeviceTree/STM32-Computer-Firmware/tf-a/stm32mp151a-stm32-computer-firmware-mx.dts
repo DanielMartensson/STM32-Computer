@@ -99,20 +99,20 @@
 					 <STM32_PINMUX('B', 3, AF9)>, /* SDMMC2_D2 */
 					 <STM32_PINMUX('B', 4, AF9)>, /* SDMMC2_D3 */
 					 <STM32_PINMUX('B', 9, AF10)>, /* SDMMC2_D5 */
-					 <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
 					 <STM32_PINMUX('B', 15, AF9)>, /* SDMMC2_D1 */
 					 <STM32_PINMUX('C', 7, AF10)>, /* SDMMC2_D7 */
-					 <STM32_PINMUX('E', 5, AF9)>, /* SDMMC2_D6 */
-					 <STM32_PINMUX('G', 6, AF10)>; /* SDMMC2_CMD */
+					 <STM32_PINMUX('E', 5, AF9)>; /* SDMMC2_D6 */
 			bias-disable;
 			drive-push-pull;
 			slew-rate = <1>;
 		};
 		pins2 {
-			pinmux = <STM32_PINMUX('E', 3, AF9)>; /* SDMMC2_CK */
-			bias-disable;
+			pinmux = <STM32_PINMUX('B', 14, AF9)>, /* SDMMC2_D0 */
+					 <STM32_PINMUX('E', 3, AF9)>, /* SDMMC2_CK */
+					 <STM32_PINMUX('G', 6, AF10)>; /* SDMMC2_CMD */
+			bias-pull-up;
 			drive-push-pull;
-			slew-rate = <3>;
+			slew-rate = <1>;
 		};
 	};
 
@@ -389,7 +389,7 @@
 
 		pll4_cfg1: pll4_cfg1 {
 			st,pll_vco = < &pll4_vco_594Mhz >;
-			st,pll_div_pqr = < 11 7 7 >;
+			st,pll_div_pqr = < 59 7 7 >;
 		};
 		/* USER CODE BEGIN pll4 */
 		/* USER CODE END pll4 */

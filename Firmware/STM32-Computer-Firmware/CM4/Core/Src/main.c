@@ -160,7 +160,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL4.PLLSource = RCC_PLL4SOURCE_HSE;
   RCC_OscInitStruct.PLL4.PLLM = 4;
   RCC_OscInitStruct.PLL4.PLLN = 99;
-  RCC_OscInitStruct.PLL4.PLLP = 12;
+  RCC_OscInitStruct.PLL4.PLLP = 60;
   RCC_OscInitStruct.PLL4.PLLQ = 8;
   RCC_OscInitStruct.PLL4.PLLR = 8;
   RCC_OscInitStruct.PLL4.PLLRGE = RCC_PLL4IFRANGE_0;

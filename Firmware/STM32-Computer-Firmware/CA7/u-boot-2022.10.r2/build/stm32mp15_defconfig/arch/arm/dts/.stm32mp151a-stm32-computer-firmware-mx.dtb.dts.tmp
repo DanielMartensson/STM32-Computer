@@ -3441,20 +3441,20 @@
       <(((((('B') - 'A') * 0x10 + (3))) << 8) | (0xa))>,
       <(((((('B') - 'A') * 0x10 + (4))) << 8) | (0xa))>,
       <(((((('B') - 'A') * 0x10 + (9))) << 8) | (0xb))>,
-      <(((((('B') - 'A') * 0x10 + (14))) << 8) | (0xa))>,
       <(((((('B') - 'A') * 0x10 + (15))) << 8) | (0xa))>,
       <(((((('C') - 'A') * 0x10 + (7))) << 8) | (0xb))>,
-      <(((((('E') - 'A') * 0x10 + (5))) << 8) | (0xa))>,
-      <(((((('G') - 'A') * 0x10 + (6))) << 8) | (0xb))>;
+      <(((((('E') - 'A') * 0x10 + (5))) << 8) | (0xa))>;
    bias-disable;
    drive-push-pull;
    slew-rate = <1>;
   };
   pins2 {
-   pinmux = <(((((('E') - 'A') * 0x10 + (3))) << 8) | (0xa))>;
-   bias-disable;
+   pinmux = <(((((('B') - 'A') * 0x10 + (14))) << 8) | (0xa))>,
+      <(((((('E') - 'A') * 0x10 + (3))) << 8) | (0xa))>,
+      <(((((('G') - 'A') * 0x10 + (6))) << 8) | (0xb))>;
+   bias-pull-up;
    drive-push-pull;
-   slew-rate = <3>;
+   slew-rate = <1>;
   };
  };
 
@@ -3464,7 +3464,6 @@
       <(((((('B') - 'A') * 0x10 + (3))) << 8) | (0xa))>,
       <(((((('B') - 'A') * 0x10 + (4))) << 8) | (0xa))>,
       <(((((('B') - 'A') * 0x10 + (9))) << 8) | (0xb))>,
-      <(((((('B') - 'A') * 0x10 + (14))) << 8) | (0xa))>,
       <(((((('B') - 'A') * 0x10 + (15))) << 8) | (0xa))>,
       <(((((('C') - 'A') * 0x10 + (7))) << 8) | (0xb))>,
       <(((((('E') - 'A') * 0x10 + (5))) << 8) | (0xa))>;
@@ -3473,14 +3472,15 @@
    slew-rate = <1>;
   };
   pins2 {
-   pinmux = <(((((('E') - 'A') * 0x10 + (3))) << 8) | (0xa))>;
-   bias-disable;
+   pinmux = <(((((('B') - 'A') * 0x10 + (14))) << 8) | (0xa))>,
+      <(((((('E') - 'A') * 0x10 + (3))) << 8) | (0xa))>;
+   bias-pull-up;
    drive-push-pull;
-   slew-rate = <3>;
+   slew-rate = <1>;
   };
   pins3 {
    pinmux = <(((((('G') - 'A') * 0x10 + (6))) << 8) | (0xb))>;
-   bias-disable;
+   bias-pull-up;
    drive-open-drain;
    slew-rate = <1>;
   };
@@ -3908,20 +3908,20 @@
 
 };
 
-&rtc{
- status = "okay";
-
-
- clocks = <&scmi_clk 18>, <&scmi_clk 17>;
-
-};
-
 &rng1{
  status = "okay";
 
 
  clocks = <&scmi_clk 16>;
  resets = <&scmi_reset 8>;
+
+};
+
+&rtc{
+ status = "okay";
+
+
+ clocks = <&scmi_clk 18>, <&scmi_clk 17>;
 
 };
 
@@ -4054,6 +4054,8 @@
  cpu-supply = <&vddcore>;
  clocks = <&scmi_clk 7>;
 };
+
+
 # 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi" 1
 # 17 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi"
 / {
@@ -4062,4 +4064,4 @@
 
 
 };
-# 1034 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 1036 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2

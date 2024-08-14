@@ -645,7 +645,7 @@
 
 		pll4_cfg1: pll4_cfg1 {
 			st,pll_vco = < &pll4_vco_594Mhz >;
-			st,pll_div_pqr = < 11 7 7 >;
+			st,pll_div_pqr = < 59 7 7 >;
 		};
 		/* USER CODE BEGIN pll4 */
 		/* USER CODE END pll4 */
