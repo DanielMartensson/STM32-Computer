@@ -93,7 +93,7 @@
 		compatible = "gpio-leds";
 		led-blue {
 			label = "heartbeat";
-			gpios = <&gpioa 14 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpioa 14 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "heartbeat";
 			default-state = "off";
 		};
@@ -645,7 +645,7 @@
 
 		pll4_cfg1: pll4_cfg1 {
 			st,pll_vco = < &pll4_vco_594Mhz >;
-			st,pll_div_pqr = < 5 7 7 >;
+			st,pll_div_pqr = < 11 7 7 >;
 		};
 		/* USER CODE BEGIN pll4 */
 		/* USER CODE END pll4 */

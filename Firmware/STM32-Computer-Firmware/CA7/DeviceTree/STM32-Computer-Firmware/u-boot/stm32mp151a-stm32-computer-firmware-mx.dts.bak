@@ -107,6 +107,14 @@
 			};
 		};
 	};
+	
+	config {
+		u-boot,boot-led = "heartbeat";
+		u-boot,error-led = "error";
+		u-boot,mmc-env-partition = "u-boot-env";
+		st,fastboot-gpios = <&gpioa 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		st,stm32prog-gpios = <&gpioa 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
 
 	led{
 		compatible = "gpio-leds";
@@ -116,6 +124,11 @@
 			gpios = <&gpioa 14 GPIO_ACTIVE_HIGH>;
 			linux,default-trigger = "heartbeat";
 			default-state = "off";
+		};
+		
+		led-red {
+			label = "error";
+			gpios = <&gpioa 13 GPIO_ACTIVE_LOW>;
 		};
 	};
 	
@@ -878,6 +891,15 @@
 	/* USER CODE END rtc */
 };
 
+&rng1{
+	status = "okay";
+
+	/* USER CODE BEGIN rtc */
+	clocks = <&scmi_clk CK_SCMI_RNG1>;
+	resets = <&scmi_reset RST_SCMI_RNG1>;
+	/* USER CODE END rtc */
+};
+
 &sdmmc2{
 	pinctrl-names = "default", "opendrain", "sleep";
 	pinctrl-0 = <&sdmmc2_pins_mx>;
@@ -951,6 +973,9 @@
 	phys = <&usbphyc_port1 0>;
 	phy-names = "usb2-phy";
 	usb-role-switch;
+	u-boot,force-b-session-valid;
+	u-boot,force-vbus-detection;
+	dr_mode = "peripheral";
 	/* USER CODE END usbotg_hs */
 };
 
@@ -958,6 +983,7 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbphyc */
+	phy-supply = <&vdd_usb>;
 	/* USER CODE END usbphyc */
 };
 

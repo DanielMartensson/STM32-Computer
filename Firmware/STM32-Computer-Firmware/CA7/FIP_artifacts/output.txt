@@ -15,7 +15,7 @@ INFO:    BL2: Doing platform setup
 INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
 INFO:    Memory size = 0x20000000 (512 MB)
 INFO:    DFU USB START...
-INFO:    phase ID :3, Manifestation 3 at c716780a
+INFO:    phase ID :3, Manifestation 3 at c716783a
 INFO:    Send detach request
 INFO:    Receive DFU Detach
 INFO:    DFU USB STOP...
@@ -41,7 +41,7 @@ INFO:    Image id=8 loaded: 0xde000000 - 0xde03ee08
 INFO:    BL2: Skip loading image id 9
 INFO:    BL2: Loading image id 2
 INFO:    Loading image id=2 at address 0xc0500000
-INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513a40
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513a70
 INFO:    BL2: Skip loading image id 16
 INFO:    BL2: Loading image id 5
 INFO:    Loading image id=5 at address 0xc0100000
@@ -102,7 +102,7 @@ D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: c9e2d42b8-dev (gcc version 12.3.0 (GCC)) #44 Tue Aug 13 22:18:38 UTC 2024 arm
+I/TC: OP-TEE version: b44545131-dev (gcc version 12.3.0 (GCC)) #45 Wed Aug 14 16:56:14 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -437,10 +437,10 @@ D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050378 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 serial_stm32 serial@40010000: pinctrl_select_state_full: uclass_get_device_by_phandle_id: err=-19
-optee optee: OP-TEE: revision 3.19 (c9e2d42b)
+optee optee: OP-TEE: revision 3.19 (b4454513)
 
 
-U-Boot 2022.10-stm32mp-r2 (Aug 14 2024 - 00:19:35 +0200)
+U-Boot 2022.10-stm32mp-r2 (Aug 14 2024 - 18:58:59 +0200)
 
 D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
 D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open bsec.pta
@@ -460,7 +460,7 @@ D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 DRAM:  512 MiB
-optee optee: OP-TEE: revision 3.19 (c9e2d42b)
+optee optee: OP-TEE: revision 3.19 (b4454513)
 D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
 D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
@@ -595,4 +595,5 @@ D/TC:0   pwr_scv_handler:56 PWR service: write 0xd0000000 at offset 0xc
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:0   pwr_scv_handler:56 PWR service: write 0xf1000000 at offset 0xc
 crq->brequest:0x0
