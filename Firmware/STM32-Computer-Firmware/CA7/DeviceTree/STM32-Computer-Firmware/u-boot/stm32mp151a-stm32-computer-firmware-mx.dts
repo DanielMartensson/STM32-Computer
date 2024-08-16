@@ -937,6 +937,7 @@
 	/* USER CODE BEGIN uart4 */
 	/delete-property/ dmas;
 	/delete-property/ dma-names;
+	u-boot,dm-pre-reloc;
 	/* USER CODE END uart4 */
 };
 
@@ -974,9 +975,10 @@
 	phys = <&usbphyc_port1 0>;
 	phy-names = "usb2-phy";
 	usb-role-switch;
-	u-boot,force-b-session-valid;
-	u-boot,force-vbus-detection;
-	dr_mode = "peripheral";
+    u-boot,dm-pre-reloc;                        
+    u-boot,force-b-session-valid;
+    hnp-srp-disable;
+    dr_mode = "peripheral";  
 	/* USER CODE END usbotg_hs */
 };
 
@@ -1030,5 +1032,14 @@
 	cpu-supply = <&vddcore>;
 	clocks = <&scmi_clk CK_SCMI_MPU>;
 };
-/* USER CODE END addons */
 
+&uart4_pins_mx {
+	u-boot,dm-pre-reloc;
+	pins1 {
+		u-boot,dm-pre-reloc;
+	};
+	pins2 {
+		u-boot,dm-pre-reloc;
+	};
+};
+/* USER CODE END addons */
