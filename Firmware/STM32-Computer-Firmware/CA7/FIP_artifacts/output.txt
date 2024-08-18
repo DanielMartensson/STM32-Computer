@@ -1,3 +1,4 @@
+[   13.929766] platform 5a001000.display-controller: deferred probe pending
 NOTICE:  CPU: STM32MP151AAC Rev.Z
 NOTICE:  Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
 INFO:    PMIC version = 0x21
@@ -6,19 +7,14 @@ INFO:      Power-on Reset (rst_por)
 INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
 INFO:    FCONF: Reading firmware configuration information for: stm32mp_io
 INFO:    FCONF: Reading firmware configuration information for: stm32mp_fuse
-INFO:    Using USB
+INFO:    Using EMMC
 INFO:      Instance 2
 INFO:    Boot used partition fsbl1
 NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):fc5a7b038-dirty(fc5a7b03)
-NOTICE:  BL2: Built : 23:46:56, Aug  6 2024
+NOTICE:  BL2: Built : 23:45:21, Aug  6 2024
 INFO:    BL2: Doing platform setup
 INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
 INFO:    Memory size = 0x20000000 (512 MB)
-INFO:    DFU USB START...
-INFO:    phase ID :3, Manifestation 3 at c716783a
-INFO:    Send detach request
-INFO:    Receive DFU Detach
-INFO:    DFU USB STOP...
 INFO:    BL2: Loading image id 1
 INFO:    Loading image id=1 at address 0x2ffff000
 INFO:    Image id=1 loaded: 0x2ffff000 - 0x2ffff1ea
@@ -41,7 +37,7 @@ INFO:    Image id=8 loaded: 0xde000000 - 0xde03ee08
 INFO:    BL2: Skip loading image id 9
 INFO:    BL2: Loading image id 2
 INFO:    Loading image id=2 at address 0xc0500000
-INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513a70
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513ac0
 INFO:    BL2: Skip loading image id 16
 INFO:    BL2: Loading image id 5
 INFO:    Loading image id=5 at address 0xc0100000
@@ -102,7 +98,7 @@ D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: b44545131-dev (gcc version 12.3.0 (GCC)) #45 Wed Aug 14 16:56:14 UTC 2024 arm
+I/TC: OP-TEE version: a07044694-dev (gcc version 12.3.0 (GCC)) #48 Thu Aug 15 20:11:57 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -177,13 +173,13 @@ D/TC:0 0 clk_register:126 Registered clock gpioj, freq 0
 D/TC:0 0 clk_register:126 Registered clock gpiok, freq 0
 D/TC:0 0 clk_register:126 Registered clock (null), freq 208877928
 D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 104438964
 D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
-D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
-D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
-D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
-D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 104438964
+D/TC:0 0 clk_register:126 Registered clock (null), freq 104438964
+D/TC:0 0 clk_register:126 Registered clock (null), freq 104438964
 D/TC:0 0 clk_register:126 Registered clock (null), freq 208877928
-D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 104438964
 D/TC:0 0 clk_register:126 Registered clock syscfg, freq 0
 D/TC:0 0 clk_register:126 Registered clock (null), freq 0
 D/TC:0 0 clk_register:126 Registered clock (null), freq 0
@@ -436,11 +432,10 @@ D/TC:? 0 tee_ta_close_session:470 Destroy session
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050378 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
-serial_stm32 serial@40010000: pinctrl_select_state_full: uclass_get_device_by_phandle_id: err=-19
-optee optee: OP-TEE: revision 3.19 (b4454513)
+optee optee: OP-TEE: revision 3.19 (a0704469)
 
 
-U-Boot 2022.10-stm32mp-r2 (Aug 14 2024 - 18:58:59 +0200)
+U-Boot 2022.10-stm32mp-r2 (Aug 15 2024 - 23:53:15 +0200)
 
 D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
 D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open bsec.pta
@@ -460,7 +455,7 @@ D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 DRAM:  512 MiB
-optee optee: OP-TEE: revision 3.19 (b4454513)
+optee optee: OP-TEE: revision 3.19 (a0704469)
 D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
 D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
@@ -485,10 +480,7 @@ D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 - MCU : 208.878 MHz
 - AXI : 266.500 MHz
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-- PER : 24 MHz
+- PER : 0 MHz
 - DDR : 533 MHz
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
@@ -509,7 +501,25 @@ Core:  104 devices, 38 uclasses, devicetree: board
 smcwd watchdog: Init failed
 NAND:  0 MiB
 MMC:   STM32 SD/MMC: 0
-Loading Environment from nowhere... OK
+Loading Environment from MMC... D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+OK
 In:    serial
 Out:   serial
 Err:   serial
@@ -529,9 +539,6 @@ D/TC:? 0 tee_ta_close_session:470 Destroy session
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
 Net:   D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
@@ -539,17 +546,7 @@ D/TC:? 0 tee_ta_close_session:470 Destroy session
 Error: ethernet@5800a000 address not set.
 No ethernet found.
 
-7[r[999;999H[6n8D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-Card did not respond to voltage select! : -110
-No EFI system partition
+7[r[999;999H[6n8No EFI system partition
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
@@ -573,27 +570,457 @@ D/TC:? 0 tee_ta_close_session:470 Destroy session
 
 Error: ethernet@5800a000 address not set.
 Hit any key to stop autoboot:  1  0 
-Boot over usb0!
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 stm32_bsec_shadow_register:266 BSEC shadow warning: OTP locked
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 1a8342cc-81a5-4512-99fe-9e2b3e37d626
-D/TC:? 0 tee_ta_open_session:677 init session failed 0xffff0008
-DFU alt info setting: done
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
-D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
-D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:0   pwr_scv_handler:56 PWR service: write 0x40000000 at offset 0xc
-D/TC:0   pwr_scv_handler:56 PWR service: write 0xd0000000 at offset 0xc
+Boot over mmc0!
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
-D/TC:0   pwr_scv_handler:56 PWR service: write 0xf1000000 at offset 0xc
-crq->brequest:0x0
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Scanning mmc 0:6...
+Found /mmc0_extlinux/extlinux.conf
+Retrieving file: /mmc0_extlinux/extlinux.conf
+Retrieving file: /splash_landscape.bmp
+1:	OpenSTLinux
+Enter choice: 1:	OpenSTLinux
+Retrieving file: /uImage
+Retrieving file: /st-image-resize-initrd
+append: root=PARTUUID=e91c4e10-16e6-4c0e-bd0e-77becf4a3582 rootwait rw   console=ttySTM0,115200
+Retrieving file: /stm32mp151a-stm32-computer-firmware-mx.dtb
+** File not found /stm32mp151a-stm32-computer-firmware-mx.dtb **
+## Booting kernel from Legacy Image at c2000000 ...
+   Image Name:   Linux-6.1.82
+   Created:      2024-03-15  18:27:50 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    8370696 Bytes = 8 MiB
+   Load Address: c2000040
+   Entry Point:  c2000040
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at dbae33c0
+   Booting using the fdt blob at 0xdbae33c0
+   XIP Kernel Image
+   Loading Ramdisk to cfa0e000, end cffff92a ... OK
+   Loading Device Tree to cf9f7000, end cfa0dabf ... OK
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+
+Starting kernel ...
+
+D/TC:0   pwr_scv_handler:56 PWR service: write 0x0 at offset 0x28
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x3f at offset 0x20
+D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
+D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050208 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050208 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde050208 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 1 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 1 tee_ta_close_session:451 csess 0xde050070 id 2
+D/TC:? 1 tee_ta_close_session:470 Destroy session
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 6.1.82 (oe-user@oe-host) (arm-ostl-linux-gnueabi-gcc (GCC) 12.3.0, GNU ld (GNU Binutils) 2.40.0.20230703) #1 SMP PREEMPT Fri Mar 15 18:27:50 UTC 2024
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] Reserved memory: created DMA memory pool at 0x10000000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node mcuram2@10000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x10040000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node vdev0vring0@10040000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x10041000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node vdev0vring1@10041000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x10042000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node vdev0buffer@10042000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x10048000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node mcu-rsc-table@10048000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x30000000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node mcuram@30000000, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x38000000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node retram@38000000, compatible id shared-dma-pool
+[    0.000000] cma: Reserved 64 MiB at 0xda000000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000c0000000-0x00000000ddffffff]
+[    0.000000]   HighMem  [mem 0x00000000de000000-0x00000000dfffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000c0000000-0x00000000ddffffff]
+[    0.000000]   node   0: [mem 0x00000000de000000-0x00000000dfffffff]
+[    0.000000] Initmem setup node 0 [mem 0x00000000c0000000-0x00000000dfffffff]
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 18 pages/cpu s41108 r8192 d24428 u73728
+[    0.000000] pcpu-alloc: s41108 r8192 d24428 u73728 alloc=18*4096
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129992
+[    0.000000] Kernel command line: root=PARTUUID=e91c4e10-16e6-4c0e-bd0e-77becf4a3582 rootwait rw   console=ttySTM0,115200
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] Memory: 394324K/524288K available (12288K kernel code, 1373K rwdata, 3816K rodata, 1024K init, 236K bss, 64428K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] trace event string verifier disabled
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=2 to nr_cpu_ids=1.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000002] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000023] Switching to timer-based delay loop, resolution 41ns
+[    0.001250] Console: colour dummy device 80x30
+[    0.001321] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.001347] CPU: Testing write buffer coherency: ok
+[    0.001423] pid_max: default: 32768 minimum: 301
+[    0.001744] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.001771] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.003614] /cpus/cpu@0 missing clock-frequency property
+[    0.003665] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.005350] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.005368] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.005582] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.005593] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.005846] Setting up static identity map for 0xc0100000 - 0xc0100060
+[    0.006118] rcu: Hierarchical SRCU implementation.
+[    0.006128] rcu: 	Max phase no-delay instances is 1000.
+[    0.008001] smp: Bringing up secondary CPUs ...
+[    0.008018] smp: Brought up 1 node, 1 CPU
+[    0.008033] SMP: Total of 1 processors activated (48.00 BogoMIPS).
+[    0.008046] CPU: All CPU(s) started in SVC mode.
+[    0.009013] devtmpfs: initialized
+[    0.036664] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.037053] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.037090] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.040698] pinctrl core: initialized pinctrl subsystem
+[    0.043688] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.047019] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.049063] thermal_sys: Registered thermal governor 'step_wise'
+[    0.049224] cpuidle: using governor menu
+[    0.049620] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.049639] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.050214] Serial: AMBA PL011 UART driver
+[    0.053682] stm32-pm-domain pm_domain: domain core-ret-power-domain registered
+[    0.053734] stm32-pm-domain pm_domain: subdomain core-power-domain registered
+[    0.053749] stm32-pm-domain pm_domain: domains probed
+[    0.083140] platform 5a001000.display-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    0.086593] platform 4000b000.audio-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    0.096399] platform connector: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    0.116131] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.139488] SCSI subsystem initialized
+[    0.139981] libata version 3.00 loaded.
+[    0.140494] usbcore: registered new interface driver usbfs
+[    0.140576] usbcore: registered new interface driver hub
+[    0.140662] usbcore: registered new device driver usb
+[    0.141247] pps_core: LinuxPPS API ver. 1 registered
+[    0.141260] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.141294] PTP clock support registered
+[    0.141591] EDAC MC: Ver: 3.0.0
+[    0.142802] Driver 'scmi-optee' was unable to register with bus_type 'tee' because the bus was not initialized.
+[    0.156098] clocksource: Switched to clocksource arch_sys_counter
+[    0.181231] NET: Registered PF_INET protocol family
+[    0.181641] IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.184245] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    0.184299] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.184339] TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+[    0.184406] TCP bind hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.184571] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.184717] UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.184772] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.185161] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.196824] RPC: Registered named UNIX socket transport module.
+[    0.196844] RPC: Registered udp transport module.
+[    0.196852] RPC: Registered tcp transport module.
+[    0.196859] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.197812] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[    0.200475] Initialise system trusted keyrings
+[    0.201320] Trying to unpack rootfs image as initramfs...
+[    0.206411] workingset: timestamp_bits=14 max_order=17 bucket_order=3
+[    0.239610] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.247135] NFS: Registering the id_resolver key type
+[    0.247235] Key type id_resolver registered
+[    0.247245] Key type id_legacy registered
+[    0.247443] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.247456] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.247665] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.247997] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.248850] fuse: init (API version 7.37)
+[    0.250109] NET: Registered PF_ALG protocol family
+[    0.250135] Key type asymmetric registered
+[    0.250145] Asymmetric key parser 'x509' registered
+[    0.250447] bounce: pool size: 64 pages
+[    0.250654] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.250670] io scheduler mq-deadline registered
+[    0.250680] io scheduler kyber registered
+[    0.289640] STM32 USART driver initialized
+[    0.358059] brd: module loaded
+[    0.388699] loop: module loaded
+[    0.418349] CAN device driver interface
+[    0.420820] pegasus: Pegasus/Pegasus II USB Ethernet driver
+[    0.420916] usbcore: registered new interface driver pegasus
+[    0.421021] usbcore: registered new interface driver asix
+[    0.421084] usbcore: registered new interface driver ax88179_178a
+[    0.421158] usbcore: registered new interface driver cdc_ether
+[    0.421240] usbcore: registered new interface driver smsc75xx
+[    0.421321] usbcore: registered new interface driver smsc95xx
+[    0.421380] usbcore: registered new interface driver net1080
+[    0.421450] usbcore: registered new interface driver cdc_subset
+[    0.421507] usbcore: registered new interface driver zaurus
+[    0.421652] usbcore: registered new interface driver cdc_ncm
+[    0.447512] usbcore: registered new interface driver usb-storage
+[    0.447813] usbcore: registered new device driver onboard-usb-hub
+[    0.451845] i2c_dev: i2c /dev entries driver
+[    0.455160] arm_smc_wdt: probe of watchdog failed with error -5
+[    0.478365] sdhci: Secure Digital Host Controller Interface driver
+[    0.478384] sdhci: Copyright(c) Pierre Ossman
+[    0.478392] Synopsys Designware Multimedia Card Interface Driver
+[    0.478927] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.480021] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.480639] usbcore: registered new interface driver usbhid
+[    0.480653] usbhid: USB HID core driver
+[    0.485116] optee: probing for conduit method.
+[    0.485156] optee: revision 3.19 (a0704469)
+[    0.536882] optee: dynamic shared memory is enabled
+[    0.580669] optee: initialized driver
+[    0.582196] NET: Registered PF_PACKET protocol family
+[    0.582220] can: controller area network core
+[    0.582562] NET: Registered PF_CAN protocol family
+[    0.582583] can: raw protocol
+[    0.582598] can: broadcast manager protocol
+[    0.582616] can: netlink gateway - max_hops=1
+[    0.606598] Key type dns_resolver registered
+[    0.606750] ThumbEE CPU extension supported.
+[    0.606781] Registering SWP/SWPB emulation handler
+[    0.607492] registered taskstats version 1
+[    0.607557] Loading compiled-in X.509 certificates
+[    0.826246] arm-scmi firmware:scmi: Enabled polling mode TX channel - prot_id:16
+[    0.826637] arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
+[    0.826797] arm-scmi firmware:scmi: SCMI Protocol v2.0 'ST:' Firmware version 0x0
+[    0.896031] sysfs: cannot create duplicate filename '/devices/platform/cpufreq-dt'
+[    0.896058] CPU: 0 PID: 42 Comm: kworker/u2:4 Not tainted 6.1.82 #1
+[    0.896079] Hardware name: STM32 (Device Tree Support)
+[    0.896091] Workqueue: events_unbound deferred_probe_work_func
+[    0.896142]  unwind_backtrace from show_stack+0x10/0x14
+[    0.896181]  show_stack from dump_stack_lvl+0x40/0x4c
+[    0.896212]  dump_stack_lvl from sysfs_warn_dup+0x58/0x64
+[    0.896244]  sysfs_warn_dup from sysfs_create_dir_ns+0xf4/0x104
+[    0.896273]  sysfs_create_dir_ns from create_dir+0x1c/0x164
+[    0.896304]  create_dir from kobject_add_internal+0xa4/0x208
+[    0.896332]  kobject_add_internal from kobject_add+0x60/0xc4
+[    0.896360]  kobject_add from device_add+0xcc/0x6d4
+[    0.896395]  device_add from platform_device_add+0x100/0x244
+[    0.896429]  platform_device_add from platform_device_register_full+0x108/0x158
+[    0.896461]  platform_device_register_full from stm32_cpufreq_probe+0xfc/0x19c
+[    0.896498]  stm32_cpufreq_probe from platform_probe+0x5c/0xb0
+[    0.896528]  platform_probe from really_probe+0xe0/0x40c
+[    0.896554]  really_probe from __driver_probe_device+0x9c/0x130
+[    0.896576]  __driver_probe_device from driver_probe_device+0x30/0xc0
+[    0.896599]  driver_probe_device from __device_attach_driver+0xa8/0x120
+[    0.896622]  __device_attach_driver from bus_for_each_drv+0x88/0xd4
+[    0.896654]  bus_for_each_drv from __device_attach+0xa8/0x1ec
+[    0.896684]  __device_attach from bus_probe_device+0x84/0x8c
+[    0.896715]  bus_probe_device from deferred_probe_work_func+0x8c/0xd4
+[    0.896745]  deferred_probe_work_func from process_one_work+0x1e8/0x510
+[    0.896771]  process_one_work from worker_thread+0x208/0x504
+[    0.896796]  worker_thread from kthread+0xdc/0xf8
+[    0.896828]  kthread from ret_from_fork+0x14/0x28
+[    0.896857] Exception stack(0xde9c5fb0 to 0xde9c5ff8)
+[    0.896872] 5fa0:                                     00000000 00000000 00000000 00000000
+[    0.896888] 5fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    0.896902] 5fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+[    0.916118] kobject_add_internal failed for cpufreq-dt with -EEXIST, don't try to register things with the same name in the same directory.
+[    0.948944] random: crng init done
+[    1.076201] stm32-dma 48000000.dma-controller: STM32 DMA driver registered
+[    1.080718] stm32-mdma 58000000.dma-controller: STM32 MDMA driver registered
+[    1.084063] 8<--- cut here ---
+[    1.084080] Unhandled fault: imprecise external abort (0x1c06) at 0x7613e27a
+[    1.084097] [7613e27a] *pgd=00000000
+[    1.084122] Internal error: : 1c06 [#1] PREEMPT SMP ARM
+[    1.084138] Modules linked in:
+[    1.084151] CPU: 0 PID: 9 Comm: kworker/u2:0 Not tainted 6.1.82 #1
+[    1.084168] Hardware name: STM32 (Device Tree Support)
+[    1.084177] Workqueue: eval_map_wq eval_map_work_func
+[    1.084217] PC is at update_event_printk+0x108/0x1c0
+[    1.084239] LR is at 0x4500297d
+[    1.084251] pc : [<c020db98>]    lr : [<4500297d>]    psr: 00000053
+[    1.084261] sp : de831ee0  ip : 00000000  fp : 0000014c
+[    1.084270] r10: 000002d4  r9 : c13b4fd4  r8 : 0000000f
+[    1.084279] r7 : 00000000  r6 : c124a47c  r5 : c0e477ec  r4 : c13ab518
+[    1.084290] r3 : 00000030  r2 : 00000004  r1 : c13ab517  r0 : c13aabe9
+[    1.084301] Flags: nzcv  IRQs on  FIQs off  Mode SVC_32  ISA ARM  Segment none
+[    1.084315] Control: 10c5387d  Table: c000406a  DAC: 00000051
+[    1.084322] Register r0 information: non-slab/vmalloc memory
+[    1.084339] Register r1 information: non-slab/vmalloc memory
+[    1.084351] Register r2 information: non-paged memory
+[    1.084362] Register r3 information: non-paged memory
+[    1.084373] Register r4 information: non-slab/vmalloc memory
+[    1.084385] Register r5 information: non-slab/vmalloc memory
+[    1.084396] Register r6 information: non-slab/vmalloc memory
+[    1.084408] Register r7 information: NULL pointer
+[    1.084419] Register r8 information: non-paged memory
+[    1.084429] Register r9 information: non-slab/vmalloc memory
+[    1.084441] Register r10 information: non-paged memory
+[    1.084453] Register r11 information: non-paged memory
+[    1.084464] Register r12 information: NULL pointer
+[    1.084475] Process kworker/u2:0 (pid: 9, stack limit = 0x(ptrval))
+[    1.084487] Stack: (0xde831ee0 to 0xde832000)
+[    1.084506] 1ee0: 000001e1 c1255830 c13b4f88 c0d33274 c134d910 c0211e0c c1303d40 c12550a8
+[    1.084524] 1f00: 40000053 c12477fc c1804880 c1806600 c180e300 00000000 c1428f00 c180e305
+[    1.084541] 1f20: c18ccc00 c0143d0c d9b11840 c1806600 c1806648 c0ce7228 d9b11840 c1804880
+[    1.084558] 1f40: c1806600 c1804898 c180661c c1303d40 c18ccc00 00000088 c1806600 c014442c
+[    1.084575] 1f60: 00000000 c1303d40 00000000 c18b6040 c18ccc00 c18b6400 de811ea0 c01443e4
+[    1.084592] 1f80: c1804880 00000000 00000000 c014b158 c18b6040 c014b07c 00000000 00000000
+[    1.084608] 1fa0: 00000000 00000000 00000000 c010014c 00000000 00000000 00000000 00000000
+[    1.084623] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    1.084639] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000 00000000 00000000
+[    1.084658]  update_event_printk from trace_event_eval_update+0xb4/0xf8
+[    1.084692]  trace_event_eval_update from process_one_work+0x1e8/0x510
+[    1.084725]  process_one_work from worker_thread+0x48/0x504
+[    1.084750]  worker_thread from kthread+0xdc/0xf8
+[    1.084783]  kthread from ret_from_fork+0x14/0x28
+[    1.084812] Exception stack(0xde831fb0 to 0xde831ff8)
+[    1.084826] 1fa0:                                     00000000 00000000 00000000 00000000
+[    1.084842] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    1.084856] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+[    1.084874] Code: e2844001 eafffff4 e1a01004 e5f43001 (e7d52003) 
+[    1.084885] ---[ end trace 0000000000000000 ]---
+[    1.084894] note: kworker/u2:0[9] exited with irqs disabled
+[    1.098854] /soc/interrupt-controller@5000d000: bank0
+[    1.098895] /soc/interrupt-controller@5000d000: bank1
+[    1.098919] /soc/interrupt-controller@5000d000: bank2
+[    1.106932] stm32_rtc 5c004000.rtc: registered as rtc0
+[    1.106994] stm32_rtc 5c004000.rtc: setting system clock to 2000-01-01T00:00:11 UTC (946684811)
+[    1.116590] stm32_rtc 5c004000.rtc: Date/Time must be initialized
+[    1.116618] stm32_rtc 5c004000.rtc: registered rev:1.2
+[    1.120900] stm32-rproc 10000000.m4: wdg irq registered
+[    1.121210] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.121229] remoteproc remoteproc0: cannot get vq0 mbox
+[    1.121241] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.121252] remoteproc remoteproc0: cannot get vq1 mbox
+[    1.121263] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.121274] remoteproc remoteproc0: cannot get shutdown mbox
+[    1.121285] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.121296] remoteproc remoteproc0: cannot get detach mbox
+[    1.121431] remoteproc remoteproc0: m4 is available
+[    1.125552] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOA bank added
+[    1.136862] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOB bank added
+[    1.137727] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOC bank added
+[    1.138530] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOD bank added
+[    1.139279] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOE bank added
+[    1.140049] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOF bank added
+[    1.140923] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOG bank added
+[    1.141719] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOH bank added
+[    1.142467] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOI bank added
+[    1.142526] stm32mp157-pinctrl soc:pinctrl@50002000: Pinctrl STM32 initialized
+[    1.144546] stm32mp157-pinctrl soc:pinctrl@54004000: error -ENOENT: failed to get clk
+[    1.144574] stm32mp157-pinctrl: probe of soc:pinctrl@54004000 failed with error -2
+[    1.147971] stm32-usart 40010000.serial: interrupt mode for rx (no dma)
+[    1.147997] stm32-usart 40010000.serial: interrupt mode for tx (no dma)
+[    1.148029] 40010000.serial: ttySTM0 at MMIO 0x40010000 (irq = 41, base_baud = 4000000) is a stm32-usart
+[    1.766277] Freeing initrd memory: 6088K
+[    3.314446] printk: console [ttySTM0] enabled
+[    3.325334] stm32-dwmac 5800a000.ethernet: IRQ eth_lpi not found
+D/TC:? 1 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 1 tee_ta_close_session:451 csess 0xde050070 id 2
+D/TC:? 1 tee_ta_close_session:470 Destroy session
+[    3.350622] stm32-dwmac 5800a000.ethernet: User ID: 0x40, Synopsys ID: 0x42
+[    3.356324] stm32-dwmac 5800a000.ethernet: 	DWMAC4/5
+[    3.361198] stm32-dwmac 5800a000.ethernet: DMA HW capability register supported
+[    3.368540] stm32-dwmac 5800a000.ethernet: RX Checksum Offload Engine supported
+[    3.375829] stm32-dwmac 5800a000.ethernet: TX Checksum insertion supported
+[    3.382734] stm32-dwmac 5800a000.ethernet: Wake-Up On Lan supported
+[    3.389074] stm32-dwmac 5800a000.ethernet: TSO supported
+[    3.394246] stm32-dwmac 5800a000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    3.402179] stm32-dwmac 5800a000.ethernet: device MAC address 56:bf:8f:58:f8:31
+[    3.409418] stm32-dwmac 5800a000.ethernet: Enabled L3L4 Flow TC (entries=2)
+[    3.416428] stm32-dwmac 5800a000.ethernet: Enabled RFS Flow TC (entries=10)
+[    3.423318] stm32-dwmac 5800a000.ethernet: TSO feature enabled
+[    3.429215] stm32-dwmac 5800a000.ethernet: Using 32/32 bits DMA host/device width
+[    3.472849] stm32f7-i2c 40012000.i2c: using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+[    3.481087] stm32f7-i2c 40012000.i2c: STM32F7 I2C-0 bus adapter
+[    3.510458] platform 4000b000.audio-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    3.521179] platform 5a001000.display-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    3.533098] i2c 1-0039: Fixed dependency cycle(s) with /soc/etzpc@5c007000/audio-controller@4000b000
+[    3.542373] i2c 1-0039: Fixed dependency cycle(s) with /soc/display-controller@5a001000
+[    3.552184] stpmic1 1-0033: PMIC Chip Version: 0x21
+D/TC:0   pwr_scv_handler:56 PWR service: write 0x100 at offset 0x20
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x1 at offset 0x28
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x1 at offset 0x20
+[    3.575919] platform 5c002000.i2c:stpmic@33:regulators: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/stpmic@33/regulators/buck4
+[    3.587796] platform 5c002000.i2c:stpmic@33:regulators: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/stpmic@33/regulators/buck2
+[    3.634778] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    3.643810] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    3.653966] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    3.664214] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    3.674993] stm32f7-i2c 5c002000.i2c: STM32F7 I2C-1 bus adapter
+[    3.688015] mmci-pl18x 58007000.mmc: mmc0: PL180 manf 53 rev2 at 0x58007000 irq 53,0 (pio)
+[    3.710421] input: pmic_onkey as /devices/platform/soc/5c007000.etzpc/5c002000.i2c/i2c-1/1-0033/5c002000.i2c:stpmic@33:onkey/input/input0
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x40000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x10000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: clear 0x10000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: clear 0x40000000 at offset 0xc
+[    3.752149] stm32-usbphyc 5a006000.usbphyc: registered rev:1.0
+[    3.763962] dwc2 49000000.usb-otg: supply vusb_d not found, using dummy regulator
+[    3.770624] dwc2 49000000.usb-otg: supply vusb_a not found, using dummy regulator
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x40000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x10000000 at offset 0xc
+[    3.794006] dwc2 49000000.usb-otg: EPs: 9, dedicated fifos, 952 entries in SPRAM
+D/TC:0   pwr_scv_handler:56 PWR service: clear 0x10000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: clear 0x40000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x40000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: set 0x10000000 at offset 0xc
+[    3.843447] ohci-platform 5800c000.usb: Generic Platform OHCI controller
+[    3.848934] ehci-platform 5800d000.usb: EHCI Host Controller
+[    3.854521] ohci-platform 5800c000.usb: new USB bus registered, assigned bus number 1
+[    3.862398] ehci-platform 5800d000.usb: new USB bus registered, assigned bus number 2
+[    3.870699] ohci-platform 5800c000.usb: irq 59, io mem 0x5800c000
+[    3.876842] ehci-platform 5800d000.usb: irq 58, io mem 0x5800d000
+[    3.889429] mmc0: new DDR MMC card at address 0001
+[    3.894297] mmcblk0: mmc0:0001 008GB0 7.28 GiB 
+[    3.906206] ehci-platform 5800d000.usb: USB 2.0 started, EHCI 1.00
+[    3.913115] hub 2-0:1.0: USB hub found
+[    3.915912] hub 2-0:1.0: 2 ports detected
+[    3.919945]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9
+[    3.937790] mmcblk0boot0: mmc0:0001 008GB0 4.00 MiB 
+[    3.944541] mmcblk0boot1: mmc0:0001 008GB0 4.00 MiB 
+[    3.956544] hub 1-0:1.0: USB hub found
+[    3.959032] mmcblk0rpmb: mmc0:0001 008GB0 4.00 MiB, chardev (244:0)
+[    3.969023] hub 1-0:1.0: 2 ports detected
+[   13.929668] platform 5a001000.display-controller: deferred probe pending
