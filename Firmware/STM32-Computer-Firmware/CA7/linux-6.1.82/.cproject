@@ -52,12 +52,6 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="STM32-Computer-Firmware_CA7_linux-6.1.82.com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe.471316148" name="Executable" projectType="com.st.stm32cube.ide.mpu.gnu.managedbuild.projecttype.exe"/>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.191350281;com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.191350281.;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.456562592;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.1844872608">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="dtbs" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
@@ -151,4 +145,10 @@
 		</buildTargets>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.983217742;com.st.stm32cube.ide.mpu.gnu.managedbuild.config.exe.debug.983217742.;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.165656846;com.st.stm32cube.ide.mpu.gnu.managedbuild.tool.c.compiler.input.c.20399551">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
 </cproject>

@@ -3961,6 +3961,7 @@
 
  /delete-property/ dmas;
  /delete-property/ dma-names;
+ u-boot,dm-pre-reloc;
 
 };
 
@@ -3998,9 +3999,10 @@
  phys = <&usbphyc_port1 0>;
  phy-names = "usb2-phy";
  usb-role-switch;
- u-boot,force-b-session-valid;
- u-boot,force-vbus-detection;
- dr_mode = "peripheral";
+    u-boot,dm-pre-reloc;
+    u-boot,force-b-session-valid;
+    hnp-srp-disable;
+    dr_mode = "peripheral";
 
 };
 
@@ -4055,7 +4057,15 @@
  clocks = <&scmi_clk 7>;
 };
 
-
+&uart4_pins_mx {
+ u-boot,dm-pre-reloc;
+ pins1 {
+  u-boot,dm-pre-reloc;
+ };
+ pins2 {
+  u-boot,dm-pre-reloc;
+ };
+};
 # 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi" 1
 # 17 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi"
 / {
@@ -4064,4 +4074,4 @@
 
 
 };
-# 1036 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 1046 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2

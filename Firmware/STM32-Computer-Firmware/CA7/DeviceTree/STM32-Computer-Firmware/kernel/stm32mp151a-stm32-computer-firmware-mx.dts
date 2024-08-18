@@ -18,6 +18,8 @@
 
 /* USER CODE BEGIN includes */
 #include "stm32mp15-scmi.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/mfd/st,stpmic1.h>
 /* USER CODE END includes */
 
 / {
@@ -38,10 +40,110 @@
 		ranges;
 
 		/* USER CODE BEGIN reserved-memory */
+		optee@de000000 {
+			reg = <0xde000000 0x2000000>;
+			no-map;
+		};
+		
+		mcuram2:mcuram2@10000000{
+			compatible = "shared-dma-pool";
+			reg = <0x10000000 0x40000>;
+			no-map;
+		};
+
+		vdev0vring0:vdev0vring0@10040000{
+			compatible = "shared-dma-pool";
+			reg = <0x10040000 0x1000>;
+			no-map;
+		};
+
+		vdev0vring1:vdev0vring1@10041000{
+			compatible = "shared-dma-pool";
+			reg = <0x10041000 0x1000>;
+			no-map;
+		};
+
+		vdev0buffer:vdev0buffer@10042000{
+			compatible = "shared-dma-pool";
+			reg = <0x10042000 0x4000>;
+			no-map;
+		};
+
+		mcu_rsc_table:mcu-rsc-table@10048000{
+			compatible = "shared-dma-pool";
+			reg = <0x10048000 0x8000>;
+			no-map;
+		};
+
+		mcuram:mcuram@30000000{
+			compatible = "shared-dma-pool";
+			reg = <0x30000000 0x40000>;
+			no-map;
+		};
+
+		retram:retram@38000000{
+			compatible = "shared-dma-pool";
+			reg = <0x38000000 0x10000>;
+			no-map;
+		};
 		/* USER CODE END reserved-memory */
 	};
 
 	/* USER CODE BEGIN root */
+	aliases{
+		ethernet0 = &ethernet0;
+		serial0 = &uart4;
+	};
+
+	hdmi:connector{
+		compatible = "hdmi-connector";
+		label = "hdmi";
+		type = "a";
+
+		port{
+
+			hdmi_connector_in:endpoint{
+				remote-endpoint = <&sii9022_out>;
+			};
+		};
+	};
+	
+	config {
+		u-boot,boot-led = "heartbeat";
+		u-boot,error-led = "error";
+		u-boot,mmc-env-partition = "u-boot-env";
+		st,fastboot-gpios = <&gpioa 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		st,stm32prog-gpios = <&gpioa 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+
+	led{
+		compatible = "gpio-leds";
+
+		led-blue{
+			label = "heartbeat";
+			gpios = <&gpioa 14 GPIO_ACTIVE_LOW>;
+			linux,default-trigger = "heartbeat";
+			default-state = "off";
+		};
+		
+		led-red {
+			label = "error";
+			gpios = <&gpioa 13 GPIO_ACTIVE_LOW>;
+			default-state = "off";
+		};
+	};
+	
+	vin:vin{
+		compatible = "regulator-fixed";
+		regulator-name = "vin";
+		regulator-min-microvolt = <5000000>;
+		regulator-max-microvolt = <5000000>;
+		regulator-always-on;
+	};
+
+	chosen{
+		stdout-path = "serial0:115200n8";
+	};
 	/* USER CODE END root */
 
 	clocks{
@@ -405,6 +507,16 @@
 	status = "okay";
 
 	/* USER CODE BEGIN m4_rproc */
+	resets = <&scmi_reset RST_SCMI_MCU>,
+		 <&scmi_reset RST_SCMI_MCU_HOLD_BOOT>;
+	reset-names = "mcu_rst", "hold_boot";
+	/delete-property/ st,syscfg-holdboot;
+	
+	memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>,
+			<&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
+	interrupt-parent = <&exti>;
+	interrupts = <68 1>;
+	wakeup-source;
 	/* USER CODE END m4_rproc */
 
 	m4_system_resources{
@@ -436,6 +548,7 @@
 	status = "okay";
 
 	/* USER CODE BEGIN dma1 */
+	resets = <&scmi_reset RST_SCMI_MDMA>;
 	/* USER CODE END dma1 */
 };
 
@@ -463,6 +576,21 @@
 	status = "okay";
 
 	/* USER CODE BEGIN ethernet0 */
+	phy-mode = "rgmii-id";
+	max-speed = <1000>;
+	phy-handle = <&phy0>;
+	nvmem-cells = <&ethernet_mac_address>;
+	nvmem-cell-names = "mac-address";
+
+	mdio{
+		#address-cells = <1>;
+		#size-cells = <0>;
+		compatible = "snps,dwmac-mdio";
+
+		phy0:ethernet-phy@0{
+			reg = <0>;
+		};
+	};
 	/* USER CODE END ethernet0 */
 };
 
@@ -490,6 +618,195 @@
 	status = "okay";
 
 	/* USER CODE BEGIN i2c4 */
+	clocks = <&scmi_clk CK_SCMI_I2C4>;
+	resets = <&scmi_reset RST_SCMI_I2C4>;
+	i2c-scl-rising-time-ns = <185>;
+	i2c-scl-falling-time-ns = <20>;
+	clock-frequency = <400000>;
+	/delete-property/ dmas;
+	/delete-property/ dma-names;
+
+	hdmi-transmitter@39{
+		compatible = "sil,sii9022";
+		reg = <0x39>;
+		iovcc-supply = <&v3v3_hdmi>;
+		cvcc12-supply = <&v1v2_hdmi>;
+		reset-gpios = <&gpioa 10 GPIO_ACTIVE_LOW>;
+		interrupts = <1 IRQ_TYPE_EDGE_FALLING>;
+		interrupt-parent = <&gpiog>;
+		#sound-dai-cells = <0>;
+		status = "okay";
+
+		ports{
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			port@0{
+				reg = <0>;
+
+				sii9022_in:endpoint{
+					remote-endpoint = <&ltdc_ep0_out>;
+				};
+			};
+
+			port@1{
+				reg = <1>;
+
+				sii9022_out:endpoint{
+					remote-endpoint = <&hdmi_connector_in>;
+				};
+			};
+
+			port@3{
+				reg = <3>;
+
+				sii9022_tx_endpoint:endpoint{
+					remote-endpoint = <&i2s2_endpoint>;
+				};
+			};
+		};
+	};
+	
+	pmic:stpmic@33{
+		compatible = "st,stpmic1";
+		reg = <0x33>;
+		interrupts-extended = <&exti 55 IRQ_TYPE_EDGE_FALLING>;
+		interrupt-controller;
+		#interrupt-cells = <2>;
+		status = "okay";
+
+		regulators{
+			compatible = "st,stpmic1-regulators";
+			buck1-supply = <&vin>;
+			buck2-supply = <&vin>;
+			buck3-supply = <&vin>;
+			buck4-supply = <&vin>;
+			/*ldo1-supply = <&v3v3>;*/
+			ldo2-supply = <&vin>;
+			ldo3-supply = <&vdd_ddr>;
+			ldo4-supply = <&vin>;
+			ldo5-supply = <&vin>;
+			ldo6-supply = <&v3v3>;
+			vref_ddr-supply = <&vin>;
+			/*boost-supply = <&vin>;
+			pwr_sw1-supply = <&bst_out>;
+			pwr_sw2-supply = <&bst_out>;*/
+
+			vddcore:buck1{
+				regulator-name = "vddcore";
+				regulator-min-microvolt = <1200000>;
+				regulator-max-microvolt = <1350000>;
+				regulator-always-on;
+				regulator-initial-mode = <0>;
+				regulator-over-current-protection;
+			};
+
+			vdd_ddr:buck2{
+				regulator-name = "vdd_ddr";
+				regulator-min-microvolt = <1350000>;
+				regulator-max-microvolt = <1350000>;
+				regulator-always-on;
+				regulator-initial-mode = <0>;
+				regulator-over-current-protection;
+			};
+
+			vdd:buck3{
+				regulator-name = "vdd";
+				regulator-min-microvolt = <3300000>;
+				regulator-max-microvolt = <3300000>;
+				regulator-always-on;
+				st,mask-reset;
+				regulator-initial-mode = <0>;
+				regulator-over-current-protection;
+			};
+
+			v3v3:buck4{
+				regulator-name = "v3v3";
+				regulator-min-microvolt = <3300000>;
+				regulator-max-microvolt = <3300000>;
+				regulator-always-on;
+				regulator-over-current-protection;
+				regulator-initial-mode = <0>;
+			};
+			
+			/*
+			v1v8_audio:ldo1{
+				regulator-name = "v1v8_audio";
+				regulator-min-microvolt = <1800000>;
+				regulator-max-microvolt = <1800000>;
+				regulator-always-on;
+				interrupts = <IT_CURLIM_LDO1 0>;
+			};*/
+
+			v3v3_hdmi:ldo2{
+				regulator-name = "v3v3_hdmi";
+				regulator-min-microvolt = <3300000>;
+				regulator-max-microvolt = <3300000>;
+				regulator-always-on;
+				interrupts = <IT_CURLIM_LDO2 0>;
+			};
+
+			vtt_ddr:ldo3{
+				regulator-name = "vtt_ddr";
+				regulator-min-microvolt = <500000>;
+				regulator-max-microvolt = <750000>;
+				regulator-always-on;
+				regulator-over-current-protection;
+			};
+
+			vdd_usb:ldo4{
+				regulator-name = "vdd_usb";
+				interrupts = <IT_CURLIM_LDO4 0>;
+			};
+
+			vdda:ldo5{
+				regulator-name = "vdda";
+				regulator-min-microvolt = <2900000>;
+				regulator-max-microvolt = <2900000>;
+				interrupts = <IT_CURLIM_LDO5 0>;
+				regulator-boot-on;
+			};
+
+			v1v2_hdmi:ldo6{
+				regulator-name = "v1v2_hdmi";
+				regulator-min-microvolt = <1200000>;
+				regulator-max-microvolt = <1200000>;
+				regulator-always-on;
+				interrupts = <IT_CURLIM_LDO6 0>;
+			};
+
+			vref_ddr:vref-ddr{
+				regulator-name = "vref_ddr";
+				regulator-always-on;
+			};
+
+			/*
+			bst_out:boost{
+				regulator-name = "bst_out";
+				interrupts = <IT_OCP_BOOST 0>;
+			};
+
+			vbus_otg:pwr-sw1{
+				regulator-name = "vbus_otg";
+				interrupts = <IT_OCP_OTG 0>;
+			};
+
+			vbus_sw:pwr-sw2{
+				regulator-name = "vbus_sw";
+				interrupts = <IT_OCP_SWOUT 0>;
+				regulator-active-discharge = <1>;
+			};
+			*/
+		};
+
+		onkey{
+			compatible = "st,stpmic1-onkey";
+			interrupts = <IT_PONKEY_F 0>, <IT_PONKEY_R 0>;
+			interrupt-names = "onkey-falling", "onkey-rising";
+			power-off-time-sec = <10>;
+			status = "okay";
+		};
+	};
 	/* USER CODE END i2c4 */
 };
 
@@ -500,6 +817,17 @@
 	status = "okay";
 
 	/* USER CODE BEGIN i2s2 */
+	clocks = <&rcc SPI2>, <&rcc SPI2_K>, <&rcc PLL3_Q>, <&rcc PLL3_R>;
+	clock-names = "pclk", "i2sclk", "x8k", "x11k";
+
+	i2s2_port:port{
+
+		i2s2_endpoint:endpoint{
+			remote-endpoint = <&sii9022_tx_endpoint>;
+			dai-format = "i2s";
+			mclk-fs = <256>;
+		};
+	};
 	/* USER CODE END i2s2 */
 };
 
@@ -510,6 +838,12 @@
 	status = "okay";
 
 	/* USER CODE BEGIN ltdc */
+	port{
+
+		ltdc_ep0_out:endpoint{
+			remote-endpoint = <&sii9022_in>;
+		};
+	};
 	/* USER CODE END ltdc */
 };
 
@@ -531,6 +865,8 @@
 	status = "okay";
 
 	/* USER CODE BEGIN pwr_regulators */
+	vdd-supply = <&vdd>;
+	vdd_3v3_usbfs-supply = <&vdd_usb>;
 	/* USER CODE END pwr_regulators */
 };
 
@@ -538,6 +874,13 @@
 	status = "okay";
 
 	/* USER CODE BEGIN rcc */
+	compatible = "st,stm32mp1-rcc-secure", "syscon";
+	clock-names = "hse", "hsi", "csi", "lse", "lsi";
+	clocks = <&scmi_clk CK_SCMI_HSE>,
+		 <&scmi_clk CK_SCMI_HSI>,
+		 <&scmi_clk CK_SCMI_CSI>,
+		 <&scmi_clk CK_SCMI_LSE>,
+		 <&scmi_clk CK_SCMI_LSI>;
 	/* USER CODE END rcc */
 };
 
@@ -545,6 +888,8 @@
 	status = "okay";
 
 	/* USER CODE BEGIN rng1 */
+	clocks = <&scmi_clk CK_SCMI_RNG1>;
+	resets = <&scmi_reset RST_SCMI_RNG1>;
 	/* USER CODE END rng1 */
 };
 
@@ -552,6 +897,7 @@
 	status = "okay";
 
 	/* USER CODE BEGIN rtc */
+	clocks = <&scmi_clk CK_SCMI_RTCAPB>, <&scmi_clk CK_SCMI_RTC>;
 	/* USER CODE END rtc */
 };
 
@@ -563,6 +909,14 @@
 	status = "okay";
 
 	/* USER CODE BEGIN sdmmc2 */
+	non-removable;
+	no-sd;
+	no-sdio;
+	st,neg-edge;
+	bus-width = <8>;
+	vmmc-supply = <&v3v3>;
+	vqmmc-supply = <&vdd>;
+	mmc-ddr-3_3v;
 	/* USER CODE END sdmmc2 */
 };
 
@@ -581,6 +935,9 @@
 	status = "okay";
 
 	/* USER CODE BEGIN uart4 */
+	/delete-property/ dmas;
+	/delete-property/ dma-names;
+	u-boot,dm-pre-reloc;
 	/* USER CODE END uart4 */
 };
 
@@ -588,6 +945,15 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbh_ehci */
+	phys = <&usbphyc_port0>;
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	hub@1{
+		compatible = "usb424,2514";
+		reg = <1>;
+		vdd-supply = <&v3v3>;
+	};
 	/* USER CODE END usbh_ehci */
 };
 
@@ -595,6 +961,7 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbh_ohci */
+	phys = <&usbphyc_port0>;
 	/* USER CODE END usbh_ohci */
 };
 
@@ -605,6 +972,13 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbotg_hs */
+	phys = <&usbphyc_port1 0>;
+	phy-names = "usb2-phy";
+	usb-role-switch;
+    u-boot,dm-pre-reloc;                        
+    u-boot,force-b-session-valid;
+    hnp-srp-disable;
+    dr_mode = "peripheral";  
 	/* USER CODE END usbotg_hs */
 };
 
@@ -612,6 +986,7 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbphyc */
+	phy-supply = <&vdd_usb>;
 	/* USER CODE END usbphyc */
 };
 
@@ -619,6 +994,15 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbphyc_port0 */
+	phy-supply = <&vdd_usb>;
+	st,tune-hs-dc-level = <2>;
+	st,enable-fs-rftime-tuning;
+	st,enable-hs-rftime-reduction;
+	st,trim-hs-current = <15>;
+	st,trim-hs-impedance = <1>;
+	st,tune-squelch-level = <3>;
+	st,tune-hs-rx-offset = <2>;
+	st,no-lsfs-sc;
 	/* USER CODE END usbphyc_port0 */
 };
 
@@ -626,9 +1010,37 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbphyc_port1 */
+	phy-supply = <&vdd_usb>;
+	st,tune-hs-dc-level = <2>;
+	st,enable-fs-rftime-tuning;
+	st,enable-hs-rftime-reduction;
+	st,trim-hs-current = <15>;
+	st,trim-hs-impedance = <1>;
+	st,tune-squelch-level = <3>;
+	st,tune-hs-rx-offset = <2>;
+	st,no-lsfs-sc;
 	/* USER CODE END usbphyc_port1 */
 };
 
 /* USER CODE BEGIN addons */
+&arm_wdt{
+	timeout-sec = <32>;
+	status = "okay";
+};
+
+&cpu0 {
+	cpu-supply = <&vddcore>;
+	clocks = <&scmi_clk CK_SCMI_MPU>;
+};
+
+&uart4_pins_mx {
+	u-boot,dm-pre-reloc;
+	pins1 {
+		u-boot,dm-pre-reloc;
+	};
+	pins2 {
+		u-boot,dm-pre-reloc;
+	};
+};
 /* USER CODE END addons */
 
