@@ -8870,3 +8870,32 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+!SESSION 2024-08-20 22:07:48.089 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=sv_SE
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-08-20 22:08:11.539
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-08-20 22:08:11.540
+!MESSAGE Log4j2 initialized with config file /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/.metadata/.log4j2.xml
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-08-20 22:08:18.125
+!MESSAGE An internal error occurred during: "OpenSTLinux Lookup".
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "setupFiles" is null
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:130)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:113)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager$1.run(OpenSTLinuxSDKManager.java:198)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-08-20 22:11:18.645
+!MESSAGE Started RMI Server, listening on port 41337
