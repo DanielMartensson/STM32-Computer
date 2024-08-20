@@ -2897,8 +2897,6 @@
 /delete-node/ &clk_lsi;
 /delete-node/ &clk_csi;
 # 21 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
-# 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/include/dt-bindings/mfd/st,stpmic1.h" 1
-# 22 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
 # 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp15-scmi-u-boot.dtsi" 1
 
 
@@ -3069,7 +3067,10 @@
 &uart8{
  resets = <&rcc 19475>;
 };
-# 23 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 22 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+
+# 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/include/dt-bindings/mfd/st,stpmic1.h" 1
+# 24 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
 
 
 / {
@@ -3778,7 +3779,7 @@
     regulator-over-current-protection;
     regulator-initial-mode = <0>;
    };
-# 741 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 742 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
    v3v3_hdmi:ldo2{
     regulator-name = "v3v3_hdmi";
     regulator-min-microvolt = <3300000>;
@@ -3820,7 +3821,7 @@
     regulator-name = "vref_ddr";
     regulator-always-on;
    };
-# 800 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 801 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
   };
 
   onkey{
@@ -4066,6 +4067,8 @@
   u-boot,dm-pre-reloc;
  };
 };
+
+
 # 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi" 1
 # 17 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi"
 / {
@@ -4074,4 +4077,4 @@
 
 
 };
-# 1046 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2
+# 1049 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp" 2

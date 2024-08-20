@@ -1,2 +1,0 @@
-#include "stm32mp151a-stm32-computer-firmware-mx.dts"
-#include "stm32mp15-bl2.dtsi"

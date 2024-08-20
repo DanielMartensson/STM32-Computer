@@ -1,0 +1,12 @@
+2024-08-19 02:01:34,503 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-08-19 02:10:19,610 [INFO] Activator:176 - 
+
+
+2024-08-19 02:10:19,612 [INFO] Activator:177 - !SESSION log4j initialized
+2024-08-19 02:10:30,102 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-08-19 02:10:56,193 [INFO] ApplicationProperties:184 - Using Application install path: /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.common.mx_6.12.0.202406281431
+2024-08-19 02:10:56,239 [INFO] DbMcusXml:78 - Set database path to: /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.common.mx_6.12.0.202406281431//db//mcu/
+2024-08-19 02:10:56,239 [INFO] ApiDb:274 - Set plugin database path to: /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.common.mx_6.12.0.202406281431//db//plugins/boardmanager/
+2024-08-19 02:10:56,240 [WARN] ApiDb:259 - Overriding images path with different value:  => /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.common.mx_6.12.0.202406281431//db//plugins/mcufinder/images/
+2024-08-19 02:10:56,272 [INFO] ApiDb:250 - Set database path to: /home/lubuntu/.stmcufinder/plugins/mcufinder//mcu/
+2024-08-19 02:10:56,273 [INFO] DbMcusAds:125 - Set database path to: /home/lubuntu/.stmcufinder/plugins/mcufinder//mcu/

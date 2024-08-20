@@ -11,7 +11,7 @@ UBOOT_BINARY ?=
 UBOOT_DEVICETREE ?=
 
 # Set default FIP config
-FIP_CONFIG ?= optee-emmc #optee-nand optee-nor optee-sdcard
+FIP_CONFIG ?= optee-emmc optee-nand optee-nor optee-sdcard
 
 # Init default config settings
 UBOOT_BINARY_stm32mp15_defconfig ?= u-boot.dtb

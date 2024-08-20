@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="rcc"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="DIS"/>
 			<item value="rcc"/>
+			<item value="ether"/>
 			<item value="sdmmc"/>
 			<item value="emmc"/>
 			<item value="vdev0buffer"/>
@@ -21,8 +23,6 @@
 			<item value="clk_set_rate"/>
 			<item value="_set_opp_clk_rate"/>
 			<item value="DMSG"/>
-			<item value="opp_set_voltage"/>
-			<item value="set_opp_clk_rate"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>

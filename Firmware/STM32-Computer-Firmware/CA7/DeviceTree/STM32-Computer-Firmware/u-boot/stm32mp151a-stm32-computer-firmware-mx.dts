@@ -18,8 +18,9 @@
 
 /* USER CODE BEGIN includes */
 #include "stm32mp15-scmi.dtsi"
-#include <dt-bindings/mfd/st,stpmic1.h>
 #include "stm32mp15-scmi-u-boot.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/mfd/st,stpmic1.h>
 /* USER CODE END includes */
 
 / {
@@ -1043,3 +1044,4 @@
 	};
 };
 /* USER CODE END addons */
+

@@ -20968,13 +20968,13 @@ Disassembly of section ro:
 
 2fff668c <version_string>:
 2fff668c:	3276 382e 732d 6d74 3233 706d 2d31 3272     v2.8-stm32mp1-r2
-2fff669c:	302e 6428 6265 6775 3a29 6366 6135 6237     .0(debug):fc5a7b
-2fff66ac:	3330 2d38 6964 7472 2879 6366 6135 6237     038-dirty(fc5a7b
-2fff66bc:	3330 0029                                   03).
+2fff669c:	302e 6428 6265 6775 3a29 3161 3464 6137     .0(debug):a1d47a
+2fff66ac:	6663 2d64 6964 7472 2879 3161 3464 6137     cfd-dirty(a1d47a
+2fff66bc:	6663 0029                                   cf).
 
 2fff66c0 <build_message>:
-2fff66c0:	7542 6c69 2074 203a 3931 353a 3a31 3632     Built : 19:51:26
-2fff66d0:	202c 7541 2067 3720 3220 3230 0034 6c62     , Aug  7 2024.bl
+2fff66c0:	7542 6c69 2074 203a 3931 303a 3a36 3032     Built : 19:06:20
+2fff66d0:	202c 7541 2067 3032 3220 3230 0034 6c62     , Aug 20 2024.bl
 2fff66e0:	2f32 6c62 5f32 6d69 6761 5f65 6f6c 6461     2/bl2_image_load
 2fff66f0:	765f 2e32 0063 421e 324c 203a 6c50 7461     _v2.c..BL2: Plat
 2fff6700:	6f66 6d72 7320 7465 7075 6120 726c 6165     form setup alrea

@@ -1,13 +1,41 @@
-01:49:31 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
-make all 
+20:09:22 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
+make uImage LOADADDR=0xC2000040 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/build/../../FIP_artifacts
 + case "$command" in
-+ exec make all
++ exec make uImage LOADADDR=0xC2000040
   GEN     Makefile
   CALL    /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/scripts/checksyscalls.sh
+  OBJCOPY arch/arm/boot/Image
   Kernel: arch/arm/boot/Image is ready
+  LDS     arch/arm/boot/compressed/vmlinux.lds
+  AS      arch/arm/boot/compressed/head.o
+  GZIP    arch/arm/boot/compressed/piggy_data
+  AS      arch/arm/boot/compressed/piggy.o
+  CC      arch/arm/boot/compressed/misc.o
+  CC      arch/arm/boot/compressed/decompress.o
+  CC      arch/arm/boot/compressed/string.o
+  AS      arch/arm/boot/compressed/hyp-stub.o
+  CC      arch/arm/boot/compressed/fdt_rw.o
+  CC      arch/arm/boot/compressed/fdt_ro.o
+  CC      arch/arm/boot/compressed/fdt_wip.o
+  CC      arch/arm/boot/compressed/fdt.o
+  CC      arch/arm/boot/compressed/atags_to_fdt.o
+  CC      arch/arm/boot/compressed/fdt_check_mem_start.o
+  AS      arch/arm/boot/compressed/lib1funcs.o
+  AS      arch/arm/boot/compressed/ashldi3.o
+  AS      arch/arm/boot/compressed/bswapsdi2.o
+  LD      arch/arm/boot/compressed/vmlinux
+  OBJCOPY arch/arm/boot/zImage
   Kernel: arch/arm/boot/zImage is ready
+  UIMAGE  arch/arm/boot/uImage
+Image Name:   Linux-6.1.82
+Created:      Tue Aug 20 18:10:24 2024
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    8249856 Bytes = 8056.50 KiB = 7.87 MiB
+Load Address: c2000040
+Entry Point:  c2000040
+  Kernel: arch/arm/boot/uImage is ready
 
-01:53:48 Build Finished. 0 errors, 0 warnings. (took 4m:16s.515ms)
+20:10:25 Build Finished. 0 errors, 0 warnings. (took 1m:2s.969ms)
 

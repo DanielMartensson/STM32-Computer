@@ -1,17 +1,16 @@
-01:39:20 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_optee-os-3.19.0-r2 ****
+20:29:19 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_optee-os-3.19.0-r2 ****
 make -f ../Makefile.sdk.ide CFG_DRAM_SIZE=0x20000000 CFG_TZDRAM_START=0xde000000 CFG_EMBED_DTB_SOURCE_FILE=stm32mp151a-stm32-computer-firmware-mx optee 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../../FIP_artifacts
 + case "$command" in
 + exec make -f ../Makefile.sdk.ide CFG_DRAM_SIZE=0x20000000 CFG_TZDRAM_START=0xde000000 CFG_EMBED_DTB_SOURCE_FILE=stm32mp151a-stm32-computer-firmware-mx optee
 make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2'
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/include/generated/arm32_sysreg.h
-  GEN     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/include/generated/arm32_sysreg.S
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/conf.mk
-  UPD     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/conf.mk
   CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/include/generated/conf.h
-make[1]: *** No rule to make target '/home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h', needed by '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/include/generated/.asm-defines.s'.  Stop.
+  CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/include/generated/context_asm_defines.h
+  CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/conf.cmake
+  CHK     /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/export-ta_arm32/mk/conf.mk
 make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2'
 
-01:39:56 Build Failed. 1 errors, 0 warnings. (took 36s.348ms)
+20:30:43 Build Finished. 0 errors, 0 warnings. (took 1m:23s.980ms)
 
