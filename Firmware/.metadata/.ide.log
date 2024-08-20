@@ -1845,3 +1845,4 @@ GenProcess for OUTPUT : processName=optee-dtsBind - Output=optee-os
 2024-08-20 23:00:50,118 [INFO] WebApp:186 - Connection restablished
 2024-08-20 23:01:08,317 [INFO] WebApp:189 - Connection lost
 2024-08-20 23:01:09,004 [INFO] WebApp:186 - Connection restablished
+2024-08-20 23:24:25,691 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
