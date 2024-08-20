@@ -4,9 +4,9 @@
  lib/libutils/ext/include/config.h core/include/drivers/wdt.h \
  lib/libutils/isoc/include/assert.h lib/libutils/ext/include/compiler.h \
  lib/libutils/ext/include/trace.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
  lib/libutils/ext/include/trace_levels.h core/include/kernel/interrupt.h \
  core/include/dt-bindings/interrupt-controller/irq.h \
  lib/libutils/ext/include/types_ext.h lib/libutils/isoc/include/limits.h \

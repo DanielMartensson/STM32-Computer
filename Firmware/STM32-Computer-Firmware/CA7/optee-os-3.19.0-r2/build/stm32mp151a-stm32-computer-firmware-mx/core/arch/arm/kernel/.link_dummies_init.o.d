@@ -6,10 +6,10 @@
  core/include/keep.h lib/libutee/include/tee_api_types.h \
  lib/libutils/isoc/include/inttypes.h lib/libutils/isoc/include/stdint.h \
  lib/libutils/isoc/include/limits.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
  lib/libutee/include/tee_api_defines.h lib/libutils/ext/include/trace.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
  lib/libutils/ext/include/trace_levels.h \
  lib/libutils/ext/include/types_ext.h lib/libutils/isoc/include/unistd.h \
  core/include/mm/core_mmu.h lib/libutils/isoc/include/assert.h \

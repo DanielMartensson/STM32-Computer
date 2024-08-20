@@ -8,9 +8,9 @@
  /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/../build/stm32mp151a-stm32-computer-firmware-mx/core/include/generated/arm32_sysreg.h \
  core/arch/arm/plat-stm32mp1/./boot_api.h \
  core/include/drivers/stm32_rtc.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
  lib/libutee/include/tee_api_types.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
  lib/libutee/include/tee_api_defines.h \
  core/include/drivers/stm32mp_dt_bindings.h \
  core/include/dt-bindings/clock/stm32mp1-clks.h \
@@ -33,7 +33,7 @@
  lib/libutee/include/tee_api_defines_extensions.h \
  core/arch/arm/plat-stm32mp1/./stm32_util.h \
  lib/libutils/isoc/include/assert.h lib/libutils/ext/include/trace.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
  lib/libutils/ext/include/trace_levels.h core/include/drivers/clk.h \
  core/include/kernel/refcount.h lib/libutils/ext/include/atomic.h \
  core/include/drivers/stm32mp1_rcc_util.h core/include/kernel/panic.h \

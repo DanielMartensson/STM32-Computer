@@ -331,7 +331,7 @@ __defines:
 	.byte	0x7
 	.4byte	.Ldebug_macro5
 	.byte	0x4
-	.file 6 "/home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h"
+	.file 6 "/opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h"
 	.byte	0x3
 	.uleb128 0xb
 	.uleb128 0x6
@@ -352,7 +352,7 @@ __defines:
 	.byte	0x7
 	.4byte	.Ldebug_macro8
 	.byte	0x4
-	.file 9 "/home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h"
+	.file 9 "/opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h"
 	.byte	0x3
 	.uleb128 0xd
 	.uleb128 0x9

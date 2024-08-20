@@ -8,7 +8,7 @@
  lib/libutils/isoc/include/limits.h lib/libutils/isoc/include/stdint.h \
  lib/libmbedtls/mbedtls/include/mbedtls/x509.h \
  lib/libmbedtls/mbedtls/include/mbedtls/asn1.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
  lib/libmbedtls/mbedtls/include/mbedtls/bignum.h \
  lib/libmbedtls/mbedtls/include/mbedtls/pk.h \
  lib/libmbedtls/mbedtls/include/mbedtls/md.h \
@@ -20,13 +20,13 @@
  lib/libmbedtls/mbedtls/include/mbedtls/oid.h \
  lib/libmbedtls/mbedtls/include/mbedtls/cipher.h \
  lib/libutils/isoc/include/stdio.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
  lib/libutils/isoc/include/string.h lib/libutils/isoc/include/sys/cdefs.h \
  lib/libmbedtls/mbedtls/include/mbedtls/pem.h \
  lib/libutils/isoc/include/stdlib.h lib/libutils/ext/include/compiler.h \
  lib/libutils/isoc/include/malloc.h lib/libutils/ext/include/types_ext.h \
  lib/libutils/isoc/include/inttypes.h \
- /home/lubuntu/Program/STM32/SDK/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
+ /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
  lib/libutils/isoc/include/unistd.h \
  lib/libmbedtls/mbedtls/include/mbedtls/x509_crt.h \
  lib/libmbedtls/mbedtls/include/mbedtls/x509_crl.h \
