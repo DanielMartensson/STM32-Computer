@@ -632,7 +632,7 @@
 		reg = <0x39>;
 		iovcc-supply = <&v3v3_hdmi>;
 		cvcc12-supply = <&v1v2_hdmi>;
-		reset-gpios = <&gpioa 10 GPIO_ACTIVE_LOW>;
+		reset-gpios = <&gpioe 8 GPIO_ACTIVE_LOW>;
 		interrupts = <1 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-parent = <&gpiog>;
 		#sound-dai-cells = <0>;
@@ -949,8 +949,8 @@
 	phys = <&usbphyc_port0>;
 	#address-cells = <1>;
 	#size-cells = <0>;
-
-	hub@1{
+	/* onboard HUB */
+	hub@1 {
 		compatible = "usb424,2514";
 		reg = <1>;
 		vdd-supply = <&v3v3>;
@@ -962,7 +962,6 @@
 	status = "okay";
 
 	/* USER CODE BEGIN usbh_ohci */
-	phys = <&usbphyc_port0>;
 	/* USER CODE END usbh_ohci */
 };
 
@@ -1024,6 +1023,7 @@
 };
 
 /* USER CODE BEGIN addons */
+/*
 &arm_wdt{
 	timeout-sec = <32>;
 	status = "okay";
@@ -1042,6 +1042,6 @@
 	pins2 {
 		u-boot,dm-pre-reloc;
 	};
-};
+};*/
 /* USER CODE END addons */
 

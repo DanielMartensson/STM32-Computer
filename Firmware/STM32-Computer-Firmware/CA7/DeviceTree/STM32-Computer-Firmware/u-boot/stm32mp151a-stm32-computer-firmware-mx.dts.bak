@@ -18,8 +18,9 @@
 
 /* USER CODE BEGIN includes */
 #include "stm32mp15-scmi.dtsi"
-#include <dt-bindings/mfd/st,stpmic1.h>
 #include "stm32mp15-scmi-u-boot.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/mfd/st,stpmic1.h>
 /* USER CODE END includes */
 
 / {
@@ -631,7 +632,7 @@
 		reg = <0x39>;
 		iovcc-supply = <&v3v3_hdmi>;
 		cvcc12-supply = <&v1v2_hdmi>;
-		reset-gpios = <&gpioa 10 GPIO_ACTIVE_LOW>;
+		reset-gpios = <&gpioe 8 GPIO_ACTIVE_LOW>;
 		interrupts = <1 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-parent = <&gpiog>;
 		#sound-dai-cells = <0>;
@@ -941,30 +942,6 @@
 	/* USER CODE END uart4 */
 };
 
-&usbh_ehci{
-	status = "okay";
-
-	/* USER CODE BEGIN usbh_ehci */
-	phys = <&usbphyc_port0>;
-	#address-cells = <1>;
-	#size-cells = <0>;
-
-	hub@1{
-		compatible = "usb424,2514";
-		reg = <1>;
-		vdd-supply = <&v3v3>;
-	};
-	/* USER CODE END usbh_ehci */
-};
-
-&usbh_ohci{
-	status = "okay";
-
-	/* USER CODE BEGIN usbh_ohci */
-	phys = <&usbphyc_port0>;
-	/* USER CODE END usbh_ohci */
-};
-
 &usbotg_hs{
 	pinctrl-names = "default", "sleep";
 	pinctrl-0 = <&usb_otg_hs_pins_mx>;
@@ -1023,6 +1000,7 @@
 };
 
 /* USER CODE BEGIN addons */
+/*
 &arm_wdt{
 	timeout-sec = <32>;
 	status = "okay";
@@ -1041,5 +1019,6 @@
 	pins2 {
 		u-boot,dm-pre-reloc;
 	};
-};
+};*/
 /* USER CODE END addons */
+

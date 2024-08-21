@@ -3682,7 +3682,7 @@
   reg = <0x39>;
   iovcc-supply = <&v3v3_hdmi>;
   cvcc12-supply = <&v1v2_hdmi>;
-  reset-gpios = <&gpioa 10 1>;
+  reset-gpios = <&gpioe 8 1>;
   interrupts = <1 2>;
   interrupt-parent = <&gpiog>;
   #sound-dai-cells = <0>;
@@ -3974,7 +3974,7 @@
  #address-cells = <1>;
  #size-cells = <0>;
 
- hub@1{
+ hub@1 {
   compatible = "usb424,2514";
   reg = <1>;
   vdd-supply = <&v3v3>;
@@ -3986,7 +3986,6 @@
  status = "okay";
 
 
- phys = <&usbphyc_port0>;
 
 };
 
@@ -4046,29 +4045,7 @@
  st,no-lsfs-sc;
 
 };
-
-
-&arm_wdt{
- timeout-sec = <32>;
- status = "okay";
-};
-
-&cpu0 {
- cpu-supply = <&vddcore>;
- clocks = <&scmi_clk 7>;
-};
-
-&uart4_pins_mx {
- u-boot,dm-pre-reloc;
- pins1 {
-  u-boot,dm-pre-reloc;
- };
- pins2 {
-  u-boot,dm-pre-reloc;
- };
-};
-
-
+# 1048 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
 # 1 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi" 1
 # 17 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/u-boot-2022.10.r2/u-boot-stm32mp-v2022.10-stm32mp-r2/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx-u-boot.dtsi"
 / {

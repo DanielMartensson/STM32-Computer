@@ -1,6 +1,482 @@
-22:44:57 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
-make stm32mp151a-stm32-computer-firmware-mx.dtb 
+00:27:55 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
+make uImage LOADADDR=0xC2000040 
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/build/../../FIP_artifacts
 + case "$command" in
-+ exec make stm32mp151a-stm32-computer-firmware-mx.dtb
++ exec make uImage LOADADDR=0xC2000040
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+  GEN     Makefile
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+  CALL    /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/scripts/checksyscalls.sh
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+Image Type   : STMicroelectronics STM32 V1.0
+Image Target : STM32MP15x Cortex-A7
+Image Size   : 229700 bytes
+Image Load   : 0x2ffc2500
+Entry Point  : 0x2fffa601
+Version      : 0x00000000
+Halt Address : 0x2ffe9000
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Including bl32/optee/optee.mk
+Trusted Firmware-A built for OP-TEE payload support
+PSA_FWU_SUPPORT is an experimental feature
+Building stm32mp1
+make[1]: Nothing to be done for 'dtbs'.
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+Image Type   : STMicroelectronics STM32 V2.0
+Image Target : STM32MP13x Cortex-A7
+Image Size   : 92228 bytes
+Image Load   : 0x2ffe0000
+Entry Point  : 0x2fff6801
+Version      : 0x00000000
+Halt Address : 0x2ffe4000
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+  Kernel: arch/arm/boot/Image is ready
+Building stm32mp1
+make[1]: Leaving directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+make[1]: Entering directory '/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/tf-a-2.8.15-r2/tf-a-stm32mp-v2.8.15-stm32mp-r2'
+  Kernel: arch/arm/boot/zImage is ready
+  Kernel: arch/arm/boot/uImage is ready
+
+00:29:07 Build Finished. 0 errors, 0 warnings. (took 1m:11s.775ms)
+

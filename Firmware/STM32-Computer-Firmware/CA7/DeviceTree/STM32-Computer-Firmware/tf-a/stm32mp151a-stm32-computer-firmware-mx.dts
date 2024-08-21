@@ -157,6 +157,9 @@
 	pmic: stpmic@33 {
 		compatible = "st,stpmic1";
 		reg = <0x33>;
+		/* 		interrupts-extended = <&gpioa 0 IRQ_TYPE_EDGE_FALLING>;
+		 *  Use this instead in the future
+		 */
 		interrupts-extended = <&exti_pwr 55 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-controller;
 		#interrupt-cells = <2>;

@@ -6,14 +6,19 @@ INFO:      Power-on Reset (rst_por)
 INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
 INFO:    FCONF: Reading firmware configuration information for: stm32mp_io
 INFO:    FCONF: Reading firmware configuration information for: stm32mp_fuse
-INFO:    Using EMMC
+INFO:    Using USB
 INFO:      Instance 2
 INFO:    Boot used partition fsbl1
 NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):a1d47acfd-dirty(a1d47acf)
-NOTICE:  BL2: Built : 16:50:09, Aug 20 2024
+NOTICE:  BL2: Built : 16:50:28, Aug 20 2024
 INFO:    BL2: Doing platform setup
 INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
 INFO:    Memory size = 0x20000000 (512 MB)
+INFO:    DFU USB START...
+INFO:    phase ID :3, Manifestation 3 at c7166812
+INFO:    Send detach request
+INFO:    Receive DFU Detach
+INFO:    DFU USB STOP...
 INFO:    BL2: Loading image id 1
 INFO:    Loading image id=1 at address 0x2ffff000
 INFO:    Image id=1 loaded: 0x2ffff000 - 0x2ffff1ea
@@ -36,7 +41,7 @@ INFO:    Image id=8 loaded: 0xde000000 - 0xde03de08
 INFO:    BL2: Skip loading image id 9
 INFO:    BL2: Loading image id 2
 INFO:    Loading image id=2 at address 0xc0500000
-INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513ac0
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513a48
 INFO:    BL2: Skip loading image id 16
 INFO:    BL2: Loading image id 5
 INFO:    Loading image id=5 at address 0xc0100000
@@ -97,7 +102,701 @@ D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
 I/TC: 
 I/TC: Embedded DTB found
 D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
-I/TC: OP-TEE version: a1d47acfd-dev (gcc version 12.3.0 (GCC)) #4 Tue Aug 20 16:38:49 UTC 2024 arm
+I/TC: OP-TEE version: 8b208c982-dev (gcc version 12.3.0 (GCC)) #7 Wed Aug 21 22:20:11 UTC 2024 arm
+I/TC: WARNING: This OP-TEE configuration might be insecure!
+I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
+I/TC: Primary CPU initializing
+D/TC:0 0 call_preinitcalls:21 level 2 mobj_mapped_shm_init()
+D/TC:0 0 mobj_mapped_shm_init:463 Shared memory address range: dbc00000, ddc00000
+D/TC:0 0 call_initcalls:40 level 1 register_time_source()
+D/TC:0 0 call_initcalls:40 level 1 initialize_bsec()
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[1] = cfg0_otp 0bit offset: 0, length: 8
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[2] = part_number_otp 1bit offset: 0, length: 8
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[3] = monotonic_otp 4bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[4] = nand_otp 9bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[5] = uid_otp 13bit offset: 0, length: 96
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[6] = package_otp 16bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[7] = hw2_otp 18bit offset: 0, length: 32
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[8] = calib 23bit offset: 0, length: 16
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[9] = calib 23bit offset: 16, length: 16
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[10] = pkh_otp 24bit offset: 0, length: 256
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[11] = mac 57bit offset: 0, length: 64
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[12] = huk-otp 60bit offset: 0, length: 128
+D/TC:0 0 save_dt_nvmem_layout:875 nvmem[13] = board_id 59bit offset: 0, length: 32
+D/TC:0 0 call_initcalls:40 level 1 clk_dt_probe()
+D/TC:0 0 clk_dt_probe:202 Probing clocks from devicetree
+D/TC:0 0 clk_register:126 Registered clock clk-hse, freq 24000000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-hse initialized
+D/TC:0 0 clk_register:126 Registered clock clk-hsi, freq 64000000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-hsi initialized
+D/TC:0 0 clk_register:126 Registered clock clk-lse, freq 32768
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-lse initialized
+D/TC:0 0 clk_register:126 Registered clock clk-lsi, freq 32000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-lsi initialized
+D/TC:0 0 clk_register:126 Registered clock clk-csi, freq 4000000
+D/TC:0 0 probe_driver_node:443 element: fixed_clock on node clk-csi initialized
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 533000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 533000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 133250000
+D/TC:0 0 clk_register:126 Registered clock spi6, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock i2c4, freq 64000000
+D/TC:0 0 clk_register:126 Registered clock i2c6, freq 64000000
+D/TC:0 0 clk_register:126 Registered clock usart1, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock rtcapb, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock iwdg, freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 66625000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 24000000
+D/TC:0 0 clk_register:126 Registered clock gpioz, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock crpy1, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock hash1, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock rng1, freq 4000000
+D/TC:0 0 clk_register:126 Registered clock bkpsram, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock rtc, freq 32768
+D/TC:0 0 clk_register:126 Registered clock gpioa, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiob, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioc, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiod, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioe, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiof, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiog, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioh, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioi, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpioj, freq 0
+D/TC:0 0 clk_register:126 Registered clock gpiok, freq 0
+D/TC:0 0 clk_register:126 Registered clock (null), freq 208877928
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 208877928
+D/TC:0 0 clk_register:126 Registered clock (null), freq 64000000
+D/TC:0 0 clk_register:126 Registered clock syscfg, freq 0
+D/TC:0 0 clk_register:126 Registered clock (null), freq 0
+D/TC:0 0 clk_register:126 Registered clock (null), freq 0
+D/TC:0 0 clk_register:126 Registered clock dbg, freq 0
+D/TC:0 0 clk_register:126 Registered clock hse, freq 24000000
+D/TC:0 0 clk_register:126 Registered clock csi, freq 4000000
+D/TC:0 0 clk_register:126 Registered clock lsi, freq 32000
+D/TC:0 0 clk_register:126 Registered clock lse, freq 32768
+D/TC:0 0 clk_register:126 Registered clock hsi, freq 64000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 12000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 325000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 325000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock pll2q, freq 266500000
+D/TC:0 0 clk_register:126 Registered clock pll2r, freq 533000000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 208877929
+D/TC:0 0 clk_register:126 Registered clock pll3q, freq 24573874
+D/TC:0 0 clk_register:126 Registered clock pll3r, freq 11290698
+D/TC:0 0 clk_register:126 Registered clock (null), freq 266500000
+D/TC:0 0 clk_register:126 Registered clock (null), freq 650000000
+D/TC:0 0 clk_register:126 Registered clock mcu, freq 208877929
+D/TC:0 0 probe_driver_node:443 element: stm32mp1_clock on node rcc@50000000 initialized
+D/TC:0 0 call_initcalls:40 level 2 init_debug()
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem cfg0_otp = 0: 0 bit offset: 0, length: 8
+I/TC: WARNING: All debug access are allowed
+D/TC:0 0 call_initcalls:40 level 2 provisioning_probe()
+D/TC:0 0 stm32_bsec_find_otp_by_phandle:679 nvmem = 6: 18 bit offset: 0, length: 32
+D/TC:0 0 provision:62 OTP 18: provisioning value 0x1e0, lock 0x2 / shadow value 0x7ae00000, lock 0
+I/TC: Override the OTP 18: 0x7ae00000 to 0x7ae001e0
+D/TC:0 0 stm32_bsec_shadow_register:266 BSEC shadow warning: OTP locked
+D/TC:0 0 provision:100 Read SHADOW 0x7ae001e0
+I/TC: WARNING: Embeds insecure stm32mp_provisioning driver
+D/TC:0 0 call_initcalls:40 level 2 probe_dt_drivers_early()
+D/TC:0 0 add_node_to_probe:641 element: stm32-cpu-opp on node cpu0-opp-table
+D/TC:0 0 add_node_to_probe:641 element: simple-bus on node soc
+D/TC:0 0 add_node_to_probe:641 element: simple-bus on node ahb
+D/TC:0 0 add_node_to_probe:641 element: fixed-regulator on node vin
+D/TC:0 0 probe_driver_node:443 element: fixed-regulator on node vin initialized
+D/TC:0 0 probe_driver_node:443 element: simple-bus on node ahb initialized
+D/TC:0 0 add_node_to_probe:641 element: stm32mp15_rstctrl on node rcc@50000000
+D/TC:0 0 add_node_to_probe:641 element: stm32mp1-pwr-regu on node pwr@50001000
+D/TC:0 0 add_node_to_probe:641 element: stm32-rtc on node rtc@5c004000
+D/TC:0 0 add_node_to_probe:641 element: stm32mp1-tzc400 on node tzc@5c006000
+D/TC:0 0 add_node_to_probe:641 element: stm32-tamp on node tamp@5c00a000
+D/TC:0 0 add_node_to_probe:641 element: stm32_gpio on node pin-controller@50002000
+D/TC:0 0 add_node_to_probe:641 element: stm32_gpio on node pin-controller-z@54004000
+D/TC:0 0 add_node_to_probe:641 element: stm32-etzpc on node etzpc@5c007000
+D/TC:0 0 probe_driver_node:443 element: simple-bus on node soc initialized
+D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 1 time(s)
+D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 2 time(s)
+D/TC:0 0 stm32_etzpc_set_driverdata:517 ETZPC revision 0x32, per_sec 96, ahb_sec 0, tzma 2
+D/TC:0 0 add_node_to_probe:641 element: stm32_i2c on node i2c@5c002000
+D/TC:0 0 probe_driver_node:443 element: stm32-etzpc on node etzpc@5c007000 initialized
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@54004000
+D/TC:0 0 _fdt_stm32_gpio_controller:982 GPIO bank Z assigned to non-secure
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank Z (8 pins) @d9004000
+D/TC:0 0 probe_driver_node:443 element: stm32_gpio on node pin-controller-z@54004000 initialized
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50002000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank A (16 pins) @d9402000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50003000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank B (16 pins) @d9403000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50004000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank C (16 pins) @d9404000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50005000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank D (16 pins) @d9405000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50006000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank E (16 pins) @d9406000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50007000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank F (16 pins) @d9407000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50008000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank G (16 pins) @d9408000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@50009000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank H (16 pins) @d9409000
+D/TC:0 0 _fdt_stm32_gpio_controller:930 Bank name gpio@5000a000
+D/TC:0 0 stm32_gpio_parse_pinctrl_node:1146 Registered GPIO bank I (12 pins) @d940a000
+D/TC:0 0 probe_driver_node:443 element: stm32_gpio on node pin-controller@50002000 initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 1 time(s)
+D/TC:0 0 tzc_set_driverdata:124 TZC400 Filters 2 Regions 8
+D/TC:0 0 add_carved_out_nsec:382 0xc0000000 - 0xddffffff : Sec access 0 NS access 0x87fb87fb
+D/TC:0 0 tzc_dump_state:473 region 0
+D/TC:0 0 tzc_dump_state:476 region_base: 0x0000000000000000
+D/TC:0 0 tzc_dump_state:479 region_top: 0x00000000ffffffff
+D/TC:0 0 tzc_dump_state:481 secure rw: TZC_REGION_S_NONE
+D/TC:0 0 tzc_dump_state:486 filter 0 enable
+D/TC:0 0 tzc_dump_state:486 filter 1 enable
+D/TC:0 0 tzc_dump_state:473 region 1
+D/TC:0 0 tzc_dump_state:476 region_base: 0x00000000de000000
+D/TC:0 0 tzc_dump_state:479 region_top: 0x00000000dfffffff
+D/TC:0 0 tzc_dump_state:481 secure rw: TZC_REGION_S_RDWR
+D/TC:0 0 tzc_dump_state:486 filter 0 enable
+D/TC:0 0 tzc_dump_state:486 filter 1 enable
+D/TC:0 0 tzc_dump_state:473 region 2
+D/TC:0 0 tzc_dump_state:476 region_base: 0x00000000c0000000
+D/TC:0 0 tzc_dump_state:479 region_top: 0x00000000ddffffff
+D/TC:0 0 tzc_dump_state:481 secure rw: TZC_REGION_S_NONE
+D/TC:0 0 tzc_dump_state:486 filter 0 enable
+D/TC:0 0 tzc_dump_state:486 filter 1 enable
+D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0xff to 0xd8621824
+D/TC:0 0 gic_it_set_cpu_mask:352 cpu_mask: 0x3
+D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd8621424
+D/TC:0 0 probe_driver_node:443 element: stm32mp1-tzc400 on node tzc@5c006000 initialized
+D/TC:0 0 probe_driver_node:443 element: stm32-rtc on node rtc@5c004000 initialized
+D/TC:0 0 probe_driver_node:443 element: stm32mp1-pwr-regu on node pwr@50001000 initialized
+D/TC:0 0 probe_driver_node:443 element: stm32mp15_rstctrl on node rcc@50000000 initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 2 time(s)
+D/TC:0 0 i2c_compute_timing:455 I2C SDADEL(min/max): 18/519, SCLDEL(Min): 285
+D/TC:0 0 i2c_compute_timing:553 I2C TIMINGR (PRESC/SCLDEL/SDADEL): 1/8/1
+D/TC:0 0 i2c_compute_timing:555 I2C TIMINGR (SCLH/SCLL): 27/38
+D/TC:0 0 i2c_compute_timing:557 I2C TIMINGR: 0x10811b26
+D/TC:0 0 i2c_setup_timing:644 I2C Freq(400000Hz), Clk Source(64000000)
+D/TC:0 0 i2c_setup_timing:646 I2C Rise(185) and Fall(20) Time
+D/TC:0 0 i2c_setup_timing:648 I2C Analog Filter(On), DNF(0)
+D/TC:0 0 add_node_to_probe:641 element: stm32_pmic on node stpmic@33
+D/TC:0 0 probe_driver_node:443 element: stm32_i2c on node i2c@5c002000 initialized
+D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 3 time(s)
+D/TC:0 0 regulator_get_by_phandle:44 phandle 4 not found
+D/TC:0 0 probe_driver_node:449 element: stm32-cpu-opp on node cpu0-opp-table deferred 4 time(s)
+D/TC:0 0 register_periph:104 Register I2C4 as non-secure
+D/TC:0 0 initialize_pmic:724 PMIC version = 0x21
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck1: enable, 1200mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck2: enable, 1350mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck3: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul buck4: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo1: disable, 1800mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo2: disable, 1800mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo3: enable, 1700mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo4: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo5: enable, 2900mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul ldo6: disable, 1000mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul vref_ddr: enable, 3300mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul boost: disable, 5000mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul pwr_sw1: disable, 5000mV
+D/TC:0 0 stpmic1_dump_regulators:1137 PMIC regul pwr_sw2: disable, 5000mV
+D/TC:0 0 probe_driver_node:443 element: stm32_pmic on node stpmic@33 initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 3 time(s)
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 4 time(s)
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem part_number_otp = 1: 1 bit offset: 0, length: 8
+D/TC:0 0 get_opp_freqvolt_from_dt_subnode:1426 Invalid opp-supported-hw 0x2
+D/TC:0 0 get_opp_freqvolt_from_dt_subnode:1426 Invalid opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+D/TC:0 0 stm32_cpu_opp_get_dt_subnode:622 Found OPP 0 (650000kHz/1200mV) from DT
+D/TC:0 0 stm32_cpu_opp_is_supported:557 Not supported opp-supported-hw 0x2
+D/TC:0 0 probe_driver_node:443 element: stm32-cpu-opp on node cpu0-opp-table initialized
+D/TC:0 0 probe_driver_node:449 element: stm32-tamp on node tamp@5c00a000 deferred 5 time(s)
+D/TC:0 0 process_probe_list:590 Unresolved dependencies after 6 rounds, 6 deferred
+D/TC:0 0 probe_dt_drivers_early:774 Deferred drivers probing
+D/TC:0 0 print_probe_list:397 Probe list: 1 elements
+D/TC:0 0 print_probe_list:399 |- Driver stm32-tamp probes on node tamp@5c00a000
+D/TC:0 0 print_probe_list:403 `- Probe list end
+D/TC:0 0 print_probe_list:409 Failed list: 0 elements
+D/TC:0 0 print_probe_list:414 `- Failed list end
+D/TC:0 0 call_initcalls:40 level 3 platform_banner()
+I/TC: Platform stm32mp1: flavor PLATFORM_FLAVOR - DT stm32mp151a-stm32-computer-firmware-mx.dts
+I/TC: OP-TEE ST profile: system_services
+D/TC:0 0 call_initcalls:40 level 3 init_stm32mp1_calib()
+D/TC:0 0 stm32mp_start_clock_calib:406 HSI clock calibration not supported
+D/TC:0 0 stm32mp_start_clock_calib:408 CSI clock calibration not supported
+D/TC:0 0 call_initcalls:40 level 3 verify_pseudo_tas_conformance()
+D/TC:0 0 call_initcalls:40 level 3 mobj_init()
+D/TC:0 0 call_initcalls:40 level 3 default_mobj_init()
+D/TC:0 0 call_initcalls:40 level 3 tee_cryp_init()
+D/TC:0 0 call_initcalls:40 level 4 init_console_from_dt()
+D/TC:0 0 register_periph_iomem:203 IO for non-secure resource 0x40010000
+I/TC: DTB enables console (non-secure)
+D/TC:0 0 call_initcalls:40 level 5 stm32mp_syscfg_enable_io_compensation()
+D/TC:0 0 call_initcalls:40 level 5 init_pm_support()
+D/TC:0 0 call_initcalls:40 level 5 probe_dt_drivers()
+D/TC:0 0 stm32_tamp_parse_passive_conf:1608 Passive conf from dt: precharge=0, nb_sample=4, clk_div=16384
+D/TC:0 0 stm32_tamp_parse_active_conf:1823 Active conf from dt: no filter clk_div=1
+D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0xff00 to 0xd86218e4
+D/TC:0 0 gic_it_set_cpu_mask:352 cpu_mask: 0x300
+D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd86214e5
+D/TC:0 0 add_node_to_probe:641 element: stm32_tamp_nvram on node nvram@5c00a100
+D/TC:0 0 probe_driver_node:443 element: stm32-tamp on node tamp@5c00a000 initialized
+D/TC:0 0 probe_driver_node:443 element: stm32_tamp_nvram on node nvram@5c00a100 initialized
+D/TC:0 0 call_initcalls:40 level 6 init_stm32mp1_drivers()
+D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0x101ff01 to 0xd8621808
+D/TC:0 0 gic_it_set_cpu_mask:352 cpu_mask: 0x1010101
+D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd8621409
+D/TC:0 0 call_initcalls:40 level 6 stm32mp1_init_scmi_server()
+D/TC:0 0 call_initcalls:40 level 6 stm32mp1_init_final_shres()
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp IWDG1    ( 0): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp USART1   ( 1): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp SPI6     ( 2): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp I2C4     ( 3): non-secure    
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp RNG1     ( 4): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp HASH1    ( 5): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp CRYP1    ( 6): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp I2C6     ( 7): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp RTC      ( 8): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp MCU      ( 9): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp PLL3     (10): unregistered  
+D/TC:0 0 stm32mp1_init_final_shres:438 stm32mp MDMA     (11): unregistered  
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem cfg0_otp = 0: 0 bit offset: 0, length: 8
+D/TC:0 0 check_rcc_secure_configuration:347 RCC/PWR secure hardening: TZEN enable, MCKPROT enable
+D/TC:0 0 call_initcalls:40 level 6 stm32mp_syscfg_set_hslv()
+D/TC:0 0 stm32_bsec_find_otp_in_nvmem_layout:644 nvmem hw2_otp = 6: 18 bit offset: 0, length: 32
+D/TC:0 0 call_initcalls:40 level 6 init_low_power()
+D/TC:0 0 gic_it_set_cpu_mask:350 cpu_mask: writing 0xff00 to 0xd86218b0
+D/TC:0 0 gic_it_set_cpu_mask:352 cpu_mask: 0x300
+D/TC:0 0 gic_it_set_prio:361 prio: writing 0x1 to 0xd86214b1
+D/TC:0 0 call_initcalls:40 level 6 stm32mp1_init_lp_states()
+D/TC:0 0 stm32mp1_init_lp_states:230 Power configuration: shutdown to 6, suspend to 2
+D/TC:0 0 call_initcalls:40 level 6 regulator_core_init()
+D/TC:0 0 call_initcalls:40 level 7 stm32_rng_release()
+D/TC:0 0 call_initcalls:40 level 7 regulator_core_cleanup()
+D/TC:0 0 regulator_core_cleanup:916 disable usb33
+D/TC:0 0 regulator_core_cleanup:916 disable reg18
+D/TC:0 0 regulator_core_cleanup:916 disable reg11
+D/TC:0 0 call_initcalls:40 level 7 release_probe_lists()
+D/TC:0 0 call_finalcalls:59 level 1 release_external_dt()
+I/TC: Primary CPU switching to normal world boot
+D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
+D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
+D/TC:0 0 core_mmu_xlat_table_alloc:526 xlat tables used 4 / 10
+D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
+D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open device.pta
+D/TC:? 0 tee_ta_init_pseudo_ta_session:326 device.pta : 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f588 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open PTA-SCMI
+D/TC:? 0 tee_ta_init_pseudo_ta_session:326 PTA-SCMI : a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f480 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f378 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f378 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f378 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+serial_stm32 serial@40010000: pinctrl_select_state_full: uclass_get_device_by_phandle_id: err=-19
+optee optee: OP-TEE: revision 3.19 (8b208c98)
+
+
+U-Boot 2022.10-stm32mp-r2 (Aug 22 2024 - 00:20:20 +0200)
+
+D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open bsec.pta
+D/TC:? 0 tee_ta_init_pseudo_ta_session:326 bsec.pta : 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f378 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+CPU: STM32MP151AAC Rev.Z
+Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
+Board: stm32mp1 in trusted mode (st,stm32mp151a-stm32-computer-firmware-mx)
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+DRAM:  512 MiB
+optee optee: OP-TEE: revision 3.19 (8b208c98)
+D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
+D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+Clocks:
+- MPU : 650 MHz
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+- MCU : 208.878 MHz
+- AXI : 266.500 MHz
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+- PER : 24 MHz
+- DDR : 533 MHz
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+Core:  103 devices, 37 uclasses, devicetree: board
+NAND:  0 MiB
+MMC:   STM32 SD/MMC: 0
+Loading Environment from nowhere... OK
+In:    serial
+Out:   serial
+Err:   serial
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+invalid MAC address 0 in OTP 00:00:00:00:00:00
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+Net:   D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+
+Error: ethernet@5800a000 address not set.
+No ethernet found.
+
+7[r[999;999H[6n8D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+No EFI system partition
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+
+Error: ethernet@5800a000 address not set.
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+
+Error: ethernet@5800a000 address not set.
+Hit any key to stop autoboot:  1  0 
+Boot over usb0!
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 stm32_bsec_shadow_register:266 BSEC shadow warning: OTP locked
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 1a8342cc-81a5-4512-99fe-9e2b3e37d626
+D/TC:? 0 tee_ta_open_session:677 init session failed 0xffff0008
+DFU alt info setting: done
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:0   pwr_scv_handler:56 PWR service: write 0x40000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: write 0xd0000000 at offset 0xc
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+FlashLayout received, size = 736
+DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+D/TC:0   pwr_scv_handler:56 PWR service: write 0xb0000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: write 0x20000000 at offset 0xc
+partitions on mmc0: Writing GPT: success!
+done
+Erasing fip-b on mmc 0: done
+Erasing u-boot-env on mmc 0: done
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 stm32_bsec_shadow_register:266 BSEC shadow warning: OTP locked
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+DFU alt info setting: done
+D/TC:0   pwr_scv_handler:56 PWR service: write 0x40000000 at offset 0xc
+D/TC:0   pwr_scv_handler:56 PWR service: write 0xd0000000 at offset 0xc
+D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
+D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
+D/TC:? 0 tee_ta_close_session:470 Destroy session
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#Set to BOOT_BUS_WIDTH = 0x0, RESET = 0x0, BOOT_MODE = 0x0
+DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#Set to BOOT_BUS_WIDTH = 0x0, RESET = 0x0, BOOT_MODE = 0x0
+DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+########DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+##DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#############################################################################DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+################Phase=END
+DOWNLOAD ... OK
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+#
+UPLOAD ... done
+Ctrl+C to exit ...
+NOTICE:  CPU: STM32MP151AAC Rev.Z
+NOTICE:  Model: STMicroelectronics custom STM32CubeMX board - openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
+INFO:    PMIC version = 0x21
+INFO:    Reset reason (0x15):
+INFO:      Power-on Reset (rst_por)
+INFO:    FCONF: Reading TB_FW firmware configuration file from: 0x2ffe2000
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_io
+INFO:    FCONF: Reading firmware configuration information for: stm32mp_fuse
+INFO:    Using EMMC
+INFO:      Instance 2
+INFO:    Boot used partition fsbl1
+NOTICE:  BL2: v2.8-stm32mp1-r2.0(debug):a1d47acfd-dirty(a1d47acf)
+NOTICE:  BL2: Built : 16:50:09, Aug 20 2024
+INFO:    BL2: Doing platform setup
+INFO:    RAM: DDR3-DDR3L 16bits 533000kHz
+INFO:    Memory size = 0x20000000 (512 MB)
+INFO:    BL2: Loading image id 1
+INFO:    Loading image id=1 at address 0x2ffff000
+INFO:    Image id=1 loaded: 0x2ffff000 - 0x2ffff1ea
+INFO:    FCONF: Reading FW_CONFIG firmware configuration file from: 0x2ffff000
+INFO:    FCONF: Reading firmware configuration information for: dyn_cfg
+INFO:    FCONF: Reading firmware configuration information for: stm32mp1_firewall
+INFO:    BL2: Loading image id 4
+INFO:    Loading image id=4 at address 0xde000000
+INFO:    Image id=4 loaded: 0xde000000 - 0xde00001c
+INFO:    OPTEE ep=0xde000000
+INFO:    OPTEE header info:
+INFO:          magic=0x4554504f
+INFO:          version=0x2
+INFO:          arch=0x0
+INFO:          flags=0x0
+INFO:          nb_images=0x1
+INFO:    BL2: Loading image id 8
+INFO:    Loading image id=8 at address 0xde000000
+INFO:    Image id=8 loaded: 0xde000000 - 0xde03de08
+INFO:    BL2: Skip loading image id 9
+INFO:    BL2: Loading image id 2
+INFO:    Loading image id=2 at address 0xc0500000
+INFO:    Image id=2 loaded: 0xc0500000 - 0xc0513a48
+INFO:    BL2: Skip loading image id 16
+INFO:    BL2: Loading image id 5
+INFO:    Loading image id=5 at address 0xc0100000
+INFO:    Image id=5 loaded: 0xc0100000 - 0xc0214c94
+NOTICE:  BL2: Booting BL32
+INFO:    Entry point address = 0xde000000
+INFO:    SPSR = 0x1d3
+I/TC: Early console on UART#4
+D/TC:0   add_phys_mem:670 MCUSRAM_BASE type IO_SEC 0x30000000 size 0x00060000
+D/TC:0   add_phys_mem:670 RETRAM_BASE type IO_SEC 0x38000000 size 0x00010000
+D/TC:0   add_phys_mem:670 TEE_RAM_START type ROM_SEC 0xde000000 size 0x00200000
+D/TC:0   add_phys_mem:670 DDR_BASE type RAM_NSEC 0xc0000000 size 0x00001000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0xa0021000ul, CORE_MMU_PGDIR_SIZE) type IO_SEC 0xa0000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x54000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x54000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x48000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x48000000 size 0x01200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5c000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x5c000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5a000000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x5a000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50020000, CORE_MMU_PGDIR_SIZE) type IO_SEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:684 Physical mem map overlaps 0x50000000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x54000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x54000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5c000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x5c000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x5a000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x5a000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x50020000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x50000000 size 0x00200000
+D/TC:0   add_phys_mem:684 Physical mem map overlaps 0x50000000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x44000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x44000000 size 0x00200000
+D/TC:0   add_phys_mem:670 ROUNDDOWN(0x40000000, CORE_MMU_PGDIR_SIZE) type IO_NSEC 0x40000000 size 0x00200000
+D/TC:0   add_phys_mem:670 TA_RAM_START type TA_RAM 0xde200000 size 0x01e00000
+D/TC:0   add_phys_mem:670 VCORE_UNPG_RW_PA type TEE_RAM_RW 0xde03d000 size 0x001c3000
+D/TC:0   add_phys_mem:670 VCORE_UNPG_RX_PA type TEE_RAM_RX 0xde000000 size 0x0003d000
+D/TC:0   add_va_space:710 type RES_VASPACE size 0x00a00000
+D/TC:0   add_va_space:710 type SHM_VASPACE size 0x02000000
+D/TC:0   dump_mmap_table:837 type TA_RAM       va 0xd6400000..0xd81fffff pa 0xde200000..0xdfffffff size 0x01e00000 (pgdir)
+D/TC:0   dump_mmap_table:837 type ROM_SEC      va 0xd8400000..0xd85fffff pa 0xde000000..0xde1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd8600000..0xd87fffff pa 0xa0000000..0xa01fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd8800000..0xd89fffff pa 0x5c000000..0x5c1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd8a00000..0xd8bfffff pa 0x5c000000..0x5c1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd8c00000..0xd8dfffff pa 0x5a000000..0x5a1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd8e00000..0xd8ffffff pa 0x5a000000..0x5a1fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd9000000..0xd91fffff pa 0x54000000..0x541fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd9200000..0xd93fffff pa 0x54000000..0x541fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xd9400000..0xd95fffff pa 0x50000000..0x501fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd9600000..0xd97fffff pa 0x50000000..0x501fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xd9800000..0xda9fffff pa 0x48000000..0x491fffff size 0x01200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xdac00000..0xdadfffff pa 0x44000000..0x441fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type IO_NSEC      va 0xdae00000..0xdaffffff pa 0x40000000..0x401fffff size 0x00200000 (pgdir)
+D/TC:0   dump_mmap_table:837 type RES_VASPACE  va 0xdb000000..0xdb9fffff pa 0x00000000..0x009fffff size 0x00a00000 (pgdir)
+D/TC:0   dump_mmap_table:837 type SHM_VASPACE  va 0xdbc00000..0xddbfffff pa 0x00000000..0x01ffffff size 0x02000000 (pgdir)
+D/TC:0   dump_mmap_table:837 type RAM_NSEC     va 0xddf8f000..0xddf8ffff pa 0xc0000000..0xc0000fff size 0x00001000 (smallpg)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xddf90000..0xddf9ffff pa 0x38000000..0x3800ffff size 0x00010000 (smallpg)
+D/TC:0   dump_mmap_table:837 type IO_SEC       va 0xddfa0000..0xddffffff pa 0x30000000..0x3005ffff size 0x00060000 (smallpg)
+D/TC:0   dump_mmap_table:837 type TEE_RAM_RX   va 0xde000000..0xde03cfff pa 0xde000000..0xde03cfff size 0x0003d000 (smallpg)
+D/TC:0   dump_mmap_table:837 type TEE_RAM_RW   va 0xde03d000..0xde1fffff pa 0xde03d000..0xde1fffff size 0x001c3000 (smallpg)
+D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 1 / 10
+D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 2 / 10
+D/TC:0   core_mmu_xlat_table_alloc:526 xlat tables used 3 / 10
+I/TC: 
+I/TC: Embedded DTB found
+D/TC:0 0 core_mmu_set_discovered_nsec_ddr:485 Non-secure memory range [0xc0000000 0xde000000]
+I/TC: OP-TEE version: 8b208c982-dev (gcc version 12.3.0 (GCC)) #7 Wed Aug 21 22:20:11 UTC 2024 arm
 I/TC: WARNING: This OP-TEE configuration might be insecure!
 I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
 I/TC: Primary CPU initializing
@@ -419,10 +1118,11 @@ D/TC:? 0 tee_ta_close_session:470 Destroy session
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde04f378 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
-optee optee: OP-TEE: revision 3.19 (a1d47acf)
+serial_stm32 serial@40010000: pinctrl_select_state_full: uclass_get_device_by_phandle_id: err=-19
+optee optee: OP-TEE: revision 3.19 (8b208c98)
 
 
-U-Boot 2022.10-stm32mp-r2 (Aug 20 2024 - 21:02:01 +0200)
+U-Boot 2022.10-stm32mp-r2 (Aug 22 2024 - 00:20:20 +0200)
 
 D/TC:? 0 tee_ta_init_pseudo_ta_session:296 Lookup pseudo TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
 D/TC:? 0 tee_ta_init_pseudo_ta_session:309 Open bsec.pta
@@ -442,7 +1142,7 @@ D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6
 D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
 DRAM:  512 MiB
-optee optee: OP-TEE: revision 3.19 (a1d47acf)
+optee optee: OP-TEE: revision 3.19 (8b208c98)
 D/TC:0   tee_entry_exchange_capabilities:101 Asynchronous notifications are disabled
 D/TC:0   tee_entry_exchange_capabilities:110 Dynamic shared memory is enabled
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 7011a688-ddde-4053-a5a9-7b3c4ddf13b8
@@ -487,8 +1187,7 @@ D/TC:? 0 tee_ta_close_session:470 Destroy session
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
 D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
-Core:  104 devices, 38 uclasses, devicetree: board
-smcwd watchdog: Init failed
+Core:  103 devices, 37 uclasses, devicetree: board
 NAND:  0 MiB
 MMC:   STM32 SD/MMC: 0
 Loading Environment from MMC... D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA a8cfe406-d4f5-4a2e-9f8d-a25dc754c099
@@ -622,8 +1321,7 @@ Enter choice: 1:	OpenSTLinux
 Retrieving file: /uImage
 Retrieving file: /st-image-resize-initrd
 append: root=PARTUUID=e91c4e10-16e6-4c0e-bd0e-77becf4a3582 rootwait rw   console=ttySTM0,115200
-Retrieving file: /stm32mp151a-stm32-computer-firmware-mx.dtb/stm32mp151a-stm32-computer-firmware-mx.dtb
-** File not found /stm32mp151a-stm32-computer-firmware-mx.dtb/stm32mp151a-stm32-computer-firmware-mx.dtb **
+Retrieving file: /stm32mp151a-stm32-computer-firmware-mx.dtb
 ## Booting kernel from Legacy Image at c2000000 ...
    Image Name:   Linux-6.1.82
    Created:      2024-08-20  18:10:24 UTC
@@ -632,11 +1330,11 @@ Retrieving file: /stm32mp151a-stm32-computer-firmware-mx.dtb/stm32mp151a-stm32-c
    Load Address: c2000040
    Entry Point:  c2000040
    Verifying Checksum ... OK
-## Flattened Device Tree blob at dbae33c0
-   Booting using the fdt blob at 0xdbae33c0
+## Flattened Device Tree blob at c6000000
+   Booting using the fdt blob at 0xc6000000
    XIP Kernel Image
    Loading Ramdisk to cfa0e000, end cffff92a ... OK
-   Loading Device Tree to cf9f7000, end cfa0dabf ... OK
+   Loading Device Tree to cf9f7000, end cfa0d4a9 ... OK
 D/TC:? 0 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
 D/TC:? 0 tee_ta_close_session:451 csess 0xde04f270 id 1
 D/TC:? 0 tee_ta_close_session:470 Destroy session
@@ -713,7 +1411,7 @@ D/TC:? 1 tee_ta_close_session:470 Destroy session
 [    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
 [    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
 [    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
-[    0.000000] Memory: 394356K/524288K available (12288K kernel code, 1393K rwdata, 3816K rodata, 1024K init, 223K bss, 64396K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] Memory: 394360K/524288K available (12288K kernel code, 1393K rwdata, 3816K rodata, 1024K init, 223K bss, 64392K reserved, 65536K cma-reserved, 0K highmem)
 [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
 [    0.000000] trace event string verifier disabled
 [    0.000000] rcu: Preemptible hierarchical RCU implementation.
@@ -727,318 +1425,320 @@ D/TC:? 1 tee_ta_close_session:470 Destroy session
 [    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
 [    0.000001] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
 [    0.000021] Switching to timer-based delay loop, resolution 41ns
-[    0.001195] Console: colour dummy device 80x30
-[    0.001256] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
-[    0.001279] CPU: Testing write buffer coherency: ok
-[    0.001347] pid_max: default: 32768 minimum: 301
-[    0.001641] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
-[    0.001669] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
-[    0.004424] cblist_init_generic: Setting adjustable number of callback queues.
-[    0.004445] cblist_init_generic: Setting shift to 0 and lim to 1.
-[    0.004635] cblist_init_generic: Setting adjustable number of callback queues.
-[    0.004647] cblist_init_generic: Setting shift to 0 and lim to 1.
-[    0.004853] Setting up static identity map for 0xc0100000 - 0xc0100060
+[    0.001186] Console: colour dummy device 80x30
+[    0.001245] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.001268] CPU: Testing write buffer coherency: ok
+[    0.001336] pid_max: default: 32768 minimum: 301
+[    0.001627] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.001655] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.004421] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.004441] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.004627] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.004638] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.004848] Setting up static identity map for 0xc0100000 - 0xc0100060
 [    0.005053] rcu: Hierarchical SRCU implementation.
-[    0.005062] rcu: 	Max phase no-delay instances is 1000.
-[    0.006214] EFI services will not be available.
-[    0.006956] devtmpfs: initialized
-[    0.030050] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
-[    0.030394] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
-[    0.030426] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
-[    0.033775] pinctrl core: initialized pinctrl subsystem
-[    0.035284] DMI not present or invalid.
-[    0.036592] NET: Registered PF_NETLINK/PF_ROUTE protocol family
-[    0.039320] DMA: preallocated 256 KiB pool for atomic coherent allocations
-[    0.040971] thermal_sys: Registered thermal governor 'step_wise'
-[    0.041090] cpuidle: using governor menu
-[    0.041385] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
-[    0.041403] hw-breakpoint: maximum watchpoint size is 8 bytes.
-[    0.041797] Serial: AMBA PL011 UART driver
-[    0.045025] stm32-pm-domain pm_domain: domain core-ret-power-domain registered
-[    0.045063] stm32-pm-domain pm_domain: subdomain core-power-domain registered
-[    0.045075] stm32-pm-domain pm_domain: domains probed
-[    0.072326] platform 5a001000.display-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
-[    0.075310] platform 4000b000.audio-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
-[    0.083744] platform connector: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
-[    0.100852] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
-[    0.119655] SCSI subsystem initialized
-[    0.120092] libata version 3.00 loaded.
-[    0.120531] usbcore: registered new interface driver usbfs
-[    0.120606] usbcore: registered new interface driver hub
-[    0.120671] usbcore: registered new device driver usb
-[    0.121166] pps_core: LinuxPPS API ver. 1 registered
-[    0.121179] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
-[    0.121210] PTP clock support registered
-[    0.121479] EDAC MC: Ver: 3.0.0
-[    0.133731] Driver 'scmi-optee' was unable to register with bus_type 'tee' because the bus was not initialized.
-[    0.136687] clocksource: Switched to clocksource arch_sys_counter
-[    0.159639] NET: Registered PF_INET protocol family
-[    0.160015] IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
-[    0.162448] tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
-[    0.162499] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
-[    0.162525] TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
-[    0.162585] TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
-[    0.162677] TCP: Hash tables configured (established 4096 bind 4096)
-[    0.162815] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
-[    0.162853] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
-[    0.163170] NET: Registered PF_UNIX/PF_LOCAL protocol family
-[    0.167022] RPC: Registered named UNIX socket transport module.
-[    0.167044] RPC: Registered udp transport module.
-[    0.167050] RPC: Registered tcp transport module.
-[    0.167056] RPC: Registered tcp NFSv4.1 backchannel transport module.
-[    0.167593] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
-[    0.169662] Initialise system trusted keyrings
-[    0.170272] workingset: timestamp_bits=14 max_order=17 bucket_order=3
-[    0.177179] Trying to unpack rootfs image as initramfs...
-[    0.201837] squashfs: version 4.0 (2009/01/31) Phillip Lougher
-[    0.227459] NFS: Registering the id_resolver key type
-[    0.227626] Key type id_resolver registered
-[    0.227636] Key type id_legacy registered
-[    0.227811] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
-[    0.227824] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
-[    0.228000] ntfs: driver 2.1.32 [Flags: R/O].
-[    0.228309] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
-[    0.229066] fuse: init (API version 7.37)
-[    0.230156] NET: Registered PF_ALG protocol family
-[    0.230181] Key type asymmetric registered
-[    0.230191] Asymmetric key parser 'x509' registered
-[    0.230462] bounce: pool size: 64 pages
-[    0.230651] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
-[    0.230666] io scheduler mq-deadline registered
-[    0.230676] io scheduler kyber registered
-[    0.259900] STM32 USART driver initialized
-[    0.319792] brd: module loaded
-[    0.349239] loop: module loaded
-[    0.377616] CAN device driver interface
-[    0.379816] pegasus: Pegasus/Pegasus II USB Ethernet driver
-[    0.379904] usbcore: registered new interface driver pegasus
-[    0.379980] usbcore: registered new interface driver asix
-[    0.380036] usbcore: registered new interface driver ax88179_178a
-[    0.380091] usbcore: registered new interface driver cdc_ether
-[    0.380163] usbcore: registered new interface driver smsc75xx
-[    0.380248] usbcore: registered new interface driver smsc95xx
-[    0.380304] usbcore: registered new interface driver net1080
-[    0.380360] usbcore: registered new interface driver cdc_subset
-[    0.380414] usbcore: registered new interface driver zaurus
-[    0.380541] usbcore: registered new interface driver cdc_ncm
-[    0.382965] usbcore: registered new interface driver usb-storage
-[    0.383224] usbcore: registered new device driver onboard-usb-hub
-[    0.407125] i2c_dev: i2c /dev entries driver
-[    0.410091] arm_smc_wdt: probe of watchdog failed with error -5
-[    0.412462] sdhci: Secure Digital Host Controller Interface driver
-[    0.412479] sdhci: Copyright(c) Pierre Ossman
-[    0.412485] Synopsys Designware Multimedia Card Interface Driver
-[    0.412912] sdhci-pltfm: SDHCI platform and OF driver helper
-[    0.413803] ledtrig-cpu: registered to indicate activity on CPUs
-[    0.414327] usbcore: registered new interface driver usbhid
-[    0.414341] usbhid: USB HID core driver
-[    0.438490] optee: probing for conduit method.
-[    0.438529] optee: revision 3.19 (a1d47acf)
-[    0.477379] optee: dynamic shared memory is enabled
-[    0.521246] optee: initialized driver
-[    0.522574] NET: Registered PF_PACKET protocol family
-[    0.522598] can: controller area network core
-[    0.522894] NET: Registered PF_CAN protocol family
-[    0.522911] can: raw protocol
-[    0.522926] can: broadcast manager protocol
-[    0.522941] can: netlink gateway - max_hops=1
-[    0.547130] Key type dns_resolver registered
-[    0.547279] ThumbEE CPU extension supported.
-[    0.547304] Registering SWP/SWPB emulation handler
-[    0.547922] registered taskstats version 1
-[    0.547977] Loading compiled-in X.509 certificates
-[    1.518927] Freeing initrd memory: 6088K
-[    1.556987] Loaded X.509 cert 'Build time autogenerated kernel key: dc187794c8aef9363d5d46762595ec876c29812e'
-[    1.685959] arm-scmi firmware:scmi: Enabled polling mode TX channel - prot_id:16
-[    1.686233] arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
-[    1.686357] arm-scmi firmware:scmi: SCMI Protocol v2.0 'ST:' Firmware version 0x0
-[    1.736559] sysfs: cannot create duplicate filename '/devices/platform/cpufreq-dt'
-[    1.736585] CPU: 0 PID: 40 Comm: kworker/u2:4 Not tainted 6.1.82 #1
-[    1.736607] Hardware name: STM32 (Device Tree Support)
-[    1.736617] Workqueue: events_unbound deferred_probe_work_func
-[    1.736675]  unwind_backtrace from show_stack+0x10/0x14
-[    1.736713]  show_stack from dump_stack_lvl+0x24/0x2c
-[    1.736749]  dump_stack_lvl from sysfs_warn_dup+0x58/0x64
-[    1.736794]  sysfs_warn_dup from sysfs_create_dir_ns+0xf4/0x104
-[    1.736834]  sysfs_create_dir_ns from create_dir+0x1c/0x150
-[    1.736876]  create_dir from kobject_add_internal+0xac/0x1f4
-[    1.736916]  kobject_add_internal from kobject_add+0x60/0xc4
-[    1.736954]  kobject_add from device_add+0xcc/0x6d4
-[    1.736994]  device_add from platform_device_add+0x100/0x244
-[    1.737027]  platform_device_add from platform_device_register_full+0x108/0x158
-[    1.737058]  platform_device_register_full from stm32_cpufreq_probe+0xfc/0x19c
-[    1.737097]  stm32_cpufreq_probe from platform_probe+0x5c/0xb0
-[    1.737128]  platform_probe from really_probe+0xe0/0x40c
-[    1.737155]  really_probe from __driver_probe_device+0x9c/0x130
-[    1.737177]  __driver_probe_device from driver_probe_device+0x30/0xc0
-[    1.737200]  driver_probe_device from __device_attach_driver+0xa8/0x120
-[    1.737224]  __device_attach_driver from bus_for_each_drv+0x88/0xd4
-[    1.737256]  bus_for_each_drv from __device_attach+0xa8/0x1ec
-[    1.737286]  __device_attach from bus_probe_device+0x84/0x8c
-[    1.737317]  bus_probe_device from deferred_probe_work_func+0x8c/0xd4
-[    1.737357]  deferred_probe_work_func from process_one_work+0x1d0/0x4c8
-[    1.737398]  process_one_work from worker_thread+0x21c/0x580
-[    1.737431]  worker_thread from kthread+0xd8/0xf4
-[    1.737461]  kthread from ret_from_fork+0x14/0x28
-[    1.737486] Exception stack(0xde9b5fb0 to 0xde9b5ff8)
-[    1.737500] 5fa0:                                     00000000 00000000 00000000 00000000
-[    1.737516] 5fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[    1.737531] 5fe0: 00000000 00000000 00000000 00000000 00000013 00000000
-[    1.746708] kobject_add_internal failed for cpufreq-dt with -EEXIST, don't try to register things with the same name in the same directory.
-[    1.769179] random: crng init done
-[    1.830457] stm32-dma 48000000.dma-controller: STM32 DMA driver registered
-[    1.834244] 8<--- cut here ---
-[    1.834261] Unhandled fault: imprecise external abort (0x1c06) at 0xdeb0c588
-[    1.834276] [deb0c588] *pgd=c348a811, *pte=c349224f, *ppte=c349201f
-[    1.834316] Internal error: : 1c06 [#1] PREEMPT ARM
-[    1.834328] Modules linked in:
-[    1.834340] CPU: 0 PID: 9 Comm: kworker/u2:0 Not tainted 6.1.82 #1
-[    1.834354] Hardware name: STM32 (Device Tree Support)
-[    1.834364] Workqueue: eval_map_wq eval_map_work_func
-[    1.834392] PC is at update_event_printk+0xd0/0x1c0
-[    1.834420] LR is at update_event_printk+0x8c/0x1c0
-[    1.834440] pc : [<c01e289c>]    lr : [<c01e2858>]    psr: 20000053
-[    1.834450] sp : de831ee8  ip : 0000002c  fp : 0000014c
-[    1.834458] r10: 000002d4  r9 : c13b9ddc  r8 : 0000001a
-[    1.834467] r7 : 00000001  r6 : c123eda0  r5 : c0e4b56c  r4 : c139ff03
-[    1.834477] r3 : 0000004c  r2 : 00000000  r1 : c139feeb  r0 : 00000001
-[    1.834487] Flags: nzCv  IRQs on  FIQs off  Mode SVC_32  ISA ARM  Segment none
-[    1.834500] Control: 10c5387d  Table: c2830059  DAC: 00000051
-[    1.834507] Register r0 information: non-paged memory
-[    1.834521] Register r1 information: non-slab/vmalloc memory
-[    1.834533] Register r2 information: NULL pointer
-[    1.834544] Register r3 information: non-paged memory
-[    1.834554] Register r4 information: non-slab/vmalloc memory
-[    1.834564] Register r5 information: non-slab/vmalloc memory
-[    1.834575] Register r6 information: non-slab/vmalloc memory
-[    1.834585] Register r7 information: non-paged memory
-[    1.834595] Register r8 information: non-paged memory
-[    1.834605] Register r9 information: non-slab/vmalloc memory
-[    1.834616] Register r10 information: non-paged memory
-[    1.834626] Register r11 information: non-paged memory
-[    1.834636] Register r12 information: non-paged memory
-[    1.834646] Process kworker/u2:0 (pid: 9, stack limit = 0x(ptrval))
-[    1.834657] Stack: (0xde831ee8 to 0xde832000)
-[    1.834674] 1ee0:                   00000152 c124cae4 c13b9d90 c0d32eb4 c13513f0 c01e6c00
-[    1.834690] 1f00: de831f24 c124c598 c1a3d900 c123c7fc c1803780 c142e560 c180f200 00000000
-[    1.834707] 1f20: c18cc200 c180f205 c1805400 c013dcb4 c1805444 c18cc200 c1805400 c1803780
-[    1.834723] 1f40: c1805400 c1803798 c1805418 c13468e0 c18cc200 00000088 c1805400 c013dff0
-[    1.834739] 1f60: de811ec0 c13468e0 60000053 c1896940 c1896e80 c18cc200 de811ec0 c013dfac
-[    1.834755] 1f80: c1803780 00000000 00000000 c01450f0 c1896940 c0145018 00000000 00000000
-[    1.834771] 1fa0: 00000000 00000000 00000000 c010014c 00000000 00000000 00000000 00000000
-[    1.834786] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[    1.834801] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000 00000000 00000000
-[    1.834820]  update_event_printk from trace_event_eval_update+0xb4/0xf8
-[    1.834858]  trace_event_eval_update from process_one_work+0x1d0/0x4c8
-[    1.834891]  process_one_work from worker_thread+0x44/0x580
-[    1.834923]  worker_thread from kthread+0xd8/0xf4
-[    1.834953]  kthread from ret_from_fork+0x14/0x28
-[    1.834976] Exception stack(0xde831fb0 to 0xde831ff8)
-[    1.834989] 1fa0:                                     00000000 00000000 00000000 00000000
-[    1.835005] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-[    1.835018] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000
-[    1.835036] Code: e1a01006 ebffffab e2504000 0a00002d (e5d43001) 
-[    1.835046] ---[ end trace 0000000000000000 ]---
-[    1.835054] note: kworker/u2:0[9] exited with irqs disabled
-[    1.835197] stm32-mdma 58000000.dma-controller: STM32 MDMA driver registered
-[    1.842595] /soc/interrupt-controller@5000d000: bank0
-[    1.842631] /soc/interrupt-controller@5000d000: bank1
-[    1.842649] /soc/interrupt-controller@5000d000: bank2
-[    1.848408] stm32_rtc 5c004000.rtc: registered as rtc0
-[    1.848458] stm32_rtc 5c004000.rtc: setting system clock to 2000-01-01T00:00:12 UTC (946684812)
-[    1.848735] stm32_rtc 5c004000.rtc: Date/Time must be initialized
-[    1.848748] stm32_rtc 5c004000.rtc: registered rev:1.2
-[    1.852339] stm32-rproc 10000000.m4: wdg irq registered
-[    1.852613] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
-[    1.852631] remoteproc remoteproc0: cannot get vq0 mbox
-[    1.852642] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
-[    1.852652] remoteproc remoteproc0: cannot get vq1 mbox
-[    1.852662] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
-[    1.852671] remoteproc remoteproc0: cannot get shutdown mbox
-[    1.852681] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
-[    1.852691] remoteproc remoteproc0: cannot get detach mbox
-[    1.852832] remoteproc remoteproc0: m4 is available
-[    1.856496] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOA bank added
-[    1.857299] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOB bank added
-[    1.857953] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOC bank added
-[    1.858571] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOD bank added
-[    1.859191] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOE bank added
-[    1.859851] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOF bank added
-[    1.860609] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOG bank added
-[    1.861259] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOH bank added
-[    1.861911] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOI bank added
-[    1.861956] stm32mp157-pinctrl soc:pinctrl@50002000: Pinctrl STM32 initialized
-[    1.863686] stm32mp157-pinctrl soc:pinctrl@54004000: error -ENOENT: failed to get clk
-[    1.863712] stm32mp157-pinctrl: probe of soc:pinctrl@54004000 failed with error -2
-[    1.866256] stm32-usart 40010000.serial: interrupt mode for rx (no dma)
-[    1.866278] stm32-usart 40010000.serial: interrupt mode for tx (no dma)
-[    1.866308] 40010000.serial: ttySTM0 at MMIO 0x40010000 (irq = 33, base_baud = 4000000) is a stm32-usart
-[    3.733518] printk: console [ttySTM0] enabled
-[    3.743563] stm32-dwmac 5800a000.ethernet: IRQ eth_lpi not found
+[    0.005063] rcu: 	Max phase no-delay instances is 1000.
+[    0.006213] EFI services will not be available.
+[    0.006949] devtmpfs: initialized
+[    0.029582] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.030000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.030034] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+[    0.033403] pinctrl core: initialized pinctrl subsystem
+[    0.034896] DMI not present or invalid.
+[    0.036210] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.038927] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.040595] thermal_sys: Registered thermal governor 'step_wise'
+[    0.040729] cpuidle: using governor menu
+[    0.041035] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.041052] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.041423] Serial: AMBA PL011 UART driver
+[    0.044422] stm32-pm-domain pm_domain: domain core-ret-power-domain registered
+[    0.044459] stm32-pm-domain pm_domain: subdomain core-power-domain registered
+[    0.044471] stm32-pm-domain pm_domain: domains probed
+[    0.071486] platform 5a001000.display-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    0.074424] platform 4000b000.audio-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    0.082664] platform connector: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    0.099807] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.118708] SCSI subsystem initialized
+[    0.119144] libata version 3.00 loaded.
+[    0.119590] usbcore: registered new interface driver usbfs
+[    0.119666] usbcore: registered new interface driver hub
+[    0.119729] usbcore: registered new device driver usb
+[    0.120216] pps_core: LinuxPPS API ver. 1 registered
+[    0.120228] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.120260] PTP clock support registered
+[    0.120533] EDAC MC: Ver: 3.0.0
+[    0.122953] Driver 'scmi-optee' was unable to register with bus_type 'tee' because the bus was not initialized.
+[    0.134591] clocksource: Switched to clocksource arch_sys_counter
+[    0.159257] NET: Registered PF_INET protocol family
+[    0.159632] IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.162065] tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.162117] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.162143] TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+[    0.162203] TCP bind hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.162295] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.162435] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.162472] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.162779] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.163582] RPC: Registered named UNIX socket transport module.
+[    0.163600] RPC: Registered udp transport module.
+[    0.163607] RPC: Registered tcp transport module.
+[    0.163612] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.164151] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[    0.166588] Initialise system trusted keyrings
+[    0.174752] workingset: timestamp_bits=14 max_order=17 bucket_order=3
+[    0.185080] Trying to unpack rootfs image as initramfs...
+[    0.216369] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.217556] NFS: Registering the id_resolver key type
+[    0.217651] Key type id_resolver registered
+[    0.217659] Key type id_legacy registered
+[    0.217827] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    0.217839] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    0.218007] ntfs: driver 2.1.32 [Flags: R/O].
+[    0.218301] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.219026] fuse: init (API version 7.37)
+[    0.220154] NET: Registered PF_ALG protocol family
+[    0.220178] Key type asymmetric registered
+[    0.220188] Asymmetric key parser 'x509' registered
+[    0.220453] bounce: pool size: 64 pages
+[    0.220639] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    0.220652] io scheduler mq-deadline registered
+[    0.220662] io scheduler kyber registered
+[    0.250478] STM32 USART driver initialized
+[    0.311601] brd: module loaded
+[    0.339137] loop: module loaded
+[    0.367427] CAN device driver interface
+[    0.369554] pegasus: Pegasus/Pegasus II USB Ethernet driver
+[    0.369642] usbcore: registered new interface driver pegasus
+[    0.369717] usbcore: registered new interface driver asix
+[    0.369773] usbcore: registered new interface driver ax88179_178a
+[    0.369829] usbcore: registered new interface driver cdc_ether
+[    0.369901] usbcore: registered new interface driver smsc75xx
+[    0.369984] usbcore: registered new interface driver smsc95xx
+[    0.370041] usbcore: registered new interface driver net1080
+[    0.370096] usbcore: registered new interface driver cdc_subset
+[    0.370149] usbcore: registered new interface driver zaurus
+[    0.370274] usbcore: registered new interface driver cdc_ncm
+[    0.372577] usbcore: registered new interface driver usb-storage
+[    0.372814] usbcore: registered new device driver onboard-usb-hub
+[    0.396525] i2c_dev: i2c /dev entries driver
+[    0.399718] cpu cpu0: _of_add_opp_table_v2: no supported OPPs
+[    0.399794] cpu cpu0: OPP table can't be empty
+[    0.401458] sdhci: Secure Digital Host Controller Interface driver
+[    0.401472] sdhci: Copyright(c) Pierre Ossman
+[    0.401478] Synopsys Designware Multimedia Card Interface Driver
+[    0.401886] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.402742] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.403238] usbcore: registered new interface driver usbhid
+[    0.403251] usbhid: USB HID core driver
+[    0.427576] optee: probing for conduit method.
+[    0.427615] optee: revision 3.19 (8b208c98)
+[    0.465311] optee: dynamic shared memory is enabled
+[    0.519150] optee: initialized driver
+[    0.520469] NET: Registered PF_PACKET protocol family
+[    0.520493] can: controller area network core
+[    0.520783] NET: Registered PF_CAN protocol family
+[    0.520801] can: raw protocol
+[    0.520815] can: broadcast manager protocol
+[    0.520830] can: netlink gateway - max_hops=1
+[    0.534928] Key type dns_resolver registered
+[    0.535069] ThumbEE CPU extension supported.
+[    0.535093] Registering SWP/SWPB emulation handler
+[    0.535701] registered taskstats version 1
+[    0.535757] Loading compiled-in X.509 certificates
+[    1.503174] Freeing initrd memory: 6088K
+[    1.534254] Loaded X.509 cert 'Build time autogenerated kernel key: dc187794c8aef9363d5d46762595ec876c29812e'
+[    1.673887] arm-scmi firmware:scmi: Enabled polling mode TX channel - prot_id:16
+[    1.674147] arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
+[    1.674299] arm-scmi firmware:scmi: SCMI Protocol v2.0 'ST:' Firmware version 0x0
+[    1.724431] sysfs: cannot create duplicate filename '/devices/platform/cpufreq-dt'
+[    1.724458] CPU: 0 PID: 33 Comm: kworker/u2:2 Not tainted 6.1.82 #1
+[    1.724480] Hardware name: STM32 (Device Tree Support)
+[    1.724492] Workqueue: events_unbound deferred_probe_work_func
+[    1.724549]  unwind_backtrace from show_stack+0x10/0x14
+[    1.724585]  show_stack from dump_stack_lvl+0x24/0x2c
+[    1.724623]  dump_stack_lvl from sysfs_warn_dup+0x58/0x64
+[    1.724666]  sysfs_warn_dup from sysfs_create_dir_ns+0xf4/0x104
+[    1.724706]  sysfs_create_dir_ns from create_dir+0x1c/0x150
+[    1.724749]  create_dir from kobject_add_internal+0xac/0x1f4
+[    1.724788]  kobject_add_internal from kobject_add+0x60/0xc4
+[    1.724828]  kobject_add from device_add+0xcc/0x6d4
+[    1.724867]  device_add from platform_device_add+0x100/0x244
+[    1.724901]  platform_device_add from platform_device_register_full+0x108/0x158
+[    1.724932]  platform_device_register_full from stm32_cpufreq_probe+0xfc/0x19c
+[    1.724971]  stm32_cpufreq_probe from platform_probe+0x5c/0xb0
+[    1.725003]  platform_probe from really_probe+0xe0/0x40c
+[    1.725029]  really_probe from __driver_probe_device+0x9c/0x130
+[    1.725051]  __driver_probe_device from driver_probe_device+0x30/0xc0
+[    1.725074]  driver_probe_device from __device_attach_driver+0xa8/0x120
+[    1.725098]  __device_attach_driver from bus_for_each_drv+0x88/0xd4
+[    1.725130]  bus_for_each_drv from __device_attach+0xa8/0x1ec
+[    1.725160]  __device_attach from bus_probe_device+0x84/0x8c
+[    1.725191]  bus_probe_device from deferred_probe_work_func+0x8c/0xd4
+[    1.725231]  deferred_probe_work_func from process_one_work+0x1d0/0x4c8
+[    1.725271]  process_one_work from worker_thread+0x21c/0x580
+[    1.725302]  worker_thread from kthread+0xd8/0xf4
+[    1.725331]  kthread from ret_from_fork+0x14/0x28
+[    1.725354] Exception stack(0xde8b1fb0 to 0xde8b1ff8)
+[    1.725368] 1fa0:                                     00000000 00000000 00000000 00000000
+[    1.725384] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    1.725397] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+[    1.734602] kobject_add_internal failed for cpufreq-dt with -EEXIST, don't try to register things with the same name in the same directory.
+[    1.758445] random: crng init done
+[    1.814660] stm32-dma 48000000.dma-controller: STM32 DMA driver registered
+[    1.818463] 8<--- cut here ---
+[    1.818479] Unhandled fault: imprecise external abort (0x1c06) at 0xdeb10588
+[    1.818493] [deb10588] *pgd=c3488811, *pte=c349024f, *ppte=c349001f
+[    1.818533] Internal error: : 1c06 [#1] PREEMPT ARM
+[    1.818545] Modules linked in:
+[    1.818557] CPU: 0 PID: 9 Comm: kworker/u2:0 Not tainted 6.1.82 #1
+[    1.818572] Hardware name: STM32 (Device Tree Support)
+[    1.818581] Workqueue: eval_map_wq eval_map_work_func
+[    1.818610] PC is at update_event_printk+0x14c/0x1c0
+[    1.818636] LR is at update_event_printk+0x8c/0x1c0
+[    1.818657] pc : [<c01e2918>]    lr : [<c01e2858>]    psr: a0000053
+[    1.818666] sp : de831ee8  ip : 00000045  fp : 0000014c
+[    1.818675] r10: 000002d4  r9 : c13b9e28  r8 : 00000010
+[    1.818683] r7 : 00000000  r6 : c123f1f0  r5 : c0e4b56c  r4 : c13a08ed
+[    1.818694] r3 : 0000004e  r2 : c13a08ec  r1 : c13a08ed  r0 : ffffffff
+[    1.818705] Flags: NzCv  IRQs on  FIQs off  Mode SVC_32  ISA ARM  Segment none
+[    1.818717] Control: 10c5387d  Table: c2848059  DAC: 00000051
+[    1.818724] Register r0 information: non-paged memory
+[    1.818738] Register r1 information: non-slab/vmalloc memory
+[    1.818751] Register r2 information: non-slab/vmalloc memory
+[    1.818762] Register r3 information: non-paged memory
+[    1.818772] Register r4 information: non-slab/vmalloc memory
+[    1.818783] Register r5 information: non-slab/vmalloc memory
+[    1.818793] Register r6 information: non-slab/vmalloc memory
+[    1.818804] Register r7 information: NULL pointer
+[    1.818814] Register r8 information: zero-size pointer
+[    1.818824] Register r9 information: non-slab/vmalloc memory
+[    1.818835] Register r10 information: non-paged memory
+[    1.818845] Register r11 information: non-paged memory
+[    1.818854] Register r12 information: non-paged memory
+[    1.818865] Process kworker/u2:0 (pid: 9, stack limit = 0x(ptrval))
+[    1.818876] Stack: (0xde831ee8 to 0xde832000)
+[    1.818893] 1ee0:                   000001ae c124cc54 c13b9ddc c0d32eb4 c13513f0 c01e6c00
+[    1.818909] 1f00: de831f24 c124c598 c1a38880 c123c7fc c1803780 c142e560 c180f200 00000000
+[    1.818926] 1f20: c18cc200 c180f205 c1805400 c013dcb4 c1805444 c18cc200 c1805400 c1803780
+[    1.818942] 1f40: c1805400 c1803798 c1805418 c13468e0 c18cc200 00000088 c1805400 c013dff0
+[    1.818958] 1f60: de811ec0 c13468e0 60000053 c1896940 c1896e80 c18cc200 de811ec0 c013dfac
+[    1.818974] 1f80: c1803780 00000000 00000000 c01450f0 c1896940 c0145018 00000000 00000000
+[    1.818990] 1fa0: 00000000 00000000 00000000 c010014c 00000000 00000000 00000000 00000000
+[    1.819005] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    1.819020] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000 00000000 00000000
+[    1.819039]  update_event_printk from trace_event_eval_update+0xb4/0xf8
+[    1.819078]  trace_event_eval_update from process_one_work+0x1d0/0x4c8
+[    1.819112]  process_one_work from worker_thread+0x44/0x580
+[    1.819144]  worker_thread from kthread+0xd8/0xf4
+[    1.819174]  kthread from ret_from_fork+0x14/0x28
+[    1.819197] Exception stack(0xde831fb0 to 0xde831ff8)
+[    1.819210] 1fa0:                                     00000000 00000000 00000000 00000000
+[    1.819226] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    1.819239] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+[    1.819257] Code: e3530000 08bd81f0 e1a02004 e5f4c001 (e7d5300c) 
+[    1.819267] ---[ end trace 0000000000000000 ]---
+[    1.819275] note: kworker/u2:0[9] exited with irqs disabled
+[    1.819420] stm32-mdma 58000000.dma-controller: STM32 MDMA driver registered
+[    1.826490] /soc/interrupt-controller@5000d000: bank0
+[    1.826525] /soc/interrupt-controller@5000d000: bank1
+[    1.826543] /soc/interrupt-controller@5000d000: bank2
+[    1.832135] stm32_rtc 5c004000.rtc: registered as rtc0
+[    1.832184] stm32_rtc 5c004000.rtc: setting system clock to 2000-01-01T00:00:12 UTC (946684812)
+[    1.832455] stm32_rtc 5c004000.rtc: Date/Time must be initialized
+[    1.832472] stm32_rtc 5c004000.rtc: registered rev:1.2
+[    1.835998] stm32-rproc 10000000.m4: wdg irq registered
+[    1.836284] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.836303] remoteproc remoteproc0: cannot get vq0 mbox
+[    1.836314] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.836324] remoteproc remoteproc0: cannot get vq1 mbox
+[    1.836334] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.836344] remoteproc remoteproc0: cannot get shutdown mbox
+[    1.836354] stm32-rproc 10000000.m4: mbox_request_channel_byname() requires an "mbox-names" property
+[    1.836363] remoteproc remoteproc0: cannot get detach mbox
+[    1.836505] remoteproc remoteproc0: m4 is available
+[    1.839953] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOA bank added
+[    1.840622] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOB bank added
+[    1.841257] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOC bank added
+[    1.841846] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOD bank added
+[    1.842570] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOE bank added
+[    1.843228] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOF bank added
+[    1.843980] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOG bank added
+[    1.844753] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOH bank added
+[    1.845437] stm32mp157-pinctrl soc:pinctrl@50002000: GPIOI bank added
+[    1.845486] stm32mp157-pinctrl soc:pinctrl@50002000: Pinctrl STM32 initialized
+[    1.847216] stm32mp157-pinctrl soc:pinctrl@54004000: error -ENOENT: failed to get clk
+[    1.847240] stm32mp157-pinctrl: probe of soc:pinctrl@54004000 failed with error -2
+[    1.849770] stm32-usart 40010000.serial: interrupt mode for rx (no dma)
+[    1.849791] stm32-usart 40010000.serial: interrupt mode for tx (no dma)
+[    1.849822] 40010000.serial: ttySTM0 at MMIO 0x40010000 (irq = 33, base_baud = 4000000) is a stm32-usart
+[    3.721219] printk: console [ttySTM0] enabled
+[    3.731328] stm32-dwmac 5800a000.ethernet: IRQ eth_lpi not found
 D/TC:? 1 tee_ta_init_session_with_context:549 Re-open TA 94cf71ad-80e6-40b5-a7c6-3dc501eb2803
 D/TC:? 1 tee_ta_close_session:451 csess 0xde04f070 id 2
 D/TC:? 1 tee_ta_close_session:470 Destroy session
-[    3.768461] stm32-dwmac 5800a000.ethernet: User ID: 0x40, Synopsys ID: 0x42
-[    3.774063] stm32-dwmac 5800a000.ethernet: 	DWMAC4/5
-[    3.779101] stm32-dwmac 5800a000.ethernet: DMA HW capability register supported
-[    3.786281] stm32-dwmac 5800a000.ethernet: RX Checksum Offload Engine supported
-[    3.793690] stm32-dwmac 5800a000.ethernet: TX Checksum insertion supported
-[    3.800578] stm32-dwmac 5800a000.ethernet: Wake-Up On Lan supported
-[    3.807004] stm32-dwmac 5800a000.ethernet: TSO supported
-[    3.812067] stm32-dwmac 5800a000.ethernet: Enable RX Mitigation via HW Watchdog Timer
-[    3.820037] stm32-dwmac 5800a000.ethernet: device MAC address 0a:ca:ab:2d:d6:aa
-[    3.827337] stm32-dwmac 5800a000.ethernet: Enabled L3L4 Flow TC (entries=2)
-[    3.834214] stm32-dwmac 5800a000.ethernet: Enabled RFS Flow TC (entries=10)
-[    3.841207] stm32-dwmac 5800a000.ethernet: TSO feature enabled
-[    3.847176] stm32-dwmac 5800a000.ethernet: Using 32/32 bits DMA host/device width
-[    3.888195] stm32f7-i2c 40012000.i2c: using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
-[    3.896197] stm32f7-i2c 40012000.i2c: STM32F7 I2C-0 bus adapter
-[    3.925228] platform 4000b000.audio-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
-[    3.935866] platform 5a001000.display-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
-[    3.947857] i2c 1-0039: Fixed dependency cycle(s) with /soc/etzpc@5c007000/audio-controller@4000b000
-[    3.957090] i2c 1-0039: Fixed dependency cycle(s) with /soc/display-controller@5a001000
-[    3.966628] stpmic1 1-0033: PMIC Chip Version: 0x21
+[    3.756267] stm32-dwmac 5800a000.ethernet: User ID: 0x40, Synopsys ID: 0x42
+[    3.761872] stm32-dwmac 5800a000.ethernet: 	DWMAC4/5
+[    3.766913] stm32-dwmac 5800a000.ethernet: DMA HW capability register supported
+[    3.774093] stm32-dwmac 5800a000.ethernet: RX Checksum Offload Engine supported
+[    3.781486] stm32-dwmac 5800a000.ethernet: TX Checksum insertion supported
+[    3.788387] stm32-dwmac 5800a000.ethernet: Wake-Up On Lan supported
+[    3.794724] stm32-dwmac 5800a000.ethernet: TSO supported
+[    3.799887] stm32-dwmac 5800a000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    3.807857] stm32-dwmac 5800a000.ethernet: device MAC address ae:cd:0c:3c:fa:da
+[    3.815061] stm32-dwmac 5800a000.ethernet: Enabled L3L4 Flow TC (entries=2)
+[    3.822038] stm32-dwmac 5800a000.ethernet: Enabled RFS Flow TC (entries=10)
+[    3.829030] stm32-dwmac 5800a000.ethernet: TSO feature enabled
+[    3.834809] stm32-dwmac 5800a000.ethernet: Using 32/32 bits DMA host/device width
+[    3.876005] stm32f7-i2c 40012000.i2c: using dma0chan0 (tx) and dma0chan1 (rx) for DMA transfers
+[    3.883992] stm32f7-i2c 40012000.i2c: STM32F7 I2C-0 bus adapter
+[    3.913021] platform 4000b000.audio-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    3.923658] platform 5a001000.display-controller: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/hdmi-transmitter@39
+[    3.935632] i2c 1-0039: Fixed dependency cycle(s) with /soc/etzpc@5c007000/audio-controller@4000b000
+[    3.944876] i2c 1-0039: Fixed dependency cycle(s) with /soc/display-controller@5a001000
+[    3.954401] stpmic1 1-0033: PMIC Chip Version: 0x21
 D/TC:0   pwr_scv_handler:56 PWR service: write 0x100 at offset 0x20
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x1 at offset 0x28
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x1 at offset 0x20
-[    3.990017] platform 5c002000.i2c:stpmic@33:regulators: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/stpmic@33/regulators/buck4
-[    4.001829] platform 5c002000.i2c:stpmic@33:regulators: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/stpmic@33/regulators/buck2
-[    4.046500] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
-[    4.055498] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
-[    4.065728] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
-[    4.075949] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
-[    4.086616] stm32f7-i2c 5c002000.i2c: STM32F7 I2C-1 bus adapter
-[    4.105246] mmci-pl18x 58007000.mmc: mmc0: PL180 manf 53 rev2 at 0x58007000 irq 45,0 (pio)
-[    4.119272] input: pmic_onkey as /devices/platform/soc/5c007000.etzpc/5c002000.i2c/i2c-1/1-0033/5c002000.i2c:stpmic@33:onkey/input/input0
+[    3.977774] platform 5c002000.i2c:stpmic@33:regulators: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/stpmic@33/regulators/buck4
+[    3.989586] platform 5c002000.i2c:stpmic@33:regulators: Fixed dependency cycle(s) with /soc/etzpc@5c007000/i2c@5c002000/stpmic@33/regulators/buck2
+[    4.034258] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    4.043273] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    4.053505] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    4.063726] stpmic1-regulator 5c002000.i2c:stpmic@33:regulators: Failed to create device link (0x180) with 1-0033
+[    4.074407] stm32f7-i2c 5c002000.i2c: STM32F7 I2C-1 bus adapter
+[    4.091449] mmci-pl18x 58007000.mmc: mmc0: PL180 manf 53 rev2 at 0x58007000 irq 45,0 (pio)
+[    4.104562] i2c i2c-1: Added multiplexed i2c bus 2
+[    4.110762] input: pmic_onkey as /devices/platform/soc/5c007000.etzpc/5c002000.i2c/i2c-1/1-0033/5c002000.i2c:stpmic@33:onkey/input/input0
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x40000000 at offset 0xc
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x10000000 at offset 0xc
 D/TC:0   pwr_scv_handler:56 PWR service: clear 0x10000000 at offset 0xc
 D/TC:0   pwr_scv_handler:56 PWR service: clear 0x40000000 at offset 0xc
-[    4.160391] stm32-usbphyc 5a006000.usbphyc: registered rev:1.0
-[    4.171764] dwc2 49000000.usb-otg: supply vusb_d not found, using dummy regulator
-[    4.178335] dwc2 49000000.usb-otg: supply vusb_a not found, using dummy regulator
+[    4.151879] stm32-usbphyc 5a006000.usbphyc: registered rev:1.0
+[    4.164077] [drm] Initialized stm 1.0.0 20170330 for 5a001000.display-controller on minor 0
+[    4.172909] dwc2 49000000.usb-otg: supply vusb_d not found, using dummy regulator
+[    4.179380] dwc2 49000000.usb-otg: supply vusb_a not found, using dummy regulator
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x40000000 at offset 0xc
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x10000000 at offset 0xc
-[    4.201731] dwc2 49000000.usb-otg: EPs: 9, dedicated fifos, 952 entries in SPRAM
+[    4.202023] dwc2 49000000.usb-otg: EPs: 9, dedicated fifos, 952 entries in SPRAM
 D/TC:0   pwr_scv_handler:56 PWR service: clear 0x10000000 at offset 0xc
 D/TC:0   pwr_scv_handler:56 PWR service: clear 0x40000000 at offset 0xc
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x40000000 at offset 0xc
 D/TC:0   pwr_scv_handler:56 PWR service: set 0x10000000 at offset 0xc
-[    4.249722] ohci-platform 5800c000.usb: Generic Platform OHCI controller
-[    4.255089] ehci-platform 5800d000.usb: EHCI Host Controller
-[    4.260921] ohci-platform 5800c000.usb: new USB bus registered, assigned bus number 1
-[    4.268562] ehci-platform 5800d000.usb: new USB bus registered, assigned bus number 2
-[    4.276807] ohci-platform 5800c000.usb: irq 51, io mem 0x5800c000
-[    4.282908] ehci-platform 5800d000.usb: irq 50, io mem 0x5800d000
-[    4.295549] mmc0: new DDR MMC card at address 0001
-[    4.300216] mmcblk0: mmc0:0001 008GB0 7.28 GiB 
-[    4.314320]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9
-[    4.317684] ehci-platform 5800d000.usb: USB 2.0 started, EHCI 1.00
-[    4.327119] mmcblk0boot0: mmc0:0001 008GB0 4.00 MiB 
-[    4.332995] hub 2-0:1.0: USB hub found
-[    4.335415] hub 2-0:1.0: 2 ports detected
-[    4.341068] mmcblk0boot1: mmc0:0001 008GB0 4.00 MiB 
-[    4.355877] mmcblk0rpmb: mmc0:0001 008GB0 4.00 MiB, chardev (244:0)
-[    4.370830] hub 1-0:1.0: USB hub found
-[    4.373247] hub 1-0:1.0: 2 ports detected
-[   14.569904] platform 5a001000.display-controller: deferred probe pending
+[    4.241950] ohci-platform 5800c000.usb: Generic Platform OHCI controller
+[    4.247661] ohci-platform 5800c000.usb: new USB bus registered, assigned bus number 1
+[    4.255209] ehci-platform 5800d000.usb: EHCI Host Controller
+[    4.260801] ehci-platform 5800d000.usb: new USB bus registered, assigned bus number 2
+[    4.269000] ohci-platform 5800c000.usb: irq 53, io mem 0x5800c000
+[    4.275225] ehci-platform 5800d000.usb: irq 52, io mem 0x5800d000
+[    4.287751] mmc0: new DDR MMC card at address 0001
+[    4.292389] mmcblk0: mmc0:0001 008GB0 7.28 GiB 
+[    4.304665] ehci-platform 5800d000.usb: USB 2.0 started, EHCI 1.00
+[    4.310916] hub 2-0:1.0: USB hub found
+[    4.313642] hub 2-0:1.0: 2 ports detected
+[    4.317706]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9
+[    4.327652] mmcblk0boot0: mmc0:0001 008GB0 4.00 MiB 
+[    4.333975] mmcblk0boot1: mmc0:0001 008GB0 4.00 MiB 
+[    4.340047] mmcblk0rpmb: mmc0:0001 008GB0 4.00 MiB, chardev (244:0)
+[    4.350948] hub 1-0:1.0: USB hub found
+[    4.353356] hub 1-0:1.0: 2 ports detected

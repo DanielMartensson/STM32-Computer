@@ -1,9 +1,14 @@
-22:44:57 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
-make stm32mp151a-stm32-computer-firmware-mx.dtb 
+00:27:55 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
+make uImage LOADADDR=0xC2000040 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/build/../../FIP_artifacts
 + case "$command" in
-+ exec make stm32mp151a-stm32-computer-firmware-mx.dtb
++ exec make uImage LOADADDR=0xC2000040
+  GEN     Makefile
+  CALL    /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/scripts/checksyscalls.sh
+  Kernel: arch/arm/boot/Image is ready
+  Kernel: arch/arm/boot/zImage is ready
+  Kernel: arch/arm/boot/uImage is ready
 
-22:44:58 Build Finished. 0 errors, 0 warnings. (took 1s.494ms)
+00:29:07 Build Finished. 0 errors, 0 warnings. (took 1m:11s.775ms)
 
