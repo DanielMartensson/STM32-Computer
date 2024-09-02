@@ -247,7 +247,8 @@
 	pmic: stpmic@33 {
 		compatible = "st,stpmic1";
 		reg = <0x33>;
-		interrupts-extended = <&gpioa 0 IRQ_TYPE_EDGE_FALLING>;
+		/* It becomes lots of debug messages when gpioa 0 was replaced with exti 55 */
+		interrupts-extended = <&exti 55 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-controller;
 		#interrupt-cells = <2>;
 		status = "okay";
@@ -265,8 +266,7 @@
 			ldo5-supply = <&vin>;
 			ldo6-supply = <&v3v3>;
 			vref_ddr-supply = <&vin>;
-			boost-supply = <&vin>;
-			/*
+			/*boost-supply = <&vin>;
 			pwr_sw1-supply = <&bst_out>;
 			pwr_sw2-supply = <&bst_out>;
 			 */
@@ -734,4 +734,3 @@
 	st,no-lsfs-sc;
 };
 /* USER CODE END addons */
-
