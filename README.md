@@ -66,6 +66,35 @@ I have been using JLCPCB as the manufacturer for this.
 
 ![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic6.png?raw=true)
 
+# Prompt
+
+This is the prompt over `UART`.
+
+```sh
+root@stm32mp1:~# ls
+README-CHECK-GPU
+root@stm32mp1:~# cd 
+root@stm32mp1:~# ls
+README-CHECK-GPU
+root@stm32mp1:~# cd ~
+root@stm32mp1:~# ls
+README-CHECK-GPU
+root@stm32mp1:~# cd ~/
+root@stm32mp1:~# ls
+README-CHECK-GPU
+root@stm32mp1:~# cd /home
+root@stm32mp1:/home# ls
+root  weston
+root@stm32mp1:/home# cd weston
+root@stm32mp1:/home/weston# mkdir test
+root@stm32mp1:/home/weston# ls
+test  typescript  weston-previous.log  weston.log
+root@stm32mp1:/home/weston# rm -r test
+root@stm32mp1:/home/weston# ls
+typescript  weston-previous.log  weston.log
+root@stm32mp1:/home/weston# 
+```
+
 # How to get Linux working on this custom board
 
 Updates are comming....
