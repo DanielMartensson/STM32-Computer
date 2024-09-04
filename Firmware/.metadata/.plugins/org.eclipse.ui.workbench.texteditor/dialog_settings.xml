@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="destroy"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="DIS"/>
-			<item value="rcc"/>
-			<item value="ether"/>
-			<item value="sdmmc"/>
-			<item value="emmc"/>
-			<item value="vdev0buffer"/>
-			<item value="con_usbotg_hs_ep"/>
-			<item value="vddcore"/>
-			<item value="stm32mp1_set_opp_khz"/>
-			<item value="pll"/>
-			<item value="opp_khz"/>
-			<item value="clk_set_rate_no_lock"/>
-			<item value="clk_set_rate"/>
-			<item value="_set_opp_clk_rate"/>
-			<item value="DMSG"/>
+			<item value="destroy"/>
+			<item value="initcall_blacklisted"/>
+			<item value="blacklisted_initcalls"/>
+			<item value="initcall_t"/>
+			<item value="do_one_initcall"/>
+			<item value="initcall_from_entry"/>
+			<item value="initcall_levels"/>
+			<item value="trace_initcall_start"/>
+			<item value="trace_initcall_finish"/>
+			<item value="do_trace_initcall_finish"/>
+			<item value="do_trace_initcall_start"/>
+			<item value="dereference_function_descriptor"/>
+			<item value="sprint_symbol_no_offset"/>
+			<item value="__start___param"/>
+			<item value="initcall_entry_t"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>

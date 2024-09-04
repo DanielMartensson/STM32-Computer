@@ -98,23 +98,38 @@ static inline long __sched
 __wait_for_common(struct completion *x,
 		  long (*action)(long), long timeout, int state)
 {
+	//pr_info("completation.c: might_sleep();");
 	might_sleep();
+	//pr_info("completation.c: might_sleep(); OK");
 
 	complete_acquire(x);
+	//pr_info("completation.c: complete_acquire(x);");
+
 
 	raw_spin_lock_irq(&x->wait.lock);
+	//pr_info("completation.c: raw_spin_lock_irq(&x->wait.lock);");
+
 	timeout = do_wait_for_common(x, action, timeout, state);
+	//pr_info("completation.c: timeout = do_wait_for_common(x, action, timeout, state);");
+
 	raw_spin_unlock_irq(&x->wait.lock);
+	//pr_info("completation.c: raw_spin_unlock_irq(&x->wait.lock);");
+
 
 	complete_release(x);
+	//pr_info("completation.c: complete_release(x);");
 
+	//pr_info("completation.c: return timeout: %lu", timeout);
 	return timeout;
 }
 
 static long __sched
 wait_for_common(struct completion *x, long timeout, int state)
 {
-	return __wait_for_common(x, schedule_timeout, timeout, state);
+	//pr_info("completion.c: return __wait_for_common(x, schedule_timeout, timeout, state);");
+	timeout =  __wait_for_common(x, schedule_timeout, timeout, state);
+	//pr_info("completion.c: Got the timeout: %lu", timeout);
+	return timeout;
 }
 
 static long __sched
@@ -135,7 +150,10 @@ wait_for_common_io(struct completion *x, long timeout, int state)
  */
 void __sched wait_for_completion(struct completion *x)
 {
+	//pr_info("completation.c: void __sched wait_for_completion(struct completion *x)");
 	wait_for_common(x, MAX_SCHEDULE_TIMEOUT, TASK_UNINTERRUPTIBLE);
+	//pr_info("completation.c: void __sched wait_for_completion(struct completion *x) OK: %lu", timeout);
+	//pr_info("Returning back to workqueue.c!");
 }
 EXPORT_SYMBOL(wait_for_completion);
 

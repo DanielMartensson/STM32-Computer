@@ -4667,6 +4667,7 @@
  pmic: stpmic@33 {
   compatible = "st,stpmic1";
   reg = <0x33>;
+
   interrupts-extended = <&gpioa 0 2>;
   interrupt-controller;
   #interrupt-cells = <2>;
@@ -4685,7 +4686,6 @@
    ldo5-supply = <&vin>;
    ldo6-supply = <&v3v3>;
    vref_ddr-supply = <&vin>;
-   boost-supply = <&vin>;
 
 
 
@@ -5079,7 +5079,7 @@
  pinctrl-0 = <&uart4_pins_mx>;
  /delete-property/dmas;
  /delete-property/dma-names;
- reg = <0x40010000 0x400>;
+
  status = "okay";
 };
 # 713 "core/arch/arm/dts/stm32mp151a-stm32-computer-firmware-mx.dts"

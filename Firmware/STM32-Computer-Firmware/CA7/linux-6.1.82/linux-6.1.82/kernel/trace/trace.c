@@ -9855,8 +9855,10 @@ subsys_initcall(trace_eval_init);
 static int __init trace_eval_sync(void)
 {
 	/* Make sure the eval map updates are finished */
-	if (eval_map_wq)
-		destroy_workqueue(eval_map_wq);
+	if (eval_map_wq){
+		//destroy_workqueue(eval_map_wq);
+
+	}
 	return 0;
 }
 

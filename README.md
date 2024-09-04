@@ -14,8 +14,9 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 * 2024-05-26: Done with the fine impedance matched routing
 * 2024-06-06: In production at JLCPCB - 42 dollar for 5 pcs
 * 2024-06-18: Received the package
-* 2024-07-07: Received the components
+* 2024-07-07: Received the components - about 52 dollars
 * 2024-07-18: Done with soldering
+* 2024-09-04: First sucessfull boot with Linux
 
 # Features
 
@@ -65,4 +66,59 @@ I have been using JLCPCB as the manufacturer for this.
 
 ![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic6.png?raw=true)
 
+# How to get Linux working on this custom board
+
+Updates are comming....
+
+# Errata
+
+In order to make sure that the `OpenSTLinux` will work on `STM32MP151XXAC` processor, one must do the following
+
+## Change the `kernel/trace/trace.c`
+
+One huge problem inside `OpenSTLinux` is that the workqueue `eval_map_wq` contains important initial calls for devices such as `STPMIC`.
+When that workqueue is destoryed, the linux kernel halts, without any errors. I belive that it destroys the communication to the `STPMIC`. Not sure, becuase it's very difficullt to debug this thing using `UART`.
+
+But to solve that issue, then comment `destroy_workqueue(eval_map_wq);`. It's not a standard way to do this. The problem lies on STMicroelectronics to make sure that the workqueue do not destroy important devices, which now, it currently doing.
+
+```c
+static int __init trace_eval_sync(void)
+{
+	/* Make sure the eval map updates are finished */
+	if (eval_map_wq){
+		/*destroy_workqueue(eval_map_wq); */
+
+	}
+	return 0;
+}
+```
+
+## Change the `drivers/cpufreq/cpufreq-dt-platdev.c`
+
+This is a common issue. It's not a bug or so, it's just that the developers of `STMicroelectronics` has forgotten to adapt their `OpenSTLinux` code for the `STM32MP151` series, and only for `STM32MP157` and `STM32MP153`. But make the code suitable for the `STM32MP151` series by adding support for it. Add this line `{ .compatible = "st,stm32mp151", },` so your device trees will work with the linux kernel.
+
+```c
+/*
+ * Machines for which the cpufreq device is *not* created, mostly used for
+ * platforms using "operating-points-v2" property.
+ */
+static const struct of_device_id blocklist[] __initconst = {
+	{ .compatible = "allwinner,sun50i-h6", },
+	...
+	..
+	.
+    { .compatible = "st,stih407", },
+	{ .compatible = "st,stih410", },
+	{ .compatible = "st,stih418", },
+	{ .compatible = "st,stm32mp157", },
+	{ .compatible = "st,stm32mp151", },
+	...
+	..
+	.
+	{ .compatible = "qcom,msm8974", },
+	{ .compatible = "qcom,msm8960", },
+
+	{ }
+};
+```
 

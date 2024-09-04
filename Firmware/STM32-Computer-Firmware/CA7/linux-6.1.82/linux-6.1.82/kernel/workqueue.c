@@ -2810,14 +2810,21 @@ void __flush_workqueue(struct workqueue_struct *wq)
 		return;
 
 	lock_map_acquire(&wq->lockdep_map);
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): lock_map_acquire(&wq->lockdep_map);");
 	lock_map_release(&wq->lockdep_map);
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): lock_map_release(&wq->lockdep_map);");
+
 
 	mutex_lock(&wq->mutex);
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): mutex_lock(&wq->mutex);");
+
 
 	/*
 	 * Start-to-wait phase
 	 */
 	next_color = work_next_color(wq->work_color);
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): next_color = work_next_color(wq->work_color);");
+
 
 	if (next_color != wq->flush_color) {
 		/*
@@ -2826,6 +2833,8 @@ void __flush_workqueue(struct workqueue_struct *wq)
 		 * by one.
 		 */
 		WARN_ON_ONCE(!list_empty(&wq->flusher_overflow));
+		//pr_info("void __flush_workqueue(struct workqueue_struct *wq): WARN_ON_ONCE(!list_empty(&wq->flusher_overflow));");
+
 		this_flusher.flush_color = wq->work_color;
 		wq->work_color = next_color;
 
@@ -2845,7 +2854,11 @@ void __flush_workqueue(struct workqueue_struct *wq)
 		} else {
 			/* wait in queue */
 			WARN_ON_ONCE(wq->flush_color == this_flusher.flush_color);
+			//pr_info("void __flush_workqueue(struct workqueue_struct *wq): WARN_ON_ONCE(wq->flush_color == this_flusher.flush_color);");
+
 			list_add_tail(&this_flusher.list, &wq->flusher_queue);
+			//pr_info("void __flush_workqueue(struct workqueue_struct *wq): list_add_tail(&this_flusher.list, &wq->flusher_queue);");
+
 			flush_workqueue_prep_pwqs(wq, -1, wq->work_color);
 		}
 	} else {
@@ -2855,13 +2868,23 @@ void __flush_workqueue(struct workqueue_struct *wq)
 		 * flush_color and transfer to flusher_queue.
 		 */
 		list_add_tail(&this_flusher.list, &wq->flusher_overflow);
+		//pr_info("void __flush_workqueue(struct workqueue_struct *wq): list_add_tail(&this_flusher.list, &wq->flusher_overflow);");
+
 	}
 
 	check_flush_dependency(wq, NULL);
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): check_flush_dependency(wq, NULL);");
+
 
 	mutex_unlock(&wq->mutex);
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): mutex_unlock(&wq->mutex);");
 
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): wait_for_completion(&this_flusher.done); calling");
+	//pr_info("workqueue.c: wait_for_completion(&this_flusher.done); Calling....");
 	wait_for_completion(&this_flusher.done);
+	//pr_info("workqueue.c: wait_for_completion(&this_flusher.done); OK");
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): wait_for_completion(&this_flusher.done); OK!");
+
 
 	/*
 	 * Wake-up-and-cascade phase
@@ -2873,6 +2896,8 @@ void __flush_workqueue(struct workqueue_struct *wq)
 		return;
 
 	mutex_lock(&wq->mutex);
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): mutex_lock(&wq->mutex);");
+
 
 	/* we might have raced, check again with mutex held */
 	if (wq->first_flusher != &this_flusher)
@@ -2883,15 +2908,21 @@ void __flush_workqueue(struct workqueue_struct *wq)
 	WARN_ON_ONCE(!list_empty(&this_flusher.list));
 	WARN_ON_ONCE(wq->flush_color != this_flusher.flush_color);
 
+	//pr_info("void __flush_workqueue(struct workqueue_struct *wq): Enetering the while loop");
 	while (true) {
 		struct wq_flusher *next, *tmp;
+
 
 		/* complete all the flushers sharing the current flush color */
 		list_for_each_entry_safe(next, tmp, &wq->flusher_queue, list) {
 			if (next->flush_color != wq->flush_color)
 				break;
 			list_del_init(&next->list);
+			//pr_info("void __flush_workqueue(struct workqueue_struct *wq): list_del_init(&next->list);");
+
 			complete(&next->done);
+			//pr_info("void __flush_workqueue(struct workqueue_struct *wq): complete(&next->done);");
+
 		}
 
 		WARN_ON_ONCE(!list_empty(&wq->flusher_overflow) &&
@@ -2902,6 +2933,8 @@ void __flush_workqueue(struct workqueue_struct *wq)
 
 		/* one color has been freed, handle overflow queue */
 		if (!list_empty(&wq->flusher_overflow)) {
+			//pr_info("void __flush_workqueue(struct workqueue_struct *wq): if (!list_empty(&wq->flusher_overflow)) {");
+
 			/*
 			 * Assign the same color to all overflowed
 			 * flushers, advance work_color and append to
@@ -2970,36 +3003,53 @@ void drain_workqueue(struct workqueue_struct *wq)
 	 * Use __WQ_DRAINING so that queue doesn't have to check nr_drainers.
 	 */
 	mutex_lock(&wq->mutex);
+	//pr_info("void drain_workqueue(struct workqueue_struct *wq): mutex_lock(&wq->mutex);");
 	if (!wq->nr_drainers++)
 		wq->flags |= __WQ_DRAINING;
 	mutex_unlock(&wq->mutex);
+	//pr_info("void drain_workqueue(struct workqueue_struct *wq): mutex_unlock(&wq->mutex);");
+
 reflush:
+	//pr_info("workqueue.c: __flush_workqueue(wq) Calling.... workqueue %s : %s()", wq->name, __func__);
 	__flush_workqueue(wq);
+	//pr_info("workqueue.c: __flush_workqueue(wp); OK");
+	//pr_info("void drain_workqueue(struct workqueue_struct *wq): __flush_workqueue(wq);");
+
 
 	mutex_lock(&wq->mutex);
+	//pr_info("void drain_workqueue(struct workqueue_struct *wq): mutex_lock(&wq->mutex);");
 
 	for_each_pwq(pwq, wq) {
 		bool drained;
 
 		raw_spin_lock_irq(&pwq->pool->lock);
+		//pr_info("void drain_workqueue(struct workqueue_struct *wq): raw_spin_lock_irq(&pwq->pool->lock);");
+
 		drained = !pwq->nr_active && list_empty(&pwq->inactive_works);
+		//pr_info("void drain_workqueue(struct workqueue_struct *wq): drained = !pwq->nr_active && list_empty(&pwq->inactive_works);");
+
 		raw_spin_unlock_irq(&pwq->pool->lock);
+		//pr_info("void drain_workqueue(struct workqueue_struct *wq): raw_spin_unlock_irq(&pwq->pool->lock);");
+
 
 		if (drained)
 			continue;
 
-		if (++flush_cnt == 10 ||
-		    (flush_cnt % 100 == 0 && flush_cnt <= 1000))
-			pr_warn("workqueue %s: %s() isn't complete after %u tries\n",
-				wq->name, __func__, flush_cnt);
+		if (++flush_cnt == 10 || (flush_cnt % 100 == 0 && flush_cnt <= 1000)){
+			pr_warn("workqueue %s: %s() isn't complete after %u tries\n", wq->name, __func__, flush_cnt);
+			//pr_info("workqueue %s: %s() isn't complete after %u tries\n", wq->name, __func__, flush_cnt);
+		}
 
 		mutex_unlock(&wq->mutex);
+		//pr_info("void drain_workqueue(struct workqueue_struct *wq): mutex_unlock(&wq->mutex);");
+
 		goto reflush;
 	}
 
 	if (!--wq->nr_drainers)
 		wq->flags &= ~__WQ_DRAINING;
 	mutex_unlock(&wq->mutex);
+	//pr_info("void drain_workqueue(struct workqueue_struct *wq): mutex_unlock(&wq->mutex);");
 }
 EXPORT_SYMBOL_GPL(drain_workqueue);
 
@@ -4417,10 +4467,16 @@ void destroy_workqueue(struct workqueue_struct *wq)
 	 * Remove it from sysfs first so that sanity check failure doesn't
 	 * lead to sysfs name conflicts.
 	 */
+	//pr_info("workqueue_sysfs_unregister(wq); - Calling....");
 	workqueue_sysfs_unregister(wq);
+	//pr_info("workqueue_sysfs_unregister(wq); OK");
+
 
 	/* drain it before proceeding with destruction */
+	//pr_info("workqueue.c: drain_workqueue(wq); Calling...");
 	drain_workqueue(wq);
+	//pr_info("workqueue.c: drain_workqueue(wq); OK");
+
 
 	/* kill rescuer, if sanity checks fail, leave it w/o rescuer */
 	if (wq->rescuer) {
@@ -4428,12 +4484,17 @@ void destroy_workqueue(struct workqueue_struct *wq)
 
 		/* this prevents new queueing */
 		raw_spin_lock_irq(&wq_mayday_lock);
+		//pr_info("raw_spin_lock_irq(&wq_mayday_lock);");
+
 		wq->rescuer = NULL;
 		raw_spin_unlock_irq(&wq_mayday_lock);
+		//pr_info("raw_spin_unlock_irq(&wq_mayday_lock);");
 
 		/* rescuer will empty maydays list before exiting */
 		kthread_stop(rescuer->task);
+		//pr_info("kthread_stop(rescuer->task);");
 		kfree(rescuer);
+		//pr_info("kfree(rescuer);");
 	}
 
 	/*
@@ -4441,37 +4502,56 @@ void destroy_workqueue(struct workqueue_struct *wq)
 	 * in-flight operations which may do put_pwq().
 	 */
 	mutex_lock(&wq_pool_mutex);
+	//pr_info("mutex_lock(&wq_pool_mutex);");
 	mutex_lock(&wq->mutex);
+	//pr_info("mutex_lock(&wq->mutex);");
 	for_each_pwq(pwq, wq) {
 		raw_spin_lock_irq(&pwq->pool->lock);
+		//pr_info("raw_spin_lock_irq(&pwq->pool->lock);");
 		if (WARN_ON(pwq_busy(pwq))) {
 			pr_warn("%s: %s has the following busy pwq\n",
 				__func__, wq->name);
+			//pr_info("%s: %s has the following busy pwq\n", __func__, wq->name);
 			show_pwq(pwq);
+			//pr_info("show_pwq(pwq);");
 			raw_spin_unlock_irq(&pwq->pool->lock);
+			//pr_info("raw_spin_unlock_irq(&pwq->pool->lock);");
 			mutex_unlock(&wq->mutex);
+			//pr_info("mutex_unlock(&wq->mutex);");
 			mutex_unlock(&wq_pool_mutex);
+			//pr_info("mutex_unlock(&wq_pool_mutex);");
 			show_one_workqueue(wq);
+			//pr_info("show_one_workqueue(wq);");
 			return;
 		}
 		raw_spin_unlock_irq(&pwq->pool->lock);
+		//pr_info("raw_spin_unlock_irq(&pwq->pool->lock);");
 	}
 	mutex_unlock(&wq->mutex);
+	//pr_info("mutex_unlock(&wq->mutex);");
+
 
 	/*
 	 * wq list is used to freeze wq, remove from list after
 	 * flushing is complete in case freeze races us.
 	 */
 	list_del_rcu(&wq->list);
+	//pr_info("list_del_rcu(&wq->list);");
 	mutex_unlock(&wq_pool_mutex);
+	//pr_info("mutex_unlock(&wq_pool_mutex);");
+
 
 	if (!(wq->flags & WQ_UNBOUND)) {
 		wq_unregister_lockdep(wq);
+		//pr_info("wq_unregister_lockdep(wq);");
+
 		/*
 		 * The base ref is never dropped on per-cpu pwqs.  Directly
 		 * schedule RCU free.
 		 */
 		call_rcu(&wq->rcu, rcu_free_wq);
+		//pr_info("call_rcu(&wq->rcu, rcu_free_wq);");
+
 	} else {
 		/*
 		 * We're the sole accessor of @wq at this point.  Directly
@@ -4480,8 +4560,11 @@ void destroy_workqueue(struct workqueue_struct *wq)
 		 */
 		for_each_node(node) {
 			pwq = rcu_access_pointer(wq->numa_pwq_tbl[node]);
+			//pr_info("pwq = rcu_access_pointer(wq->numa_pwq_tbl[node]);");
 			RCU_INIT_POINTER(wq->numa_pwq_tbl[node], NULL);
+			//pr_info("RCU_INIT_POINTER(wq->numa_pwq_tbl[node], NULL);");
 			put_pwq_unlocked(pwq);
+			//pr_info("put_pwq_unlocked(pwq);");
 		}
 
 		/*
@@ -4491,6 +4574,7 @@ void destroy_workqueue(struct workqueue_struct *wq)
 		pwq = wq->dfl_pwq;
 		wq->dfl_pwq = NULL;
 		put_pwq_unlocked(pwq);
+		//pr_info("put_pwq_unlocked(pwq);");
 	}
 }
 EXPORT_SYMBOL_GPL(destroy_workqueue);

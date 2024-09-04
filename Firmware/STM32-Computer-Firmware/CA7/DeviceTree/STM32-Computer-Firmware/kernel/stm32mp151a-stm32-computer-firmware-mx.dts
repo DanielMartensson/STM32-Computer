@@ -40,10 +40,10 @@
 		ranges;
 
 		/* USER CODE BEGIN reserved-memory */
-		optee@de000000 {
+		/*optee@de000000 {
 			reg = <0xde000000 0x2000000>;
 			no-map;
-		};
+		};*/
 		
 		mcuram2:mcuram2@10000000{
 			compatible = "shared-dma-pool";
@@ -504,23 +504,22 @@
 };
 
 &m4_rproc{
-	status = "okay";
+	status = "disabled";
 
 	/* USER CODE BEGIN m4_rproc */
-	resets = <&scmi_reset RST_SCMI_MCU>,
-		 <&scmi_reset RST_SCMI_MCU_HOLD_BOOT>;
+	resets = <&scmi_reset RST_SCMI_MCU>, <&scmi_reset RST_SCMI_MCU_HOLD_BOOT>;
 	reset-names = "mcu_rst", "hold_boot";
-	/delete-property/ st,syscfg-holdboot;
-	
-	memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>,
-			<&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
+	/*/delete-property/ st,syscfg-holdboot;*/
+	mboxes = <&ipcc 0>, <&ipcc 1>, <&ipcc 2>, <&ipcc 3>;
+	mbox-names = "vq0", "vq1", "shutdown", "detach";
+	memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>, <&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
 	interrupt-parent = <&exti>;
 	interrupts = <68 1>;
 	wakeup-source;
 	/* USER CODE END m4_rproc */
 
 	m4_system_resources{
-		status = "okay";
+		status = "disabled";
 
 		/* USER CODE BEGIN m4_system_resources */
 		/* USER CODE END m4_system_resources */
@@ -670,6 +669,7 @@
 	pmic:stpmic@33{
 		compatible = "st,stpmic1";
 		reg = <0x33>;
+		/*interrupts-extended = <&gpioa 0 IRQ_TYPE_EDGE_FALLING>;*/
 		interrupts-extended = <&exti 55 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-controller;
 		#interrupt-cells = <2>;
@@ -1027,7 +1027,7 @@
 	timeout-sec = <32>;
 	status = "okay";
 };
-
+*/
 &cpu0 {
 	cpu-supply = <&vddcore>;
 	clocks = <&scmi_clk CK_SCMI_MPU>;
@@ -1041,5 +1041,8 @@
 	pins2 {
 		u-boot,dm-pre-reloc;
 	};
-};*/
+};
+&gpioz {
+	clocks = <&scmi_clk CK_SCMI_GPIOZ>;
+};
 /* USER CODE END addons */

@@ -938,15 +938,28 @@ asmlinkage __visible void __init __no_sanitize_address start_kernel(void)
 {
 	char *command_line;
 	char *after_dashes;
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): Start kernel");
 
 	set_task_stack_end_magic(&init_task);
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): set_task_stack_end_magic");
+
 	smp_setup_processor_id();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): smp_setup_processor_id");
+
 	debug_objects_early_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): debug_objects_early_init");
+
 	init_vmlinux_build_id();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): init_vmlinux_build_id");
+
 
 	cgroup_init_early();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): cgroup_init_early");
+
 
 	local_irq_disable();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): local_irq_disable");
+
 	early_boot_irqs_disabled = true;
 
 	/*
@@ -954,29 +967,59 @@ asmlinkage __visible void __init __no_sanitize_address start_kernel(void)
 	 * enable them.
 	 */
 	boot_cpu_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): boot_cpu_init");
+
 	page_address_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): page_address_init");
+
 	pr_notice("%s", linux_banner);
 	early_security_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): early_security_init");
+
 	setup_arch(&command_line);
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): setup_arch");
+
 	setup_boot_config();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): setup_boot_config");
+
 	setup_command_line(command_line);
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): setup_command_line");
+
 	setup_nr_cpu_ids();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): setup_nr_cpu_ids");
+
 	setup_per_cpu_areas();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): setup_per_cpu_areas");
+
 	smp_prepare_boot_cpu();	/* arch-specific boot-cpu hooks */
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): smp_prepare_boot_cpu");
+
 	boot_cpu_hotplug_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): boot_cpu_hotplug_init");
+
 
 	build_all_zonelists(NULL);
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): build_all_zonelists");
+
 	page_alloc_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): page_alloc_init");
+
 
 	pr_notice("Kernel command line: %s\n", saved_command_line);
 	/* parameters may set static keys */
 	jump_label_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): jump_label_init");
+
 	parse_early_param();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): parse_early_param");
+
 	after_dashes = parse_args("Booting kernel",
 				  static_command_line, __start___param,
 				  __stop___param - __start___param,
 				  -1, -1, NULL, &unknown_bootoption);
 	print_unknown_bootoptions();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): print_unknown_bootoptions");
+
 	if (!IS_ERR_OR_NULL(after_dashes))
 		parse_args("Setting init args", after_dashes, NULL, 0, -1, -1,
 			   NULL, set_init_arg);
@@ -986,21 +1029,39 @@ asmlinkage __visible void __init __no_sanitize_address start_kernel(void)
 
 	/* Architectural and non-timekeeping rng init, before allocator init */
 	random_init_early(command_line);
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): random_init_early");
+
 
 	/*
 	 * These use large bootmem allocations and must precede
 	 * kmem_cache_init()
 	 */
 	setup_log_buf(0);
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): setup_log_buf");
+
 	vfs_caches_init_early();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): vfs_caches_init_early");
+
 	sort_main_extable();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): sort_main_extable");
+
 	trap_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): trap_init");
+
 	mm_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): mm_init");
+
 	poking_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): poking_init");
+
 	ftrace_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): ftrace_init");
+
 
 	/* trace_printk can be enabled here */
 	early_trace_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): early_trace_init");
+
 
 	/*
 	 * Set up the scheduler prior starting any interrupts (such as the
@@ -1013,13 +1074,19 @@ asmlinkage __visible void __init __no_sanitize_address start_kernel(void)
 		 "Interrupts were enabled *very* early, fixing it\n"))
 		local_irq_disable();
 	radix_tree_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): radix_tree_init");
+
 	maple_tree_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): maple_tree_init");
+
 
 	/*
 	 * Set up housekeeping before setting up workqueues to allow the unbound
 	 * workqueue to take non-housekeeping into account.
 	 */
 	housekeeping_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): housekeeping_init");
+
 
 	/*
 	 * Allow workqueue creation and work item queueing/cancelling
@@ -1027,30 +1094,60 @@ asmlinkage __visible void __init __no_sanitize_address start_kernel(void)
 	 * workqueue_init().
 	 */
 	workqueue_init_early();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): workqueue_init_early");
+
 
 	rcu_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): rcu_init");
+
 
 	/* Trace events are available after this */
 	trace_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): trace_init");
+
 
 	if (initcall_debug)
 		initcall_debug_enable();
 
 	context_tracking_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): context_tracking_init");
+
 	/* init some links before init_ISA_irqs() */
 	early_irq_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): early_irq_init");
+
 	init_IRQ();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): init_IRQ");
+
 	tick_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): tick_init");
+
 	rcu_init_nohz();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): rcu_init_nohz");
+
 	init_timers();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): init_timers");
+
 	srcu_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): srcu_init");
+
 	hrtimers_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): hrtimers_init");
+
 	softirq_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): softirq_init");
+
 	timekeeping_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): timekeeping_init");
+
 	time_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): time_init");
+
 
 	/* This must be after timekeeping is initialized */
 	random_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): random_init");
+
 
 	/* These make use of the fully initialized rng */
 	kfence_init();
@@ -1124,8 +1221,12 @@ asmlinkage __visible void __init __no_sanitize_address start_kernel(void)
 	signals_init();
 	seq_file_init();
 	proc_root_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): proc_root_init");
+
 	nsfs_init();
 	cpuset_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): cpuset_init");
+
 	cgroup_init();
 	taskstats_init_early();
 	delayacct_init();
@@ -1135,7 +1236,11 @@ asmlinkage __visible void __init __no_sanitize_address start_kernel(void)
 	kcsan_init();
 
 	/* Do the rest non-__init'ed, we're now alive */
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): kcsan_init");
+
 	arch_call_rest_init();
+	//pr_info("asmlinkage __visible void __init __no_sanitize_address start_kernel(void): arch_call_rest_init");
+
 
 	prevent_tail_call_optimization();
 }
@@ -1210,6 +1315,9 @@ static bool __init_or_module initcall_blacklisted(initcall_t fn)
 	 * displayed for built-in init functions.  Strip off the [module_name].
 	 */
 	strreplace(fn_name, ' ', '\0');
+	//pr_info("Fn name = %s", fn_name);
+
+
 
 	list_for_each_entry(entry, &blacklisted_initcalls, next) {
 		if (!strcmp(fn_name, entry->buf)) {
@@ -1288,13 +1396,16 @@ int __init_or_module do_one_initcall(initcall_t fn)
 	int count = preempt_count();
 	char msgbuf[64];
 	int ret;
-
-	if (initcall_blacklisted(fn))
+	ret = initcall_blacklisted(fn);
+	if (ret)
 		return -EPERM;
-
+	//pr_info("fn not black listed. Let's see if that was good choice");
 	do_trace_initcall_start(fn);
+	//pr_info("Made trace init call start on fn. Begin call the function");
 	ret = fn();
+	//pr_info("Function fn called: %i = fn();", ret);
 	do_trace_initcall_finish(fn, ret);
+	//pr_info("Made trace init call stop on fn");
 
 	msgbuf[0] = 0;
 
@@ -1307,7 +1418,6 @@ int __init_or_module do_one_initcall(initcall_t fn)
 		local_irq_enable();
 	}
 	WARN(msgbuf[0], "initcall %pS returned with %s\n", fn, msgbuf);
-
 	add_latent_entropy();
 	return ret;
 }
@@ -1363,23 +1473,24 @@ static void __init do_initcall_level(int level, char *command_line)
 		   __stop___param - __start___param,
 		   level, level,
 		   NULL, ignore_unknown_bootoption);
-
 	trace_initcall_level(initcall_level_names[level]);
-	for (fn = initcall_levels[level]; fn < initcall_levels[level+1]; fn++)
+	//pr_info("trace_initcall_level(initcall_level_names[%i]);= %s", level, initcall_level_names[level]);
+	for (fn = initcall_levels[level]; fn < initcall_levels[level+1]; fn++){
 		do_one_initcall(initcall_from_entry(fn));
+	}
 }
 
 static void __init do_initcalls(void)
 {
-	int level;
+	int level, total;
 	size_t len = strlen(saved_command_line) + 1;
 	char *command_line;
 
 	command_line = kzalloc(len, GFP_KERNEL);
 	if (!command_line)
 		panic("%s: Failed to allocate %zu bytes\n", __func__, len);
-
-	for (level = 0; level < ARRAY_SIZE(initcall_levels) - 1; level++) {
+	total = ARRAY_SIZE(initcall_levels) - 1;
+	for (level = 0; level < total; level++) {
 		/* Parser modifies command_line, restore it each time */
 		strcpy(command_line, saved_command_line);
 		do_initcall_level(level, command_line);
@@ -1507,9 +1618,11 @@ static int __ref kernel_init(void *unused)
 	/*
 	 * Wait until kthreadd is all set-up.
 	 */
+	//pr_info("static int __ref kernel_init(void *unused):  	wait_for_completion(&kthreadd_done);");
 	wait_for_completion(&kthreadd_done);
-
+	//pr_info("static int __ref kernel_init(void *unused):  kernel_init_freeable();");
 	kernel_init_freeable();
+	//pr_info("static int __ref kernel_init(void *unused):  kernel_init_freeable(); OK");
 	/* need to finish all async __init code before freeing the memory */
 	async_synchronize_full();
 
@@ -1620,8 +1733,9 @@ static noinline void __init kernel_init_freeable(void)
 	/* Initialize page ext after all struct pages are initialized. */
 	if (!early_page_ext_enabled())
 		page_ext_init();
-
+	//pr_info("static noinline void __init kernel_init_freeable(void): 	do_basic_setup();");
 	do_basic_setup();
+	//pr_info("static noinline void __init kernel_init_freeable(void): 	do_basic_setup(); OK");
 
 	kunit_run_all_tests();
 

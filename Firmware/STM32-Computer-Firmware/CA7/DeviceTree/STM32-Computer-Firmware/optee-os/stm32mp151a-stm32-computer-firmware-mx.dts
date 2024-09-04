@@ -248,7 +248,7 @@
 		compatible = "st,stpmic1";
 		reg = <0x33>;
 		/* It becomes lots of debug messages when gpioa 0 was replaced with exti 55 */
-		interrupts-extended = <&exti 55 IRQ_TYPE_EDGE_FALLING>;
+		interrupts-extended = <&gpioa 0 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-controller;
 		#interrupt-cells = <2>;
 		status = "okay";
@@ -694,7 +694,7 @@
 	pinctrl-0 = <&uart4_pins_mx>;
 	/delete-property/dmas;
 	/delete-property/dma-names;
-	reg = <0x40010000 0x400>;
+	/*reg = <0x40010000 0x400>;*/
 	status = "okay";
 };
 

@@ -3555,23 +3555,23 @@
 };
 
 &m4_rproc{
- status = "okay";
+ status = "disabled";
 
 
- resets = <&scmi_reset 10>,
-   <&scmi_reset 11>;
+ resets = <&scmi_reset 10>, <&scmi_reset 11>;
  reset-names = "mcu_rst", "hold_boot";
- /delete-property/ st,syscfg-holdboot;
 
- memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>,
-   <&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
+ mboxes = <&ipcc 0>, <&ipcc 1>, <&ipcc 2>, <&ipcc 3>;
+ mbox-names = "vq0", "vq1", "shutdown", "detach";
+
+ memory-region = <&retram>, <&mcuram>, <&mcuram2>, <&vdev0vring0>, <&vdev0vring1>, <&vdev0buffer>, <&mcu_rsc_table>;
  interrupt-parent = <&exti>;
  interrupts = <68 1>;
  wakeup-source;
 
 
  m4_system_resources{
-  status = "okay";
+  status = "disabled";
 
 
 
@@ -3630,6 +3630,7 @@
  phy-mode = "rgmii-id";
  max-speed = <1000>;
  phy-handle = <&phy0>;
+ mac-address = [00 80 E1 00 00 00];
  nvmem-cells = <&ethernet_mac_address>;
  nvmem-cell-names = "mac-address";
 
@@ -3779,7 +3780,7 @@
     regulator-over-current-protection;
     regulator-initial-mode = <0>;
    };
-# 742 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 743 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
    v3v3_hdmi:ldo2{
     regulator-name = "v3v3_hdmi";
     regulator-min-microvolt = <3300000>;
@@ -3821,7 +3822,7 @@
     regulator-name = "vref_ddr";
     regulator-always-on;
    };
-# 801 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
+# 802 "arch/arm/dts/.stm32mp151a-stm32-computer-firmware-mx.dtb.pre.tmp"
   };
 
   onkey{
