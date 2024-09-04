@@ -1,5 +1,0 @@
-MANIFEST_VERSION = openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
-KERNEL_DT = ./DeviceTree/STM32MP157F-EV1/kernel
-OPTEE_DT = ./DeviceTree/STM32MP157F-EV1/optee-os
-UBOOT_DT = ./DeviceTree/STM32MP157F-EV1/u-boot
-TFA_DT = ./DeviceTree/STM32MP157F-EV1/tf-a

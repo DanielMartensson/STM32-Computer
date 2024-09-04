@@ -16,7 +16,7 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 * 2024-06-18: Received the package
 * 2024-07-07: Received the components - about 52 dollars
 * 2024-07-18: Done with soldering
-* 2024-09-04: First sucessfull boot with Linux
+* 2024-09-04: First successful boot with Linux
 
 # Features
 
