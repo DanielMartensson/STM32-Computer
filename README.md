@@ -99,6 +99,13 @@ root@stm32mp1:/home/weston#
 
 Updates are comming....
 
+# TODO
+
+* Replace the USB hub package. It as the wrong article number. The correct article number is `USB2514B-AEZC` with `QFN-36` package, not ` 	VQFN-36-E` as it is written in the BOM list
+* Start up Ethernet
+* Start up HDMI
+* Start up USB hub
+
 # Errata
 
 In order to make sure that the `OpenSTLinux` will work on `STM32MP151XXAC` processor, one must do the following
@@ -116,7 +123,6 @@ static int __init trace_eval_sync(void)
 	/* Make sure the eval map updates are finished */
 	if (eval_map_wq){
 		/*destroy_workqueue(eval_map_wq); */
-
 	}
 	return 0;
 }
