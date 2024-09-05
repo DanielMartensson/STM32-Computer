@@ -31,7 +31,7 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 * Size: 75 mm x 100 mm
 * Thickness: 1.52 mm
 * 3 x Mounting pads of M2.5
-* 1 x 4/8 Gb DDRL3 RAM memory
+* 1 x 512 MB DDRL3 RAM memory
 * Debug: JTAG
 * Power supply: 5V DC jack
 
