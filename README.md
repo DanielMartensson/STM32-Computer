@@ -25,7 +25,7 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 * 1 x HDMI
 * 4 x USB A
 * 1 x USB OTG(On The Go)
-* 1 x 4/8 Gb eMMC (Embedded Multi Media Card)
+* 1 x 4/8 GB eMMC (Embedded Multi Media Card)
 * 1 x Ethernet RJ45
 * 1 x Coin cell battery holder
 * Size: 75 mm x 100 mm
