@@ -147,7 +147,7 @@ There are three types of flash layouts that you can use:
 
 Flip the `BOOT1` (blue switch) to `OFF` when you're about to flash the eMMC. Flip the `BOOT1` to `ON` when you want to boot from the eMMC.
 
-
+![a](https://raw.githubusercontent.com/DanielMartensson/STM32-Computer/main/documents/pictures/stm32cubeprogrammer.jpg)
 
 # TODO
 
