@@ -68,6 +68,8 @@ I have been using JLCPCB as the manufacturer for this.
 
 ![a](https://raw.githubusercontent.com/DanielMartensson/STM32-Computer/main/documents/pictures/openstlinux.jpeg)
 
+![a](https://raw.githubusercontent.com/DanielMartensson/STM32-Computer/main/documents/pictures/putty.jpg)
+
 # Prompt
 
 This is the prompt over `UART`.
