@@ -156,7 +156,6 @@ Flip the `BOOT1` (blue switch) to `OFF` when you're about to flash the eMMC. Fli
 # TODO
 
 * Replace the USB hub package. It as the wrong article number. The correct article number is `USB2514B-AEZC` with `QFN-36` package, not `VQFN-36-E` as it is written in the BOM list
-* Start up Ethernet
 * Start up USB hub
 
 # Errata
