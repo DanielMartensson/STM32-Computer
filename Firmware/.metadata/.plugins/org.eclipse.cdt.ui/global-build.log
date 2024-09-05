@@ -1,4 +1,4 @@
-23:50:29 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
+21:32:18 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
 make uImage LOADADDR=0xC2000040 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/build/../../FIP_artifacts
@@ -6,40 +6,12 @@ FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-
 + exec make uImage LOADADDR=0xC2000040
   GEN     Makefile
   CALL    /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/scripts/checksyscalls.sh
-  CC      init/main.o
-  AR      init/built-in.a
-  CC      kernel/workqueue.o
-  AR      kernel/built-in.a
-  AR      built-in.a
-  AR      vmlinux.a
-  LD      vmlinux.o
-  OBJCOPY modules.builtin.modinfo
-  GEN     modules.builtin
-  GEN     .vmlinux.objs
   MODPOST vmlinux.symvers
-  UPD     include/generated/utsversion.h
-  CC      init/version-timestamp.o
-  LD      .tmp_vmlinux.kallsyms1
-  NM      .tmp_vmlinux.kallsyms1.syms
-  KSYMS   .tmp_vmlinux.kallsyms1.S
-  AS      .tmp_vmlinux.kallsyms1.S
-  LD      .tmp_vmlinux.kallsyms2
-  NM      .tmp_vmlinux.kallsyms2.syms
-  KSYMS   .tmp_vmlinux.kallsyms2.S
-  AS      .tmp_vmlinux.kallsyms2.S
-  LD      vmlinux
-  NM      System.map
-  SORTTAB vmlinux
-  OBJCOPY arch/arm/boot/Image
   Kernel: arch/arm/boot/Image is ready
-  GZIP    arch/arm/boot/compressed/piggy_data
-  AS      arch/arm/boot/compressed/piggy.o
-  LD      arch/arm/boot/compressed/vmlinux
-  OBJCOPY arch/arm/boot/zImage
   Kernel: arch/arm/boot/zImage is ready
   UIMAGE  arch/arm/boot/uImage
 Image Name:   Linux-6.1.82
-Created:      Wed Sep  4 21:53:06 2024
+Created:      Thu Sep  5 19:33:44 2024
 Image Type:   ARM Linux Kernel Image (uncompressed)
 Data Size:    8249856 Bytes = 8056.50 KiB = 7.87 MiB
 Load Address: c2000040

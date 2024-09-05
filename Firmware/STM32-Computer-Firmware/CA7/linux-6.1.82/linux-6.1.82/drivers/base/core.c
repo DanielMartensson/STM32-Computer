@@ -3899,7 +3899,6 @@ EXPORT_SYMBOL_GPL(device_del);
 void device_unregister(struct device *dev)
 {
 	pr_debug("device: '%s': %s\n", dev_name(dev), __func__);
-	//pr_info("void device_unregister(struct device *dev): device: '%s': %s\n", dev_name(dev), __func__);
 	device_del(dev);
 	put_device(dev);
 }

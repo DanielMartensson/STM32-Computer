@@ -66,6 +66,8 @@ I have been using JLCPCB as the manufacturer for this.
 
 ![a](https://github.com/DanielMartensson/STM32-Computer/blob/main/documents/pictures/STM32-Computer-pic6.png?raw=true)
 
+![a](https://raw.githubusercontent.com/DanielMartensson/STM32-Computer/main/documents/pictures/openstlinux.jpeg)
+
 # Prompt
 
 This is the prompt over `UART`.
@@ -153,7 +155,6 @@ Flip the `BOOT1` (blue switch) to `OFF` when you're about to flash the eMMC. Fli
 
 * Replace the USB hub package. It as the wrong article number. The correct article number is `USB2514B-AEZC` with `QFN-36` package, not `VQFN-36-E` as it is written in the BOM list
 * Start up Ethernet
-* Start up HDMI
 * Start up USB hub
 
 # Errata
