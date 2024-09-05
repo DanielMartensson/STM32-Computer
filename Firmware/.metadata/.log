@@ -10024,3 +10024,24 @@ java.lang.NullPointerException: Cannot read the array length because "setupFiles
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-04 23:33:15.956
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-09-05 19:34:30.779
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2024-09-05 19:34:30.800
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-09-05 19:34:30.800
+!MESSAGE The project description file (.project) for 'STM32MP157D-DK1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-09-05 19:34:30.800
+!MESSAGE The project description file (.project) for 'STM32MP157D-DK1_CA7' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-09-05 19:34:30.800
+!MESSAGE The project description file (.project) for 'STM32MP157D-DK1_CM4' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-09-05 19:34:30.800
+!MESSAGE The project description file (.project) for 'STM32MP157F-EV1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-09-05 19:34:30.800
+!MESSAGE The project description file (.project) for 'STM32MP157F-EV1_CA7' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-09-05 19:34:30.800
+!MESSAGE The project description file (.project) for 'STM32MP157F-EV1_CM4' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-09-05 19:34:32.219
+!MESSAGE The workspace will exit with unsaved changes in this session.

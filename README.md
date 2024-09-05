@@ -97,7 +97,57 @@ root@stm32mp1:/home/weston#
 
 # How to get Linux working on this custom board
 
-Updates are comming....
+```sh
+# Localization
+lubuntu@lubuntu-20bg001kms:~/Downloads$ ls
+en.FLASH-stm32mp1-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26.tar.gz
+
+# Transfrom GNU zip to TAR archive
+lubuntu@lubuntu-20bg001kms:~/Downloads$ gzip -d en.FLASH-stm32mp1-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26.tar.gz 
+
+# Extract TAR archive
+lubuntu@lubuntu-20bg001kms:~/Downloads$ tar -xf en.FLASH-stm32mp1-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26.tar 
+
+# Navigation to *.ext4 files
+lubuntu@lubuntu-20bg001kms:~/Downloads$ cd stm32mp1-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/images/stm32mp1/
+
+# Move *.ext4 files to FIP_artifacts folder
+lubuntu@lubuntu-20bg001kms:~/Downloads/stm32mp1-openstlinux-6.1-yocto-mickledore-mpu-v
+24.06.26/images/stm32mp1$ cp *.ext4 ~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts/
+
+# Navigation to the FIP_artifacts folder
+lubuntu@lubuntu-20bg001kms:~/Downloads/stm32mp1-openstlinux-6.1-yocto-mickledore-mpu-v
+24.06.26/images/stm32mp1$ cd ~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts/
+
+# Create folder
+lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts$ sudo mkdir /mnt/bootfs
+
+# Mount bootfs file
+lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts$ sudo mount -o loop st-image-bootfs-openstlinux-weston-stm32mp1.ext4 /mnt/bootfs/
+
+# Copy over the linux kernel
+lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts$ sudo cp ../linux-6.1.82/build/arch/arm/boot/uImage /mnt/bootfs/
+
+# Copy over the dtb file
+lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts$ sudo cp ../linux-6.1.82/build/arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dtb /mnt/bootfs/
+
+# Unmount bootfs
+lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts$ sudo umount /mnt/bootfs 
+
+# Run STM32CubeProgrammer
+lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/FIP_artifacts$ sudo /opt/st/stm32cubeprog_2.17.0/bin/STM32CubeProgrammer
+
+```
+
+There are three types of flash layouts that you can use:
+
+1. `FlashLayout - Bootfs.tsv` for only re-flashing the `kernel` and `.dtb` file. Great use for debugging purposes.
+2. `FlashLayout - Half.tsv` for re-flashing `optee, u-boot, kernel, tf-a` and `.dtb` file. If you already have flashed the operative system.
+3. `FlashLayout - Complete.tsv` for flashing the whole system. If you never had flashed the eMMC before.
+
+Flip the `BOOT1` (blue switch) to `OFF` when you're about to flash the eMMC. Flip the `BOOT1` to `ON` when you want to boot from the eMMC.
+
+
 
 # TODO
 

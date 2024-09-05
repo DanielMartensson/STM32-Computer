@@ -9,6 +9,9 @@
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
 			<item value="destroy"/>
+			<item value="pr_info"/>
+			<item value="ethernet_mac_address"/>
+			<item value="ETHMAC"/>
 			<item value="initcall_blacklisted"/>
 			<item value="blacklisted_initcalls"/>
 			<item value="initcall_t"/>
@@ -20,9 +23,6 @@
 			<item value="do_trace_initcall_finish"/>
 			<item value="do_trace_initcall_start"/>
 			<item value="dereference_function_descriptor"/>
-			<item value="sprint_symbol_no_offset"/>
-			<item value="__start___param"/>
-			<item value="initcall_entry_t"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>
