@@ -58,27 +58,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000012  00000000  00000000  0000713b  2**0
                   CONTENTS, READONLY
- 13 .debug_line   00009146  00000000  00000000  0000714d  2**0
+ 13 .debug_line   000092d6  00000000  00000000  0000714d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_line_str 0000010c  00000000  00000000  00010293  2**0
+ 14 .debug_line_str 0000010c  00000000  00000000  00010423  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_info   0000d0b1  00000000  00000000  0001039f  2**0
+ 15 .debug_info   0000d0b1  00000000  00000000  0001052f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_abbrev 000028e3  00000000  00000000  0001d450  2**0
+ 16 .debug_abbrev 000028e3  00000000  00000000  0001d5e0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_aranges 00000898  00000000  00000000  0001fd38  2**3
+ 17 .debug_aranges 00000898  00000000  00000000  0001fec8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00015196  00000000  00000000  000205d0  2**0
+ 18 .debug_str    00015196  00000000  00000000  00020760  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  19 .rel.dyn      00000018  00005170  00005170  00006170  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 20 .debug_rnglists 00000ca1  00000000  00000000  00035766  2**0
+ 20 .debug_rnglists 00000ca1  00000000  00000000  000358f6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_loclists 00007812  00000000  00000000  00036407  2**0
+ 21 .debug_loclists 00007812  00000000  00000000  00036597  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_macro  00014368  00000000  00000000  0003dc19  2**0
+ 22 .debug_macro  00014368  00000000  00000000  0003dda9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_frame  00000fa8  00000000  00000000  00051f84  2**2
+ 23 .debug_frame  00000fa8  00000000  00000000  00052114  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 00000000 l    d  .text	00000000 .text
@@ -291,15 +291,15 @@ SYMBOL TABLE:
 00001d40 l     F .text	00000188 ta_elf_set_init_fini_info_compat
 00003b1a l     F .text	00000010 sys_copy_from_ta_bin
 00003198 l     F .text	00000010 free
-00003fb8 l     F .text	00000010 ___ldelf_open_bin_from_thumb
-00003fc8 l     F .text	00000010 ___ldelf_close_bin_from_thumb
-00003fd8 l     F .text	00000010 ___ldelf_map_bin_from_thumb
-00003fe8 l     F .text	00000010 ___ldelf_cp_from_bin_from_thumb
-00003ff8 l     F .text	00000010 ___ldelf_gen_rnd_num_from_thumb
-00004008 l     F .text	00000010 ___ldelf_remap_from_thumb
-00004018 l     F .text	00000010 ___ldelf_set_prot_from_thumb
-00004028 l     F .text	00000010 ___ldelf_log_from_thumb
-00004038 l     F .text	00000010 ___ldelf_map_zi_from_thumb
+00003fb8 l     F .text	00000010 ___ldelf_close_bin_from_thumb
+00003fc8 l     F .text	00000010 ___ldelf_open_bin_from_thumb
+00003fd8 l     F .text	00000010 ___ldelf_set_prot_from_thumb
+00003fe8 l     F .text	00000010 ___ldelf_remap_from_thumb
+00003ff8 l     F .text	00000010 ___ldelf_map_bin_from_thumb
+00004008 l     F .text	00000010 ___ldelf_cp_from_bin_from_thumb
+00004018 l     F .text	00000010 ___ldelf_map_zi_from_thumb
+00004028 l     F .text	00000010 ___ldelf_gen_rnd_num_from_thumb
+00004038 l     F .text	00000010 ___ldelf_log_from_thumb
 00004048 l     F .text	00000010 ___ldelf_unmap_from_thumb
 00005158 g       .rel.got	00000000 __reloc_begin
 00000148 g     F .text	00000018 _ldelf_remap
@@ -8666,7 +8666,7 @@ sys_map_zi():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:43
     3aee:	bc10      	pop	{r4}
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:42
-    3af0:	f000 baa2 	b.w	4038 <___ldelf_map_zi_from_thumb>
+    3af0:	f000 ba92 	b.w	4018 <___ldelf_map_zi_from_thumb>
 
 00003af4 <sys_unmap>:
 sys_unmap():
@@ -8679,12 +8679,12 @@ sys_open_ta_bin():
     3af8:	460a      	mov	r2, r1
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:52
     3afa:	2110      	movs	r1, #16
-    3afc:	f000 ba5c 	b.w	3fb8 <___ldelf_open_bin_from_thumb>
+    3afc:	f000 ba64 	b.w	3fc8 <___ldelf_open_bin_from_thumb>
 
 00003b00 <sys_close_ta_bin>:
 sys_close_ta_bin():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:57
-    3b00:	f000 ba62 	b.w	3fc8 <___ldelf_close_bin_from_thumb>
+    3b00:	f000 ba5a 	b.w	3fb8 <___ldelf_close_bin_from_thumb>
 
 00003b04 <sys_map_ta_bin>:
 sys_map_ta_bin():
@@ -8701,7 +8701,7 @@ sys_map_ta_bin():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:66
     3b14:	bc70      	pop	{r4, r5, r6}
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:64
-    3b16:	f000 ba5f 	b.w	3fd8 <___ldelf_map_bin_from_thumb>
+    3b16:	f000 ba6f 	b.w	3ff8 <___ldelf_map_bin_from_thumb>
 
 00003b1a <sys_copy_from_ta_bin>:
 sys_copy_from_ta_bin():
@@ -8715,22 +8715,22 @@ sys_copy_from_ta_bin():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:73
     3b24:	bc10      	pop	{r4}
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:72
-    3b26:	f000 ba5f 	b.w	3fe8 <___ldelf_cp_from_bin_from_thumb>
+    3b26:	f000 ba6f 	b.w	4008 <___ldelf_cp_from_bin_from_thumb>
 
 00003b2a <sys_set_prot>:
 sys_set_prot():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:77
-    3b2a:	f000 ba75 	b.w	4018 <___ldelf_set_prot_from_thumb>
+    3b2a:	f000 ba55 	b.w	3fd8 <___ldelf_set_prot_from_thumb>
 
 00003b2e <sys_remap>:
 sys_remap():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:83
-    3b2e:	f000 ba6b 	b.w	4008 <___ldelf_remap_from_thumb>
+    3b2e:	f000 ba5b 	b.w	3fe8 <___ldelf_remap_from_thumb>
 
 00003b32 <sys_gen_random_num>:
 sys_gen_random_num():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/ldelf/sys.c:88
-    3b32:	f000 ba61 	b.w	3ff8 <___ldelf_gen_rnd_num_from_thumb>
+    3b32:	f000 ba79 	b.w	4028 <___ldelf_gen_rnd_num_from_thumb>
 
 00003b36 <get_pad_begin>:
 get_pad_begin():
@@ -9526,7 +9526,7 @@ trace_ext_puts():
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/lib/libutee/trace_ext.c:28
     3fa6:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
 /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/optee-os-3.19.0-r2/optee-os-stm32mp-3.19.0-stm32mp-r2/lib/libutee/trace_ext.c:24
-    3faa:	f000 b83d 	b.w	4028 <___ldelf_log_from_thumb>
+    3faa:	f000 b845 	b.w	4038 <___ldelf_log_from_thumb>
 
 00003fae <trace_ext_get_thread_id>:
 trace_ext_get_thread_id():
@@ -9536,77 +9536,77 @@ trace_ext_get_thread_id():
     3fb4:	0000      	movs	r0, r0
 	...
 
-00003fb8 <___ldelf_open_bin_from_thumb>:
-___ldelf_open_bin_from_thumb():
-    3fb8:	4778      	bx	pc
-    3fba:	e7fd      	b.n	3fb8 <___ldelf_open_bin_from_thumb>
-    3fbc:	e59fc000 	ldr	ip, [pc]	@ 3fc4 <___ldelf_open_bin_from_thumb+0xc>
-    3fc0:	e08cf00f 	add	pc, ip, pc
-    3fc4:	ffffc118 	.word	0xffffc118
-
-00003fc8 <___ldelf_close_bin_from_thumb>:
+00003fb8 <___ldelf_close_bin_from_thumb>:
 ___ldelf_close_bin_from_thumb():
+    3fb8:	4778      	bx	pc
+    3fba:	e7fd      	b.n	3fb8 <___ldelf_close_bin_from_thumb>
+    3fbc:	e59fc000 	ldr	ip, [pc]	@ 3fc4 <___ldelf_close_bin_from_thumb+0xc>
+    3fc0:	e08cf00f 	add	pc, ip, pc
+    3fc4:	ffffc12c 	.word	0xffffc12c
+
+00003fc8 <___ldelf_open_bin_from_thumb>:
+___ldelf_open_bin_from_thumb():
     3fc8:	4778      	bx	pc
-    3fca:	e7fd      	b.n	3fc8 <___ldelf_close_bin_from_thumb>
-    3fcc:	e59fc000 	ldr	ip, [pc]	@ 3fd4 <___ldelf_close_bin_from_thumb+0xc>
+    3fca:	e7fd      	b.n	3fc8 <___ldelf_open_bin_from_thumb>
+    3fcc:	e59fc000 	ldr	ip, [pc]	@ 3fd4 <___ldelf_open_bin_from_thumb+0xc>
     3fd0:	e08cf00f 	add	pc, ip, pc
-    3fd4:	ffffc11c 	.word	0xffffc11c
+    3fd4:	ffffc108 	.word	0xffffc108
 
-00003fd8 <___ldelf_map_bin_from_thumb>:
-___ldelf_map_bin_from_thumb():
-    3fd8:	4778      	bx	pc
-    3fda:	e7fd      	b.n	3fd8 <___ldelf_map_bin_from_thumb>
-    3fdc:	e59fc000 	ldr	ip, [pc]	@ 3fe4 <___ldelf_map_bin_from_thumb+0xc>
-    3fe0:	e08cf00f 	add	pc, ip, pc
-    3fe4:	ffffc120 	.word	0xffffc120
-
-00003fe8 <___ldelf_cp_from_bin_from_thumb>:
-___ldelf_cp_from_bin_from_thumb():
-    3fe8:	4778      	bx	pc
-    3fea:	e7fd      	b.n	3fe8 <___ldelf_cp_from_bin_from_thumb>
-    3fec:	e59fc000 	ldr	ip, [pc]	@ 3ff4 <___ldelf_cp_from_bin_from_thumb+0xc>
-    3ff0:	e08cf00f 	add	pc, ip, pc
-    3ff4:	ffffc128 	.word	0xffffc128
-
-00003ff8 <___ldelf_gen_rnd_num_from_thumb>:
-___ldelf_gen_rnd_num_from_thumb():
-    3ff8:	4778      	bx	pc
-    3ffa:	e7fd      	b.n	3ff8 <___ldelf_gen_rnd_num_from_thumb>
-    3ffc:	e59fc000 	ldr	ip, [pc]	@ 4004 <___ldelf_gen_rnd_num_from_thumb+0xc>
-    4000:	e08cf00f 	add	pc, ip, pc
-    4004:	ffffc158 	.word	0xffffc158
-
-00004008 <___ldelf_remap_from_thumb>:
-___ldelf_remap_from_thumb():
-    4008:	4778      	bx	pc
-    400a:	e7fd      	b.n	4008 <___ldelf_remap_from_thumb>
-    400c:	e59fc000 	ldr	ip, [pc]	@ 4014 <___ldelf_remap_from_thumb+0xc>
-    4010:	e08cf00f 	add	pc, ip, pc
-    4014:	ffffc130 	.word	0xffffc130
-
-00004018 <___ldelf_set_prot_from_thumb>:
+00003fd8 <___ldelf_set_prot_from_thumb>:
 ___ldelf_set_prot_from_thumb():
-    4018:	4778      	bx	pc
-    401a:	e7fd      	b.n	4018 <___ldelf_set_prot_from_thumb>
-    401c:	e59fc000 	ldr	ip, [pc]	@ 4024 <___ldelf_set_prot_from_thumb+0xc>
-    4020:	e08cf00f 	add	pc, ip, pc
-    4024:	ffffc10c 	.word	0xffffc10c
+    3fd8:	4778      	bx	pc
+    3fda:	e7fd      	b.n	3fd8 <___ldelf_set_prot_from_thumb>
+    3fdc:	e59fc000 	ldr	ip, [pc]	@ 3fe4 <___ldelf_set_prot_from_thumb+0xc>
+    3fe0:	e08cf00f 	add	pc, ip, pc
+    3fe4:	ffffc14c 	.word	0xffffc14c
 
-00004028 <___ldelf_log_from_thumb>:
-___ldelf_log_from_thumb():
-    4028:	4778      	bx	pc
-    402a:	e7fd      	b.n	4028 <___ldelf_log_from_thumb>
-    402c:	e59fc000 	ldr	ip, [pc]	@ 4034 <___ldelf_log_from_thumb+0xc>
-    4030:	e08cf00f 	add	pc, ip, pc
-    4034:	ffffc054 	.word	0xffffc054
+00003fe8 <___ldelf_remap_from_thumb>:
+___ldelf_remap_from_thumb():
+    3fe8:	4778      	bx	pc
+    3fea:	e7fd      	b.n	3fe8 <___ldelf_remap_from_thumb>
+    3fec:	e59fc000 	ldr	ip, [pc]	@ 3ff4 <___ldelf_remap_from_thumb+0xc>
+    3ff0:	e08cf00f 	add	pc, ip, pc
+    3ff4:	ffffc150 	.word	0xffffc150
 
-00004038 <___ldelf_map_zi_from_thumb>:
+00003ff8 <___ldelf_map_bin_from_thumb>:
+___ldelf_map_bin_from_thumb():
+    3ff8:	4778      	bx	pc
+    3ffa:	e7fd      	b.n	3ff8 <___ldelf_map_bin_from_thumb>
+    3ffc:	e59fc000 	ldr	ip, [pc]	@ 4004 <___ldelf_map_bin_from_thumb+0xc>
+    4000:	e08cf00f 	add	pc, ip, pc
+    4004:	ffffc100 	.word	0xffffc100
+
+00004008 <___ldelf_cp_from_bin_from_thumb>:
+___ldelf_cp_from_bin_from_thumb():
+    4008:	4778      	bx	pc
+    400a:	e7fd      	b.n	4008 <___ldelf_cp_from_bin_from_thumb>
+    400c:	e59fc000 	ldr	ip, [pc]	@ 4014 <___ldelf_cp_from_bin_from_thumb+0xc>
+    4010:	e08cf00f 	add	pc, ip, pc
+    4014:	ffffc108 	.word	0xffffc108
+
+00004018 <___ldelf_map_zi_from_thumb>:
 ___ldelf_map_zi_from_thumb():
+    4018:	4778      	bx	pc
+    401a:	e7fd      	b.n	4018 <___ldelf_map_zi_from_thumb>
+    401c:	e59fc000 	ldr	ip, [pc]	@ 4024 <___ldelf_map_zi_from_thumb+0xc>
+    4020:	e08cf00f 	add	pc, ip, pc
+    4024:	ffffc08c 	.word	0xffffc08c
+
+00004028 <___ldelf_gen_rnd_num_from_thumb>:
+___ldelf_gen_rnd_num_from_thumb():
+    4028:	4778      	bx	pc
+    402a:	e7fd      	b.n	4028 <___ldelf_gen_rnd_num_from_thumb>
+    402c:	e59fc000 	ldr	ip, [pc]	@ 4034 <___ldelf_gen_rnd_num_from_thumb+0xc>
+    4030:	e08cf00f 	add	pc, ip, pc
+    4034:	ffffc128 	.word	0xffffc128
+
+00004038 <___ldelf_log_from_thumb>:
+___ldelf_log_from_thumb():
     4038:	4778      	bx	pc
-    403a:	e7fd      	b.n	4038 <___ldelf_map_zi_from_thumb>
-    403c:	e59fc000 	ldr	ip, [pc]	@ 4044 <___ldelf_map_zi_from_thumb+0xc>
+    403a:	e7fd      	b.n	4038 <___ldelf_log_from_thumb>
+    403c:	e59fc000 	ldr	ip, [pc]	@ 4044 <___ldelf_log_from_thumb+0xc>
     4040:	e08cf00f 	add	pc, ip, pc
-    4044:	ffffc06c 	.word	0xffffc06c
+    4044:	ffffc044 	.word	0xffffc044
 
 00004048 <___ldelf_unmap_from_thumb>:
 ___ldelf_unmap_from_thumb():

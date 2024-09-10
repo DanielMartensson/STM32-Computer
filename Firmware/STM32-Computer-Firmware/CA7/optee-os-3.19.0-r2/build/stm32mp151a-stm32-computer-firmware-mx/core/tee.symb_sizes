@@ -399,7 +399,7 @@ de016e4e 0000004e t scmi_voltd_config_set
 de016918 0000004e t scmi_clock_config_set
 de014ad2 0000004e T plat_scmi_rd_set_state
 de0173ae 0000004e T mutex_read_lock
-de02d467 0000004e R core_v_str
+de02d467 0000004d R core_v_str
 de010eac 0000004c T thread_set_foreign_intr
 de00191c 0000004c T thread_rpc
 de011ea0 0000004c T tee_mm_free
@@ -1163,7 +1163,7 @@ de02d0cb 00000012 r __func__.1
 de02d2fc 00000012 r __func__.1
 de02bb82 00000012 r __func__.0
 de02bc74 00000012 r __func__.0
-de02d530 00000011 r hexdigits
+de02d52f 00000011 r hexdigits
 de02c10d 00000011 r __func__.7
 de02b87c 00000011 r __func__.3
 de02caf2 00000011 r __func__.2
@@ -1172,7 +1172,7 @@ de02cae1 00000011 r __func__.1
 de02ac89 00000011 r __func__.0
 de02c636 00000011 r __func__.0
 de02cad0 00000011 r __func__.0
-de02d51f 00000011 r HEXDIGITS
+de02d51e 00000011 r HEXDIGITS
 de028264 00000010 r tzc_secu_match_table
 de0291c0 00000010 r ta_uuid.0
 de018e02 00000010 T strlen
@@ -1475,7 +1475,7 @@ de0174a0 00000006 T condvar_broadcast
 de02edc8 00000006 d __compound_literal.5
 de02c236 00000005 r uart6_parents
 de02c231 00000005 r uart234578_parents
-de02d565 00000005 r lvl_strs.0
+de02d564 00000005 r lvl_strs.0
 de02b82f 00000005 r CSWTCH.66
 de032250 00000004 b wq_spin_lock
 de032214 00000004 b wdt_min_timeout

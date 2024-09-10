@@ -163,11 +163,11 @@
 	uart4_pins_mx: uart4_mx-0 {
 		pins1 {
 			pinmux = <STM32_PINMUX('B', 2, AF8)>; /* UART4_RX */
-			bias-disable;
+			bias-pull-up;
 		};
 		pins2 {
 			pinmux = <STM32_PINMUX('G', 11, AF6)>; /* UART4_TX */
-			bias-disable;
+			bias-pull-up;
 			drive-push-pull;
 			slew-rate = <0>;
 		};

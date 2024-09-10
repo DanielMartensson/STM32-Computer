@@ -99,10 +99,10 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
-			<target name="all  (stm32mp151a-stm32-computer-firmware-mx) - mp15" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="all  (stm32mp151a-stm32-computer-firmware-mx) - mp151" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>make</buildCommand>
 				<buildArguments>-f ../Makefile.sdk.ide</buildArguments>
-				<buildTarget>DEVICETREE=stm32mp151a-stm32-computer-firmware-mx  FIP_CONFIG="optee-emmc" UBOOT_CONFIG=default UBOOT_DEFCONFIG=stm32mp15_defconfig UBOOT_BINARY=u-boot.dtb  all</buildTarget>
+				<buildTarget>DEVICETREE=stm32mp151a-stm32-computer-firmware-mx  FIP_CONFIG="optee-emmc" UBOOT_CONFIG=default UBOOT_DEFCONFIG=stm32mp151_defconfig UBOOT_BINARY=u-boot.dtb  all</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>

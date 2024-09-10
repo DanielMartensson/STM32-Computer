@@ -5,9 +5,9 @@
  core/include/kernel/refcount.h lib/libutils/ext/include/atomic.h \
  lib/libutils/ext/include/compiler.h lib/libutils/ext/include/types_ext.h \
  lib/libutils/isoc/include/limits.h \
- /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
+ /opt/STMicroelectronics/STM32MP1/SDK/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stddef.h \
  lib/libutils/isoc/include/inttypes.h lib/libutils/isoc/include/stdint.h \
- /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
+ /opt/STMicroelectronics/STM32MP1/SDK/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdbool.h \
  lib/libutils/isoc/include/unistd.h lib/libutils/isoc/include/sys/queue.h \
  lib/libutee/include/tee_api_types.h \
  lib/libutee/include/tee_api_defines.h core/include/drivers/clk_dt.h \
@@ -24,7 +24,7 @@
  lib/libutee/include/tee_api_defines_extensions.h \
  core/include/kernel/boot.h core/include/initcall.h \
  lib/libutils/ext/include/trace.h \
- /opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
+ /opt/STMicroelectronics/STM32MP1/SDK/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26/sysroots/x86_64-ostl_sdk-linux/usr/lib/arm-ostl-linux-gnueabi/gcc/arm-ostl-linux-gnueabi/12.3.0/include/stdarg.h \
  lib/libutils/ext/include/trace_levels.h core/lib/libfdt/include/libfdt.h \
  core/lib/libfdt/include/libfdt_env.h lib/libutils/isoc/include/stdlib.h \
  lib/libutils/isoc/include/malloc.h lib/libutils/isoc/include/string.h \

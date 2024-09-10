@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-user_defined_sdk_root_path=/opt/st/stm32mp1/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
+user_defined_sdk_root_path=/opt/STMicroelectronics/STM32MP1/SDK/4.2.4-openstlinux-6.1-yocto-mickledore-mpu-v24.06.26
