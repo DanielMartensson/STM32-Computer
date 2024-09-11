@@ -109,6 +109,8 @@ root@stm32mp1:/home/weston#
 
 # How to get Linux working on this custom board
 
+Here is a manual to get `OpenSTLinux` or `STM32-OS` to work on `STM32-Computer`.
+
 ```sh
 # Localization
 lubuntu@lubuntu-20bg001kms:~/Downloads$ ls
@@ -169,11 +171,11 @@ Flip the `BOOT1` (blue switch) to `OFF` when you're about to flash the eMMC. Fli
 
 # Errata
 
-In order to make sure that the `OpenSTLinux` will work on `STM32MP151XXAC` processor, one must do the following
+In order to make sure that the `OpenSTLinux` or `STM32-OS` will work on `STM32MP15XXAC` processor, one must do the following
 
 ## Change the `kernel/trace/trace.c`
 
-One huge problem inside `OpenSTLinux` is that the workqueue `eval_map_wq` contains important initial calls for devices such as `STPMIC`.
+One huge problem inside `linux kernel` is that the workqueue `eval_map_wq` contains important initial calls for devices such as `STPMIC`.
 When that workqueue is destoryed, the linux kernel halts, without any errors. I belive that it destroys the communication to the `STPMIC`. Not sure, becuase it's very difficullt to debug this thing using `UART`.
 
 But to solve that issue, then comment `destroy_workqueue(eval_map_wq);`. It's not a standard way to do this. The problem lies on STMicroelectronics to make sure that the workqueue do not destroy important devices, which now, it currently doing.
