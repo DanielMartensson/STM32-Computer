@@ -3,9 +3,9 @@
 This project is a STM32 computer were Linux can be deployed onto.
 The circuit board is made in Altium CircuitMaker. 
 
-# Operative System to the board
+# Operating system to the board
 
-Here is an `STM32-OS` system for the board.
+Here is `STM32-OS` system for the board.
 
 https://github.com/danielmartensson/STM32-OS
 
@@ -154,7 +154,7 @@ lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Comp
 There are four types of flash layouts that you can use:
 
 1. `FlashLayout - Bootfs.tsv` for only re-flashing the `kernel` and `.dtb` file. Great use for debugging purposes.
-2. `FlashLayout - Rootfs.tsv` for only flashing the operative system.
+2. `FlashLayout - Rootfs.tsv` for only flashing the operating system.
 3. `FlashLayout - Half.tsv` for re-flashing `optee, u-boot, kernel, tf-a` and `.dtb` file. If you already have flashed the operative system.
 4. `FlashLayout - Complete.tsv` for flashing the whole system. If you never had flashed the eMMC before.
 
