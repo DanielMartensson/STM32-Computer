@@ -11165,3 +11165,32 @@ java.net.http.HttpTimeoutException: request timed out
 	at java.net.http/jdk.internal.net.http.ResponseTimerEvent.handle(ResponseTimerEvent.java:63)
 	at java.net.http/jdk.internal.net.http.HttpClientImpl.purgeTimeoutsAndReturnNextDeadline(HttpClientImpl.java:1270)
 	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:899)
+!SESSION 2024-09-10 23:58:55.607 -----------------------------------------------
+eclipse.buildId=Version 1.16.0
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=sv_SE
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-09-10 23:59:13.816
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-10 23:59:13.817
+!MESSAGE Log4j2 initialized with config file /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/.metadata/.log4j2.xml
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-09-10 23:59:22.428
+!MESSAGE An internal error occurred during: "OpenSTLinux Lookup".
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "setupFiles" is null
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:130)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:143)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager.lookup(OpenSTLinuxSDKManager.java:113)
+	at com.st.stm32cube.ide.mpu.linux.openstlinux.sdk.core.manager.OpenSTLinuxSDKManager$1.run(OpenSTLinuxSDKManager.java:198)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-11 00:01:57.756
+!MESSAGE Started RMI Server, listening on port 41337
