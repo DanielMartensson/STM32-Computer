@@ -29,6 +29,7 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 # Features
 
 * Processor: STM32MP15XXAC
+* CubeIDE: STM32MP151AAC
 * Stack layers: 4
 * 1 x HDMI
 * 4 x USB A
