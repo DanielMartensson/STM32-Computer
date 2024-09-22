@@ -9,4 +9,4 @@ PE	0x08	fip-a	FIP	mmc0	0x00180000	fip/fip-stm32mp151a-stm32-computer-firmware-mx
 PED	0x09	fip-b	FIP	mmc0	0x00580000	none
 PED	0x0A	u-boot-env	ENV	mmc0	0x00980000	none
 P	0x10	bootfs	System	mmc0	0x00A00000	bootfs.ext4
-PE	0x11	vendorfs	FileSystem	mmc0	0x04A00000	rootfs.ext4
+PE	0x11	rootfs	FileSystem	mmc0	0x04A00000	rootfs.ext4
