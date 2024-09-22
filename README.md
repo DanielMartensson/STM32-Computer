@@ -25,6 +25,7 @@ https://workspace.circuitmaker.com/Projects/Details/DanielMrtensson/STM32-Comput
 * 2024-07-07: Received the components - about 52 dollars
 * 2024-07-18: Done with soldering
 * 2024-09-04: First successful boot with Linux
+* 2024-09-22: Done with the minimal STM32-OS
 
 # Features
 
@@ -154,12 +155,10 @@ lubuntu@lubuntu-20bg001kms:~/Documents/GitHub/STM32-Computer/Firmware/STM32-Comp
 
 ```
 
-There are four types of flash layouts that you can use:
+There are two types of flash layouts that you can use:
 
 1. `FlashLayout - Bootfs.tsv` for only re-flashing the `kernel` and `.dtb` file. Great use for debugging purposes.
-2. `FlashLayout - Rootfs.tsv` for only flashing the operating system.
-3. `FlashLayout - Half.tsv` for re-flashing `optee, u-boot, kernel, tf-a` and `.dtb` file. If you already have flashed the operative system.
-4. `FlashLayout - Complete.tsv` for flashing the whole system. If you never had flashed the eMMC before.
+2. `FlashLayout - STM32-OS.tsv` for flashing the whole system with `rootfs.ext4`
 
 Flip the `BOOT1` (blue switch) to `OFF` when you're about to flash the eMMC. Flip the `BOOT1` to `ON` when you want to boot from the eMMC.
 
