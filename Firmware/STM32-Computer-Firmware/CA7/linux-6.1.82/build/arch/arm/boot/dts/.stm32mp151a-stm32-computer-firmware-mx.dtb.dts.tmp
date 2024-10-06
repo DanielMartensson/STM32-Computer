@@ -2913,10 +2913,10 @@
   ranges;
 
 
-
-
-
-
+  optee@de000000 {
+   reg = <0xde000000 0x2000000>;
+   no-map;
+  };
 
   mcuram2:mcuram2@10000000{
    compatible = "shared-dma-pool";
