@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="stm32mp151"/>
+		<item key="selection" value="usbh"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="usbh"/>
+			<item value="usb"/>
+			<item value="HSE"/>
+			<item value="rcc"/>
+			<item value="i2s"/>
+			<item value="hdmi"/>
 			<item value="stm32mp151"/>
 			<item value="UART"/>
 			<item value="uart"/>
@@ -17,12 +23,6 @@
 			<item value="eval_map_wq"/>
 			<item value="trace"/>
 			<item value="kernel_init"/>
-			<item value="do_one_initcall"/>
-			<item value="do_initcall_level"/>
-			<item value="do_initcalls"/>
-			<item value="do_basic_setup"/>
-			<item value="kernel_init_freeable"/>
-			<item value="kernel"/>
 		</list>
 		<list key="replacehistory">
 			<item value="pins_a"/>

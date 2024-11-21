@@ -1,0 +1,8 @@
+2024-09-11 00:00:01,513 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-09-11 00:00:01,516 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-09-11 00:00:01,516 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-09-11 00:00:01,516 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-09-11 00:00:01,517 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-09-11 00:00:40,232 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] log4j default configuration file not found
+2024-09-11 00:00:40,232 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] log4j is not configured!
+2024-09-11 00:27:50,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

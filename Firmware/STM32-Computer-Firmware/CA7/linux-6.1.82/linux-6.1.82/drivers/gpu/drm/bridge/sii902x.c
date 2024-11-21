@@ -621,16 +621,18 @@ static int sii902x_audio_hw_params(struct device *dev, void *data,
 	ret = clk_prepare_enable(sii902x->audio.mclk);
 	if (ret) {
 		dev_err(dev, "Enabling mclk failed: %d\n", ret);
+
 		return ret;
 	}
 
 	if (sii902x->audio.mclk) {
 		mclk_rate = clk_get_rate(sii902x->audio.mclk);
-		ret = sii902x_select_mclk_div(&i2s_config_reg,
-					      params->sample_rate, mclk_rate);
-		if (mclk_rate != ret * params->sample_rate)
+		ret = sii902x_select_mclk_div(&i2s_config_reg, params->sample_rate, mclk_rate);
+		if (mclk_rate != ret * params->sample_rate){
 			dev_dbg(dev, "Inaccurate reference clock (%ld/%d != %u)\n",
 				mclk_rate, ret, params->sample_rate);
+
+		}
 	}
 
 	mutex_lock(&sii902x->mutex);
@@ -643,14 +645,18 @@ static int sii902x_audio_hw_params(struct device *dev, void *data,
 
 	ret = regmap_write(sii902x->regmap, SII902X_TPI_I2S_INPUT_CONFIG_REG,
 			   i2s_config_reg);
+
+
 	if (ret)
 		goto out;
 
 	for (i = 0; i < ARRAY_SIZE(sii902x->audio.i2s_fifo_sequence) &&
-		    sii902x->audio.i2s_fifo_sequence[i]; i++)
+		    sii902x->audio.i2s_fifo_sequence[i]; i++){
 		regmap_write(sii902x->regmap,
 			     SII902X_TPI_I2S_ENABLE_MAPPING_REG,
 			     sii902x->audio.i2s_fifo_sequence[i]);
+
+	}
 
 	ret = regmap_write(sii902x->regmap, SII902X_TPI_AUDIO_CONFIG_BYTE3_REG,
 			   config_byte3_reg);
@@ -661,14 +667,17 @@ static int sii902x_audio_hw_params(struct device *dev, void *data,
 				params->iec.status,
 				min((size_t) SII902X_TPI_I2S_STRM_HDR_SIZE,
 				    sizeof(params->iec.status)));
+
 	if (ret)
 		goto out;
 
 	ret = hdmi_audio_infoframe_pack(&params->cea, infoframe_buf,
 					sizeof(infoframe_buf));
+
 	if (ret < 0) {
 		dev_err(dev, "%s: Failed to pack audio infoframe: %d\n",
 			__func__, ret);
+
 		goto out;
 	}
 
@@ -800,7 +809,6 @@ static int sii902x_audio_codec_init(struct sii902x *sii902x,
 	};
 	u8 lanes[4];
 	int num_lanes, i;
-
 	if (!of_property_read_bool(dev->of_node, "#sound-dai-cells")) {
 		dev_dbg(dev, "%s: No \"#sound-dai-cells\", no audio\n",
 			__func__);
@@ -812,16 +820,19 @@ static int sii902x_audio_codec_init(struct sii902x *sii902x,
 						       lanes, 1,
 						       ARRAY_SIZE(lanes));
 
+
 	if (num_lanes == -EINVAL) {
 		dev_dbg(dev,
 			"%s: No \"sil,i2s-data-lanes\", use default <0>\n",
 			__func__);
+
 		num_lanes = 1;
 		lanes[0] = 0;
 	} else if (num_lanes < 0) {
 		dev_err(dev,
 			"%s: Error gettin \"sil,i2s-data-lanes\": %d\n",
 			__func__, num_lanes);
+
 		return num_lanes;
 	}
 	codec_data.max_i2s_channels = 2 * num_lanes;
@@ -834,12 +845,14 @@ static int sii902x_audio_codec_init(struct sii902x *sii902x,
 	if (IS_ERR(sii902x->audio.mclk)) {
 		dev_err(dev, "%s: No clock (audio mclk) found: %ld\n",
 			__func__, PTR_ERR(sii902x->audio.mclk));
+
 		return PTR_ERR(sii902x->audio.mclk);
 	}
 
 	sii902x->audio.pdev = platform_device_register_data(
 		dev, HDMI_CODEC_DRV_NAME, PLATFORM_DEVID_AUTO,
 		&codec_data, sizeof(codec_data));
+
 
 	return PTR_ERR_OR_ZERO(sii902x->audio.pdev);
 }
@@ -1022,11 +1035,13 @@ static int sii902x_init(struct sii902x *sii902x)
 	sii902x_reset(sii902x);
 
 	ret = regmap_write(sii902x->regmap, SII902X_REG_TPI_RQB, 0x0);
+
 	if (ret)
 		return ret;
 
 	ret = regmap_bulk_read(sii902x->regmap, SII902X_REG_CHIPID(0),
 			       &chipid, 4);
+
 	if (ret) {
 		dev_err(dev, "regmap_read failed %d\n", ret);
 		return ret;
@@ -1043,43 +1058,55 @@ static int sii902x_init(struct sii902x *sii902x)
 	 * to bypass the bridge.
 	 */
 	ret = i2c_transfer(sii902x->i2c->adapter, &msg, 1);
-	if (ret < 0)
+
+	if (ret < 0){
 		dev_warn(&sii902x->i2c->dev, "Failed to disable CEC device!\n");
+	}
 
 	/* Clear all pending interrupts */
 	regmap_read(sii902x->regmap, SII902X_INT_STATUS, &status);
+
 	regmap_write(sii902x->regmap, SII902X_INT_STATUS, status);
+
 
 	if (sii902x->i2c->irq > 0) {
 		regmap_update_bits(sii902x->regmap, SII902X_INT_ENABLE,
 				   SII902X_HOTPLUG_EVENT,
 				   SII902X_HOTPLUG_EVENT);
 
+
 		ret = devm_request_threaded_irq(dev, sii902x->i2c->irq, NULL,
 						sii902x_interrupt,
 						IRQF_ONESHOT, dev_name(dev),
 						sii902x);
+
+
 		if (ret)
 			return ret;
 	}
 
 	ret = sii902x_audio_codec_init(sii902x, dev);
+
 	if (ret)
 		return ret;
 
 	i2c_set_clientdata(sii902x->i2c, sii902x);
 
+
 	sii902x->i2cmux = i2c_mux_alloc(sii902x->i2c->adapter, dev,
 					1, 0, I2C_MUX_GATE,
 					sii902x_i2c_bypass_select,
 					sii902x_i2c_bypass_deselect);
+
 	if (!sii902x->i2cmux) {
 		ret = -ENOMEM;
+
 		goto err_unreg_audio;
 	}
 
 	sii902x->i2cmux->priv = sii902x;
 	ret = i2c_mux_add_adapter(sii902x->i2cmux, 0, 0, 0);
+
 	if (ret)
 		goto err_unreg_audio;
 
@@ -1092,6 +1119,7 @@ static int sii902x_init(struct sii902x *sii902x)
 		sii902x->bridge.ops |= DRM_BRIDGE_OP_HPD;
 
 	drm_bridge_add(&sii902x->bridge);
+
 
 	return 0;
 
@@ -1112,22 +1140,26 @@ static int sii902x_probe(struct i2c_client *client,
 
 	ret = i2c_check_functionality(client->adapter,
 				      I2C_FUNC_SMBUS_BYTE_DATA);
+
 	if (!ret) {
 		dev_err(dev, "I2C adapter not suitable\n");
 		return -EIO;
 	}
 
 	sii902x = devm_kzalloc(dev, sizeof(*sii902x), GFP_KERNEL);
+
 	if (!sii902x)
 		return -ENOMEM;
 
 	sii902x->i2c = client;
 	sii902x->regmap = devm_regmap_init_i2c(client, &sii902x_regmap_config);
+
 	if (IS_ERR(sii902x->regmap))
 		return PTR_ERR(sii902x->regmap);
 
 	sii902x->reset_gpio = devm_gpiod_get_optional(dev, "reset",
 						      GPIOD_OUT_LOW);
+
 	if (IS_ERR(sii902x->reset_gpio)) {
 		dev_err(dev, "Failed to retrieve/request reset gpio: %ld\n",
 			PTR_ERR(sii902x->reset_gpio));
@@ -1135,10 +1167,12 @@ static int sii902x_probe(struct i2c_client *client,
 	}
 
 	endpoint = of_graph_get_endpoint_by_regs(dev->of_node, 1, -1);
+
 	if (endpoint) {
 		struct device_node *remote = of_graph_get_remote_port_parent(endpoint);
 
 		of_node_put(endpoint);
+
 		if (!remote) {
 			dev_err(dev, "Endpoint in port@1 unconnected\n");
 			return -ENODEV;
@@ -1151,12 +1185,15 @@ static int sii902x_probe(struct i2c_client *client,
 		}
 
 		sii902x->next_bridge = of_drm_find_bridge(remote);
+
 		of_node_put(remote);
 		if (!sii902x->next_bridge)
 			return -EPROBE_DEFER;
 	}
 
+
 	mutex_init(&sii902x->mutex);
+
 
 	sii902x->supplies[0].supply = "iovcc";
 	sii902x->supplies[1].supply = "cvcc12";
@@ -1167,12 +1204,14 @@ static int sii902x_probe(struct i2c_client *client,
 
 	ret = regulator_bulk_enable(ARRAY_SIZE(sii902x->supplies),
 				    sii902x->supplies);
+
 	if (ret < 0) {
 		dev_err_probe(dev, ret, "Failed to enable supplies");
 		return ret;
 	}
 
 	ret = sii902x_init(sii902x);
+
 	if (ret < 0) {
 		regulator_bulk_disable(ARRAY_SIZE(sii902x->supplies),
 				       sii902x->supplies);
@@ -1183,6 +1222,7 @@ static int sii902x_probe(struct i2c_client *client,
 
 static void sii902x_remove(struct i2c_client *client)
 {
+
 	struct sii902x *sii902x = i2c_get_clientdata(client);
 
 	drm_bridge_remove(&sii902x->bridge);
@@ -1194,6 +1234,7 @@ static void sii902x_remove(struct i2c_client *client)
 
 static int sii902x_pm_suspend(struct device *dev)
 {
+
 	struct i2c_client *client = to_i2c_client(dev);
 	struct sii902x *sii902x = i2c_get_clientdata(client);
 
@@ -1202,6 +1243,7 @@ static int sii902x_pm_suspend(struct device *dev)
 
 	regulator_bulk_disable(ARRAY_SIZE(sii902x->supplies),
 			       sii902x->supplies);
+
 
 	return 0;
 }
@@ -1221,6 +1263,7 @@ static int sii902x_pm_resume(struct device *dev)
 
 	ret = regulator_bulk_enable(ARRAY_SIZE(sii902x->supplies),
 				    sii902x->supplies);
+
 	if (ret) {
 		dev_err(&sii902x->i2c->dev, "regulator_bulk_enable failed\n");
 		return ret;

@@ -97,14 +97,36 @@
 
 	hdmi:connector{
 		compatible = "hdmi-connector";
+		#sound-dai-cells = <0>;
 		label = "hdmi";
 		type = "a";
 
 		port{
-
 			hdmi_connector_in:endpoint{
 				remote-endpoint = <&sii9022_out>;
 			};
+			hdmi_audio_out:endpoit{
+				remote-endpoint= <&sii9022_tx_endpoint>;
+			};
+		};
+	};
+	
+	sound {
+		compatible = "simple-audio-card";
+		simple-audio-card,name = "SII9022A HDMI";
+		simple-audio-card,format = "i2s";
+		/*simple-audio-card,widgets = "Speaker", "External Speaker";
+		simple-audio-card,routing = "External Speaker", "LINE_OUT";*/
+		simple-audio-card,bitclock-master = <&dailink0_master>;
+		simple-audio-card,frame-master = <&dailink0_master>;
+		simple-audio-card,mclk-fs = <256>;
+		
+		dailink0_master: simple-audio-card,cpu {
+			sound-dai = <&i2s2>;
+		};
+		
+		simple-audio-card,codec {
+			sound-dai = <&sii9022A>;
 		};
 	};
 	
@@ -122,7 +144,7 @@
 		led-blue{
 			label = "heartbeat";
 			gpios = <&gpioa 14 GPIO_ACTIVE_LOW>;
-			linux,default-trigger = "heartbeat";
+			linux,default-trigger = "timer"; /* Change from heartbeat -> timer */
 			default-state = "off";
 		};
 		
@@ -471,7 +493,6 @@
 		};
 		pins2 {
 			pinmux = <STM32_PINMUX('G', 11, ANALOG)>; /* UART4_TX */
-			bias-pull-up;
 		};
 	};
 
@@ -479,7 +500,6 @@
 		pins {
 			pinmux = <STM32_PINMUX('B', 2, ANALOG)>, /* UART4_RX */
 					 <STM32_PINMUX('G', 11, ANALOG)>; /* UART4_TX */
-			bias-pull-up;
 		};
 	};
 
@@ -506,7 +526,7 @@
 };
 
 &m4_rproc{
-	status = "disabled";
+	status = "okay";
 
 	/* USER CODE BEGIN m4_rproc */
 	resets = <&scmi_reset RST_SCMI_MCU>, <&scmi_reset RST_SCMI_MCU_HOLD_BOOT>;
@@ -521,7 +541,7 @@
 	/* USER CODE END m4_rproc */
 
 	m4_system_resources{
-		status = "disabled";
+		status = "okay";
 
 		/* USER CODE BEGIN m4_system_resources */
 		/* USER CODE END m4_system_resources */
@@ -627,7 +647,7 @@
 	/delete-property/ dmas;
 	/delete-property/ dma-names;
 
-	hdmi-transmitter@39{
+	sii9022A: hdmi-transmitter@39{
 		compatible = "sil,sii9022";
 		reg = <0x39>;
 		iovcc-supply = <&v3v3_hdmi>;
@@ -636,6 +656,9 @@
 		interrupts = <1 IRQ_TYPE_EDGE_FALLING>;
 		interrupt-parent = <&gpiog>;
 		#sound-dai-cells = <0>;
+		sil,i2s-data-lanes = <0>;
+		/*clocks = <&mclk>;
+		clock-names = "mclk";*/
 		status = "okay";
 
 		ports{
@@ -823,7 +846,6 @@
 	clock-names = "pclk", "i2sclk", "x8k", "x11k";
 
 	i2s2_port:port{
-
 		i2s2_endpoint:endpoint{
 			remote-endpoint = <&sii9022_tx_endpoint>;
 			dai-format = "i2s";
@@ -960,9 +982,9 @@
 };
 
 &usbh_ohci{
-	status = "okay";
 
 	/* USER CODE BEGIN usbh_ohci */
+	status = "disabled";
 	/* USER CODE END usbh_ohci */
 };
 
@@ -1048,3 +1070,4 @@
 	clocks = <&scmi_clk CK_SCMI_GPIOZ>;
 };
 /* USER CODE END addons */
+

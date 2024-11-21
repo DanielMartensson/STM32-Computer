@@ -1,24 +1,9 @@
-21:20:09 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
+12:18:28 **** Build of configuration Default for project STM32-Computer-Firmware_CA7_linux-6.1.82 ****
 make stm32mp151a-stm32-computer-firmware-mx.dtb 
 Wrapper for /opt/st/stm32cubeide_1.16.0/plugins/com.st.stm32cube.ide.mpu.linux.toolchain_2.1.0.202305092038/tools/bin/make
 FIP_DEPLOYDIR_ROOT: /home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/build/../../FIP_artifacts
 + case "$command" in
 + exec make stm32mp151a-stm32-computer-firmware-mx.dtb
-  DTC     arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dtb
 
-21:20:12 Build Finished. 0 errors, 0 warnings. (took 2s.124ms)
-
-  MODPOST vmlinux.symvers
-  Kernel: arch/arm/boot/Image is ready
-  Kernel: arch/arm/boot/zImage is ready
-  UIMAGE  arch/arm/boot/uImage
-Image Name:   Linux-6.1.82
-Created:      Tue Sep 10 19:20:45 2024
-Image Type:   ARM Linux Kernel Image (uncompressed)
-Data Size:    8249856 Bytes = 8056.50 KiB = 7.87 MiB
-Load Address: c2000040
-Entry Point:  c2000040
-  Kernel: arch/arm/boot/uImage is ready
-
-21:20:46 Build Finished. 0 errors, 0 warnings. (took 1m:55s.676ms)
+12:18:29 Build Finished. 0 errors, 0 warnings. (took 1s.484ms)
 

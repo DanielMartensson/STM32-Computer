@@ -2970,14 +2970,36 @@
 
  hdmi:connector{
   compatible = "hdmi-connector";
+  #sound-dai-cells = <0>;
   label = "hdmi";
   type = "a";
 
   port{
-
    hdmi_connector_in:endpoint{
     remote-endpoint = <&sii9022_out>;
    };
+   hdmi_audio_out:endpoit{
+    remote-endpoint= <&sii9022_tx_endpoint>;
+   };
+  };
+ };
+
+ sound {
+  compatible = "simple-audio-card";
+  simple-audio-card,name = "SII9022A HDMI";
+  simple-audio-card,format = "i2s";
+
+
+  simple-audio-card,bitclock-master = <&dailink0_master>;
+  simple-audio-card,frame-master = <&dailink0_master>;
+  simple-audio-card,mclk-fs = <256>;
+
+  dailink0_master: simple-audio-card,cpu {
+   sound-dai = <&i2s2>;
+  };
+
+  simple-audio-card,codec {
+   sound-dai = <&sii9022A>;
   };
  };
 
@@ -2995,7 +3017,7 @@
   led-blue{
    label = "heartbeat";
    gpios = <&gpioa 14 1>;
-   linux,default-trigger = "heartbeat";
+   linux,default-trigger = "timer";
    default-state = "off";
   };
 
@@ -3344,7 +3366,6 @@
   };
   pins2 {
    pinmux = <(((((('G') - 'A') * 0x10 + (11))) << 8) | (0x11))>;
-   bias-pull-up;
   };
  };
 
@@ -3352,7 +3373,6 @@
   pins {
    pinmux = <(((((('B') - 'A') * 0x10 + (2))) << 8) | (0x11))>,
       <(((((('G') - 'A') * 0x10 + (11))) << 8) | (0x11))>;
-   bias-pull-up;
   };
  };
 
@@ -3379,7 +3399,7 @@
 };
 
 &m4_rproc{
- status = "disabled";
+ status = "okay";
 
 
  resets = <&scmi_reset 10>, <&scmi_reset 11>;
@@ -3394,7 +3414,7 @@
 
 
  m4_system_resources{
-  status = "disabled";
+  status = "okay";
 
 
 
@@ -3500,7 +3520,7 @@
  /delete-property/ dmas;
  /delete-property/ dma-names;
 
- hdmi-transmitter@39{
+ sii9022A: hdmi-transmitter@39{
   compatible = "sil,sii9022";
   reg = <0x39>;
   iovcc-supply = <&v3v3_hdmi>;
@@ -3509,6 +3529,9 @@
   interrupts = <1 2>;
   interrupt-parent = <&gpiog>;
   #sound-dai-cells = <0>;
+  sil,i2s-data-lanes = <0>;
+
+
   status = "okay";
 
   ports{
@@ -3603,7 +3626,7 @@
     regulator-over-current-protection;
     regulator-initial-mode = <0>;
    };
-# 743 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+# 766 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
    v3v3_hdmi:ldo2{
     regulator-name = "v3v3_hdmi";
     regulator-min-microvolt = <3300000>;
@@ -3645,7 +3668,7 @@
     regulator-name = "vref_ddr";
     regulator-always-on;
    };
-# 802 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+# 825 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
   };
 
   onkey{
@@ -3670,7 +3693,6 @@
  clock-names = "pclk", "i2sclk", "x8k", "x11k";
 
  i2s2_port:port{
-
   i2s2_endpoint:endpoint{
    remote-endpoint = <&sii9022_tx_endpoint>;
    dai-format = "i2s";
@@ -3807,9 +3829,9 @@
 };
 
 &usbh_ohci{
- status = "okay";
 
 
+ status = "disabled";
 
 };
 
@@ -3869,7 +3891,7 @@
  st,no-lsfs-sc;
 
 };
-# 1033 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
+# 1055 "/home/lubuntu/Dokument/GitHub/STM32-Computer/Firmware/STM32-Computer-Firmware/CA7/linux-6.1.82/linux-6.1.82/arch/arm/boot/dts/stm32mp151a-stm32-computer-firmware-mx.dts"
 &cpu0 {
  cpu-supply = <&vddcore>;
  clocks = <&scmi_clk 7>;
