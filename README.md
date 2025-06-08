@@ -3,6 +3,10 @@
 This project is a STM32 computer were Linux can be deployed onto.
 The circuit board is made in Altium CircuitMaker. 
 
+# STM64 Computer - A better board
+
+I've build a 64-bit STM32 board for Linux. Check it out here: https://github.com/DanielMartensson/STM64-Computer
+
 # Operating system to the board
 
 Here is `STM32-OS` system for the board.
